@@ -10464,7 +10464,6 @@ C - - - - - 0x03F4FE 0F:F4EE: E6 98     INC ram_0098
 C - - - - - 0x03F500 0F:F4F0: A9 00     LDA #$00
 C - - - - - 0x03F502 0F:F4F2: 85 26     STA ram_0026
 C - - - - - 0x03F504 0F:F4F4: 20 08 D0  JSR sub_D008_RTS
-bra_F4F7:
 C - - - - - 0x03F507 0F:F4F7: 4C A7 F5  JMP loc_F5A7
 
 
@@ -10476,7 +10475,7 @@ C - - - - - 0x03F50E 0F:F4FE: 20 0D D0  JSR sub_D00D
 C - - - - - 0x03F511 0F:F501: A9 00     LDA #$00
 C - - - - - 0x03F513 0F:F503: 85 A0     STA ram_00A0
 C - - - - - 0x03F515 0F:F505: 85 A1     STA ram_00A1
-C - - - - - 0x03F517 0F:F507: F0 EE     BEQ bra_F4F7    ; bzk опт
+C - - - - - 0x03F517 0F:F507: F0 EE     JMP loc_F5A7
 
 
 
