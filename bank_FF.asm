@@ -11963,11 +11963,6 @@ C - - - - - 0x03FDF2 0F:FDE2: 20 91 A9  JSR sub_0x0269A1
 C - - - - - 0x03FDF5 0F:FDE5: 4C 13 FF  JMP loc_FF13
 
 
-; bzk мусор
-- - - - - - 0x03FDF8 0F:FDE8: EA        NOP
-- - - - - - 0x03FDF9 0F:FDE9: 4C 57 FD  JMP loc_FD57
-
-
 
 loc_FDEC:
 C D 3 - - - 0x03FDFC 0F:FDEC: AD 35 06  LDA ram_0635
