@@ -1467,16 +1467,6 @@ C - - - - - 0x034A26 0D:8A16: 9D C6 06  STA ram_06C6,X
 C - - - - - 0x034A29 0D:8A19: 4C BF A1  JMP loc_A1BF
 
 
-; bzk мусор
-- - - - - - 0x034A2C 0D:8A1C: 60        .byte $60   ; 
-- - - - - - 0x034A2D 0D:8A1D: 0A        .byte $0A   ; 
-- - - - - - 0x034A2E 0D:8A1E: 08        .byte $08   ; 
-- - - - - - 0x034A2F 0D:8A1F: 01        .byte $01   ; 
-- - - - - - 0x034A30 0D:8A20: 10        .byte $10   ; 
-- - - - - - 0x034A31 0D:8A21: 0A        .byte $0A   ; 
-- - - - - - 0x034A32 0D:8A22: 01        .byte $01   ; 
-
-
 
 ofs_8A23_09:
 - - - - - - 0x034A33 0D:8A23: BD 10 06  LDA ram_0610,X
