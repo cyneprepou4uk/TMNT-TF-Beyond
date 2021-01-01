@@ -583,39 +583,6 @@ con_X       = $00   ; координата X
 con_jmp     = $80   ; прыжок
 
 
-; bzk мусор
-- - - - - - 0x0302F7 0C:82E7: EA        .byte $EA   ; 
-- - - - - - 0x0302F8 0C:82E8: EA        .byte $EA   ; 
-- - - - - - 0x0302F9 0C:82E9: EA        .byte $EA   ; 
-- - - - - - 0x0302FA 0C:82EA: EA        .byte $EA   ; 
-- - - - - - 0x0302FB 0C:82EB: EA        .byte $EA   ; 
-- - - - - - 0x0302FC 0C:82EC: EA        .byte $EA   ; 
-- - - - - - 0x0302FD 0C:82ED: EA        .byte $EA   ; 
-- - - - - - 0x0302FE 0C:82EE: EA        .byte $EA   ; 
-- - - - - - 0x0302FF 0C:82EF: EA        .byte $EA   ; 
-- - - - - - 0x030300 0C:82F0: EA        .byte $EA   ; 
-- - - - - - 0x030301 0C:82F1: EA        .byte $EA   ; 
-- - - - - - 0x030302 0C:82F2: EA        .byte $EA   ; 
-- - - - - - 0x030303 0C:82F3: EA        .byte $EA   ; 
-- - - - - - 0x030304 0C:82F4: EA        .byte $EA   ; 
-- - - - - - 0x030305 0C:82F5: EA        .byte $EA   ; 
-- - - - - - 0x030306 0C:82F6: EA        .byte $EA   ; 
-- - - - - - 0x030307 0C:82F7: EA        .byte $EA   ; 
-- - - - - - 0x030308 0C:82F8: EA        .byte $EA   ; 
-- - - - - - 0x030309 0C:82F9: EA        .byte $EA   ; 
-- - - - - - 0x03030A 0C:82FA: EA        .byte $EA   ; 
-- - - - - - 0x03030B 0C:82FB: EA        .byte $EA   ; 
-- - - - - - 0x03030C 0C:82FC: EA        .byte $EA   ; 
-- - - - - - 0x03030D 0C:82FD: EA        .byte $EA   ; 
-- - - - - - 0x03030E 0C:82FE: EA        .byte $EA   ; 
-- - - - - - 0x03030F 0C:82FF: EA        .byte $EA   ; 
-- - - - - - 0x030310 0C:8300: EA        .byte $EA   ; 
-- - - - - - 0x030311 0C:8301: EA        .byte $EA   ; 
-- - - - - - 0x030312 0C:8302: EA        .byte $EA   ; 
-- - - - - - 0x030313 0C:8303: EA        .byte $EA   ; 
-- - - - - - 0x030314 0C:8304: EA        .byte $EA   ; 
-
-
 
 _off010_8305_01:
 _off010_8305_06:
