@@ -5702,66 +5702,10 @@ C - - - - - 0x0360C2 0D:A0B2: 85 17     STA ram_0017
 C - - - - - 0x0360C4 0D:A0B4: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x0360C5 0D:A0B5: A5 13     LDA ram_0013
-- - - - - - 0x0360C7 0D:A0B7: F0 2E     BEQ bra_A0E7
-- - - - - - 0x0360C9 0D:A0B9: A5 11     LDA ram_0011
-- - - - - - 0x0360CB 0D:A0BB: C9 08     CMP #$08
-- - - - - - 0x0360CD 0D:A0BD: D0 13     BNE bra_A0D2_RTS
-- - - - - - 0x0360CF 0D:A0BF: BC DE 06  LDY ram_06DE,X
-- - - - - - 0x0360D2 0D:A0C2: A5 13     LDA ram_0013
-- - - - - - 0x0360D4 0D:A0C4: F0 0D     BEQ bra_A0D3
-- - - - - - 0x0360D6 0D:A0C6: C9 02     CMP #$02
-- - - - - - 0x0360D8 0D:A0C8: F0 22     BEQ bra_A0EC
-- - - - - - 0x0360DA 0D:A0CA: C9 03     CMP #$03
-- - - - - - 0x0360DC 0D:A0CC: D0 2E     BNE bra_A0FC
-- - - - - - 0x0360DE 0D:A0CE: A9 25     LDA #$25
-- - - - - - 0x0360E0 0D:A0D0: 85 17     STA ram_0017
-bra_A0D2_RTS:
-- - - - - - 0x0360E2 0D:A0D2: 60        RTS
-bra_A0D3:
-- - - - - - 0x0360E3 0D:A0D3: 20 86 EC  JSR sub_0x03EC96
-- - - - - - 0x0360E6 0D:A0D6: 09 04     ORA #$04
-- - - - - - 0x0360E8 0D:A0D8: 95 8E     STA ram_008E,X
-- - - - - - 0x0360EA 0D:A0DA: 95 91     STA ram_0091,X
-- - - - - - 0x0360EC 0D:A0DC: 9D C6 06  STA ram_06C6,X
-- - - - - - 0x0360EF 0D:A0DF: 9D C8 06  STA ram_06C8,X
-- - - - - - 0x0360F2 0D:A0E2: A9 02     LDA #$02
-- - - - - - 0x0360F4 0D:A0E4: 85 17     STA ram_0017
-- - - - - - 0x0360F6 0D:A0E6: 60        RTS
-bra_A0E7:
-- - - - - - 0x0360F7 0D:A0E7: A9 03     LDA #$03
-- - - - - - 0x0360F9 0D:A0E9: 85 17     STA ram_0017
-- - - - - - 0x0360FB 0D:A0EB: 60        RTS
-bra_A0EC:
-- - - - - - 0x0360FC 0D:A0EC: B9 40 05  LDA ram_0540,Y
-- - - - - - 0x0360FF 0D:A0EF: C9 02     CMP #$02
-- - - - - - 0x036101 0D:A0F1: 90 09     BCC bra_A0FC
-- - - - - - 0x036103 0D:A0F3: C9 04     CMP #$04
-- - - - - - 0x036105 0D:A0F5: B0 0A     BCS bra_A101
-
-
 
 bra_A0F7:
 loc_A0F7:
 C D 1 - - - 0x036107 0D:A0F7: 4C 9F A3  JMP loc_A39F
-
-
-; bzk мусор
-bra_A0FC:
-- - - - - - 0x03610C 0D:A0FC: A9 41     LDA #$41
-- - - - - - 0x03610E 0D:A0FE: 85 17     STA ram_0017
-- - - - - - 0x036110 0D:A100: 60        RTS
-bra_A101:
-- - - - - - 0x036111 0D:A101: 20 86 EC  JSR sub_0x03EC96
-- - - - - - 0x036114 0D:A104: 09 08     ORA #$08
-- - - - - - 0x036116 0D:A106: 95 8E     STA ram_008E,X
-- - - - - - 0x036118 0D:A108: 95 91     STA ram_0091,X
-- - - - - - 0x03611A 0D:A10A: 9D C6 06  STA ram_06C6,X
-- - - - - - 0x03611D 0D:A10D: 9D C8 06  STA ram_06C8,X
-- - - - - - 0x036120 0D:A110: A9 06     LDA #$06
-- - - - - - 0x036122 0D:A112: 85 17     STA ram_0017
-- - - - - - 0x036124 0D:A114: 60        RTS
 
 
 
