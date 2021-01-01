@@ -227,51 +227,6 @@ bra_817B_RTS:
 C - - - - - 0x03818B 0E:817B: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x03818C 0E:817C: EA        .byte $EA   ; 
-- - - - - - 0x03818D 0E:817D: EA        .byte $EA   ; 
-- - - - - - 0x03818E 0E:817E: EA        .byte $EA   ; 
-- - - - - - 0x03818F 0E:817F: EA        .byte $EA   ; 
-- - - - - - 0x038190 0E:8180: EA        .byte $EA   ; 
-- - - - - - 0x038191 0E:8181: EA        .byte $EA   ; 
-- - - - - - 0x038192 0E:8182: EA        .byte $EA   ; 
-- - - - - - 0x038193 0E:8183: EA        .byte $EA   ; 
-- - - - - - 0x038194 0E:8184: EA        .byte $EA   ; 
-- - - - - - 0x038195 0E:8185: EA        .byte $EA   ; 
-- - - - - - 0x038196 0E:8186: EA        .byte $EA   ; 
-- - - - - - 0x038197 0E:8187: EA        .byte $EA   ; 
-- - - - - - 0x038198 0E:8188: EA        .byte $EA   ; 
-- - - - - - 0x038199 0E:8189: EA        .byte $EA   ; 
-- - - - - - 0x03819A 0E:818A: EA        .byte $EA   ; 
-- - - - - - 0x03819B 0E:818B: EA        .byte $EA   ; 
-- - - - - - 0x03819C 0E:818C: EA        .byte $EA   ; 
-- - - - - - 0x03819D 0E:818D: EA        .byte $EA   ; 
-- - - - - - 0x03819E 0E:818E: EA        .byte $EA   ; 
-- - - - - - 0x03819F 0E:818F: EA        .byte $EA   ; 
-- - - - - - 0x0381A0 0E:8190: EA        .byte $EA   ; 
-- - - - - - 0x0381A1 0E:8191: EA        .byte $EA   ; 
-- - - - - - 0x0381A2 0E:8192: EA        .byte $EA   ; 
-- - - - - - 0x0381A3 0E:8193: EA        .byte $EA   ; 
-- - - - - - 0x0381A4 0E:8194: EA        .byte $EA   ; 
-- - - - - - 0x0381A5 0E:8195: EA        .byte $EA   ; 
-- - - - - - 0x0381A6 0E:8196: EA        .byte $EA   ; 
-- - - - - - 0x0381A7 0E:8197: EA        .byte $EA   ; 
-- - - - - - 0x0381A8 0E:8198: EA        .byte $EA   ; 
-- - - - - - 0x0381A9 0E:8199: EA        .byte $EA   ; 
-- - - - - - 0x0381AA 0E:819A: EA        .byte $EA   ; 
-- - - - - - 0x0381AB 0E:819B: EA        .byte $EA   ; 
-- - - - - - 0x0381AC 0E:819C: EA        .byte $EA   ; 
-- - - - - - 0x0381AD 0E:819D: EA        .byte $EA   ; 
-- - - - - - 0x0381AE 0E:819E: EA        .byte $EA   ; 
-- - - - - - 0x0381AF 0E:819F: EA        .byte $EA   ; 
-- - - - - - 0x0381B0 0E:81A0: EA        .byte $EA   ; 
-- - - - - - 0x0381B1 0E:81A1: EA        .byte $EA   ; 
-- - - - - - 0x0381B2 0E:81A2: EA        .byte $EA   ; 
-- - - - - - 0x0381B3 0E:81A3: EA        .byte $EA   ; 
-- - - - - - 0x0381B4 0E:81A4: EA        .byte $EA   ; 
-- - - - - - 0x0381B5 0E:81A5: EA        .byte $EA   ; 
-
-
 
 sub_81A6:
 C - - - - - 0x0381B6 0E:81A6: A9 25     LDA #$25
