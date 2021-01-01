@@ -7514,13 +7514,6 @@ tbl_0x03E3E8:
 - D 3 - - - 0x03E3EE 0F:E3DE: 04        .byte $04   ; 26
 
 
-; bzk мусор
-- - - - - - 0x03E3EF 0F:E3DF: EA        .byte $EA   ; 
-- - - - - - 0x03E3F0 0F:E3E0: EA        .byte $EA   ; 
-- - - - - - 0x03E3F1 0F:E3E1: EA        .byte $EA   ; 
-- - - - - - 0x03E3F2 0F:E3E2: EA        .byte $EA   ; 
-
-
 
 loc_E3E3:
 C D 3 - - - 0x03E3F3 0F:E3E3: AD 50 01  LDA ram_0150
