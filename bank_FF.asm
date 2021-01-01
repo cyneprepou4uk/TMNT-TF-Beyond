@@ -4134,13 +4134,6 @@ _off002_0x03CFF5_29:
 - D 2 - I - 0x03D00F 0F:CFFF: FF        .byte $FF   ; 
 
 
-; bzk мусор
-- - - - - - 0x03D010 0F:D000: 20 09 D0  JSR sub_D009
-- - - - - - 0x03D013 0F:D003: A9 01     LDA #$01
-- - - - - - 0x03D015 0F:D005: 85 26     STA ram_0026
-- - - - - - 0x03D017 0F:D007: 60        RTS
-
-
 
 sub_D008_RTS:
 C - - - - - 0x03D018 0F:D008: 60        RTS
