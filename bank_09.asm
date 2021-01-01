@@ -1585,16 +1585,8 @@ C - - - - - 0x024B1D 09:8B0D: D0 0F     BNE bra_8B1E
 C - - - - - 0x024B1F 09:8B0F: 4C 1B 8B  JMP loc_8B1B
 
 
-; bzk мусор
-- - - - - - 0x024B22 09:8B12: C9 20     CMP #$20
-- - - - - - 0x024B24 09:8B14: D0 05     BNE bra_8B1B
-- - - - - - 0x024B26 09:8B16: A9 10     LDA #$10
-- - - - - - 0x024B28 09:8B18: 20 58 DC  JSR sub_0x03DC68
-
-
 
 loc_8B1B:
-bra_8B1B:
 C D 0 - - - 0x024B2B 09:8B1B: 4C A2 8B  JMP loc_8BA2
 bra_8B1E:
 C - - - - - 0x024B2E 09:8B1E: 20 6A D0  JSR sub_0x03D07A
