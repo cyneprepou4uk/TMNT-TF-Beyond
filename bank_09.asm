@@ -7338,8 +7338,6 @@ C - - - - - 0x026999 09:A989: 9D 00 04  STA ram_0400,X
 C - - - - - 0x02699C 09:A98C: 9D 30 05  STA ram_0530,X
 bra_A98F_RTS:
 C - - - - - 0x02699F 09:A98F: 60        RTS
-bra_A990_RTS:   ; bzk
-C - - - - - 0x0269A0 09:A990: 60        RTS
 
 
 
@@ -7366,19 +7364,19 @@ C - - - - - 0x0269BE 09:A9AE: F0 07     BEQ bra_A9B7
 bra_A9B0:
 C - - - - - 0x0269C0 09:A9B0: A6 A8     LDX ram_00A8
 C - - - - - 0x0269C2 09:A9B2: BD 50 05  LDA ram_0550,X
-C - - - - - 0x0269C5 09:A9B5: F0 D9     BEQ bra_A990_RTS
+C - - - - - 0x0269C5 09:A9B5: F0 D9     BEQ bra_A9F1_RTS
 bra_A9B7:
 C - - - - - 0x0269C7 09:A9B7: A6 AC     LDX ram_00AC
 C - - - - - 0x0269C9 09:A9B9: BD F0 05  LDA ram_05F0,X
-C - - - - - 0x0269CC 09:A9BC: D0 D2     BNE bra_A990_RTS
+C - - - - - 0x0269CC 09:A9BC: D0 D2     BNE bra_A9F1_RTS
 C - - - - - 0x0269CE 09:A9BE: BD 80 05  LDA ram_0580,X
-C - - - - - 0x0269D1 09:A9C1: 30 CD     BMI bra_A990_RTS
+C - - - - - 0x0269D1 09:A9C1: 30 CD     BMI bra_A9F1_RTS
 C - - - - - 0x0269D3 09:A9C3: BD 20 05  LDA ram_0520,X
 C - - - - - 0x0269D6 09:A9C6: C9 03     CMP #$03
-C - - - - - 0x0269D8 09:A9C8: F0 C6     BEQ bra_A990_RTS
+C - - - - - 0x0269D8 09:A9C8: F0 C6     BEQ bra_A9F1_RTS
 C - - - - - 0x0269DA 09:A9CA: A6 A8     LDX ram_00A8
 C - - - - - 0x0269DC 09:A9CC: BC 70 05  LDY ram_0570,X
-C - - - - - 0x0269DF 09:A9CF: F0 BF     BEQ bra_A990_RTS
+C - - - - - 0x0269DF 09:A9CF: F0 BF     BEQ bra_A9F1_RTS
 C - - - - - 0x0269E1 09:A9D1: BD 40 04  LDA ram_0440,X
 C - - - - - 0x0269E4 09:A9D4: 85 00     STA ram_0000
 C - - - - - 0x0269E6 09:A9D6: 85 0E     STA ram_000E
@@ -7395,6 +7393,8 @@ C - - - - - 0x0269FD 09:A9ED: 48        PHA
 C - - - - - 0x0269FE 09:A9EE: A9 D8     LDA #< ofs_0x02E5E9
 C - - - - - 0x026A00 09:A9F0: 48        PHA
 C - - - - - 0x026A01 09:A9F1: 4C E7 F5  JMP loc_0x03F5F7_prg_bank_0B
+bra_A9F1_RTS:
+                                        RTS
 
 
 
@@ -7404,7 +7404,9 @@ ofs_A9F5:
 ofs_0x026A05 = ofs_A9F5 - 1
 C - - - - - 0x026A05 09:A9F5: A6 AC     LDX ram_00AC
 C - - - - - 0x026A07 09:A9F7: BD 80 05  LDA ram_0580,X
-C - - - - - 0x026A0A 09:A9FA: 30 94     BMI bra_A990_RTS
+C - - - - - 0x026A0A 09:A9FA: 30 94     BPL bra_A9FC
+                                        RTS
+bra_A9FC:
 C - - - - - 0x026A0C 09:A9FC: A4 A9     LDY ram_00A9
 C - - - - - 0x026A0E 09:A9FE: B9 50 05  LDA ram_0550,Y
 C - - - - - 0x026A11 09:AA01: F0 58     BEQ bra_AA5B
