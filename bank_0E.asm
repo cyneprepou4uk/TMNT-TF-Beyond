@@ -7453,18 +7453,6 @@ tbl_BFE0:
 - D 1 - - - 0x03BFF7 0E:BFE7: FF        .byte $FF   ; 
 
 
-; bzk мусор
-- - - - - - 0x03BFF8 0E:BFE8: FF        .byte $FF   ; 
-- - - - - - 0x03BFF9 0E:BFE9: FF        .byte $FF   ; 
-- - - - - - 0x03BFFA 0E:BFEA: FF        .byte $FF   ; 
-- - - - - - 0x03BFFB 0E:BFEB: FF        .byte $FF   ; 
-- - - - - - 0x03BFFC 0E:BFEC: FF        .byte $FF   ; 
-- - - - - - 0x03BFFD 0E:BFED: FF        .byte $FF   ; 
-- - - - - - 0x03BFFE 0E:BFEE: FF        .byte $FF   ; 
-- - - - - - 0x03BFFF 0E:BFEF: FF        .byte $FF   ; 
-- - - - - - 0x03C000 0E:BFF0: FF        .byte $FF   ; 
-
-
 
 tbl_BFF1:
 - D 1 - - - 0x03C001 0E:BFF1: 06        .byte $06   ; 00
