@@ -9616,19 +9616,6 @@ C - - - - - 0x02E89E 0B:A88E: 48        PHA
 C - - - - - 0x02E89F 0B:A88F: 4C 17 F6  JMP loc_0x03F627
 
 
-; bzk мусор
-- - - - - - 0x02E8A2 0B:A892: FF        .byte $FF   ; 
-- - - - - - 0x02E8A3 0B:A893: FF        .byte $FF   ; 
-- - - - - - 0x02E8A4 0B:A894: FF        .byte $FF   ; 
-- - - - - - 0x02E8A5 0B:A895: FF        .byte $FF   ; 
-- - - - - - 0x02E8A6 0B:A896: FF        .byte $FF   ; 
-- - - - - - 0x02E8A7 0B:A897: FF        .byte $FF   ; 
-- - - - - - 0x02E8A8 0B:A898: FF        .byte $FF   ; 
-- - - - - - 0x02E8A9 0B:A899: FF        .byte $FF   ; 
-- - - - - - 0x02E8AA 0B:A89A: FF        .byte $FF   ; 
-- - - - - - 0x02E8AB 0B:A89B: FF        .byte $FF   ; 
-
-
 
 tbl_A89C:
 - D 1 - - - 0x02E8AC 0B:A89C: 04        .byte $04   ; 00
