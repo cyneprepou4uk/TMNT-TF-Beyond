@@ -8322,34 +8322,6 @@ C - - - - - 0x03E93C 0F:E92C: A9 00     LDA #$00
 C - - - - - 0x03E93E 0F:E92E: 4C 5E B0  JMP loc_0x02706E
 
 
-; bzk мусор
-- - - - - - 0x03E941 0F:E931: EA        .byte $EA   ; 
-- - - - - - 0x03E942 0F:E932: EA        .byte $EA   ; 
-- - - - - - 0x03E943 0F:E933: EA        .byte $EA   ; 
-- - - - - - 0x03E944 0F:E934: EA        .byte $EA   ; 
-- - - - - - 0x03E945 0F:E935: EA        .byte $EA   ; 
-- - - - - - 0x03E946 0F:E936: EA        .byte $EA   ; 
-- - - - - - 0x03E947 0F:E937: EA        .byte $EA   ; 
-- - - - - - 0x03E948 0F:E938: EA        .byte $EA   ; 
-- - - - - - 0x03E949 0F:E939: EA        .byte $EA   ; 
-- - - - - - 0x03E94A 0F:E93A: EA        .byte $EA   ; 
-- - - - - - 0x03E94B 0F:E93B: EA        .byte $EA   ; 
-- - - - - - 0x03E94C 0F:E93C: EA        .byte $EA   ; 
-- - - - - - 0x03E94D 0F:E93D: EA        .byte $EA   ; 
-- - - - - - 0x03E94E 0F:E93E: EA        .byte $EA   ; 
-- - - - - - 0x03E94F 0F:E93F: EA        .byte $EA   ; 
-- - - - - - 0x03E950 0F:E940: EA        .byte $EA   ; 
-- - - - - - 0x03E951 0F:E941: EA        .byte $EA   ; 
-- - - - - - 0x03E952 0F:E942: EA        .byte $EA   ; 
-- - - - - - 0x03E953 0F:E943: EA        .byte $EA   ; 
-- - - - - - 0x03E954 0F:E944: EA        .byte $EA   ; 
-- - - - - - 0x03E955 0F:E945: EA        .byte $EA   ; 
-- - - - - - 0x03E956 0F:E946: EA        .byte $EA   ; 
-- - - - - - 0x03E957 0F:E947: EA        .byte $EA   ; 
-- - - - - - 0x03E958 0F:E948: EA        .byte $EA   ; 
-- - - - - - 0x03E959 0F:E949: EA        .byte $EA   ; 
-
-
 
 tbl_E94A:
 - D 3 - - - 0x03E95A 0F:E94A: E4        .byte $E4   ; 
