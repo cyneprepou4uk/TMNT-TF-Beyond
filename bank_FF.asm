@@ -6050,7 +6050,6 @@ C - - - - - 0x03DC8F 0F:DC7F: DD 10 04  CMP ram_0410,X
 C - - - - - 0x03DC92 0F:DC82: B0 0C     BCS bra_DC90
 bra_DC84:
 C - - - - - 0x03DC94 0F:DC84: A9 B0     LDA #$B0
-bra_DC86:
 C - - - - - 0x03DC96 0F:DC86: 9D 10 04  STA ram_0410,X
 C - - - - - 0x03DC99 0F:DC89: A9 00     LDA #$00
 C - - - - - 0x03DC9B 0F:DC8B: 20 D3 DC  JSR sub_DCD3
@@ -6074,19 +6073,7 @@ C - - - - - 0x03DCAB 0F:DC9B: A9 50     LDA #$50
 C - - - - - 0x03DCAD 0F:DC9D: D0 B9     BNE bra_DC58
 
 
-; bzk мусор
-- - - - - - 0x03DCAF 0F:DC9F: 20 92 DC  JSR sub_DC92
-- - - - - - 0x03DCB2 0F:DCA2: A9 C0     LDA #$C0
-- - - - - - 0x03DCB4 0F:DCA4: DD 10 04  CMP ram_0410,X
-- - - - - - 0x03DCB7 0F:DCA7: B0 E7     BCS bra_DC90
-- - - - - - 0x03DCB9 0F:DCA9: 90 DB     BCC bra_DC86
-- - - - - - 0x03DCBB 0F:DCAB: A0 FF     LDY #$FF
-- - - - - - 0x03DCBD 0F:DCAD: D0 02     BNE bra_DCB1
-- - - - - - 0x03DCBF 0F:DCAF: A0 00     LDY #$00
 
-
-
-bra_DCB1:
 .export sub_0x03DCC1
 sub_0x03DCC1:
 C - - - - - 0x03DCC1 0F:DCB1: 18        CLC
