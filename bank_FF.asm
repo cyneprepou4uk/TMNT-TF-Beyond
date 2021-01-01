@@ -6005,13 +6005,6 @@ tbl_DC2A:
 - D 2 - - - 0x03DC5A 0F:DC4A: 34        .byte $34   ; 
 
 
-; bzk мусор
-- - - - - - 0x03DC5B 0F:DC4B: A9 00     LDA #$00
-- - - - - - 0x03DC5D 0F:DC4D: 8D 3C 06  STA ram_063C
-- - - - - - 0x03DC60 0F:DC50: 8D 3D 06  STA ram_063D
-- - - - - - 0x03DC63 0F:DC53: 60        RTS
-
-
 
 loc_DC54:
 .export sub_0x03DC64
