@@ -6085,18 +6085,6 @@ C - - - - - 0x03DCCC 0F:DCBC: 9D 80 04  STA ram_0480,X
 C - - - - - 0x03DCCF 0F:DCBF: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x03DCD0 0F:DCC0: A4 28     LDY ram_random_1
-- - - - - - 0x03DCD2 0F:DCC2: A5 22     LDA ram_frame_counter
-- - - - - - 0x03DCD4 0F:DCC4: 59 3C 06  EOR ram_063C,Y
-- - - - - - 0x03DCD7 0F:DCC7: 79 00 00  ADC a: ram_0000,Y
-- - - - - - 0x03DCDA 0F:DCCA: 65 28     ADC ram_random_1
-- - - - - - 0x03DCDC 0F:DCCC: 2A        ROL
-- - - - - - 0x03DCDD 0F:DCCD: 85 28     STA ram_random_1
-- - - - - - 0x03DCDF 0F:DCCF: EE 3C 06  INC ram_063C
-- - - - - - 0x03DCE2 0F:DCD2: 60        RTS
-
-
 
 sub_DCD3:
 .export sub_0x03DCE3
