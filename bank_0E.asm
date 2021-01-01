@@ -7465,13 +7465,6 @@ tbl_BFF1:
 - - - - - - 0x03C008 0E:BFF8: 01        .byte $01   ; 07
 
 
-; bzk мусор
-- - - - - - 0x03C009 0E:BFF9: EA        .byte $EA   ; 
-- - - - - - 0x03C00A 0E:BFFA: EA        .byte $EA   ; 
-- - - - - - 0x03C00B 0E:BFFB: EA        .byte $EA   ; 
-- - - - - - 0x03C00C 0E:BFFC: EA        .byte $EA   ; 
-
-
 
 tbl_BFFD:
 - D 1 - - - 0x03C00D 0E:BFFD: 02        .byte $02   ; 00
