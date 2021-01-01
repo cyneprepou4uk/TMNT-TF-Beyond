@@ -5924,35 +5924,6 @@ C - - - - - 0x03DBE0 0F:DBD0: 99 10 04  STA ram_0410,Y
 C - - - - - 0x03DBE3 0F:DBD3: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x03DBE4 0F:DBD4: BD 90 04  LDA ram_0490,X
-- - - - - - 0x03DBE7 0F:DBD7: 99 90 04  STA ram_0490,Y
-- - - - - - 0x03DBEA 0F:DBDA: BD 80 04  LDA ram_0480,X
-- - - - - - 0x03DBED 0F:DBDD: 99 80 04  STA ram_0480,Y
-- - - - - - 0x03DBF0 0F:DBE0: BD 70 04  LDA ram_0470,X
-- - - - - - 0x03DBF3 0F:DBE3: 99 70 04  STA ram_0470,Y
-- - - - - - 0x03DBF6 0F:DBE6: BD 60 04  LDA ram_0460,X
-- - - - - - 0x03DBF9 0F:DBE9: 99 60 04  STA ram_0460,Y
-- - - - - - 0x03DBFC 0F:DBEC: 60        RTS
-- - - - - - 0x03DBFD 0F:DBED: 48        PHA
-- - - - - - 0x03DBFE 0F:DBEE: 29 F0     AND #$F0
-- - - - - - 0x03DC00 0F:DBF0: A8        TAY
-- - - - - - 0x03DC01 0F:DBF1: 68        PLA
-- - - - - - 0x03DC02 0F:DBF2: 29 0F     AND #$0F
-- - - - - - 0x03DC04 0F:DBF4: C9 08     CMP #$08
-- - - - - - 0x03DC06 0F:DBF6: 90 02     BCC bra_DBFA_RTS
-- - - - - - 0x03DC08 0F:DBF8: 09 F8     ORA #$F8
-bra_DBFA_RTS:
-- - - - - - 0x03DC0A 0F:DBFA: 60        RTS
-- - - - - - 0x03DC0B 0F:DBFB: A8        TAY
-- - - - - - 0x03DC0C 0F:DBFC: 30 03     BMI bra_DC01
-- - - - - - 0x03DC0E 0F:DBFE: A0 00     LDY #$00
-- - - - - - 0x03DC10 0F:DC00: 60        RTS
-bra_DC01:
-- - - - - - 0x03DC11 0F:DC01: A0 FF     LDY #$FF
-- - - - - - 0x03DC13 0F:DC03: 60        RTS
-
-
 
 loc_DC04:
 .export sub_0x03DC14
