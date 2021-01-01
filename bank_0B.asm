@@ -9921,57 +9921,6 @@ tbl_AA90:
 - - - - - - 0x02EADF 0B:AACF: 00        .byte $00   ; 
 
 
-; bzk мусор
-- - - - - - 0x02EAE0 0B:AAD0: FF        .byte $FF   ; 
-- - - - - - 0x02EAE1 0B:AAD1: FF        .byte $FF   ; 
-- - - - - - 0x02EAE2 0B:AAD2: FF        .byte $FF   ; 
-- - - - - - 0x02EAE3 0B:AAD3: FF        .byte $FF   ; 
-- - - - - - 0x02EAE4 0B:AAD4: FF        .byte $FF   ; 
-- - - - - - 0x02EAE5 0B:AAD5: FF        .byte $FF   ; 
-- - - - - - 0x02EAE6 0B:AAD6: FF        .byte $FF   ; 
-- - - - - - 0x02EAE7 0B:AAD7: FF        .byte $FF   ; 
-- - - - - - 0x02EAE8 0B:AAD8: FF        .byte $FF   ; 
-- - - - - - 0x02EAE9 0B:AAD9: FF        .byte $FF   ; 
-- - - - - - 0x02EAEA 0B:AADA: FF        .byte $FF   ; 
-- - - - - - 0x02EAEB 0B:AADB: FF        .byte $FF   ; 
-- - - - - - 0x02EAEC 0B:AADC: FF        .byte $FF   ; 
-- - - - - - 0x02EAED 0B:AADD: FF        .byte $FF   ; 
-- - - - - - 0x02EAEE 0B:AADE: FF        .byte $FF   ; 
-- - - - - - 0x02EAEF 0B:AADF: FF        .byte $FF   ; 
-- - - - - - 0x02EAF0 0B:AAE0: FF        .byte $FF   ; 
-- - - - - - 0x02EAF1 0B:AAE1: FF        .byte $FF   ; 
-- - - - - - 0x02EAF2 0B:AAE2: FF        .byte $FF   ; 
-- - - - - - 0x02EAF3 0B:AAE3: FF        .byte $FF   ; 
-- - - - - - 0x02EAF4 0B:AAE4: FF        .byte $FF   ; 
-- - - - - - 0x02EAF5 0B:AAE5: FF        .byte $FF   ; 
-- - - - - - 0x02EAF6 0B:AAE6: FF        .byte $FF   ; 
-- - - - - - 0x02EAF7 0B:AAE7: FF        .byte $FF   ; 
-- - - - - - 0x02EAF8 0B:AAE8: FF        .byte $FF   ; 
-- - - - - - 0x02EAF9 0B:AAE9: FF        .byte $FF   ; 
-- - - - - - 0x02EAFA 0B:AAEA: FF        .byte $FF   ; 
-- - - - - - 0x02EAFB 0B:AAEB: FF        .byte $FF   ; 
-- - - - - - 0x02EAFC 0B:AAEC: FF        .byte $FF   ; 
-- - - - - - 0x02EAFD 0B:AAED: FF        .byte $FF   ; 
-- - - - - - 0x02EAFE 0B:AAEE: FF        .byte $FF   ; 
-- - - - - - 0x02EAFF 0B:AAEF: FF        .byte $FF   ; 
-- - - - - - 0x02EB00 0B:AAF0: FF        .byte $FF   ; 
-- - - - - - 0x02EB01 0B:AAF1: FF        .byte $FF   ; 
-- - - - - - 0x02EB02 0B:AAF2: FF        .byte $FF   ; 
-- - - - - - 0x02EB03 0B:AAF3: FF        .byte $FF   ; 
-- - - - - - 0x02EB04 0B:AAF4: FF        .byte $FF   ; 
-- - - - - - 0x02EB05 0B:AAF5: FF        .byte $FF   ; 
-- - - - - - 0x02EB06 0B:AAF6: FF        .byte $FF   ; 
-- - - - - - 0x02EB07 0B:AAF7: FF        .byte $FF   ; 
-- - - - - - 0x02EB08 0B:AAF8: FF        .byte $FF   ; 
-- - - - - - 0x02EB09 0B:AAF9: FF        .byte $FF   ; 
-- - - - - - 0x02EB0A 0B:AAFA: FF        .byte $FF   ; 
-- - - - - - 0x02EB0B 0B:AAFB: FF        .byte $FF   ; 
-- - - - - - 0x02EB0C 0B:AAFC: FF        .byte $FF   ; 
-- - - - - - 0x02EB0D 0B:AAFD: FF        .byte $FF   ; 
-- - - - - - 0x02EB0E 0B:AAFE: FF        .byte $FF   ; 
-- - - - - - 0x02EB0F 0B:AAFF: FF        .byte $FF   ; 
-
-
 
 .export loc_0x02EB10
 loc_0x02EB10:
