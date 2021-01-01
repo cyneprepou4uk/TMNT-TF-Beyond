@@ -6176,13 +6176,6 @@ C - - - - - 0x03DD8C 0F:DD7C: 85 A7     STA ram_00A7
 C - - - - - 0x03DD8E 0F:DD7E: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x03DD8F 0F:DD7F: 85 94     STA ram_0094
-- - - - - - 0x03DD91 0F:DD81: A9 00     LDA #$00
-- - - - - - 0x03DD93 0F:DD83: 85 95     STA ram_0095
-- - - - - - 0x03DD95 0F:DD85: 60        RTS
-
-
 
 .export sub_0x03DD96
 sub_0x03DD96:
