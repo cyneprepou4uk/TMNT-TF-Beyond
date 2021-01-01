@@ -5632,8 +5632,8 @@ C - - - - - 0x03D7FD 0F:D7ED: 29 7F     AND #$7F
 C - - - - - 0x03D7FF 0F:D7EF: 85 03     STA ram_0003
 C - - - - - 0x03D801 0F:D7F1: A6 2F     LDX ram_002F
 bra_D7F3_loop:
-loc_D7F3:
 C D 2 - - - 0x03D803 0F:D7F3: C8        INY
+loc_D7F4:
 C - - - - - 0x03D804 0F:D7F4: B1 08     LDA (ram_0008),Y
 C - - - - - 0x03D806 0F:D7F6: C9 80     CMP #$80
 C - - - - - 0x03D808 0F:D7F8: F0 73     BEQ bra_D86D_80
@@ -5721,8 +5721,8 @@ C - - - - - 0x03D882 0F:D872: B1 08     LDA (ram_0008),Y
 C - - - - - 0x03D884 0F:D874: 85 09     STA ram_0009
 C - - - - - 0x03D886 0F:D876: 68        PLA
 C - - - - - 0x03D887 0F:D877: 85 08     STA ram_0008
-C - - - - - 0x03D889 0F:D879: A0 FF     LDY #$FF    ; bzk лучше Y = 00 и прыжок чуть пониже
-C - - - - - 0x03D88B 0F:D87B: 4C F3 D7  JMP loc_D7F3
+C - - - - - 0x03D889 0F:D879: A0 FF     LDY #$00
+C - - - - - 0x03D88B 0F:D87B: 4C F3 D7  JMP loc_D7F4
 
 
 
