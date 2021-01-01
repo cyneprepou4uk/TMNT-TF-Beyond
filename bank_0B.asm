@@ -11934,24 +11934,6 @@ bra_BF1C_RTS:
 C - - - - - 0x02FF2C 0B:BF1C: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x02FF2D 0B:BF1D: FF        .byte $FF   ; 
-- - - - - - 0x02FF2E 0B:BF1E: FF        .byte $FF   ; 
-- - - - - - 0x02FF2F 0B:BF1F: FF        .byte $FF   ; 
-- - - - - - 0x02FF30 0B:BF20: FF        .byte $FF   ; 
-- - - - - - 0x02FF31 0B:BF21: FF        .byte $FF   ; 
-- - - - - - 0x02FF32 0B:BF22: FF        .byte $FF   ; 
-- - - - - - 0x02FF33 0B:BF23: FF        .byte $FF   ; 
-- - - - - - 0x02FF34 0B:BF24: FF        .byte $FF   ; 
-- - - - - - 0x02FF35 0B:BF25: FF        .byte $FF   ; 
-- - - - - - 0x02FF36 0B:BF26: FF        .byte $FF   ; 
-- - - - - - 0x02FF37 0B:BF27: FF        .byte $FF   ; 
-- - - - - - 0x02FF38 0B:BF28: FF        .byte $FF   ; 
-- - - - - - 0x02FF39 0B:BF29: FF        .byte $FF   ; 
-- - - - - - 0x02FF3A 0B:BF2A: FF        .byte $FF   ; 
-- - - - - - 0x02FF3B 0B:BF2B: FF        .byte $FF   ; 
-
-
 
 loc_BF2C:
 C D 1 - - - 0x02FF3C 0B:BF2C: A4 2C     LDY ram_002C
