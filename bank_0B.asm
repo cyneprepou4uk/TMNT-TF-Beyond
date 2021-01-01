@@ -12028,24 +12028,6 @@ C - - - - - 0x02FFE6 0B:BFD6: 85 A3     STA ram_00A3
 C - - - - - 0x02FFE8 0B:BFD8: 4C 46 E2  JMP loc_0x03E256
 
 
-; bzk мусор
-- - - - - - 0x02FFEB 0B:BFDB: FF        .byte $FF   ; 
-- - - - - - 0x02FFEC 0B:BFDC: FF        .byte $FF   ; 
-- - - - - - 0x02FFED 0B:BFDD: FF        .byte $FF   ; 
-- - - - - - 0x02FFEE 0B:BFDE: FF        .byte $FF   ; 
-- - - - - - 0x02FFEF 0B:BFDF: FF        .byte $FF   ; 
-- - - - - - 0x02FFF0 0B:BFE0: FF        .byte $FF   ; 
-- - - - - - 0x02FFF1 0B:BFE1: FF        .byte $FF   ; 
-- - - - - - 0x02FFF2 0B:BFE2: FF        .byte $FF   ; 
-- - - - - - 0x02FFF3 0B:BFE3: FF        .byte $FF   ; 
-- - - - - - 0x02FFF4 0B:BFE4: FF        .byte $FF   ; 
-- - - - - - 0x02FFF5 0B:BFE5: FF        .byte $FF   ; 
-- - - - - - 0x02FFF6 0B:BFE6: FF        .byte $FF   ; 
-- - - - - - 0x02FFF7 0B:BFE7: FF        .byte $FF   ; 
-- - - - - - 0x02FFF8 0B:BFE8: FF        .byte $FF   ; 
-- - - - - - 0x02FFF9 0B:BFE9: FF        .byte $FF   ; 
-
-
 
 tbl_BFEA:
 - D 1 - - - 0x02FFFA 0B:BFEA: 00        .byte $00   ; 
