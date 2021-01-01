@@ -4955,8 +4955,7 @@ C - - - - - 0x035C84 0D:9C74: 60        RTS
 
 
 
-loc_9C75:   ; bzk
-ofs_9C75_01:
+ofs_9C75_01:   ; bzk
 C D 0 J - - 0x035C85 0D:9C75: 4C A4 BF  JMP loc_BFA4
 
 
@@ -5316,7 +5315,7 @@ C - - - - - 0x035E82 0D:9E72: A9 42     LDA #$42
 C - - - - - 0x035E84 0D:9E74: 85 17     STA ram_0017
 C - - - - - 0x035E86 0D:9E76: 60        RTS
 bra_9E77:
-C - - - - - 0x035E87 0D:9E77: 4C 75 9C  JMP loc_9C75
+C - - - - - 0x035E87 0D:9E77: 4C 75 9C  JMP loc_BFA4
 bra_9E7A:
 C - - - - - 0x035E8A 0D:9E7A: A9 1D     LDA #$1D
 C - - - - - 0x035E8C 0D:9E7C: 85 17     STA ram_0017
@@ -5492,7 +5491,7 @@ C - - - - - 0x035F94 0D:9F84: A9 42     LDA #$42
 C - - - - - 0x035F96 0D:9F86: 85 17     STA ram_0017
 C - - - - - 0x035F98 0D:9F88: 60        RTS
 bra_9F89:
-C - - - - - 0x035F99 0D:9F89: 4C 75 9C  JMP loc_9C75
+C - - - - - 0x035F99 0D:9F89: 4C 75 9C  JMP loc_BFA4
 bra_9F8C:
 C - - - - - 0x035F9C 0D:9F8C: A5 28     LDA ram_random_1
 C - - - - - 0x035F9E 0D:9F8E: 30 05     BMI bra_9F95
@@ -5654,7 +5653,7 @@ C D 1 - - - 0x03607A 0D:A06A: A9 42     LDA #$42
 C - - - - - 0x03607C 0D:A06C: 85 17     STA ram_0017
 C - - - - - 0x03607E 0D:A06E: 60        RTS
 bra_A06F:
-C - - - - - 0x03607F 0D:A06F: 4C 75 9C  JMP loc_9C75
+C - - - - - 0x03607F 0D:A06F: 4C 75 9C  JMP loc_BFA4
 loc_A072:
 bra_A072:
 C D 1 - - - 0x036082 0D:A072: 20 FE ED  JSR sub_0x03EE0E
