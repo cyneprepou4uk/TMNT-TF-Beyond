@@ -8041,13 +8041,6 @@ C - - - - - 0x03E755 0F:E745: E6 95     INC ram_0095
 C - - - - - 0x03E757 0F:E747: 4C 6E DD  JMP loc_DD6E
 
 
-; bzk мусор
-- - - - - - 0x03E75A 0F:E74A: A9 00     LDA #$00
-- - - - - - 0x03E75C 0F:E74C: A8        TAY
-- - - - - - 0x03E75D 0F:E74D: 20 94 D3  JSR sub_D394
-- - - - - - 0x03E760 0F:E750: 4C 41 E1  JMP loc_E141
-
-
 
 ofs_E753_0F:
 C - - J - - 0x03E763 0F:E753: E6 95     INC ram_0095
