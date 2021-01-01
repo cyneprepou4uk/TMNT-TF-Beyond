@@ -11439,17 +11439,6 @@ tbl_AE20:
 - D 1 - - - 0x02EE37 0B:AE27: 3E        .byte $3E   ; 07
 
 
-; bzk мусор
-- - - - - - 0x02EE38 0B:AE28: FF        .byte $FF   ; 
-- - - - - - 0x02EE39 0B:AE29: FF        .byte $FF   ; 
-- - - - - - 0x02EE3A 0B:AE2A: FF        .byte $FF   ; 
-- - - - - - 0x02EE3B 0B:AE2B: FF        .byte $FF   ; 
-- - - - - - 0x02EE3C 0B:AE2C: FF        .byte $FF   ; 
-- - - - - - 0x02EE3D 0B:AE2D: FF        .byte $FF   ; 
-- - - - - - 0x02EE3E 0B:AE2E: FF        .byte $FF   ; 
-- - - - - - 0x02EE3F 0B:AE2F: FF        .byte $FF   ; 
-
-
 
 tbl_AE30:
 - D 1 - - - 0x02EE40 0B:AE30: 68        .byte $68   ; 
