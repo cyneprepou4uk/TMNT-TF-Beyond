@@ -468,10 +468,19 @@ C - - - - - 0x02435C 09:834C: 4C AA 8B  JMP loc_8BAA
 
 loc_834F:
 C D 0 - - - 0x02435F 09:834F: BC 50 05  LDY ram_0550,X
-C - - - - - 0x024362 09:8352: B9 D8 E3  LDA tbl_0x03E3E8,Y
+C - - - - - 0x024362 09:8352: B9 D8 E3  LDA tbl_E3D8,Y
 C - - - - - 0x024365 09:8355: A8        TAY
 C - - - - - 0x024366 09:8356: A9 01     LDA #$01
 C - - - - - 0x024368 09:8358: 4C 81 84  JMP loc_8481
+
+tbl_E3D8:
+- D 3 - - - 0x03E3E8 0F:E3D8: 04        .byte $04   ; 20
+- D 3 - - - 0x03E3E9 0F:E3D9: 04        .byte $04   ; 21
+- D 3 - - - 0x03E3EA 0F:E3DA: 04        .byte $04   ; 22
+- D 3 - - - 0x03E3EB 0F:E3DB: 04        .byte $04   ; 23
+- D 3 - - - 0x03E3EC 0F:E3DC: 04        .byte $04   ; 24
+- D 3 - - - 0x03E3ED 0F:E3DD: 05        .byte $05   ; 25
+- D 3 - - - 0x03E3EE 0F:E3DE: 04        .byte $04   ; 26
 
 
 

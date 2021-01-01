@@ -6213,62 +6213,6 @@ C - - - - - 0x03DDC5 0F:DDB5: 60        RTS
 
 
 
-.export tbl_0x03DDC6
-tbl_0x03DDC6:
-- D 2 - - - 0x03DDC6 0F:DDB6: FC        .byte $FC   ; 
-- D 2 - - - 0x03DDC7 0F:DDB7: FD        .byte $FD   ; 
-- D 2 - - - 0x03DDC8 0F:DDB8: FC        .byte $FC   ; 
-- D 2 - - - 0x03DDC9 0F:DDB9: FC        .byte $FC   ; 
-- D 2 - - - 0x03DDCA 0F:DDBA: FE        .byte $FE   ; 
-- D 2 - - - 0x03DDCB 0F:DDBB: 03        .byte $03   ; 
-- D 2 - - - 0x03DDCC 0F:DDBC: FF        .byte $FF   ; 
-- D 2 - - - 0x03DDCD 0F:DDBD: FE        .byte $FE   ; 
-- D 2 - - - 0x03DDCE 0F:DDBE: FD        .byte $FD   ; 
-- D 2 - - - 0x03DDCF 0F:DDBF: FC        .byte $FC   ; 
-- D 2 - - - 0x03DDD0 0F:DDC0: FD        .byte $FD   ; 
-- D 2 - - - 0x03DDD1 0F:DDC1: FE        .byte $FE   ; 
-- D 2 - - - 0x03DDD2 0F:DDC2: 01        .byte $01   ; 
-- D 2 - - - 0x03DDD3 0F:DDC3: 00        .byte $00   ; 
-- D 2 - - - 0x03DDD4 0F:DDC4: FD        .byte $FD   ; 
-- D 2 - - - 0x03DDD5 0F:DDC5: FE        .byte $FE   ; 
-- D 2 - - - 0x03DDD6 0F:DDC6: FD        .byte $FD   ; 
-- D 2 - - - 0x03DDD7 0F:DDC7: FD        .byte $FD   ; 
-- D 2 - - - 0x03DDD8 0F:DDC8: FF        .byte $FF   ; 
-- D 2 - - - 0x03DDD9 0F:DDC9: 05        .byte $05   ; 
-- D 2 - - - 0x03DDDA 0F:DDCA: FF        .byte $FF   ; 
-- D 2 - - - 0x03DDDB 0F:DDCB: FC        .byte $FC   ; 
-- D 2 - - - 0x03DDDC 0F:DDCC: FD        .byte $FD   ; 
-- D 2 - - - 0x03DDDD 0F:DDCD: FC        .byte $FC   ; 
-- D 2 - - - 0x03DDDE 0F:DDCE: FC        .byte $FC   ; 
-- D 2 - - - 0x03DDDF 0F:DDCF: FE        .byte $FE   ; 
-- D 2 - - - 0x03DDE0 0F:DDD0: 03        .byte $03   ; 
-- D 2 - - - 0x03DDE1 0F:DDD1: FF        .byte $FF   ; 
-- D 2 - - - 0x03DDE2 0F:DDD2: FC        .byte $FC   ; 
-- D 2 - - - 0x03DDE3 0F:DDD3: FD        .byte $FD   ; 
-- D 2 - - - 0x03DDE4 0F:DDD4: FC        .byte $FC   ; 
-- D 2 - - - 0x03DDE5 0F:DDD5: FC        .byte $FC   ; 
-- D 2 - - - 0x03DDE6 0F:DDD6: FE        .byte $FE   ; 
-- D 2 - - - 0x03DDE7 0F:DDD7: 01        .byte $01   ; 
-- D 2 - - - 0x03DDE8 0F:DDD8: FF        .byte $FF   ; 
-- D 2 - - - 0x03DDE9 0F:DDD9: FC        .byte $FC   ; 
-- D 2 - - - 0x03DDEA 0F:DDDA: FD        .byte $FD   ; 
-- D 2 - - - 0x03DDEB 0F:DDDB: FC        .byte $FC   ; 
-- D 2 - - - 0x03DDEC 0F:DDDC: FC        .byte $FC   ; 
-- D 2 - - - 0x03DDED 0F:DDDD: FE        .byte $FE   ; 
-- D 2 - - - 0x03DDEE 0F:DDDE: 03        .byte $03   ; 
-- D 2 - - - 0x03DDEF 0F:DDDF: 00        .byte $00   ; 
-- D 2 - - - 0x03DDF0 0F:DDE0: FC        .byte $FC   ; 
-- D 2 - - - 0x03DDF1 0F:DDE1: FD        .byte $FD   ; 
-- D 2 - - - 0x03DDF2 0F:DDE2: FC        .byte $FC   ; 
-- D 2 - - - 0x03DDF3 0F:DDE3: FC        .byte $FC   ; 
-- D 2 - - - 0x03DDF4 0F:DDE4: FE        .byte $FE   ; 
-- D 2 - - - 0x03DDF5 0F:DDE5: 00        .byte $00   ; 
-- D 2 - - - 0x03DDF6 0F:DDE6: 00        .byte $00   ; 
-- - - - - - 0x03DDF7 0F:DDE7: FF        .byte $FF   ; 
-- - - - - - 0x03DDF8 0F:DDE8: FF        .byte $FF   ; 
-
-
-
 .export sub_0x03DDF9
 sub_0x03DDF9:
 .export loc_0x03DDF9
@@ -7504,18 +7448,6 @@ tbl_E3B8_prg_bank:
 
 
 
-.export tbl_0x03E3E8
-tbl_0x03E3E8:
-- D 3 - - - 0x03E3E8 0F:E3D8: 04        .byte $04   ; 20
-- D 3 - - - 0x03E3E9 0F:E3D9: 04        .byte $04   ; 21
-- D 3 - - - 0x03E3EA 0F:E3DA: 04        .byte $04   ; 22
-- D 3 - - - 0x03E3EB 0F:E3DB: 04        .byte $04   ; 23
-- D 3 - - - 0x03E3EC 0F:E3DC: 04        .byte $04   ; 24
-- D 3 - - - 0x03E3ED 0F:E3DD: 05        .byte $05   ; 25
-- D 3 - - - 0x03E3EE 0F:E3DE: 04        .byte $04   ; 26
-
-
-
 loc_E3E3:
 C D 3 - - - 0x03E3F3 0F:E3E3: AD 50 01  LDA ram_0150
 C - - - - - 0x03E3F6 0F:E3E6: 4A        LSR
@@ -7596,13 +7528,6 @@ tbl_E469:
 tbl_0x03E479:
 - D 3 - - - 0x03E479 0F:E469: 58        .byte $58   ; 00
 - D 3 - - - 0x03E47A 0F:E46A: A8        .byte $A8   ; 01
-
-
-
-.export tbl_0x03E47B
-tbl_0x03E47B:
-- D 3 - - - 0x03E47B 0F:E46B: 00        .byte $00   ; 00
-- D 3 - - - 0x03E47C 0F:E46C: 40        .byte $40   ; 01
 
 
 
