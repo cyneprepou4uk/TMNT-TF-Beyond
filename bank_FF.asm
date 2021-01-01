@@ -9376,14 +9376,6 @@ bra_EE5F:
 - - - - - - 0x03EE70 0F:EE60: 60        RTS
 
 
-; bzk мусор
-bra_EE61:
-- - - - - - 0x03EE71 0F:EE61: 0A        ASL
-- - - - - - 0x03EE72 0F:EE62: 88        DEY
-- - - - - - 0x03EE73 0F:EE63: D0 FC     BNE bra_EE61
-- - - - - - 0x03EE75 0F:EE65: 60        RTS
-
-
 
 .export sub_0x03EE76
 sub_0x03EE76:
