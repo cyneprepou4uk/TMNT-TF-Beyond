@@ -7825,10 +7825,6 @@ bra_E5F3:
 C - - - - - 0x03E603 0F:E5F3: 4C 7D E6  JMP loc_E67D
 
 
-; bzk мусор
-- - - - - - 0x03E606 0F:E5F6: E6 9E     INC ram_009E
-
-
 
 bra_E5F8:
 C - - - - - 0x03E608 0F:E5F8: A5 9E     LDA ram_009E
