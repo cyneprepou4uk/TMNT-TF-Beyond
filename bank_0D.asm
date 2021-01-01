@@ -4955,7 +4955,7 @@ C - - - - - 0x035C84 0D:9C74: 60        RTS
 
 
 
-loc_9C75:
+loc_9C75:   ; bzk
 ofs_9C75_01:
 C D 0 J - - 0x035C85 0D:9C75: 4C A4 BF  JMP loc_BFA4
 
