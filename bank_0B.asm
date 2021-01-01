@@ -11527,32 +11527,6 @@ C - - - - - 0x02EECE 0B:AEBE: 60        RTS
 
 
 ; bzk мусор
-tbl_AF3D:
-- D 1 - - - 0x02EF4D 0B:AF3D: 21        .byte $21   ; 
-- D 1 - - - 0x02EF4E 0B:AF3E: 23        .byte $23   ; 
-- D 1 - - - 0x02EF4F 0B:AF3F: 25        .byte $25   ; 
-
-
-; bzk мусор
-.export sub_0x02EF50
-sub_0x02EF50:
-C - - - - - 0x02EF50 0B:AF40: AD 2B 01  LDA ram_option_skin
-C - - - - - 0x02EF53 0B:AF43: 29 07     AND #$07    ; bzk тут достаточно AND #$03, так как всего 3 таблицы
-C - - - - - 0x02EF55 0B:AF45: A8        TAY
-C - - - - - 0x02EF56 0B:AF46: A5 01     LDA ram_0001
-C - - - - - 0x02EF58 0B:AF48: F9 3D AF  SBC tbl_AF3D,Y
-C - - - - - 0x02EF5B 0B:AF4B: 85 01     STA ram_0001
-C - - - - - 0x02EF5D 0B:AF4D: A0 02     LDY #$02
-bra_AF4F_loop:
-C - - - - - 0x02EF5F 0B:AF4F: B1 00     LDA (ram_0000),Y
-C - - - - - 0x02EF61 0B:AF51: 9D 4C 06  STA ram_064C,X
-C - - - - - 0x02EF64 0B:AF54: CA        DEX
-C - - - - - 0x02EF65 0B:AF55: 88        DEY
-C - - - - - 0x02EF66 0B:AF56: 10 F7     BPL bra_AF4F_loop
-C - - - - - 0x02EF68 0B:AF58: 4C 17 F6  JMP loc_0x03F627
-
-
-; bzk мусор
 - - - - - - 0x02EF6B 0B:AF5B: FF        .byte $FF   ; 
 - - - - - - 0x02EF6C 0B:AF5C: FF        .byte $FF   ; 
 - - - - - - 0x02EF6D 0B:AF5D: FF        .byte $FF   ; 
