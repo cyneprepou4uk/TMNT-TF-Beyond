@@ -2372,13 +2372,13 @@ C - - - - - 0x020F2A 08:8F1A: 8D 7C 07  STA ram_077C
 C - - - - - 0x020F2D 08:8F1D: AD 86 07  LDA ram_0786
 C - - - - - 0x020F30 08:8F20: D0 27     BNE bra_8F49
 C - - - - - 0x020F32 08:8F22: A0 FF     LDY #$FF
-bra_8F24:
+bra_8F24_loop:
 C - - - - - 0x020F34 08:8F24: C8        INY
 C - - - - - 0x020F35 08:8F25: B1 E6     LDA (ram_00E6),Y
 C - - - - - 0x020F37 08:8F27: C9 FF     CMP #$FF
-C - - - - - 0x020F39 08:8F29: D0 F9     BNE bra_8F24
+C - - - - - 0x020F39 08:8F29: D0 F9     BNE bra_8F24_loop
 C - - - - - 0x020F3B 08:8F2B: CE 77 07  DEC ram_0777
-C - - - - - 0x020F3E 08:8F2E: 10 F4     BPL bra_8F24
+C - - - - - 0x020F3E 08:8F2E: 10 F4     BPL bra_8F24_loop
 C - - - - - 0x020F40 08:8F30: C8        INY
 C - - - - - 0x020F41 08:8F31: 8C 7C 07  STY ram_077C
 C - - - - - 0x020F44 08:8F34: D0 29     BNE bra_8F5F
@@ -2991,7 +2991,7 @@ _off002_91D7_0B:
 - D 0 - I - 0x0211FD 08:91ED: FF        .byte $FF   ; 
 
 
-; bzk мусор
+; bzk вероятно мусор
 - - - - - - 0x0211FE 08:91EE: 02        .byte $02   ; 
 - - - - - - 0x0211FF 08:91EF: 11        .byte $11   ; 
 - - - - - - 0x021200 08:91F0: 24        .byte $24   ; 
