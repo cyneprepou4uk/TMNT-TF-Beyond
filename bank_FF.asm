@@ -12039,11 +12039,6 @@ tbl_FE37:
 - D 3 - - - 0x03FE66 0F:FE56: FE        .byte $FE   ; 
 
 
-; bzk мусор
-- - - - - - 0x03FE67 0F:FE57: EA        .byte $EA   ; 
-- - - - - - 0x03FE68 0F:FE58: EA        .byte $EA   ; 
-
-
 
 .export sub_0x03FE69
 sub_0x03FE69:
