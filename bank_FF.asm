@@ -11177,12 +11177,6 @@ tbl_F885:
 - D 3 - - - 0x03F89C 0F:F88C: 1E        .byte off_F8AE - tbl_F890   ; 07
 
 
-; bzk мусор
-- - - - - - 0x03F89D 0F:F88D: EA        .byte $EA   ; 
-- - - - - - 0x03F89E 0F:F88E: EA        .byte $EA   ; 
-- - - - - - 0x03F89F 0F:F88F: EA        .byte $EA   ; 
-
-
 
 tbl_F890:
 off_F890:
