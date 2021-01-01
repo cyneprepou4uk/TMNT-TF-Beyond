@@ -4827,20 +4827,6 @@ bra_D32F_RTS:
 C - - - - - 0x03D33F 0F:D32F: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x03D340 0F:D330: A5 8E     LDA ram_008E
-- - - - - - 0x03D342 0F:D332: 29 0C     AND #$0C
-- - - - - - 0x03D344 0F:D334: F0 0D     BEQ bra_D343
-- - - - - - 0x03D346 0F:D336: 29 08     AND #$08
-- - - - - - 0x03D348 0F:D338: D0 06     BNE bra_D340
-- - - - - - 0x03D34A 0F:D33A: EE 00 04  INC ram_0400
-- - - - - - 0x03D34D 0F:D33D: EE 00 04  INC ram_0400
-bra_D340:
-- - - - - - 0x03D350 0F:D340: CE 00 04  DEC ram_0400
-bra_D343:
-- - - - - - 0x03D353 0F:D343: 4C 14 F7  JMP loc_F714
-
-
 
 sub_D346:
 loc_D346:
