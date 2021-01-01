@@ -1877,13 +1877,6 @@ bra_8A25_RTS:
 C - - - - - 0x038A35 0E:8A25: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x038A36 0E:8A26: EA        .byte $EA   ; 
-- - - - - - 0x038A37 0E:8A27: EA        .byte $EA   ; 
-- - - - - - 0x038A38 0E:8A28: EA        .byte $EA   ; 
-- - - - - - 0x038A39 0E:8A29: EA        .byte $EA   ; 
-
-
 
 tbl_8A2A:
 - D 0 - - - 0x038A3A 0E:8A2A: 40        .byte $40   ; 00
