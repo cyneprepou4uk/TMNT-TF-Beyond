@@ -5555,11 +5555,6 @@ loc_9FE1:
 C D 0 - - - 0x035FF1 0D:9FE1: 4C 3E BF  JMP loc_BF3E
 
 
-; bzk мусор
-- - - - - - 0x035FF4 0D:9FE4: EA        NOP
-- - - - - - 0x035FF5 0D:9FE5: 60        RTS
-
-
 
 bra_9FE6:
 C - - - - - 0x035FF6 0D:9FE6: A5 11     LDA ram_0011
