@@ -8537,10 +8537,6 @@ bra_EA2A_RTS:
 C - - - - - 0x03EA3A 0F:EA2A: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x03EA3B 0F:EA2B: EA        NOP
-
-
 
 .export sub_0x03EA3C
 sub_0x03EA3C:
