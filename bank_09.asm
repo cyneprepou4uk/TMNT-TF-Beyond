@@ -1742,13 +1742,6 @@ C - - - - - 0x024C3B 09:8C2B: 20 32 D0  JSR sub_0x03D042
 - D 0 - I - 0x024C4E 09:8C3E: CA 8E     .word ofs_8ECA_08
 
 
-; bzk мусор
-- - - - - - 0x024C50 09:8C40: EA        .byte $EA   ; 
-- - - - - - 0x024C51 09:8C41: EA        .byte $EA   ; 
-- - - - - - 0x024C52 09:8C42: EA        .byte $EA   ; 
-- - - - - - 0x024C53 09:8C43: EA        .byte $EA   ; 
-
-
 
 bra_8C44:
 loc_8C44:
