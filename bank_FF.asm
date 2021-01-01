@@ -12274,14 +12274,6 @@ C - - - - - 0x03FF7F 0F:FF6F: 86 AD     STX ram_00AD
 C - - - - - 0x03FF81 0F:FF71: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x040005 0F:FFF5: 93        .byte $93   ; 
-- - - - - - 0x040006 0F:FFF6: 12        .byte $12   ; 
-- - - - - - 0x040007 0F:FFF7: 09        .byte $09   ; 
-- - - - - - 0x040008 0F:FFF8: 01        .byte $01   ; 
-- - - - - - 0x040009 0F:FFF9: 89        .byte $89   ; 
-
-
 .segment "VECTORS"
 - D 3 - - - 0x04000A 0F:FFFA: 19 F2     .word vec_F219_NMI_handler
 - D 3 - - - 0x04000C 0F:FFFC: 74 F1     .word vec_F174_RESET_handler
