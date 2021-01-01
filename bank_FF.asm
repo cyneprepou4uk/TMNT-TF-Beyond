@@ -11806,16 +11806,6 @@ tbl_FCBA:
 - D 3 - - - 0x03FCD1 0F:FCC1: 3B        .byte $3B   ; 07
 
 
-; bzk мусор
-- - - - - - 0x03FCD2 0F:FCC2: EA        .byte $EA   ; 
-- - - - - - 0x03FCD3 0F:FCC3: EA        .byte $EA   ; 
-- - - - - - 0x03FCD4 0F:FCC4: EA        .byte $EA   ; 
-- - - - - - 0x03FCD5 0F:FCC5: EA        .byte $EA   ; 
-- - - - - - 0x03FCD6 0F:FCC6: EA        .byte $EA   ; 
-- - - - - - 0x03FCD7 0F:FCC7: EA        .byte $EA   ; 
-- - - - - - 0x03FCD8 0F:FCC8: EA        .byte $EA   ; 
-
-
 
 loc_FCC9:
 C D 3 - - - 0x03FCD9 0F:FCC9: A9 00     LDA #$00
