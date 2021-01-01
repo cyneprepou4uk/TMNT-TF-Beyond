@@ -7195,42 +7195,6 @@ C - - - - - 0x03A72A 0E:A71A: 10 FA     BPL bra_A716
 C - - - - - 0x03A72C 0E:A71C: 4C 59 D2  JMP loc_0x03D269
 
 
-; bzk мусор
-- - - - - - 0x03A72F 0E:A71F: FF        .byte $FF   ; 
-- - - - - - 0x03A730 0E:A720: FF        .byte $FF   ; 
-- - - - - - 0x03A731 0E:A721: FF        .byte $FF   ; 
-- - - - - - 0x03A732 0E:A722: FF        .byte $FF   ; 
-- - - - - - 0x03A733 0E:A723: FF        .byte $FF   ; 
-- - - - - - 0x03A734 0E:A724: FF        .byte $FF   ; 
-- - - - - - 0x03A735 0E:A725: FF        .byte $FF   ; 
-- - - - - - 0x03A736 0E:A726: FF        .byte $FF   ; 
-- - - - - - 0x03A737 0E:A727: FF        .byte $FF   ; 
-- - - - - - 0x03A738 0E:A728: FF        .byte $FF   ; 
-- - - - - - 0x03A739 0E:A729: FF        .byte $FF   ; 
-- - - - - - 0x03A73A 0E:A72A: FF        .byte $FF   ; 
-- - - - - - 0x03A73B 0E:A72B: FF        .byte $FF   ; 
-- - - - - - 0x03A73C 0E:A72C: FF        .byte $FF   ; 
-- - - - - - 0x03A73D 0E:A72D: FF        .byte $FF   ; 
-- - - - - - 0x03A73E 0E:A72E: FF        .byte $FF   ; 
-- - - - - - 0x03A73F 0E:A72F: FF        .byte $FF   ; 
-- - - - - - 0x03A740 0E:A730: FF        .byte $FF   ; 
-- - - - - - 0x03A741 0E:A731: FF        .byte $FF   ; 
-- - - - - - 0x03A742 0E:A732: FF        .byte $FF   ; 
-- - - - - - 0x03A743 0E:A733: FF        .byte $FF   ; 
-- - - - - - 0x03A744 0E:A734: FF        .byte $FF   ; 
-- - - - - - 0x03A745 0E:A735: FF        .byte $FF   ; 
-- - - - - - 0x03A746 0E:A736: FF        .byte $FF   ; 
-- - - - - - 0x03A747 0E:A737: FF        .byte $FF   ; 
-- - - - - - 0x03A748 0E:A738: FF        .byte $FF   ; 
-- - - - - - 0x03A749 0E:A739: FF        .byte $FF   ; 
-- - - - - - 0x03A74A 0E:A73A: FF        .byte $FF   ; 
-- - - - - - 0x03A74B 0E:A73B: FF        .byte $FF   ; 
-- - - - - - 0x03A74C 0E:A73C: FF        .byte $FF   ; 
-- - - - - - 0x03A74D 0E:A73D: FF        .byte $FF   ; 
-- - - - - - 0x03A74E 0E:A73E: FF        .byte $FF   ; 
-- - - - - - 0x03A74F 0E:A73F: FF        .byte $FF   ; 
-
-
 
 sub_A740:
 C - - - - - 0x03A750 0E:A740: AC 28 01  LDY ram_option_health
