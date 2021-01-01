@@ -1582,11 +1582,6 @@ bra_8B08:
 C - - - - - 0x024B18 09:8B08: BD 20 05  LDA ram_0520,X
 C - - - - - 0x024B1B 09:8B0B: C9 01     CMP #$01
 C - - - - - 0x024B1D 09:8B0D: D0 0F     BNE bra_8B1E
-C - - - - - 0x024B1F 09:8B0F: 4C 1B 8B  JMP loc_8B1B
-
-
-
-loc_8B1B:
 C D 0 - - - 0x024B2B 09:8B1B: 4C A2 8B  JMP loc_8BA2
 bra_8B1E:
 C - - - - - 0x024B2E 09:8B1E: 20 6A D0  JSR sub_0x03D07A
