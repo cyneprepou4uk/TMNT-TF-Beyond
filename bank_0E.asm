@@ -263,24 +263,23 @@ C - - - - - 0x0381DF 0E:81CF: 60        RTS
 
 loc_81D0:
 C D 0 - - - 0x0381E0 0E:81D0: AD B0 04  LDA ram_04B0
-C - - - - - 0x0381E3 0E:81D3: A8        TAY     ; bzk опт
-C - - - - - 0x0381E4 0E:81D4: B9 06 82  LDA tbl_8206,Y
+                                        TAX
+                                        ASL
+                                        TAY
+C - - - - - 0x0381E4 0E:81D4: B9 06 82  LDA tbl_8206,X
 C - - - - - 0x0381E7 0E:81D7: 8D 01 05  STA ram_0501
-C - - - - - 0x0381EA 0E:81DA: AD B0 04  LDA ram_04B0
-C - - - - - 0x0381ED 0E:81DD: 0A        ASL
-C - - - - - 0x0381EE 0E:81DE: A8        TAY
 C - - - - - 0x0381EF 0E:81DF: B9 F8 81  LDA tbl_81F8,Y
 C - - - - - 0x0381F2 0E:81E2: 85 00     STA ram_0000
 C - - - - - 0x0381F4 0E:81E4: B9 F9 81  LDA tbl_81F8 + 1,Y
 C - - - - - 0x0381F7 0E:81E7: 85 01     STA ram_0001
 C - - - - - 0x0381F9 0E:81E9: A0 00     LDY #$00
-bra_81EB:
+bra_81EB_loop:
 C - - - - - 0x0381FB 0E:81EB: B1 00     LDA (ram_0000),Y
 C - - - - - 0x0381FD 0E:81ED: C9 FF     CMP #$FF
 C - - - - - 0x0381FF 0E:81EF: F0 06     BEQ bra_81F7_RTS
 C - - - - - 0x038201 0E:81F1: 20 5D D2  JSR sub_0x03D26D
 C - - - - - 0x038204 0E:81F4: C8        INY
-C - - - - - 0x038205 0E:81F5: D0 F4     BNE bra_81EB
+C - - - - - 0x038205 0E:81F5: D0 F4     BNE bra_81EB_loop
 bra_81F7_RTS:
 C - - - - - 0x038207 0E:81F7: 60        RTS
 
