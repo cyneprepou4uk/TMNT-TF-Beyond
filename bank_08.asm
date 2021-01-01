@@ -10159,6 +10159,7 @@ off_FF_AE28:
 
 
 _off001_AE53_2B:
+off_FF_AE53:
 - D 1 - I - 0x022E63 08:AE53: EF        .byte $EF   ; 
 - D 1 - I - 0x022E64 08:AE54: 0B        .byte $0B   ; 
 - D 1 - I - 0x022E65 08:AE55: FB        .byte $FB   ; 
@@ -10187,8 +10188,7 @@ _off001_AE53_2B:
 - D 1 - I - 0x022E7C 08:AE6C: DE        .byte $DE   ; 
 - D 1 - I - 0x022E7D 08:AE6D: FE        .byte $FE   ; 
 - D 1 - I - 0x022E7E 08:AE6E: FF        .byte $FF   ; 
-- D 1 - I - 0x022E7F 08:AE6F: 53        .byte $53   ; 
-- D 1 - I - 0x022E80 08:AE70: AE        .byte $AE   ; 
+- D 1 - I - 0x022E7F 08:AE6F: 53 AE     .word off_FF_AE53
 off_FD_AE71:
 - D 1 - I - 0x022E81 08:AE71: E2        .byte $E2   ; 
 - D 1 - I - 0x022E82 08:AE72: 71        .byte $71   ; 
