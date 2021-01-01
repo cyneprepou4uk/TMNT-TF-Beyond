@@ -11178,38 +11178,7 @@ tbl_ACD0:
 - D 1 - - - 0x02ECF0 0B:ACE0: 0F        .byte $0F   ; 
 - D 1 - - - 0x02ECF1 0B:ACE1: 11        .byte $11   ; 
 - D 1 - - - 0x02ECF2 0B:ACE2: 21        .byte $21   ; 
-- D 1 - - - 0x02ECF3 0B:ACE3: 20        .byte $20   ; 
-
-
-; bzk мусор
-- - - - - - 0x02ECF4 0B:ACE4: FF        .byte $FF   ; 
-- - - - - - 0x02ECF5 0B:ACE5: FF        .byte $FF   ; 
-- - - - - - 0x02ECF6 0B:ACE6: FF        .byte $FF   ; 
-- - - - - - 0x02ECF7 0B:ACE7: FF        .byte $FF   ; 
-- - - - - - 0x02ECF8 0B:ACE8: FF        .byte $FF   ; 
-- - - - - - 0x02ECF9 0B:ACE9: FF        .byte $FF   ; 
-- - - - - - 0x02ECFA 0B:ACEA: FF        .byte $FF   ; 
-- - - - - - 0x02ECFB 0B:ACEB: FF        .byte $FF   ; 
-- - - - - - 0x02ECFC 0B:ACEC: FF        .byte $FF   ; 
-- - - - - - 0x02ECFD 0B:ACED: FF        .byte $FF   ; 
-- - - - - - 0x02ECFE 0B:ACEE: FF        .byte $FF   ; 
-- - - - - - 0x02ECFF 0B:ACEF: FF        .byte $FF   ; 
-- - - - - - 0x02ED00 0B:ACF0: FF        .byte $FF   ; 
-- - - - - - 0x02ED01 0B:ACF1: FF        .byte $FF   ; 
-- - - - - - 0x02ED02 0B:ACF2: FF        .byte $FF   ; 
-- - - - - - 0x02ED03 0B:ACF3: FF        .byte $FF   ; 
-- - - - - - 0x02ED04 0B:ACF4: FF        .byte $FF   ; 
-- - - - - - 0x02ED05 0B:ACF5: FF        .byte $FF   ; 
-- - - - - - 0x02ED06 0B:ACF6: FF        .byte $FF   ; 
-- - - - - - 0x02ED07 0B:ACF7: FF        .byte $FF   ; 
-- - - - - - 0x02ED08 0B:ACF8: FF        .byte $FF   ; 
-- - - - - - 0x02ED09 0B:ACF9: FF        .byte $FF   ; 
-- - - - - - 0x02ED0A 0B:ACFA: FF        .byte $FF   ; 
-- - - - - - 0x02ED0B 0B:ACFB: FF        .byte $FF   ; 
-- - - - - - 0x02ED0C 0B:ACFC: FF        .byte $FF   ; 
-- - - - - - 0x02ED0D 0B:ACFD: FF        .byte $FF   ; 
-- - - - - - 0x02ED0E 0B:ACFE: FF        .byte $FF   ; 
-- - - - - - 0x02ED0F 0B:ACFF: FF        .byte $FF   ; 
+- D 1 - - - 0x02ECF3 0B:ACE3: 20        .byte $20   ;
 
 
 
