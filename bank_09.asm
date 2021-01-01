@@ -5187,10 +5187,6 @@ C - - - - - 0x025CAF 09:9C9F: D0 0B     BNE bra_9CAC_RTS
 C - - - - - 0x025CB1 09:9CA1: F0 01     BEQ bra_9CA4
 
 
-; bzk мусор
-- - - - - - 0x025CB3 09:9CA3: 60        RTS
-
-
 
 bra_9CA4:
 loc_9CA4:
