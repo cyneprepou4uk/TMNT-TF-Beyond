@@ -5013,10 +5013,6 @@ C - - - - - 0x035CC7 0D:9CB7: D0 0A     BNE bra_9CC3_RTS
 C - - - - - 0x035CC9 0D:9CB9: 4C 5F BF  JMP loc_BF5F
 
 
-; bzk мусор
-- - - - - - 0x035CCC 0D:9CBC: EA        NOP
-
-
 
 loc_9CBD:
 C D 0 - - - 0x035CCD 0D:9CBD: B0 04     BCS bra_9CC3_RTS
