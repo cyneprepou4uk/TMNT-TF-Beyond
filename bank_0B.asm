@@ -7877,35 +7877,6 @@ _off003_0x02DF9E_0C:
 - D 1 - I - 0x02E06A 0B:A05A: FF        .byte $FF   ; 
 
 
-; bzk мусор
-- - - - - - 0x02E06B 0B:A05B: FF        .byte $FF   ; 
-- - - - - - 0x02E06C 0B:A05C: FF        .byte $FF   ; 
-- - - - - - 0x02E06D 0B:A05D: FF        .byte $FF   ; 
-- - - - - - 0x02E06E 0B:A05E: FF        .byte $FF   ; 
-- - - - - - 0x02E06F 0B:A05F: FF        .byte $FF   ; 
-- - - - - - 0x02E070 0B:A060: FF        .byte $FF   ; 
-- - - - - - 0x02E071 0B:A061: FF        .byte $FF   ; 
-- - - - - - 0x02E072 0B:A062: FF        .byte $FF   ; 
-- - - - - - 0x02E073 0B:A063: FF        .byte $FF   ; 
-- - - - - - 0x02E074 0B:A064: FF        .byte $FF   ; 
-- - - - - - 0x02E075 0B:A065: FF        .byte $FF   ; 
-- - - - - - 0x02E076 0B:A066: FF        .byte $FF   ; 
-- - - - - - 0x02E077 0B:A067: FF        .byte $FF   ; 
-- - - - - - 0x02E078 0B:A068: FF        .byte $FF   ; 
-- - - - - - 0x02E079 0B:A069: FF        .byte $FF   ; 
-- - - - - - 0x02E07A 0B:A06A: FF        .byte $FF   ; 
-- - - - - - 0x02E07B 0B:A06B: FF        .byte $FF   ; 
-- - - - - - 0x02E07C 0B:A06C: FF        .byte $FF   ; 
-- - - - - - 0x02E07D 0B:A06D: FF        .byte $FF   ; 
-- - - - - - 0x02E07E 0B:A06E: FF        .byte $FF   ; 
-- - - - - - 0x02E07F 0B:A06F: FF        .byte $FF   ; 
-- - - - - - 0x02E080 0B:A070: FF        .byte $FF   ; 
-- - - - - - 0x02E081 0B:A071: FF        .byte $FF   ; 
-- - - - - - 0x02E082 0B:A072: FF        .byte $FF   ; 
-- - - - - - 0x02E083 0B:A073: FF        .byte $FF   ; 
-- - - - - - 0x02E084 0B:A074: FF        .byte $FF   ; 
-
-
 
 .export _off003_0x02E085_15
 _off003_0x02E085_15:
