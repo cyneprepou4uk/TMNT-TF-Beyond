@@ -3504,26 +3504,6 @@ _off010_8AD6_59:
 @end:
 
 
-; bzk мусор
-- - - - - - 0x030AF7 0C:8AE7: FF        .byte $FF   ; 
-- - - - - - 0x030AF8 0C:8AE8: FF        .byte $FF   ; 
-- - - - - - 0x030AF9 0C:8AE9: FF        .byte $FF   ; 
-- - - - - - 0x030AFA 0C:8AEA: FF        .byte $FF   ; 
-- - - - - - 0x030AFB 0C:8AEB: FF        .byte $FF   ; 
-- - - - - - 0x030AFC 0C:8AEC: FF        .byte $FF   ; 
-- - - - - - 0x030AFD 0C:8AED: FF        .byte $FF   ; 
-- - - - - - 0x030AFE 0C:8AEE: FF        .byte $FF   ; 
-- - - - - - 0x030AFF 0C:8AEF: FF        .byte $FF   ; 
-- - - - - - 0x030B00 0C:8AF0: FF        .byte $FF   ; 
-- - - - - - 0x030B01 0C:8AF1: FF        .byte $FF   ; 
-- - - - - - 0x030B02 0C:8AF2: FF        .byte $FF   ; 
-- - - - - - 0x030B03 0C:8AF3: FF        .byte $FF   ; 
-- - - - - - 0x030B04 0C:8AF4: FF        .byte $FF   ; 
-- - - - - - 0x030B05 0C:8AF5: FF        .byte $FF   ; 
-- - - - - - 0x030B06 0C:8AF6: FF        .byte $FF   ; 
-- - - - - - 0x030B07 0C:8AF7: FF        .byte $FF   ; 
-
-
 
 _off004_8AF8_30:
 - D 0 - I - 0x030B08 0C:8AF8: 74 20     .word $2074
