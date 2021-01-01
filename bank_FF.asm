@@ -9587,27 +9587,6 @@ C - - - - - 0x03EF9E 0F:EF8E: 4C 27 AE  JMP loc_0x026E37
 
 
 
-.export sub_0x03EFA1
-sub_0x03EFA1:
-C - - - - - 0x03EFA1 0F:EF91: B9 50 05  LDA ram_0550,Y
-C - - - - - 0x03EFA4 0F:EF94: A8        TAY
-C - - - - - 0x03EFA5 0F:EF95: B9 9C EF  LDA tbl_EF9C,Y
-C - - - - - 0x03EFA8 0F:EF98: 9D 60 05  STA ram_0560,X
-C - - - - - 0x03EFAB 0F:EF9B: 60        RTS
-
-
-
-tbl_EF9C:   ; bzk одинаковые байты
-- D 3 - - - 0x03EFAC 0F:EF9C: 3C        .byte $3C   ; 00
-- D 3 - - - 0x03EFAD 0F:EF9D: 3C        .byte $3C   ; 01
-- D 3 - - - 0x03EFAE 0F:EF9E: 3C        .byte $3C   ; 02
-- D 3 - - - 0x03EFAF 0F:EF9F: 3C        .byte $3C   ; 03
-- D 3 - - - 0x03EFB0 0F:EFA0: 3C        .byte $3C   ; 04
-- D 3 - - - 0x03EFB1 0F:EFA1: 3C        .byte $3C   ; 05
-- D 3 - - - 0x03EFB2 0F:EFA2: 3C        .byte $3C   ; 06
-
-
-
 .export tbl_0x03EFB6
 tbl_0x03EFB6:
 - D 3 - - - 0x03EFB6 0F:EFA6: 00        .byte $00   ; 
