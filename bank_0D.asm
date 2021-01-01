@@ -2959,18 +2959,6 @@ tbl_907D:
 - D 0 - - - 0x035094 0D:9084: 1A        .byte $1A   ; 07
 
 
-; bzk мусор
-bra_908F:
-- - - - - - 0x03509F 0D:908F: A5 28     LDA ram_random_1
-- - - - - - 0x0350A1 0D:9091: E6 28     INC ram_random_1
-- - - - - - 0x0350A3 0D:9093: 29 03     AND #$03
-- - - - - - 0x0350A5 0D:9095: A8        TAY
-- - - - - - 0x0350A6 0D:9096: B9 9F 90  LDA tbl_909F,Y
-- - - - - - 0x0350A9 0D:9099: DD E2 06  CMP ram_06E2,X
-- - - - - - 0x0350AC 0D:909C: F0 F1     BEQ bra_908F
-- - - - - - 0x0350AE 0D:909E: 60        RTS
-
-
 
 tbl_909F:
 - - - - - - 0x0350AF 0D:909F: 0B        .byte $0B   ; 00
