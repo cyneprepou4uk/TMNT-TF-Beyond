@@ -24,39 +24,6 @@ C - - - - - 0x034025 0D:8015: 10 EC     BPL bra_8003
 C - - - - - 0x034027 0D:8017: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x034028 0D:8018: EA        .byte $EA   ; 
-- - - - - - 0x034029 0D:8019: EA        .byte $EA   ; 
-- - - - - - 0x03402A 0D:801A: EA        .byte $EA   ; 
-- - - - - - 0x03402B 0D:801B: EA        .byte $EA   ; 
-- - - - - - 0x03402C 0D:801C: EA        .byte $EA   ; 
-- - - - - - 0x03402D 0D:801D: EA        .byte $EA   ; 
-- - - - - - 0x03402E 0D:801E: EA        .byte $EA   ; 
-- - - - - - 0x03402F 0D:801F: EA        .byte $EA   ; 
-- - - - - - 0x034030 0D:8020: EA        .byte $EA   ; 
-- - - - - - 0x034031 0D:8021: EA        .byte $EA   ; 
-- - - - - - 0x034032 0D:8022: EA        .byte $EA   ; 
-- - - - - - 0x034033 0D:8023: EA        .byte $EA   ; 
-- - - - - - 0x034034 0D:8024: EA        .byte $EA   ; 
-- - - - - - 0x034035 0D:8025: EA        .byte $EA   ; 
-- - - - - - 0x034036 0D:8026: EA        .byte $EA   ; 
-- - - - - - 0x034037 0D:8027: EA        .byte $EA   ; 
-- - - - - - 0x034038 0D:8028: EA        .byte $EA   ; 
-- - - - - - 0x034039 0D:8029: EA        .byte $EA   ; 
-- - - - - - 0x03403A 0D:802A: EA        .byte $EA   ; 
-- - - - - - 0x03403B 0D:802B: EA        .byte $EA   ; 
-- - - - - - 0x03403C 0D:802C: EA        .byte $EA   ; 
-- - - - - - 0x03403D 0D:802D: EA        .byte $EA   ; 
-- - - - - - 0x03403E 0D:802E: EA        .byte $EA   ; 
-- - - - - - 0x03403F 0D:802F: EA        .byte $EA   ; 
-- - - - - - 0x034040 0D:8030: EA        .byte $EA   ; 
-- - - - - - 0x034041 0D:8031: EA        .byte $EA   ; 
-- - - - - - 0x034042 0D:8032: EA        .byte $EA   ; 
-- - - - - - 0x034043 0D:8033: EA        .byte $EA   ; 
-- - - - - - 0x034044 0D:8034: EA        .byte $EA   ; 
-- - - - - - 0x034045 0D:8035: EA        .byte $EA   ; 
-
-
 
 sub_8036:
 C - - - - - 0x034046 0D:8036: 20 04 F2  JSR sub_0x03F214_roll_rng
