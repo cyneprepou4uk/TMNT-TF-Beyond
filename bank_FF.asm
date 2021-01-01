@@ -6125,10 +6125,6 @@ bra_DCF7_RTS:
 C - - - - - 0x03DD07 0F:DCF7: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x03DD08 0F:DCF8: A2 00     LDX #$00
-
-
 
 .export sub_0x03DD0A
 sub_0x03DD0A:
