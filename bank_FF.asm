@@ -6393,13 +6393,6 @@ bra_DE72_RTS:
 C - - - - - 0x03DE82 0F:DE72: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x03DE83 0F:DE73: EA        .byte $EA   ; 
-- - - - - - 0x03DE84 0F:DE74: EA        .byte $EA   ; 
-- - - - - - 0x03DE85 0F:DE75: EA        .byte $EA   ; 
-- - - - - - 0x03DE86 0F:DE76: EA        .byte $EA   ; 
-
-
 
 .export sub_0x03DE87
 sub_0x03DE87:
