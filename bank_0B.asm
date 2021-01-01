@@ -9544,37 +9544,6 @@ bra_A7E1:
 C - - - - - 0x02E7F1 0B:A7E1: 4C 17 F6  JMP loc_0x03F627
 
 
-; bzk мусор
-- - - - - - 0x02E7F4 0B:A7E4: FF        .byte $FF   ; 
-- - - - - - 0x02E7F5 0B:A7E5: FF        .byte $FF   ; 
-- - - - - - 0x02E7F6 0B:A7E6: FF        .byte $FF   ; 
-- - - - - - 0x02E7F7 0B:A7E7: FF        .byte $FF   ; 
-- - - - - - 0x02E7F8 0B:A7E8: FF        .byte $FF   ; 
-- - - - - - 0x02E7F9 0B:A7E9: FF        .byte $FF   ; 
-- - - - - - 0x02E7FA 0B:A7EA: FF        .byte $FF   ; 
-- - - - - - 0x02E7FB 0B:A7EB: FF        .byte $FF   ; 
-- - - - - - 0x02E7FC 0B:A7EC: FF        .byte $FF   ; 
-- - - - - - 0x02E7FD 0B:A7ED: FF        .byte $FF   ; 
-- - - - - - 0x02E7FE 0B:A7EE: FF        .byte $FF   ; 
-- - - - - - 0x02E7FF 0B:A7EF: FF        .byte $FF   ; 
-- - - - - - 0x02E800 0B:A7F0: FF        .byte $FF   ; 
-- - - - - - 0x02E801 0B:A7F1: FF        .byte $FF   ; 
-- - - - - - 0x02E802 0B:A7F2: FF        .byte $FF   ; 
-- - - - - - 0x02E803 0B:A7F3: FF        .byte $FF   ; 
-- - - - - - 0x02E804 0B:A7F4: FF        .byte $FF   ; 
-- - - - - - 0x02E805 0B:A7F5: FF        .byte $FF   ; 
-- - - - - - 0x02E806 0B:A7F6: FF        .byte $FF   ; 
-- - - - - - 0x02E807 0B:A7F7: FF        .byte $FF   ; 
-- - - - - - 0x02E808 0B:A7F8: FF        .byte $FF   ; 
-- - - - - - 0x02E809 0B:A7F9: FF        .byte $FF   ; 
-- - - - - - 0x02E80A 0B:A7FA: FF        .byte $FF   ; 
-- - - - - - 0x02E80B 0B:A7FB: FF        .byte $FF   ; 
-- - - - - - 0x02E80C 0B:A7FC: FF        .byte $FF   ; 
-- - - - - - 0x02E80D 0B:A7FD: FF        .byte $FF   ; 
-- - - - - - 0x02E80E 0B:A7FE: FF        .byte $FF   ; 
-- - - - - - 0x02E80F 0B:A7FF: FF        .byte $FF   ; 
-
-
 
 sub_A800:
 C - - - - - 0x02E810 0B:A800: A5 2C     LDA ram_002C
