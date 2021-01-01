@@ -4342,15 +4342,6 @@ bra_98C4:
 C - - - - - 0x0358D4 0D:98C4: 20 96 ED  JSR sub_0x03EDA6
 C - - - - - 0x0358D7 0D:98C7: A9 17     LDA #$17
 C - - - - - 0x0358D9 0D:98C9: 60        RTS
-
-
-; bzk мусор
-- - - - - - 0x0358DA 0D:98CA: 20 96 ED  JSR sub_0x03EDA6
-- - - - - - 0x0358DD 0D:98CD: A9 0B     LDA #$0B
-- - - - - - 0x0358DF 0D:98CF: 60        RTS
-
-
-
 bra_98D0:
 - - - - - - 0x0358E0 0D:98D0: 20 96 ED  JSR sub_0x03EDA6
 - - - - - - 0x0358E3 0D:98D3: A9 08     LDA #$08
