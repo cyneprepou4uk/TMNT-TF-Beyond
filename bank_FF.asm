@@ -9601,12 +9601,6 @@ tbl_EF9C:   ; bzk одинаковые байты
 - D 3 - - - 0x03EFB2 0F:EFA2: 3C        .byte $3C   ; 06
 
 
-; bzk мусор
-- - - - - - 0x03EFB3 0F:EFA3: EA        .byte $EA   ; 
-- - - - - - 0x03EFB4 0F:EFA4: EA        .byte $EA   ; 
-- - - - - - 0x03EFB5 0F:EFA5: EA        .byte $EA   ; 
-
-
 
 .export tbl_0x03EFB6
 tbl_0x03EFB6:
