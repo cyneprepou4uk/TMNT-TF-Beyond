@@ -5704,7 +5704,7 @@ C - - - - - 0x0360C4 0D:A0B4: 60        RTS
 
 
 bra_A0F7:
-loc_A0F7:
+loc_A0F7:   ; bzk
 C D 1 - - - 0x036107 0D:A0F7: 4C 9F A3  JMP loc_A39F
 
 
