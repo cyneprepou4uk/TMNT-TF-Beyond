@@ -8222,8 +8222,6 @@ C - - - - - 0x03E896 0F:E886: 20 2A E7  JSR sub_E72A
 C - - - - - 0x03E899 0F:E889: BD C0 05  LDA ram_05C0,X
 C - - - - - 0x03E89C 0F:E88C: 30 E0     BMI bra_E86E
 C - - - - - 0x03E89E 0F:E88E: 4C 02 F8  JMP loc_F802
-bra_E891_RTS:   ; bzk далекий прыжок
-C - - - - - 0x03E8A1 0F:E891: 60        RTS
 
 
 
@@ -8304,6 +8302,8 @@ C - - - - - 0x03E913 0F:E903: AD 31 06  LDA ram_0631
 C - - - - - 0x03E916 0F:E906: D0 89     BNE bra_E891_RTS
 C - - - - - 0x03E918 0F:E908: 20 8A E6  JSR sub_E68A
 C - - - - - 0x03E91B 0F:E90B: 4C 2E E1  JMP loc_E12E
+bra_E891_RTS:
+C - - - - - 0x03E8A1 0F:E891: 60        RTS
 
 
 
