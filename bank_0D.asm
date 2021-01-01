@@ -5748,11 +5748,6 @@ C D 1 - - - 0x036107 0D:A0F7: 4C 9F A3  JMP loc_A39F
 
 
 ; bzk мусор
-- - - - - - 0x03610A 0D:A0FA: EA        NOP
-- - - - - - 0x03610B 0D:A0FB: 60        RTS
-
-
-; bzk мусор
 bra_A0FC:
 - - - - - - 0x03610C 0D:A0FC: A9 41     LDA #$41
 - - - - - - 0x03610E 0D:A0FE: 85 17     STA ram_0017
