@@ -2292,13 +2292,13 @@ tbl_8E88:
 
 
 sub_8E8D:
-.export sub_0x020E9D
-sub_0x020E9D:
+.export sub_0x020E9D_play_music
+sub_0x020E9D_play_music:
 C - - - - - 0x020E9D 08:8E8D: 86 E4     STX ram_00E4
 C - - - - - 0x020E9F 08:8E8F: 84 E5     STY ram_00E5
 C - - - - - 0x020EA1 08:8E91: A0 00     LDY #$00
 C - - - - - 0x020EA3 08:8E93: 8C 77 07  STY ram_0777
-C - - - - - 0x020EA6 08:8E96: 8D 5C 07  STA ram_075C
+C - - - - - 0x020EA6 08:8E96: 8D 5C 07  STA ram_music_id
 C - - - - - 0x020EA9 08:8E99: C9 2E     CMP #$2E
 C - - - - - 0x020EAB 08:8E9B: 90 03     BCC bra_8EA0_2D_or_less
 C - - - - - 0x020EAD 08:8E9D: 4C F6 8F  JMP loc_8FF6_2E_or_higher
@@ -2335,14 +2335,14 @@ C - - - - - 0x020EE7 08:8ED7: 4C 01 90  JMP loc_9001
 bra_8EDA:
 C - - - - - 0x020EEA 08:8EDA: A0 00     LDY #$00
 C - - - - - 0x020EEC 08:8EDC: AA        TAX
-C - - - - - 0x020EED 08:8EDD: AD 5C 07  LDA ram_075C
+C - - - - - 0x020EED 08:8EDD: AD 5C 07  LDA ram_music_id
 C - - - - - 0x020EF0 08:8EE0: C9 04     CMP #$04
 C - - - - - 0x020EF2 08:8EE2: B0 07     BCS bra_8EEB
 C - - - - - 0x020EF4 08:8EE4: BD 0C 07  LDA ram_070C,X
 C - - - - - 0x020EF7 08:8EE7: C9 04     CMP #$04
 C - - - - - 0x020EF9 08:8EE9: 90 2D     BCC bra_8F18
 bra_8EEB:
-C - - - - - 0x020EFB 08:8EEB: AD 5C 07  LDA ram_075C
+C - - - - - 0x020EFB 08:8EEB: AD 5C 07  LDA ram_music_id
 C - - - - - 0x020EFE 08:8EEE: DD 0C 07  CMP ram_070C,X
 C - - - - - 0x020F01 08:8EF1: B0 25     BCS bra_8F18
 C - - - - - 0x020F03 08:8EF3: AD 86 07  LDA ram_0786
@@ -2453,7 +2453,7 @@ C - - - - - 0x020FD7 08:8FC7: 9D 74 07  STA ram_0774,X
 C - - - - - 0x020FDA 08:8FCA: 9D 92 07  STA ram_0792,X
 C - - - - - 0x020FDD 08:8FCD: 9D 6F 07  STA ram_076F,X
 bra_8FD0:
-C - - - - - 0x020FE0 08:8FD0: AD 5C 07  LDA ram_075C
+C - - - - - 0x020FE0 08:8FD0: AD 5C 07  LDA ram_music_id
 C - - - - - 0x020FE3 08:8FD3: 9D 0C 07  STA ram_070C,X
 C - - - - - 0x020FE6 08:8FD6: C9 2E     CMP #$2E
 C - - - - - 0x020FE8 08:8FD8: 90 04     BCC bra_8FDE
@@ -2467,7 +2467,7 @@ loc_8FE2:
 C D 0 - - - 0x020FF2 08:8FE2: CE B8 07  DEC ram_07B8
 C - - - - - 0x020FF5 08:8FE5: 30 1A     BMI bra_9001
 C - - - - - 0x020FF7 08:8FE7: C8        INY
-C - - - - - 0x020FF8 08:8FE8: AD 5C 07  LDA ram_075C
+C - - - - - 0x020FF8 08:8FE8: AD 5C 07  LDA ram_music_id
 C - - - - - 0x020FFB 08:8FEB: C9 2E     CMP #$2E
 C - - - - - 0x020FFD 08:8FED: 90 04     BCC bra_8FF3
 C - - - - - 0x020FFF 08:8FEF: E8        INX
@@ -2499,7 +2499,7 @@ C - - - - - 0x02102C 08:901C: 85 E6     STA ram_00E6
 C - - - - - 0x02102E 08:901E: AD 45 90  LDA #> tbl_8D96
 C - - - - - 0x021031 08:9021: 85 E7     STA ram_00E7
 C - - - - - 0x021033 08:9023: A2 08     LDX #$08
-C - - - - - 0x021035 08:9025: AD 5C 07  LDA ram_075C
+C - - - - - 0x021035 08:9025: AD 5C 07  LDA ram_music_id
 C - - - - - 0x021038 08:9028: 38        SEC
 C - - - - - 0x021039 08:9029: E9 2E     SBC #$2E
 C - - - - - 0x02103B 08:902B: A8        TAY

@@ -10766,7 +10766,7 @@ C - - - - - 0x03F6A6 0F:F696: D0 0D     BNE bra_F6A5
 C - - - - - 0x03F6A8 0F:F698: 48        PHA
 C - - - - - 0x03F6A9 0F:F699: 20 69 F6  JSR sub_F669
 C - - - - - 0x03F6AC 0F:F69C: 68        PLA
-C - - - - - 0x03F6AD 0F:F69D: 20 8D 8E  JSR sub_0x020E9D
+C - - - - - 0x03F6AD 0F:F69D: 20 8D 8E  JSR sub_0x020E9D_play_music
 loc_F6A0:
 C D 3 - - - 0x03F6B0 0F:F6A0: 20 5F F6  JSR sub_F65F
 C - - - - - 0x03F6B3 0F:F6A3: A6 A8     LDX ram_00A8
