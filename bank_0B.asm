@@ -11146,16 +11146,7 @@ tbl_ACB0:
 - D 1 - - - 0x02ECC5 0B:ACB5: 18        .byte off_AD18 - tbl_AD00   ; 05
 - D 1 - - - 0x02ECC6 0B:ACB6: 24        .byte off_AD24 - tbl_AD00   ; 06
 - D 1 - - - 0x02ECC7 0B:ACB7: 30        .byte off_AD30 - tbl_AD00   ; 07
-
-- - - - - - 0x02ECC8 0B:ACB8: FF        .byte $FF   ; bzk в 0x02EE9E заменить 10 на 08, удалить мусор
-- - - - - - 0x02ECC9 0B:ACB9: FF        .byte $FF   ; 
-- - - - - - 0x02ECCA 0B:ACBA: FF        .byte $FF   ; 
-- - - - - - 0x02ECCB 0B:ACBB: FF        .byte $FF   ; 
-- - - - - - 0x02ECCC 0B:ACBC: FF        .byte $FF   ; 
-- - - - - - 0x02ECCD 0B:ACBD: FF        .byte $FF   ; 
-- - - - - - 0x02ECCE 0B:ACBE: FF        .byte $FF   ; 
-- - - - - - 0x02ECCF 0B:ACBF: FF        .byte $FF   ; 
-
+; night mode
 - D 1 - - - 0x02ECD0 0B:ACC0: 80        .byte off_AD80 - tbl_AD00   ; 00
 - D 1 - - - 0x02ECD1 0B:ACC1: 8C        .byte off_AD8C - tbl_AD00   ; 01
 - D 1 - - - 0x02ECD2 0B:ACC2: 80        .byte off_AD80 - tbl_AD00   ; 02
@@ -11164,17 +11155,6 @@ tbl_ACB0:
 - D 1 - - - 0x02ECD5 0B:ACC5: 98        .byte off_AD98 - tbl_AD00   ; 05
 - D 1 - - - 0x02ECD6 0B:ACC6: A4        .byte off_ADA4 - tbl_AD00   ; 06
 - D 1 - - - 0x02ECD7 0B:ACC7: B0        .byte off_ADB0 - tbl_AD00   ; 07
-
-
-; bzk мусор
-- - - - - - 0x02ECD8 0B:ACC8: FF        .byte $FF   ; 
-- - - - - - 0x02ECD9 0B:ACC9: FF        .byte $FF   ; 
-- - - - - - 0x02ECDA 0B:ACCA: FF        .byte $FF   ; 
-- - - - - - 0x02ECDB 0B:ACCB: FF        .byte $FF   ; 
-- - - - - - 0x02ECDC 0B:ACCC: FF        .byte $FF   ; 
-- - - - - - 0x02ECDD 0B:ACCD: FF        .byte $FF   ; 
-- - - - - - 0x02ECDE 0B:ACCE: FF        .byte $FF   ; 
-- - - - - - 0x02ECDF 0B:ACCF: FF        .byte $FF   ; 
 
 
 
@@ -11638,49 +11618,30 @@ C - - - - - 0x02EE89 0B:AE79: B9 30 AE  LDA tbl_AE30,Y
 C - - - - - 0x02EE8C 0B:AE7C: 85 4E     STA ram_004E
 C - - - - - 0x02EE8E 0B:AE7E: B9 31 AE  LDA tbl_AE31,Y
 C - - - - - 0x02EE91 0B:AE81: 85 4F     STA ram_004F
-
-
-; bzk !!! текущий код ожидает что старший байт таблицы всегда AD
-; требуется переписать код под универсальную локацию, вот рекомендация
-;	LDA #< t_AD00
-;	STA $00
-;	LDA #> t_AD00
-;	STA $01
-;	LDA $012B
-;	AND #$02
-;	BEQ b_AE90
-;	LDA # t_ACС0 - t_ACB0		; для безопасного удаления .res между таблицами, или записать фиксированно LDA 08
-;b_AE90:
-;	ADC $9E
-;	TAX
-;	LDA t_ACB0,X
-;	CLC
-;	ADC $00
-;	STA $00
-;	LDA #$00
-;	ADC $01
-;	STA $01
-;	LDY #$0B		; отсюда без изменений
-
-
-
+                                        LDA #< tbl_AD00
+                                        STA ram_0000
 C - - - - - 0x02EE93 0B:AE83: A9 AD     LDA #> tbl_AD00
 C - - - - - 0x02EE95 0B:AE85: 85 01     STA ram_0001
 C - - - - - 0x02EE97 0B:AE87: AD 2B 01  LDA ram_option_skin
 C - - - - - 0x02EE9A 0B:AE8A: 29 02     AND #$02
-C - - - - - 0x02EE9C 0B:AE8C: F0 02     BEQ bra_AE90
-C - - - - - 0x02EE9E 0B:AE8E: A9 10     LDA #$10
-bra_AE90:
+C - - - - - 0x02EE9C 0B:AE8C: F0 02     BEQ bra_AE90_not_night_mode
+C - - - - - 0x02EE9E 0B:AE8E: A9 10     LDA #$08
+bra_AE90_not_night_mode:
 C - - - - - 0x02EEA0 0B:AE90: 65 9E     ADC ram_009E
 C - - - - - 0x02EEA2 0B:AE92: AA        TAX
 C - - - - - 0x02EEA3 0B:AE93: BD B0 AC  LDA tbl_ACB0,X
+                                        CLC
+                                        ADC ram_0000
 C - - - - - 0x02EEA6 0B:AE96: 85 00     STA ram_0000
+                                        LDA #$00
+                                        ADC ram_0001
+                                        STA ram_0001
 C - - - - - 0x02EEA8 0B:AE98: A0 0B     LDY #$0B
-bra_AE9A:
+bra_AE9A_loop:
 C - - - - - 0x02EEAA 0B:AE9A: B1 00     LDA (ram_0000),Y
 C - - - - - 0x02EEAC 0B:AE9C: 99 4D 06  STA ram_064D,Y
 C - - - - - 0x02EEAF 0B:AE9F: 88        DEY
-C - - - - - 0x02EEB0 0B:AEA0: 10 F8     BPL bra_AE9A
+C - - - - - 0x02EEB0 0B:AEA0: 10 F8     BPL bra_AE9A_loop
 C - - - - - 0x02EEB2 0B:AEA2: A0 13     LDY #$13
 bra_AEA4_loop:
 C - - - - - 0x02EEB4 0B:AEA4: B9 D0 AC  LDA tbl_ACD0,Y
@@ -11990,7 +11951,6 @@ C - - - - - 0x02EFC3 0B:AFB3: 60        RTS
 
 
 
-.segment "BANK__0B_2"
 ; !!! нельзя перемещать код, пока не будет переделан 0B:AF40
 .export tbl_0x02EFFA
 tbl_0x02EFFA:
