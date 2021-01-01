@@ -5180,14 +5180,8 @@ bra_D533_RTS:
 C - - - - - 0x03D543 0F:D533: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x03D544 0F:D534: A5 97     LDA ram_0097
-- - - - - - 0x03D546 0F:D536: D0 00     BNE bra_D538
-
-
 
 loc_D538:
-bra_D538:
 C D 2 - - - 0x03D548 0F:D538: AD 6D 06  LDA ram_066D
 C - - - - - 0x03D54B 0F:D53B: F0 F6     BEQ bra_D533_RTS
 C - - - - - 0x03D54D 0F:D53D: A0 10     LDY #$10
