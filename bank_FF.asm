@@ -10869,7 +10869,6 @@ C - - - - - 0x03F73C 0F:F72C: 4C 17 F6  JMP loc_F617
 .export sub_0x03F73F
 sub_0x03F73F:
 C - - - - - 0x03F73F 0F:F72F: A9 02     LDA #$02
-C - - - - - 0x03F741 0F:F731: 2C A9 00  BIT a: ram_00A9
 C - - - - - 0x03F744 0F:F734: 85 0A     STA ram_000A
 C - - - - - 0x03F746 0F:F736: 20 F3 F5  JSR sub_F5F3_prg_bank_0E
 C - - - - - 0x03F749 0F:F739: 20 52 84  JSR sub_0x038462
