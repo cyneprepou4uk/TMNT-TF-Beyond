@@ -10442,7 +10442,8 @@ C - - - - - 0x03F4E4 0F:F4D4: 4C DB F4  JMP loc_F4DB
 
 
 
-bra_F4D7:
+sub_F4E1:
+C - - - - - 0x03F4F1 0F:F4E1: A9 06     LDA #$06
 C - - - - - 0x03F4E7 0F:F4D7: A0 00     LDY #$00
 C - - - - - 0x03F4E9 0F:F4D9: 84 49     STY ram_0049
 sub_F4DB:
@@ -10452,9 +10453,6 @@ C - - - - - 0x03F4EE 0F:F4DE: 4C C2 F6  JMP loc_F6C2
 
 
 
-sub_F4E1:
-C - - - - - 0x03F4F1 0F:F4E1: A9 06     LDA #$06
-C - - - - - 0x03F4F3 0F:F4E3: D0 F2     BNE bra_F4D7    ; bzk опт
 
 
 
