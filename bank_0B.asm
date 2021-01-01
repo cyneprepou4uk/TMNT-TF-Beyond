@@ -11826,14 +11826,14 @@ C - - - - - 0x02EECE 0B:AEBE: 60        RTS
 - - - - - - 0x02EF4C 0B:AF3C: FF        .byte $FF   ; 
 
 
-
+; bzk мусор
 tbl_AF3D:
 - D 1 - - - 0x02EF4D 0B:AF3D: 21        .byte $21   ; 
 - D 1 - - - 0x02EF4E 0B:AF3E: 23        .byte $23   ; 
 - D 1 - - - 0x02EF4F 0B:AF3F: 25        .byte $25   ; 
 
 
-
+; bzk мусор
 .export sub_0x02EF50
 sub_0x02EF50:
 C - - - - - 0x02EF50 0B:AF40: AD 2B 01  LDA ram_option_skin
@@ -11992,7 +11992,8 @@ C - - - - - 0x02EFC3 0B:AFB3: 60        RTS
 
 .segment "BANK__0B_2"
 ; !!! нельзя перемещать код, пока не будет переделан 0B:AF40
-off_AFEA:
+.export tbl_0x02EFFA
+tbl_0x02EFFA:
 - D 1 - I - 0x02EFFA 0B:AFEA: 20        .byte $20   ; 
 - D 1 - I - 0x02EFFB 0B:AFEB: 20        .byte $20   ; 
 - D 1 - I - 0x02EFFC 0B:AFEC: 20        .byte $20   ; 
@@ -12508,7 +12509,8 @@ off_AFEA:
 
 
 
-off_B1EA:
+.export tbl_0x02F1FA
+tbl_0x02F1FA:
 - D 1 - I - 0x02F1FA 0B:B1EA: 20        .byte $20   ; 
 - D 1 - I - 0x02F1FB 0B:B1EB: 20        .byte $20   ; 
 - D 1 - I - 0x02F1FC 0B:B1EC: 20        .byte $20   ; 
@@ -13024,7 +13026,8 @@ off_B1EA:
 
 
 
-off_B3EA:
+.export tbl_0x02F3FA
+tbl_0x02F3FA:
 - D 1 - I - 0x02F3FA 0B:B3EA: 20        .byte $20   ; 
 - D 1 - I - 0x02F3FB 0B:B3EB: 20        .byte $20   ; 
 - D 1 - I - 0x02F3FC 0B:B3EC: 20        .byte $20   ; 

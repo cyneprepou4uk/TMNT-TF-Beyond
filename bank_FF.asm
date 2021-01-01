@@ -4839,18 +4839,21 @@ C - - - - - 0x03D358 0F:D348: 86 03     STX ram_0003
 C - - - - - 0x03D35A 0F:D34A: 20 7C D3  JSR sub_D37C
 C - - - - - 0x03D35D 0F:D34D: 85 00     STA ram_0000
 C - - - - - 0x03D35F 0F:D34F: 84 01     STY ram_0001
+                                        LDX ram_0003
 C - - - - - 0x03D361 0F:D351: E8        INX
 C - - - - - 0x03D362 0F:D352: 8A        TXA
 C - - - - - 0x03D363 0F:D353: 0A        ASL
 C - - - - - 0x03D364 0F:D354: 0A        ASL
 C - - - - - 0x03D365 0F:D355: AA        TAX
 C - - - - - 0x03D366 0F:D356: 20 E7 F5  JSR sub_F5E7_prg_bank_0B
-C - - - - - 0x03D369 0F:D359: 20 40 AF  JSR sub_0x02EF50
-C - - - - - 0x03D36C 0F:D35C: EA        NOP
-C - - - - - 0x03D36D 0F:D35D: EA        NOP
-C - - - - - 0x03D36E 0F:D35E: EA        NOP
-C - - - - - 0x03D36F 0F:D35F: EA        NOP
-C - - - - - 0x03D370 0F:D360: EA        NOP
+                                        LDY #$02
+bra_D359_loop:
+                                        LDA (ram_0000),Y
+                                        STA ram_064C,X
+                                        DEX
+                                        DEY
+                                        BPL bra_D359_loop
+                                        JSR sub_F617
 C - - - - - 0x03D371 0F:D361: A9 0F     LDA #$0F
 C - - - - - 0x03D373 0F:D363: 9D 4C 06  STA ram_064C,X
 C - - - - - 0x03D376 0F:D366: A6 03     LDX ram_0003
@@ -4859,6 +4862,11 @@ C - - - - - 0x03D37A 0F:D36A: BD 74 D3  LDA tbl_D374,X
 C - - - - - 0x03D37D 0F:D36D: 0D 6D 06  ORA ram_066D
 C - - - - - 0x03D380 0F:D370: 8D 6D 06  STA ram_066D
 C - - - - - 0x03D383 0F:D373: 60        RTS
+
+tbl_D35C:
+    .word tbl_0x02F3FA
+    .word tbl_0x02F1FA
+    .word tbl_0x02EFFA
 
 
 
@@ -4876,25 +4884,23 @@ tbl_D374:
 
 sub_D37C:
 C D 2 - - - 0x03D38C 0F:D37C: 85 05     STA ram_0005
-C - - - - - 0x03D38E 0F:D37E: AC 93 D3  LDY tbl_D393
+                                        LDA ram_option_skin
+                                        AND #$07
+                                        ASL
+                                        TAX
+                                        LDA ram_0005
+C - - - - - 0x03D38E 0F:D37E: AC 93 D3  LDY tbl_D35C + 1,X
 C - - - - - 0x03D391 0F:D381: 0A        ASL
 C - - - - - 0x03D392 0F:D382: 20 8D D3  JSR sub_D38D
 C - - - - - 0x03D395 0F:D385: 65 05     ADC ram_0005
 C - - - - - 0x03D397 0F:D387: 20 8D D3  JSR sub_D38D
-C - - - - - 0x03D39A 0F:D38A: 6D 92 D3  ADC tbl_D392
+C - - - - - 0x03D39A 0F:D38A: 6D 92 D3  ADC tbl_D35C,X
 sub_D38D:
 C - - - - - 0x03D39D 0F:D38D: 90 02     BCC bra_D391_RTS
 C - - - - - 0x03D39F 0F:D38F: 18        CLC
 C - - - - - 0x03D3A0 0F:D390: C8        INY
 bra_D391_RTS:
 C - - - - - 0x03D3A1 0F:D391: 60        RTS
-
-
-; bzk
-tbl_D392:
-- D 2 - - - 0x03D3A2 0F:D392: EA        .byte $EA   ; 
-tbl_D393:
-- D 2 - - - 0x03D3A3 0F:D393: D5        .byte $D5   ; 
 
 
 
