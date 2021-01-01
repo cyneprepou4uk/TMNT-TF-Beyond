@@ -9853,38 +9853,6 @@ tbl_F0DE:
 - D 3 - - - 0x03F12C 0F:F11C: 00 82     .word _off003_0x000210_1F
 
 
-; bzk мусор
-- - - - - - 0x03F12E 0F:F11E: EA        .byte $EA   ; 
-- - - - - - 0x03F12F 0F:F11F: EA        .byte $EA   ; 
-- - - - - - 0x03F130 0F:F120: EA        .byte $EA   ; 
-- - - - - - 0x03F131 0F:F121: EA        .byte $EA   ; 
-- - - - - - 0x03F132 0F:F122: EA        .byte $EA   ; 
-- - - - - - 0x03F133 0F:F123: EA        .byte $EA   ; 
-- - - - - - 0x03F134 0F:F124: EA        .byte $EA   ; 
-- - - - - - 0x03F135 0F:F125: EA        .byte $EA   ; 
-- - - - - - 0x03F136 0F:F126: EA        .byte $EA   ; 
-- - - - - - 0x03F137 0F:F127: EA        .byte $EA   ; 
-- - - - - - 0x03F138 0F:F128: EA        .byte $EA   ; 
-- - - - - - 0x03F139 0F:F129: EA        .byte $EA   ; 
-- - - - - - 0x03F13A 0F:F12A: EA        .byte $EA   ; 
-- - - - - - 0x03F13B 0F:F12B: EA        .byte $EA   ; 
-- - - - - - 0x03F13C 0F:F12C: EA        .byte $EA   ; 
-- - - - - - 0x03F13D 0F:F12D: EA        .byte $EA   ; 
-- - - - - - 0x03F13E 0F:F12E: EA        .byte $EA   ; 
-- - - - - - 0x03F13F 0F:F12F: EA        .byte $EA   ; 
-- - - - - - 0x03F140 0F:F130: EA        .byte $EA   ; 
-- - - - - - 0x03F141 0F:F131: EA        .byte $EA   ; 
-- - - - - - 0x03F142 0F:F132: EA        .byte $EA   ; 
-- - - - - - 0x03F143 0F:F133: EA        .byte $EA   ; 
-- - - - - - 0x03F144 0F:F134: EA        .byte $EA   ; 
-- - - - - - 0x03F145 0F:F135: EA        .byte $EA   ; 
-- - - - - - 0x03F146 0F:F136: EA        .byte $EA   ; 
-- - - - - - 0x03F147 0F:F137: EA        .byte $EA   ; 
-- - - - - - 0x03F148 0F:F138: EA        .byte $EA   ; 
-- - - - - - 0x03F149 0F:F139: EA        .byte $EA   ; 
-- - - - - - 0x03F14A 0F:F13A: EA        .byte $EA   ; 
-
-
 
 tbl_F13B:
 - D 3 - - - 0x03F14B 0F:F13B: 14        .byte $14   ; 00
