@@ -11726,40 +11726,6 @@ bra_FBEF_RTS:
 C - - - - - 0x03FBFF 0F:FBEF: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x03FC00 0F:FBF0: A5 46     LDA ram_0046
-- - - - - - 0x03FC02 0F:FBF2: A0 06     LDY #$06
-- - - - - - 0x03FC04 0F:FBF4: 84 43     STY ram_for_8000_2
-- - - - - - 0x03FC06 0F:FBF6: 8C 00 80  STY $8000
-- - - - - - 0x03FC09 0F:FBF9: 8D 01 80  STA $8001
-- - - - - - 0x03FC0C 0F:FBFC: A5 47     LDA ram_0047
-- - - - - - 0x03FC0E 0F:FBFE: A0 07     LDY #$07
-- - - - - - 0x03FC10 0F:FC00: 84 43     STY ram_for_8000_2
-- - - - - - 0x03FC12 0F:FC02: 8C 00 80  STY $8000
-- - - - - - 0x03FC15 0F:FC05: 8D 01 80  STA $8001
-- - - - - - 0x03FC18 0F:FC08: A5 42     LDA ram_for_8000_1
-- - - - - - 0x03FC1A 0F:FC0A: 8D 00 80  STA $8000
-- - - - - - 0x03FC1D 0F:FC0D: A9 00     LDA #$00
-- - - - - - 0x03FC1F 0F:FC0F: 85 2E     STA ram_002E
-- - - - - - 0x03FC21 0F:FC11: 60        RTS
-- - - - - - 0x03FC22 0F:FC12: AD 00 80  LDA $8000
-- - - - - - 0x03FC25 0F:FC15: 85 46     STA ram_0046
-- - - - - - 0x03FC27 0F:FC17: 18        CLC
-- - - - - - 0x03FC28 0F:FC18: 69 01     ADC #$01
-- - - - - - 0x03FC2A 0F:FC1A: 85 47     STA ram_0047
-- - - - - - 0x03FC2C 0F:FC1C: A9 30     LDA #$30
-- - - - - - 0x03FC2E 0F:FC1E: A0 06     LDY #$06
-- - - - - - 0x03FC30 0F:FC20: 84 43     STY ram_for_8000_2
-- - - - - - 0x03FC32 0F:FC22: 8C 00 80  STY $8000
-- - - - - - 0x03FC35 0F:FC25: 8D 01 80  STA $8001
-- - - - - - 0x03FC38 0F:FC28: C8        INY
-- - - - - - 0x03FC39 0F:FC29: A9 31     LDA #$31
-- - - - - - 0x03FC3B 0F:FC2B: 84 43     STY ram_for_8000_2
-- - - - - - 0x03FC3D 0F:FC2D: 8C 00 80  STY $8000
-- - - - - - 0x03FC40 0F:FC30: 8D 01 80  STA $8001
-- - - - - - 0x03FC43 0F:FC33: 60        RTS
-
-
 
 loc_FC34:
 sub_FC34:
