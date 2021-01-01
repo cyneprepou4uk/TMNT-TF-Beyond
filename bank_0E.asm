@@ -7432,10 +7432,6 @@ tbl_BFD8:
 - D 1 - - - 0x03BFE9 0E:BFD9: 32        .byte $32   ; 01
 
 
-; bzk мусор
-- - - - - - 0x03BFEA 0E:BFDA: FF        .byte $FF   ; 
-
-
 
 tbl_BFDB:
 - - - - - - 0x03BFEB 0E:BFDB: FF        .byte $FF   ; 00
