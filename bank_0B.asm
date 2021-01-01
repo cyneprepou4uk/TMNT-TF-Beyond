@@ -1,7 +1,6 @@
 .segment "BANK_0B"
 .include "copy_bank_ram.inc"
 ; 0x02C010-0x03000F
-; !!! нельзя перемещать код, пока не разберусь с 0B:AE50 и 0B:AF40
 
 - D 0 - - - 0x02C010 0B:8000: 06        .byte $06   ; 
 
@@ -11551,7 +11550,6 @@ C - - - - - 0x02EFC3 0B:AFB3: 60        RTS
 
 
 
-; !!! нельзя перемещать код, пока не будет переделан 0B:AF40
 .export tbl_0x02EFFA
 tbl_0x02EFFA:
 - D 1 - I - 0x02EFFA 0B:AFEA: 20        .byte $20   ; 
