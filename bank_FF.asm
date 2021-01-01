@@ -7530,11 +7530,6 @@ tbl_E3EF:
 - D 3 - - - 0x03E400 0F:E3F0: 84        .byte $84   ; 01
 
 
-; bzk мусор
-- - - - - - 0x03E401 0F:E3F1: EA        .byte $EA   ; 
-- - - - - - 0x03E402 0F:E3F2: EA        .byte $EA   ; 
-
-
 
 ofs_E3F3_05:
 C - - J - - 0x03E403 0F:E3F3: 20 C2 F6  JSR sub_F6C2
