@@ -11740,39 +11740,6 @@ C - - - - - 0x03FC55 0F:FC45: 8D 01 80  STA $8001
 C - - - - - 0x03FC58 0F:FC48: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x03FC59 0F:FC49: A9 02     LDA #$02
-- - - - - - 0x03FC5B 0F:FC4B: 8D 00 80  STA $8000
-- - - - - - 0x03FC5E 0F:FC4E: A5 34     LDA ram_0034
-- - - - - - 0x03FC60 0F:FC50: 8D 01 80  STA $8001
-- - - - - - 0x03FC63 0F:FC53: A9 03     LDA #$03
-- - - - - - 0x03FC65 0F:FC55: 8D 00 80  STA $8000
-- - - - - - 0x03FC68 0F:FC58: A5 35     LDA ram_0035
-- - - - - - 0x03FC6A 0F:FC5A: 8D 01 80  STA $8001
-- - - - - - 0x03FC6D 0F:FC5D: A9 04     LDA #$04
-- - - - - - 0x03FC6F 0F:FC5F: 8D 00 80  STA $8000
-- - - - - - 0x03FC72 0F:FC62: A5 36     LDA ram_0036
-- - - - - - 0x03FC74 0F:FC64: 8D 01 80  STA $8001
-- - - - - - 0x03FC77 0F:FC67: A9 05     LDA #$05
-- - - - - - 0x03FC79 0F:FC69: 8D 00 80  STA $8000
-- - - - - - 0x03FC7C 0F:FC6C: A5 37     LDA ram_0037
-- - - - - - 0x03FC7E 0F:FC6E: 8D 01 80  STA $8001
-- - - - - - 0x03FC81 0F:FC71: 60        RTS
-- - - - - - 0x03FC82 0F:FC72: A9 00     LDA #$00
-- - - - - - 0x03FC84 0F:FC74: 8D 00 80  STA $8000
-- - - - - - 0x03FC87 0F:FC77: 8D 00 E0  STA $E000
-- - - - - - 0x03FC8A 0F:FC7A: AD 02 20  LDA $2002
-- - - - - - 0x03FC8D 0F:FC7D: A9 10     LDA #$10
-- - - - - - 0x03FC8F 0F:FC7F: AA        TAX
-bra_FC80:
-- - - - - - 0x03FC90 0F:FC80: 8D 06 20  STA $2006
-- - - - - - 0x03FC93 0F:FC83: 8D 06 20  STA $2006
-- - - - - - 0x03FC96 0F:FC86: 49 10     EOR #$10
-- - - - - - 0x03FC98 0F:FC88: CA        DEX
-- - - - - - 0x03FC99 0F:FC89: D0 F5     BNE bra_FC80
-- - - - - - 0x03FC9B 0F:FC8B: 60        RTS
-
-
 
 loc_FC8C:
 sub_FC8C:
