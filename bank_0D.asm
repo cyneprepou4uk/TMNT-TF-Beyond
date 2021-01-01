@@ -931,10 +931,6 @@ C - - - - - 0x034688 0D:8678: 9D C2 06  STA ram_06C2,X
 C - - - - - 0x03468B 0D:867B: 4C FB 89  JMP loc_89FB
 
 
-; bzk мусор
-- - - - - - 0x03468E 0D:867E: EA        NOP
-
-
 
 ofs_867F_06:
 C - - J - - 0x03468F 0D:867F: BD 20 05  LDA ram_0520,X
