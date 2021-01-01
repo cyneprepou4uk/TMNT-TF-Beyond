@@ -5977,6 +5977,8 @@ C - - - - - 0x03A0F3 0E:A0E3: C9 02     CMP #$02
 C - - - - - 0x03A0F5 0E:A0E5: F0 16     BEQ bra_A0FD
 C - - - - - 0x03A0F7 0E:A0E7: 20 ED A0  JSR sub_A0ED
 C - - - - - 0x03A0FA 0E:A0EA: 4C C1 A1  JMP loc_A1C1
+bra_A0FD:
+C - - - - - 0x03A10D 0E:A0FD: 4C 41 A1  JMP loc_A141
 
 
 
@@ -5992,8 +5994,7 @@ C - - - - - 0x03A0FE 0E:A0EE: 20 32 D0  JSR sub_0x03D042
 
 
 
-bra_A0FD:   ; bzk
-C - - - - - 0x03A10D 0E:A0FD: 4C 41 A1  JMP loc_A141
+
 
 
 
