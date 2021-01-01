@@ -222,7 +222,7 @@ C - - - - - 0x0201A3 08:8193: D0 AF     BNE bra_8144_RTS
 bra_8195:
 C - - - - - 0x0201A5 08:8195: DE 4E 07  DEC ram_074E,X
 C - - - - - 0x0201A8 08:8198: BD D7 07  LDA ram_07D7,X
-C - - - - - 0x0201AB 08:819B: 20 37 8D  JSR sub_8D37_divide_by_10h
+C - - - - - 0x0201AB 08:819B: 20 37 8D  JSR sub_0x03D217_divide_by_10h
 C - - - - - 0x0201AE 08:819E: 9D B0 07  STA ram_07B0,X
 loc_81A1:
 C D 0 - - - 0x0201B1 08:81A1: 20 90 83  JSR sub_8390
@@ -380,7 +380,7 @@ C - - - - - 0x020296 08:8286: FE B9 07  INC ram_07B9,X
 C - - - - - 0x020299 08:8289: BD B3 07  LDA ram_07B3,X
 C - - - - - 0x02029C 08:828C: D0 08     BNE bra_8296
 C - - - - - 0x02029E 08:828E: B1 E2     LDA (ram_00E2),Y
-C - - - - - 0x0202A0 08:8290: 20 37 8D  JSR sub_8D37_divide_by_10h
+C - - - - - 0x0202A0 08:8290: 20 37 8D  JSR sub_0x03D217_divide_by_10h
 C - - - - - 0x0202A3 08:8293: 9D B3 07  STA ram_07B3,X
 bra_8296:
 C - - - - - 0x0202A6 08:8296: BD CB 07  LDA ram_07CB,X
@@ -627,7 +627,7 @@ C - - - - - 0x020421 08:8411: 29 F0     AND #$F0
 C - - - - - 0x020423 08:8413: 38        SEC
 C - - - - - 0x020424 08:8414: E9 C0     SBC #$C0
 C - - - - - 0x020426 08:8416: 90 11     BCC bra_8429
-C - - - - - 0x020428 08:8418: 20 37 8D  JSR sub_8D37_divide_by_10h
+C - - - - - 0x020428 08:8418: 20 37 8D  JSR sub_0x03D217_divide_by_10h
 C - - - - - 0x02042B 08:841B: 20 59 8C  JSR sub_8C59
 - D 0 - I - 0x02042E 08:841E: D6 86     .word ofs_86D6_00
 - D 0 - I - 0x020430 08:8420: 0B 87     .word ofs_870B_01
@@ -793,7 +793,7 @@ C - - - - - 0x02053E 08:852E: 30 03     BMI bra_8533
 bra_8533:
 C - - - - - 0x020543 08:8533: BD 97 07  LDA ram_0797,X
 C - - - - - 0x020546 08:8536: F0 0D     BEQ bra_8545
-C - - - - - 0x020548 08:8538: 20 37 8D  JSR sub_8D37_divide_by_10h
+C - - - - - 0x020548 08:8538: 20 37 8D  JSR sub_0x03D217_divide_by_10h
 C - - - - - 0x02054B 08:853B: DD 56 07  CMP ram_0756,X
 C - - - - - 0x02054E 08:853E: 90 15     BCC bra_8555
 C - - - - - 0x020550 08:8540: A9 00     LDA #$00
@@ -911,7 +911,7 @@ C - - - - - 0x020608 08:85F8: 60        RTS
 
 sub_85F9:
 C - - - - - 0x020609 08:85F9: BD CB 07  LDA ram_07CB,X
-C - - - - - 0x02060C 08:85FC: 20 37 8D  JSR sub_8D37_divide_by_10h
+C - - - - - 0x02060C 08:85FC: 20 37 8D  JSR sub_0x03D217_divide_by_10h
 C - - - - - 0x02060F 08:85FF: F0 16     BEQ bra_8617
 C - - - - - 0x020611 08:8601: 85 E2     STA ram_00E2
 C - - - - - 0x020613 08:8603: C6 E2     DEC ram_00E2
@@ -979,7 +979,7 @@ C D 0 - - - 0x02066B 08:865B: AD 86 07  LDA ram_0786
 C - - - - - 0x02066E 08:865E: D0 02     BNE bra_8662
 C - - - - - 0x020670 08:8660: B1 E0     LDA (ram_00E0),Y
 bra_8662:
-C - - - - - 0x020672 08:8662: 20 37 8D  JSR sub_8D37_divide_by_10h
+C - - - - - 0x020672 08:8662: 20 37 8D  JSR sub_0x03D217_divide_by_10h
 C - - - - - 0x020675 08:8665: AA        TAX
 C - - - - - 0x020676 08:8666: BD 7C 86  LDA tbl_867C,X
 C - - - - - 0x020679 08:8669: C9 47     CMP #$47
@@ -1433,7 +1433,7 @@ C - - - - - 0x02093E 08:892E: 09 30     ORA #$30
 C - - - - - 0x020940 08:8930: D0 21     BNE bra_8953
 bra_8932:
 C - - - - - 0x020942 08:8932: B1 E0     LDA (ram_00E0),Y
-C - - - - - 0x020944 08:8934: 20 37 8D  JSR sub_8D37_divide_by_10h
+C - - - - - 0x020944 08:8934: 20 37 8D  JSR sub_0x03D217_divide_by_10h
 C - - - - - 0x020947 08:8937: D0 03     BNE bra_893C
 C - - - - - 0x020949 08:8939: 4C E0 86  JMP loc_86E0
 bra_893C:
@@ -1607,7 +1607,7 @@ C - - - - - 0x020A5E 08:8A4E: F0 11     BEQ bra_8A61
 C - - - - - 0x020A60 08:8A50: C8        INY
 C - - - - - 0x020A61 08:8A51: B1 E0     LDA (ram_00E0),Y
 C - - - - - 0x020A63 08:8A53: 9D 8B 07  STA ram_078B,X
-C - - - - - 0x020A66 08:8A56: 20 37 8D  JSR sub_8D37_divide_by_10h
+C - - - - - 0x020A66 08:8A56: 20 37 8D  JSR sub_0x03D217_divide_by_10h
 C - - - - - 0x020A69 08:8A59: 9D 90 07  STA ram_0790,X
 C - - - - - 0x020A6C 08:8A5C: A9 00     LDA #$00
 C - - - - - 0x020A6E 08:8A5E: 9D 95 07  STA ram_0795,X
@@ -1635,7 +1635,7 @@ C - - - - - 0x020A98 08:8A88: DE 90 07  DEC ram_0790,X
 C - - - - - 0x020A9B 08:8A8B: D0 1A     BNE bra_8AA7
 C - - - - - 0x020A9D 08:8A8D: BD 8B 07  LDA ram_078B,X
 C - - - - - 0x020AA0 08:8A90: 48        PHA
-C - - - - - 0x020AA1 08:8A91: 20 37 8D  JSR sub_8D37_divide_by_10h
+C - - - - - 0x020AA1 08:8A91: 20 37 8D  JSR sub_0x03D217_divide_by_10h
 C - - - - - 0x020AA4 08:8A94: 9D 90 07  STA ram_0790,X
 C - - - - - 0x020AA7 08:8A97: 68        PLA
 C - - - - - 0x020AA8 08:8A98: 29 07     AND #$07
@@ -2126,15 +2126,6 @@ tbl_8C8F:
 - - - - - - 0x020D44 08:8D34: 00        .byte $00   ; 
 - - - - - - 0x020D45 08:8D35: 0E        .byte $0E   ; 
 - - - - - - 0x020D46 08:8D36: 00        .byte $00   ; 
-
-
-
-sub_8D37_divide_by_10h:     ; bzk аналогичный код есть в банке FF
-C - - - - - 0x020D47 08:8D37: 4A        LSR
-C - - - - - 0x020D48 08:8D38: 4A        LSR
-C - - - - - 0x020D49 08:8D39: 4A        LSR
-C - - - - - 0x020D4A 08:8D3A: 4A        LSR
-C - - - - - 0x020D4B 08:8D3B: 60        RTS
 
 
 
