@@ -9111,10 +9111,6 @@ C - - - - - 0x03ED0F 0F:ECFF: 95 91     STA ram_0091,X
 C - - - - - 0x03ED11 0F:ED01: 4C 4C A3  JMP loc_0x03635C
 
 
-; bzk мусор
-- - - - - - 0x03ED14 0F:ED04: 60        RTS
-
-
 
 .export loc_0x03ED15
 loc_0x03ED15:
