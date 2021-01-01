@@ -4191,8 +4191,8 @@ C - - - - - 0x0398A4 0E:9894: 29 03     AND #$03
 C - - - - - 0x0398A6 0E:9896: D0 F9     BNE bra_9891_RTS
 C - - - - - 0x0398A8 0E:9898: CE 60 05  DEC ram_0560
 C - - - - - 0x0398AB 0E:989B: D0 F4     BNE bra_9891_RTS
-C - - - - - 0x0398AD 0E:989D: 20 A4 A5  JSR sub_A5A4
-C - - - - - 0x0398B0 0E:98A0: EA        NOP
+C - - - - - 0x0398AD 0E:989D: 20 A4 A5  LDA ram_option_difficulty
+                                        CMP #$03
 C - - - - - 0x0398B1 0E:98A1: 90 05     BCC bra_98A8
 C - - - - - 0x0398B3 0E:98A3: E6 21     INC ram_0021
 C - - - - - 0x0398B5 0E:98A5: 4C 2E E1  JMP loc_0x03E13E
@@ -6942,13 +6942,6 @@ C - - - - - 0x03A5AE 0E:A59E: F0 03     BEQ bra_A5A3_RTS
 C - - - - - 0x03A5B0 0E:A5A0: AD 27 01  LDA ram_option_timer
 bra_A5A3_RTS:
 C - - - - - 0x03A5B3 0E:A5A3: 60        RTS
-
-
-
-sub_A5A4:   ; bzk опт
-C - - - - - 0x03A5B4 0E:A5A4: AD 25 01  LDA ram_option_difficulty
-C - - - - - 0x03A5B7 0E:A5A7: C9 03     CMP #$03
-C - - - - - 0x03A5B9 0E:A5A9: 60        RTS
 
 
 
