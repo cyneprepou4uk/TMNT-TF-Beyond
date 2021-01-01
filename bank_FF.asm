@@ -9561,11 +9561,6 @@ C - - - - - 0x03EF81 0F:EF71: 86 AD     STX ram_00AD
 C - - - - - 0x03EF83 0F:EF73: 4C 08 80  JMP loc_0x024018
 
 
-; bzk мусор
-- - - - - - 0x03EF86 0F:EF76: FF        .byte $FF   ; 
-- - - - - - 0x03EF87 0F:EF77: FF        .byte $FF   ; 
-
-
 
 .export loc_0x03EF88
 loc_0x03EF88:
