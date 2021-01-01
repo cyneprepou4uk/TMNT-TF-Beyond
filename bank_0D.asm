@@ -3723,22 +3723,6 @@ C D 0 - - - 0x0354D1 0D:94C1: A9 07     LDA #$07
 C - - - - - 0x0354D3 0D:94C3: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x0354D4 0D:94C4: 20 FE ED  JSR sub_0x03EE0E
-- - - - - - 0x0354D7 0D:94C7: B0 03     BCS bra_94CC
-- - - - - - 0x0354D9 0D:94C9: A9 16     LDA #$16
-- - - - - - 0x0354DB 0D:94CB: 60        RTS
-bra_94CC:
-- - - - - - 0x0354DC 0D:94CC: A5 12     LDA ram_0012
-- - - - - - 0x0354DE 0D:94CE: C9 02     CMP #$02
-- - - - - - 0x0354E0 0D:94D0: 90 46     BCC bra_9518
-- - - - - - 0x0354E2 0D:94D2: 20 C2 EC  JSR sub_0x03ECD2_random_00_03
-- - - - - - 0x0354E5 0D:94D5: B9 7B 95  LDA tbl_957B,Y
-- - - - - - 0x0354E8 0D:94D8: 60        RTS
-- - - - - - 0x0354E9 0D:94D9: A9 13     LDA #$13
-- - - - - - 0x0354EB 0D:94DB: 60        RTS
-
-
 
 bra_94DC:
 C - - - - - 0x0354EC 0D:94DC: BC DE 06  LDY ram_06DE,X
@@ -3836,14 +3820,6 @@ loc_9575:
 C D 0 - - - 0x035585 0D:9575: 20 96 ED  JSR sub_0x03EDA6
 C - - - - - 0x035588 0D:9578: A9 21     LDA #$21
 C - - - - - 0x03558A 0D:957A: 60        RTS
-
-
-; bzk мусор
-tbl_957B:
-- - - - - - 0x03558B 0D:957B: 12        .byte $12   ; 
-- - - - - - 0x03558C 0D:957C: 27        .byte $27   ; 
-- - - - - - 0x03558D 0D:957D: 18        .byte $18   ; 
-- - - - - - 0x03558E 0D:957E: 03        .byte $03   ; 
 
 
 
