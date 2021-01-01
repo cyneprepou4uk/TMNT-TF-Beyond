@@ -2770,26 +2770,6 @@ bra_8F40:
 C - - - - - 0x034F50 0D:8F40: 4C 62 8E  JMP loc_8E62
 
 
-; bzk мусор
-- - - - - - 0x034F53 0D:8F43: BC DE 06  LDY ram_06DE,X
-- - - - - - 0x034F56 0D:8F46: B9 60 04  LDA ram_0460,Y
-- - - - - - 0x034F59 0D:8F49: 30 16     BMI bra_8F61
-- - - - - - 0x034F5B 0D:8F4B: C9 80     CMP #$80
-- - - - - - 0x034F5D 0D:8F4D: 90 12     BCC bra_8F61
-- - - - - - 0x034F5F 0D:8F4F: 20 04 F2  JSR sub_0x03F214_roll_rng
-- - - - - - 0x034F62 0D:8F52: A5 28     LDA ram_random_1
-- - - - - - 0x034F64 0D:8F54: C9 04     CMP #$04
-- - - - - - 0x034F66 0D:8F56: B0 03     BCS bra_8F5B
-- - - - - - 0x034F68 0D:8F58: 4C 62 8E  JMP loc_8E62
-bra_8F5B:
-- - - - - - 0x034F6B 0D:8F5B: 20 96 ED  JSR sub_0x03EDA6
-- - - - - - 0x034F6E 0D:8F5E: A9 03     LDA #$03
-- - - - - - 0x034F70 0D:8F60: 60        RTS
-bra_8F61:
-- - - - - - 0x034F71 0D:8F61: A9 17     LDA #$17
-- - - - - - 0x034F73 0D:8F63: 60        RTS
-
-
 
 loc_8F64:
 - - - - - - 0x034F74 0D:8F64: 20 8E EC  JSR sub_0x03EC9E
