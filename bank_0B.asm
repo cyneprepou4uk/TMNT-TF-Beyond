@@ -9560,20 +9560,6 @@ bra_A814_RTS:
 C - - - - - 0x02E824 0B:A814: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x02E825 0B:A815: FF        .byte $FF   ; 
-- - - - - - 0x02E826 0B:A816: FF        .byte $FF   ; 
-- - - - - - 0x02E827 0B:A817: FF        .byte $FF   ; 
-- - - - - - 0x02E828 0B:A818: FF        .byte $FF   ; 
-- - - - - - 0x02E829 0B:A819: FF        .byte $FF   ; 
-- - - - - - 0x02E82A 0B:A81A: FF        .byte $FF   ; 
-- - - - - - 0x02E82B 0B:A81B: FF        .byte $FF   ; 
-- - - - - - 0x02E82C 0B:A81C: FF        .byte $FF   ; 
-- - - - - - 0x02E82D 0B:A81D: FF        .byte $FF   ; 
-- - - - - - 0x02E82E 0B:A81E: FF        .byte $FF   ; 
-- - - - - - 0x02E82F 0B:A81F: FF        .byte $FF   ; 
-
-
 
 ofs_A820:
 .export ofs_0x02E830
