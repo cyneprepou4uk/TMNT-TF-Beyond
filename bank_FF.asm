@@ -4735,12 +4735,6 @@ C - - - - - 0x03D2B7 0F:D2A7: 85 95     STA ram_0095
 C - - - - - 0x03D2B9 0F:D2A9: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x03D2BA 0F:D2AA: 02        .byte $02   ; 
-- - - - - - 0x03D2BB 0F:D2AB: 01        .byte $01   ; 
-- - - - - - 0x03D2BC 0F:D2AC: 00        .byte $00   ; 
-
-
 
 ofs_D2AD_01:
 C - - J - - 0x03D2BD 0F:D2AD: A9 36     LDA #$36
