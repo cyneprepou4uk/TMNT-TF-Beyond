@@ -9585,47 +9585,6 @@ tbl_A831:
 - D 1 - - - 0x02E847 0B:A837: 22        .byte $22   ; 06
 
 
-; bzk мусор
-- - - - - - 0x02E848 0B:A838: FF        .byte $FF   ; 
-- - - - - - 0x02E849 0B:A839: FF        .byte $FF   ; 
-- - - - - - 0x02E84A 0B:A83A: FF        .byte $FF   ; 
-- - - - - - 0x02E84B 0B:A83B: FF        .byte $FF   ; 
-- - - - - - 0x02E84C 0B:A83C: FF        .byte $FF   ; 
-- - - - - - 0x02E84D 0B:A83D: FF        .byte $FF   ; 
-- - - - - - 0x02E84E 0B:A83E: FF        .byte $FF   ; 
-- - - - - - 0x02E84F 0B:A83F: FF        .byte $FF   ; 
-- - - - - - 0x02E850 0B:A840: FF        .byte $FF   ; 
-- - - - - - 0x02E851 0B:A841: FF        .byte $FF   ; 
-- - - - - - 0x02E852 0B:A842: FF        .byte $FF   ; 
-- - - - - - 0x02E853 0B:A843: FF        .byte $FF   ; 
-- - - - - - 0x02E854 0B:A844: FF        .byte $FF   ; 
-- - - - - - 0x02E855 0B:A845: FF        .byte $FF   ; 
-- - - - - - 0x02E856 0B:A846: FF        .byte $FF   ; 
-- - - - - - 0x02E857 0B:A847: FF        .byte $FF   ; 
-- - - - - - 0x02E858 0B:A848: FF        .byte $FF   ; 
-- - - - - - 0x02E859 0B:A849: FF        .byte $FF   ; 
-- - - - - - 0x02E85A 0B:A84A: FF        .byte $FF   ; 
-- - - - - - 0x02E85B 0B:A84B: FF        .byte $FF   ; 
-- - - - - - 0x02E85C 0B:A84C: FF        .byte $FF   ; 
-- - - - - - 0x02E85D 0B:A84D: FF        .byte $FF   ; 
-- - - - - - 0x02E85E 0B:A84E: FF        .byte $FF   ; 
-- - - - - - 0x02E85F 0B:A84F: FF        .byte $FF   ; 
-- - - - - - 0x02E860 0B:A850: FF        .byte $FF   ; 
-- - - - - - 0x02E861 0B:A851: FF        .byte $FF   ; 
-- - - - - - 0x02E862 0B:A852: FF        .byte $FF   ; 
-- - - - - - 0x02E863 0B:A853: FF        .byte $FF   ; 
-- - - - - - 0x02E864 0B:A854: FF        .byte $FF   ; 
-- - - - - - 0x02E865 0B:A855: FF        .byte $FF   ; 
-- - - - - - 0x02E866 0B:A856: FF        .byte $FF   ; 
-- - - - - - 0x02E867 0B:A857: FF        .byte $FF   ; 
-- - - - - - 0x02E868 0B:A858: FF        .byte $FF   ; 
-- - - - - - 0x02E869 0B:A859: FF        .byte $FF   ; 
-- - - - - - 0x02E86A 0B:A85A: FF        .byte $FF   ; 
-- - - - - - 0x02E86B 0B:A85B: FF        .byte $FF   ; 
-- - - - - - 0x02E86C 0B:A85C: FF        .byte $FF   ; 
-- - - - - - 0x02E86D 0B:A85D: FF        .byte $FF   ; 
-
-
 
 ofs_A85E:
 .export ofs_0x02E86E
