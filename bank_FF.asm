@@ -10798,26 +10798,6 @@ C - - - - - 0x03F6B5 0F:F6A5: A4 A9     LDY ram_00A9
 C - - - - - 0x03F6B7 0F:F6A7: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x03F6B8 0F:F6A8: 85 20     STA ram_0020
-- - - - - - 0x03F6BA 0F:F6AA: A5 2E     LDA ram_002E
-- - - - - - 0x03F6BC 0F:F6AC: D0 13     BNE bra_F6C1_RTS
-- - - - - - 0x03F6BE 0F:F6AE: 98        TYA
-- - - - - - 0x03F6BF 0F:F6AF: 48        PHA
-- - - - - - 0x03F6C0 0F:F6B0: 8A        TXA
-- - - - - - 0x03F6C1 0F:F6B1: 48        PHA
-- - - - - - 0x03F6C2 0F:F6B2: 20 69 F6  JSR sub_F669
-- - - - - - 0x03F6C5 0F:F6B5: A5 20     LDA ram_0020
-- - - - - - 0x03F6C7 0F:F6B7: 20 8D 8E  JSR sub_0x020E9D
-- - - - - - 0x03F6CA 0F:F6BA: 20 5F F6  JSR sub_F65F
-- - - - - - 0x03F6CD 0F:F6BD: 68        PLA
-- - - - - - 0x03F6CE 0F:F6BE: AA        TAX
-- - - - - - 0x03F6CF 0F:F6BF: 68        PLA
-- - - - - - 0x03F6D0 0F:F6C0: A8        TAY
-bra_F6C1_RTS:
-- - - - - - 0x03F6D1 0F:F6C1: 60        RTS
-
-
 
 sub_F6C2:
 loc_F6C2:
