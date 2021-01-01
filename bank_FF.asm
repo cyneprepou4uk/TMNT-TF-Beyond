@@ -11253,7 +11253,7 @@ C - - - - - 0x03F8EF 0F:F8DF: 7D 85 F8  ADC tbl_F885,X
 C - - - - - 0x03F8F2 0F:F8E2: A8        TAY
 C - - - - - 0x03F8F3 0F:F8E3: B9 8F F8  LDA tbl_F890 - 1,Y
 C - - - - - 0x03F8F6 0F:F8E6: BE 94 F8  LDX tbl_F890 - 1 + 5,Y
-C - - - - - 0x03F8F9 0F:F8E9: BC 00 00  LDY a: ram_0000,X
+C - - - - - 0x03F8F9 0F:F8E9: BC 00 00  LDY ram_0000,X
 bra_F8EC:
 C - - - - - 0x03F8FC 0F:F8EC: 8D 00 C0  STA $C000
 C - - - - - 0x03F8FF 0F:F8EF: 85 4A     STA ram_004A
