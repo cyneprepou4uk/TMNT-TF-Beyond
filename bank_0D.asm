@@ -4960,10 +4960,6 @@ ofs_9C75_01:
 C D 0 J - - 0x035C85 0D:9C75: 4C A4 BF  JMP loc_BFA4
 
 
-; bzk мусор
-- - - - - - 0x035C88 0D:9C78: EA        NOP
-
-
 
 loc_9C79:
 C D 0 - - - 0x035C89 0D:9C79: D0 1D     BNE bra_9C98
