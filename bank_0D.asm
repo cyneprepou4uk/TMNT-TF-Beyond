@@ -4717,19 +4717,7 @@ C - - - - - 0x035B0A 0D:9AFA: B9 C6 9B  LDA tbl_9BC6,Y
 C - - - - - 0x035B0D 0D:9AFD: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x035B0E 0D:9AFE: BD E4 06  LDA ram_06E4,X
-- - - - - - 0x035B11 0D:9B01: D0 03     BNE bra_9B06
-- - - - - - 0x035B13 0D:9B03: 20 96 ED  JSR sub_0x03EDA6
-bra_9B06:
-- - - - - - 0x035B16 0D:9B06: A5 28     LDA ram_random_1
-- - - - - - 0x035B18 0D:9B08: 29 01     AND #$01
-- - - - - - 0x035B1A 0D:9B0A: D0 03     BNE bra_9B0F
-- - - - - - 0x035B1C 0D:9B0C: A9 06     LDA #$06
-- - - - - - 0x035B1E 0D:9B0E: 60        RTS
-bra_9B0F:
-- - - - - - 0x035B1F 0D:9B0F: A9 0C     LDA #$0C
-- - - - - - 0x035B21 0D:9B11: 60        RTS
+
 bra_9B12:
 C - - - - - 0x035B22 0D:9B12: BC DE 06  LDY ram_06DE,X
 C - - - - - 0x035B25 0D:9B15: 20 FE ED  JSR sub_0x03EE0E
