@@ -10384,18 +10384,6 @@ bra_BAAE_RTS:
 C - - - - - 0x027ABE 09:BAAE: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x027ABF 09:BAAF: BD 10 05  LDA ram_0510,X
-- - - - - - 0x027AC2 09:BAB2: 0A        ASL
-- - - - - - 0x027AC3 09:BAB3: 0A        ASL
-- - - - - - 0x027AC4 09:BAB4: A9 01     LDA #$01
-- - - - - - 0x027AC6 09:BAB6: 90 02     BCC bra_BABA
-- - - - - - 0x027AC8 09:BAB8: A9 02     LDA #$02
-bra_BABA:
-- - - - - - 0x027ACA 09:BABA: DD 24 06  CMP ram_0624,X
-- - - - - - 0x027ACD 09:BABD: 60        RTS
-
-
 
 bra_BABE:
 C - - - - - 0x027ACE 09:BABE: 88        DEY
