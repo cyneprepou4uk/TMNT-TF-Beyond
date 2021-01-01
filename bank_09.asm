@@ -7124,6 +7124,7 @@ tbl_A81B:
 - D 1 - - - 0x02682D 09:A81D: AC        .byte $AC   ; 02
 - D 1 - - - 0x02682E 09:A81E: AB        .byte $AB   ; 03
 - D 1 - - - 0x02682F 09:A81F: AA        .byte $AA   ; 04
+
 tbl_A820:
 - D 1 - - - 0x026830 09:A820: 0D        .byte $0D   ; 00
 - D 1 - - - 0x026831 09:A821: 0D        .byte $0D   ; 01
