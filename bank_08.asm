@@ -14783,12 +14783,3 @@ _off001_BFE1_63:
 
 
 
-.export tbl_0x02400C
-tbl_0x02400C:
-- D 1 - - - 0x02400C 08:BFFC: 02        .byte $02   ; 
-- D 1 - - - 0x02400D 08:BFFD: 01        .byte $01   ; 
-- D 1 - - - 0x02400E 08:BFFE: 00        .byte $00   ; 
-- D 1 - - - 0x02400F 08:BFFF: 00        .byte $00   ; 
-
-
-

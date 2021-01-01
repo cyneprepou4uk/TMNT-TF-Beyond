@@ -4718,7 +4718,7 @@ C - - J - - 0x03D2A0 0F:D290: 20 09 DE  JSR sub_DE09
 C - - - - - 0x03D2A3 0F:D293: A9 FF     LDA #$FF
 C - - - - - 0x03D2A5 0F:D295: 85 98     STA ram_0098
 C - - - - - 0x03D2A7 0F:D297: AC 25 01  LDY ram_option_difficulty
-C - - - - - 0x03D2AA 0F:D29A: B9 FC BF  LDA tbl_0x02400C,Y
+C - - - - - 0x03D2AA 0F:D29A: B9 FC BF  LDA tbl_BFFC,Y
 C - - - - - 0x03D2AD 0F:D29D: 85 31     STA ram_0031
 C - - - - - 0x03D2AF 0F:D29F: A9 00     LDA #$00
 C - - - - - 0x03D2B1 0F:D2A1: 85 89     STA ram_0089
@@ -4728,6 +4728,12 @@ C D 2 - - - 0x03D2B3 0F:D2A3: E6 94     INC ram_0094
 C - - - - - 0x03D2B5 0F:D2A5: A9 00     LDA #$00
 C - - - - - 0x03D2B7 0F:D2A7: 85 95     STA ram_0095
 C - - - - - 0x03D2B9 0F:D2A9: 60        RTS
+
+tbl_BFFC:
+- D 1 - - - 0x02400C 08:BFFC: 02        .byte $02   ; 00
+- D 1 - - - 0x02400D 08:BFFD: 01        .byte $01   ; 01
+- D 1 - - - 0x02400E 08:BFFE: 00        .byte $00   ; 02
+- D 1 - - - 0x02400F 08:BFFF: 00        .byte $00   ; 03
 
 
 
@@ -12047,9 +12053,13 @@ C - - - - - 0x03FEE0 0F:FED0: A4 95     LDY ram_0095
 C - - - - - 0x03FEE2 0F:FED2: C0 07     CPY #$07
 C - - - - - 0x03FEE4 0F:FED4: D0 06     BNE bra_FEDC
 C - - - - - 0x03FEE6 0F:FED6: AC 26 01  LDY ram_option_speed
-C - - - - - 0x03FEE9 0F:FED9: B9 8B B7  LDA tbl_0x02779B,Y
+C - - - - - 0x03FEE9 0F:FED9: B9 8B B7  LDA tbl_B78B,Y
 bra_FEDC:
 C - - - - - 0x03FEEC 0F:FEDC: 4C 6A D1  JMP loc_D16A
+
+tbl_B78B:
+- D 1 - - - 0x02779B 09:B78B: 61        .byte $61   ; 00
+- D 1 - - - 0x02779C 09:B78C: 11        .byte $11   ; 01
 
 
 
