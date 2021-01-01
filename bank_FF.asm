@@ -11482,10 +11482,6 @@ C - - - - - 0x03FA70 0F:FA60: 8C 06 20  STY $2006
 C - - - - - 0x03FA73 0F:FA63: 4C E3 E3  JMP loc_E3E3
 
 
-; bzk мусор
-- - - - - - 0x03FA76 0F:FA66: EA        NOP
-
-
 
 sub_FA67:
 C - - - - - 0x03FA77 0F:FA67: A4 4D     LDY ram_004D
