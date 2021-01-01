@@ -10627,11 +10627,6 @@ C - - - - - 0x03F5E5 0F:F5D5: 20 AE F5  JSR sub_F5AE
 C - - - - - 0x03F5E8 0F:F5D8: 4C 3E E1  JMP loc_E13E
 
 
-; bzk мусор
-- - - - - - 0x03F5EB 0F:F5DB: A9 30     LDA #$30
-- - - - - - 0x03F5ED 0F:F5DD: D0 1A     BNE bra_F5F9
-
-
 
 sub_F5DF_prg_bank_09:
 C - - - - - 0x03F5EF 0F:F5DF: A9 32     LDA #$32
