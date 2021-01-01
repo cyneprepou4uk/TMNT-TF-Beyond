@@ -11550,63 +11550,6 @@ bra_AFB3_RTS:
 C - - - - - 0x02EFC3 0B:AFB3: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x02EFC4 0B:AFB4: FF        .byte $FF   ; 
-- - - - - - 0x02EFC5 0B:AFB5: FF        .byte $FF   ; 
-- - - - - - 0x02EFC6 0B:AFB6: FF        .byte $FF   ; 
-- - - - - - 0x02EFC7 0B:AFB7: FF        .byte $FF   ; 
-- - - - - - 0x02EFC8 0B:AFB8: FF        .byte $FF   ; 
-- - - - - - 0x02EFC9 0B:AFB9: FF        .byte $FF   ; 
-- - - - - - 0x02EFCA 0B:AFBA: FF        .byte $FF   ; 
-- - - - - - 0x02EFCB 0B:AFBB: FF        .byte $FF   ; 
-- - - - - - 0x02EFCC 0B:AFBC: FF        .byte $FF   ; 
-- - - - - - 0x02EFCD 0B:AFBD: FF        .byte $FF   ; 
-- - - - - - 0x02EFCE 0B:AFBE: FF        .byte $FF   ; 
-- - - - - - 0x02EFCF 0B:AFBF: FF        .byte $FF   ; 
-- - - - - - 0x02EFD0 0B:AFC0: FF        .byte $FF   ; 
-- - - - - - 0x02EFD1 0B:AFC1: FF        .byte $FF   ; 
-- - - - - - 0x02EFD2 0B:AFC2: FF        .byte $FF   ; 
-- - - - - - 0x02EFD3 0B:AFC3: FF        .byte $FF   ; 
-- - - - - - 0x02EFD4 0B:AFC4: FF        .byte $FF   ; 
-- - - - - - 0x02EFD5 0B:AFC5: FF        .byte $FF   ; 
-- - - - - - 0x02EFD6 0B:AFC6: FF        .byte $FF   ; 
-- - - - - - 0x02EFD7 0B:AFC7: FF        .byte $FF   ; 
-- - - - - - 0x02EFD8 0B:AFC8: FF        .byte $FF   ; 
-- - - - - - 0x02EFD9 0B:AFC9: FF        .byte $FF   ; 
-- - - - - - 0x02EFDA 0B:AFCA: FF        .byte $FF   ; 
-- - - - - - 0x02EFDB 0B:AFCB: FF        .byte $FF   ; 
-- - - - - - 0x02EFDC 0B:AFCC: FF        .byte $FF   ; 
-- - - - - - 0x02EFDD 0B:AFCD: FF        .byte $FF   ; 
-- - - - - - 0x02EFDE 0B:AFCE: FF        .byte $FF   ; 
-- - - - - - 0x02EFDF 0B:AFCF: FF        .byte $FF   ; 
-- - - - - - 0x02EFE0 0B:AFD0: FF        .byte $FF   ; 
-- - - - - - 0x02EFE1 0B:AFD1: FF        .byte $FF   ; 
-- - - - - - 0x02EFE2 0B:AFD2: FF        .byte $FF   ; 
-- - - - - - 0x02EFE3 0B:AFD3: FF        .byte $FF   ; 
-- - - - - - 0x02EFE4 0B:AFD4: FF        .byte $FF   ; 
-- - - - - - 0x02EFE5 0B:AFD5: FF        .byte $FF   ; 
-- - - - - - 0x02EFE6 0B:AFD6: FF        .byte $FF   ; 
-- - - - - - 0x02EFE7 0B:AFD7: FF        .byte $FF   ; 
-- - - - - - 0x02EFE8 0B:AFD8: FF        .byte $FF   ; 
-- - - - - - 0x02EFE9 0B:AFD9: FF        .byte $FF   ; 
-- - - - - - 0x02EFEA 0B:AFDA: FF        .byte $FF   ; 
-- - - - - - 0x02EFEB 0B:AFDB: FF        .byte $FF   ; 
-- - - - - - 0x02EFEC 0B:AFDC: FF        .byte $FF   ; 
-- - - - - - 0x02EFED 0B:AFDD: FF        .byte $FF   ; 
-- - - - - - 0x02EFEE 0B:AFDE: FF        .byte $FF   ; 
-- - - - - - 0x02EFEF 0B:AFDF: FF        .byte $FF   ; 
-- - - - - - 0x02EFF0 0B:AFE0: FF        .byte $FF   ; 
-- - - - - - 0x02EFF1 0B:AFE1: FF        .byte $FF   ; 
-- - - - - - 0x02EFF2 0B:AFE2: FF        .byte $FF   ; 
-- - - - - - 0x02EFF3 0B:AFE3: FF        .byte $FF   ; 
-- - - - - - 0x02EFF4 0B:AFE4: FF        .byte $FF   ; 
-- - - - - - 0x02EFF5 0B:AFE5: FF        .byte $FF   ; 
-- - - - - - 0x02EFF6 0B:AFE6: FF        .byte $FF   ; 
-- - - - - - 0x02EFF7 0B:AFE7: FF        .byte $FF   ; 
-- - - - - - 0x02EFF8 0B:AFE8: FF        .byte $FF   ; 
-- - - - - - 0x02EFF9 0B:AFE9: FF        .byte $FF   ; 
-
-
 
 ; !!! нельзя перемещать код, пока не будет переделан 0B:AF40
 .export tbl_0x02EFFA
