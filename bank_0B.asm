@@ -11526,62 +11526,6 @@ C - - - - - 0x02EECB 0B:AEBB: BE 20 AE  LDX tbl_AE20,Y
 C - - - - - 0x02EECE 0B:AEBE: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x02EF6B 0B:AF5B: FF        .byte $FF   ; 
-- - - - - - 0x02EF6C 0B:AF5C: FF        .byte $FF   ; 
-- - - - - - 0x02EF6D 0B:AF5D: FF        .byte $FF   ; 
-- - - - - - 0x02EF6E 0B:AF5E: FF        .byte $FF   ; 
-- - - - - - 0x02EF6F 0B:AF5F: FF        .byte $FF   ; 
-- - - - - - 0x02EF70 0B:AF60: FF        .byte $FF   ; 
-- - - - - - 0x02EF71 0B:AF61: FF        .byte $FF   ; 
-- - - - - - 0x02EF72 0B:AF62: FF        .byte $FF   ; 
-- - - - - - 0x02EF73 0B:AF63: FF        .byte $FF   ; 
-- - - - - - 0x02EF74 0B:AF64: FF        .byte $FF   ; 
-- - - - - - 0x02EF75 0B:AF65: FF        .byte $FF   ; 
-- - - - - - 0x02EF76 0B:AF66: FF        .byte $FF   ; 
-- - - - - - 0x02EF77 0B:AF67: FF        .byte $FF   ; 
-- - - - - - 0x02EF78 0B:AF68: FF        .byte $FF   ; 
-- - - - - - 0x02EF79 0B:AF69: FF        .byte $FF   ; 
-- - - - - - 0x02EF7A 0B:AF6A: FF        .byte $FF   ; 
-- - - - - - 0x02EF7B 0B:AF6B: FF        .byte $FF   ; 
-- - - - - - 0x02EF7C 0B:AF6C: FF        .byte $FF   ; 
-- - - - - - 0x02EF7D 0B:AF6D: FF        .byte $FF   ; 
-- - - - - - 0x02EF7E 0B:AF6E: FF        .byte $FF   ; 
-- - - - - - 0x02EF7F 0B:AF6F: FF        .byte $FF   ; 
-- - - - - - 0x02EF80 0B:AF70: FF        .byte $FF   ; 
-- - - - - - 0x02EF81 0B:AF71: FF        .byte $FF   ; 
-- - - - - - 0x02EF82 0B:AF72: FF        .byte $FF   ; 
-- - - - - - 0x02EF83 0B:AF73: FF        .byte $FF   ; 
-- - - - - - 0x02EF84 0B:AF74: FF        .byte $FF   ; 
-- - - - - - 0x02EF85 0B:AF75: FF        .byte $FF   ; 
-- - - - - - 0x02EF86 0B:AF76: FF        .byte $FF   ; 
-- - - - - - 0x02EF87 0B:AF77: FF        .byte $FF   ; 
-- - - - - - 0x02EF88 0B:AF78: FF        .byte $FF   ; 
-- - - - - - 0x02EF89 0B:AF79: FF        .byte $FF   ; 
-- - - - - - 0x02EF8A 0B:AF7A: FF        .byte $FF   ; 
-- - - - - - 0x02EF8B 0B:AF7B: FF        .byte $FF   ; 
-- - - - - - 0x02EF8C 0B:AF7C: FF        .byte $FF   ; 
-- - - - - - 0x02EF8D 0B:AF7D: FF        .byte $FF   ; 
-- - - - - - 0x02EF8E 0B:AF7E: FF        .byte $FF   ; 
-- - - - - - 0x02EF8F 0B:AF7F: FF        .byte $FF   ; 
-- - - - - - 0x02EF90 0B:AF80: FF        .byte $FF   ; 
-- - - - - - 0x02EF91 0B:AF81: FF        .byte $FF   ; 
-- - - - - - 0x02EF92 0B:AF82: FF        .byte $FF   ; 
-- - - - - - 0x02EF93 0B:AF83: FF        .byte $FF   ; 
-- - - - - - 0x02EF94 0B:AF84: FF        .byte $FF   ; 
-- - - - - - 0x02EF95 0B:AF85: FF        .byte $FF   ; 
-- - - - - - 0x02EF96 0B:AF86: FF        .byte $FF   ; 
-- - - - - - 0x02EF97 0B:AF87: FF        .byte $FF   ; 
-- - - - - - 0x02EF98 0B:AF88: FF        .byte $FF   ; 
-- - - - - - 0x02EF99 0B:AF89: FF        .byte $FF   ; 
-- - - - - - 0x02EF9A 0B:AF8A: FF        .byte $FF   ; 
-- - - - - - 0x02EF9B 0B:AF8B: FF        .byte $FF   ; 
-- - - - - - 0x02EF9C 0B:AF8C: FF        .byte $FF   ; 
-- - - - - - 0x02EF9D 0B:AF8D: FF        .byte $FF   ; 
-- - - - - - 0x02EF9E 0B:AF8E: FF        .byte $FF   ; 
-- - - - - - 0x02EF9F 0B:AF8F: FF        .byte $FF   ; 
-
-
 
 .export loc_0x02EFA0
 loc_0x02EFA0:
