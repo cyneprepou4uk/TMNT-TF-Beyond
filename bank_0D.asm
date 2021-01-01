@@ -5808,12 +5808,6 @@ tbl_A195:
 - D 1 - - - 0x0361A6 0D:A196: 19        .byte $19   ; 01
 
 
-; bzk мусор
-- - - - - - 0x0361A7 0D:A197: EA        .byte $EA   ; 
-- - - - - - 0x0361A8 0D:A198: EA        .byte $EA   ; 
-- - - - - - 0x0361A9 0D:A199: EA        .byte $EA   ; 
-
-
 
 sub_A19A:
 C - - - - - 0x0361AA 0D:A19A: AD 25 01  LDA ram_option_difficulty
