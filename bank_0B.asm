@@ -9626,14 +9626,6 @@ tbl_A89C:
 - D 1 - - - 0x02E8B1 0B:A8A1: 09        .byte $09   ; 05
 - D 1 - - - 0x02E8B2 0B:A8A2: 06        .byte $06   ; 06
 
-
-; bzk мусор
-- - - - - - 0x02E8B3 0B:A8A3: FF        .byte $FF   ; 
-- - - - - - 0x02E8B4 0B:A8A4: FF        .byte $FF   ; 
-- - - - - - 0x02E8B5 0B:A8A5: FF        .byte $FF   ; 
-
-
-
 tbl_A8A6:
 - D 1 - - - 0x02E8B6 0B:A8A6: 05        .byte $05   ; 00
 - D 1 - - - 0x02E8B7 0B:A8A7: 07        .byte $07   ; 01
