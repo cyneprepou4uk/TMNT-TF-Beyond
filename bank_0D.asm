@@ -5533,11 +5533,11 @@ C - - - - - 0x035FD1 0D:9FC1: B0 11     BCS bra_9FD4
 C - - - - - 0x035FD3 0D:9FC3: B9 12 06  LDA ram_0612,Y
 C - - - - - 0x035FD6 0D:9FC6: C9 0D     CMP #$0D
 C - - - - - 0x035FD8 0D:9FC8: D0 03     BNE bra_9FCD
-C - - - - - 0x035FDA 0D:9FCA: 4C F7 A0  JMP loc_A0F7
+C - - - - - 0x035FDA 0D:9FCA: 4C F7 A0  JMP loc_A39F
 bra_9FCD:
 C - - - - - 0x035FDD 0D:9FCD: C9 0A     CMP #$0A
 C - - - - - 0x035FDF 0D:9FCF: D0 03     BNE bra_9FD4
-C - - - - - 0x035FE1 0D:9FD1: 4C F7 A0  JMP loc_A0F7
+C - - - - - 0x035FE1 0D:9FD1: 4C F7 A0  JMP loc_A39F
 bra_9FD4:
 C - - - - - 0x035FE4 0D:9FD4: A5 13     LDA ram_0013
 C - - - - - 0x035FE6 0D:9FD6: C9 02     CMP #$02
@@ -5661,6 +5661,8 @@ C - - - - - 0x03608C 0D:A07C: A5 13     LDA ram_0013
 C - - - - - 0x03608E 0D:A07E: C9 02     CMP #$02
 C - - - - - 0x036090 0D:A080: 90 75     BCC bra_A0F7
 C - - - - - 0x036092 0D:A082: B0 EB     BCS bra_A06F
+bra_A0F7:
+C D 1 - - - 0x036107 0D:A0F7: 4C 9F A3  JMP loc_A39F
 
 
 
@@ -5694,12 +5696,6 @@ bra_A0B0:
 C - - - - - 0x0360C0 0D:A0B0: A9 04     LDA #$04
 C - - - - - 0x0360C2 0D:A0B2: 85 17     STA ram_0017
 C - - - - - 0x0360C4 0D:A0B4: 60        RTS
-
-
-
-bra_A0F7:
-loc_A0F7:   ; bzk
-C D 1 - - - 0x036107 0D:A0F7: 4C 9F A3  JMP loc_A39F
 
 
 
