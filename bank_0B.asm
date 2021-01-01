@@ -11952,18 +11952,6 @@ C - - - - - 0x02FF4F 0B:BF3F: 9D 00 04  STA ram_0400,X
 C - - - - - 0x02FF52 0B:BF42: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x02FF53 0B:BF43: FF        .byte $FF   ; 
-- - - - - - 0x02FF54 0B:BF44: FF        .byte $FF   ; 
-- - - - - - 0x02FF55 0B:BF45: FF        .byte $FF   ; 
-- - - - - - 0x02FF56 0B:BF46: FF        .byte $FF   ; 
-- - - - - - 0x02FF57 0B:BF47: FF        .byte $FF   ; 
-- - - - - - 0x02FF58 0B:BF48: FF        .byte $FF   ; 
-- - - - - - 0x02FF59 0B:BF49: FF        .byte $FF   ; 
-- - - - - - 0x02FF5A 0B:BF4A: FF        .byte $FF   ; 
-- - - - - - 0x02FF5B 0B:BF4B: FF        .byte $FF   ; 
-
-
 
 sub_BF4C:
 C - - - - - 0x02FF5C 0B:BF4C: A5 2C     LDA ram_002C
