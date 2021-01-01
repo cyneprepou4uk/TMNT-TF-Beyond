@@ -11392,10 +11392,6 @@ tbl_F9BB_default_options:
 - D 3 - - - 0x03F9D1 0F:F9C1: 08        .byte $08   ; 06 skin
 
 
-; bzk мусор
-- - - - - - 0x03F9D2 0F:F9C2: EA        NOP
-
-
 
 bra_F9C3:
 C - - - - - 0x03F9D3 0F:F9C3: 88        DEY
