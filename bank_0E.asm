@@ -7105,36 +7105,6 @@ C - - - - - 0x03A66F 0E:A65F: 20 A4 A6  JSR sub_A6A4
 C - - - - - 0x03A672 0E:A662: 4C E5 A6  JMP loc_A6E5
 
 
-; bzk мусор
-- - - - - - 0x03A675 0E:A665: FF        .byte $FF   ; 
-- - - - - - 0x03A676 0E:A666: FF        .byte $FF   ; 
-- - - - - - 0x03A677 0E:A667: FF        .byte $FF   ; 
-- - - - - - 0x03A678 0E:A668: FF        .byte $FF   ; 
-- - - - - - 0x03A679 0E:A669: FF        .byte $FF   ; 
-- - - - - - 0x03A67A 0E:A66A: FF        .byte $FF   ; 
-- - - - - - 0x03A67B 0E:A66B: FF        .byte $FF   ; 
-- - - - - - 0x03A67C 0E:A66C: FF        .byte $FF   ; 
-- - - - - - 0x03A67D 0E:A66D: FF        .byte $FF   ; 
-- - - - - - 0x03A67E 0E:A66E: FF        .byte $FF   ; 
-- - - - - - 0x03A67F 0E:A66F: FF        .byte $FF   ; 
-- - - - - - 0x03A680 0E:A670: FF        .byte $FF   ; 
-- - - - - - 0x03A681 0E:A671: FF        .byte $FF   ; 
-- - - - - - 0x03A682 0E:A672: FF        .byte $FF   ; 
-- - - - - - 0x03A683 0E:A673: FF        .byte $FF   ; 
-- - - - - - 0x03A684 0E:A674: FF        .byte $FF   ; 
-- - - - - - 0x03A685 0E:A675: FF        .byte $FF   ; 
-- - - - - - 0x03A686 0E:A676: FF        .byte $FF   ; 
-- - - - - - 0x03A687 0E:A677: FF        .byte $FF   ; 
-- - - - - - 0x03A688 0E:A678: FF        .byte $FF   ; 
-- - - - - - 0x03A689 0E:A679: FF        .byte $FF   ; 
-- - - - - - 0x03A68A 0E:A67A: FF        .byte $FF   ; 
-- - - - - - 0x03A68B 0E:A67B: FF        .byte $FF   ; 
-- - - - - - 0x03A68C 0E:A67C: FF        .byte $FF   ; 
-- - - - - - 0x03A68D 0E:A67D: FF        .byte $FF   ; 
-- - - - - - 0x03A68E 0E:A67E: FF        .byte $FF   ; 
-- - - - - - 0x03A68F 0E:A67F: FF        .byte $FF   ; 
-
-
 
 loc_A680:
 C D 1 - - - 0x03A690 0E:A680: A6 95     LDX ram_0095
