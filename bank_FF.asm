@@ -10067,12 +10067,6 @@ C - - - - - 0x03F281 0F:F271: 85 23     STA ram_0023
 C - - - - - 0x03F283 0F:F273: 4C 6C F8  JMP loc_F86C
 
 
-; bzk мусор
-- - - - - - 0x03F286 0F:F276: EA        .byte $EA   ; 
-- - - - - - 0x03F287 0F:F277: EA        .byte $EA   ; 
-- - - - - - 0x03F288 0F:F278: EA        .byte $EA   ; 
-
-
 
 bra_F279:
 C - - - - - 0x03F289 0F:F279: A5 FE     LDA ram_00FE
