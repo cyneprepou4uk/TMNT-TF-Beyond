@@ -10665,10 +10665,6 @@ C - - - - - 0x03F603 0F:F5F3: A9 3C     LDA #$3C
 C - - - - - 0x03F605 0F:F5F5: D0 02     BNE bra_F5F9
 
 
-; bzk мусор
-- - - - - - 0x03F607 0F:F5F7: A9 3E     LDA #$3E
-
-
 
 bra_F5F9:
 sub_F5F9:
