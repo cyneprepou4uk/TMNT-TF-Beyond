@@ -5276,12 +5276,6 @@ bra_9E2B_RTS:
 C - - - - - 0x035E3B 0D:9E2B: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x035E3C 0D:9E2C: A9 01     LDA #$01
-- - - - - - 0x035E3E 0D:9E2E: 85 17     STA ram_0017
-- - - - - - 0x035E40 0D:9E30: 60        RTS
-
-
 
 loc_9E31:
 C D 0 - - - 0x035E41 0D:9E31: A9 1C     LDA #$1C
