@@ -11894,32 +11894,6 @@ C - - - - - 0x02FED3 0B:BEC3: 20 5D D2  JSR sub_0x03D26D
 C - - - - - 0x02FED6 0B:BEC6: 4C 17 F6  JMP loc_0x03F627
 
 
-; bzk мусор
-- - - - - - 0x02FED9 0B:BEC9: FF        .byte $FF   ; 
-- - - - - - 0x02FEDA 0B:BECA: FF        .byte $FF   ; 
-- - - - - - 0x02FEDB 0B:BECB: FF        .byte $FF   ; 
-- - - - - - 0x02FEDC 0B:BECC: FF        .byte $FF   ; 
-- - - - - - 0x02FEDD 0B:BECD: FF        .byte $FF   ; 
-- - - - - - 0x02FEDE 0B:BECE: FF        .byte $FF   ; 
-- - - - - - 0x02FEDF 0B:BECF: FF        .byte $FF   ; 
-- - - - - - 0x02FEE0 0B:BED0: FF        .byte $FF   ; 
-- - - - - - 0x02FEE1 0B:BED1: FF        .byte $FF   ; 
-- - - - - - 0x02FEE2 0B:BED2: FF        .byte $FF   ; 
-- - - - - - 0x02FEE3 0B:BED3: FF        .byte $FF   ; 
-- - - - - - 0x02FEE4 0B:BED4: FF        .byte $FF   ; 
-- - - - - - 0x02FEE5 0B:BED5: FF        .byte $FF   ; 
-- - - - - - 0x02FEE6 0B:BED6: FF        .byte $FF   ; 
-- - - - - - 0x02FEE7 0B:BED7: FF        .byte $FF   ; 
-- - - - - - 0x02FEE8 0B:BED8: FF        .byte $FF   ; 
-- - - - - - 0x02FEE9 0B:BED9: FF        .byte $FF   ; 
-- - - - - - 0x02FEEA 0B:BEDA: FF        .byte $FF   ; 
-- - - - - - 0x02FEEB 0B:BEDB: FF        .byte $FF   ; 
-- - - - - - 0x02FEEC 0B:BEDC: FF        .byte $FF   ; 
-- - - - - - 0x02FEED 0B:BEDD: FF        .byte $FF   ; 
-- - - - - - 0x02FEEE 0B:BEDE: FF        .byte $FF   ; 
-- - - - - - 0x02FEEF 0B:BEDF: FF        .byte $FF   ; 
-
-
 
 .export sub_0x02FEF0
 sub_0x02FEF0:
