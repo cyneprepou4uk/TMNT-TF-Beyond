@@ -10402,11 +10402,6 @@ C - - - - - 0x03F4AF 0F:F49F: A9 02     LDA #$02
 C - - - - - 0x03F4B1 0F:F4A1: 4C AE F5  JMP loc_F5AE
 
 
-; bzk мусор
-- - - - - - 0x03F4B4 0F:F4A4: EA        .byte $EA   ; 
-- - - - - - 0x03F4B5 0F:F4A5: EA        .byte $EA   ; 
-
-
 
 tbl_F4A6_Y_spr_pos:
 - D 3 - - - 0x03F4B6 0F:F4A6: 83        .byte $83   ; 00
