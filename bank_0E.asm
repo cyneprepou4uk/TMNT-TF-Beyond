@@ -3866,10 +3866,6 @@ bra_9658_RTS:
 C - - - - - 0x039668 0E:9658: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x039669 0E:9659: 4C AD 98  JMP loc_98AD
-
-
 
 sub_965C:
 C - - - - - 0x03966C 0E:965C: 84 18     STY ram_0018
@@ -4209,7 +4205,6 @@ C - - - - - 0x0398BC 0E:98AC: 60        RTS
 
 
 
-loc_98AD:
 ofs_98AD_0A:
 C - - J - - 0x0398BD 0E:98AD: 20 90 FC  JSR sub_0x03FCA0
 C - - - - - 0x0398C0 0E:98B0: 20 88 FB  JSR sub_0x03FB98
