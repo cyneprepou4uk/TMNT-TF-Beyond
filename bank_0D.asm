@@ -5354,10 +5354,6 @@ C - - - - - 0x035EBD 0D:9EAD: 85 17     STA ram_0017
 C - - - - - 0x035EBF 0D:9EAF: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x035EC0 0D:9EB0: 60        RTS
-
-
 
 ofs_9EB1_04_RTS:
 C - - J - - 0x035EC1 0D:9EB1: 60        RTS
