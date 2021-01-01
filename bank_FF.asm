@@ -9211,11 +9211,6 @@ C - - - - - 0x03ED97 0F:ED87: 18        CLC
 C - - - - - 0x03ED98 0F:ED88: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x03ED99 0F:ED89: 9D C6 06  STA ram_06C6,X
-- - - - - - 0x03ED9C 0F:ED8C: 9D C8 06  STA ram_06C8,X
-
-
 
 .export sub_0x03ED9F
 sub_0x03ED9F:
