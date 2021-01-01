@@ -10567,11 +10567,6 @@ C - - - - - 0x03F5B1 0F:F5A1: 4C 88 FB  JMP loc_FB88
 
 
 
-ofs_F5A4_09:    ; bzk опт
-C - - J - - 0x03F5B4 0F:F5A4: 4C 1D F7  JMP loc_F71D
-
-
-
 sub_F5A7:
 loc_F5A7:
 C D 3 - - - 0x03F5B7 0F:F5A7: E6 20     INC ram_0020
@@ -10878,7 +10873,7 @@ C - - - - - 0x03F72A 0F:F71A: 4C 17 F6  JMP loc_F617
 
 
 
-loc_F71D:
+ofs_F5A4_09:
 C D 3 - - - 0x03F72D 0F:F71D: 20 F3 F5  JSR sub_F5F3_prg_bank_0E
 C - - - - - 0x03F730 0F:F720: 20 7B 8C  JSR sub_0x038C8B
 C - - - - - 0x03F733 0F:F723: 4C 17 F6  JMP loc_F617
