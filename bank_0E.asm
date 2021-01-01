@@ -4348,9 +4348,9 @@ tbl_995B:
 
 
 loc_996B:
-C D 0 - - - 0x03997B 0E:996B: AD E0 99  LDA tbl_99E0
+C D 0 - - - 0x03997B 0E:996B: AD E0 99  LDA #< tbl_99E2
 C - - - - - 0x03997E 0E:996E: 85 00     STA ram_0000
-C - - - - - 0x039980 0E:9970: AD E1 99  LDA tbl_99E0 + 1
+C - - - - - 0x039980 0E:9970: AD E1 99  LDA #> tbl_99E2
 C - - - - - 0x039983 0E:9973: 85 01     STA ram_0001
 C - - - - - 0x039985 0E:9975: A0 00     LDY #$00
 C - - - - - 0x039987 0E:9977: AE 30 05  LDX ram_0530
@@ -4414,11 +4414,6 @@ C - - - - - 0x0399E8 0E:99D8: E6 21     INC ram_0021
 C - - - - - 0x0399EA 0E:99DA: A9 01     LDA #$01
 C - - - - - 0x0399EC 0E:99DC: 8D 60 05  STA ram_0560
 C - - - - - 0x0399EF 0E:99DF: 60        RTS
-
-
-
-tbl_99E0:   ; bzk
-- D 0 - - - 0x0399F0 0E:99E0: E2 99     .word tbl_99E2
 
 
 
