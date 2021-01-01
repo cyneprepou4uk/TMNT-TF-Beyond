@@ -3785,14 +3785,14 @@ tbl_8C00:
 
 
 tbl_8FDB:
-- D 0 - - - 0x030FEB 0C:8FDB: C6        .byte $C6, $BF, $C9, $FF   ; 
-- D 0 - - - 0x030FEF 0C:8FDF: CC        .byte $CC, $BB, $CA, $FF   ; 
-- D 0 - - - 0x030FF3 0C:8FE3: C7        .byte $C7, $C3, $C5, $FF   ; 
-- D 0 - - - 0x030FF7 0C:8FE7: BE        .byte $BE, $C9, $C8, $FF   ; 
-- D 0 - - - 0x030FFB 0C:8FEB: BD        .byte $BD, $BB, $CD, $FF   ; 
-- D 0 - - - 0x030FFF 0C:8FEF: C2        .byte $C2, $C9, $CE, $FF   ; 
-- D 0 - - - 0x031003 0C:8FF3: CD        .byte $CD, $C2, $CC, $FF   ; 
-- D 0 - - - 0x031007 0C:8FF7: A9        .byte $A9, $A9, $A9, $FF   ; 
+- D 0 - - - 0x030FEB 0C:8FDB: C6        .byte $C6, $BF, $C9, $FF   ; 00
+- D 0 - - - 0x030FEF 0C:8FDF: CC        .byte $CC, $BB, $CA, $FF   ; 01
+- D 0 - - - 0x030FF3 0C:8FE3: C7        .byte $C7, $C3, $C5, $FF   ; 02
+- D 0 - - - 0x030FF7 0C:8FE7: BE        .byte $BE, $C9, $C8, $FF   ; 03
+- D 0 - - - 0x030FFB 0C:8FEB: BD        .byte $BD, $BB, $CD, $FF   ; 04
+- D 0 - - - 0x030FFF 0C:8FEF: C2        .byte $C2, $C9, $CE, $FF   ; 05
+- D 0 - - - 0x031003 0C:8FF3: CD        .byte $CD, $C2, $CC, $FF   ; 06
+- D 0 - - - 0x031007 0C:8FF7: A9        .byte $A9, $A9, $A9, $FF   ; 07
 
 
 
