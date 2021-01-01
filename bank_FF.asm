@@ -10841,12 +10841,6 @@ C - - - - - 0x03F6FA 0F:F6EA: 20 76 80  JSR sub_0x030086
 C - - - - - 0x03F6FD 0F:F6ED: 4C 17 F6  JMP loc_F617
 
 
-; bzk мусор
-- - - - - - 0x03F700 0F:F6F0: 20 E7 F5  JSR sub_F5E7_prg_bank_0B
-- - - - - - 0x03F703 0F:F6F3: 20 01 80  JSR $8001
-- - - - - - 0x03F706 0F:F6F6: 4C 17 F6  JMP loc_F617
-
-
 
 sub_F6F9:
 C - - - - - 0x03F709 0F:F6F9: 20 E7 F5  JSR sub_F5E7_prg_bank_0B
