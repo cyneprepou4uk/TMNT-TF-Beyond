@@ -11971,16 +11971,6 @@ C - - - - - 0x02FF75 0B:BF65: FE 30 05  INC ram_0530,X
 C - - - - - 0x02FF78 0B:BF68: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x02FF79 0B:BF69: FF        .byte $FF   ; 
-- - - - - - 0x02FF7A 0B:BF6A: FF        .byte $FF   ; 
-- - - - - - 0x02FF7B 0B:BF6B: FF        .byte $FF   ; 
-- - - - - - 0x02FF7C 0B:BF6C: FF        .byte $FF   ; 
-- - - - - - 0x02FF7D 0B:BF6D: FF        .byte $FF   ; 
-- - - - - - 0x02FF7E 0B:BF6E: FF        .byte $FF   ; 
-- - - - - - 0x02FF7F 0B:BF6F: FF        .byte $FF   ; 
-
-
 
 .export loc_0x02FF80
 loc_0x02FF80:
