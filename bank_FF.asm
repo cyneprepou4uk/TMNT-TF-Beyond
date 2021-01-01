@@ -12243,6 +12243,13 @@ C - - - - - 0x03FF7F 0F:FF6F: 86 AD     STX ram_00AD
 C - - - - - 0x03FF81 0F:FF71: 60        RTS
 
 
+
+.export _common_RTS
+_common_RTS:
+    RTS
+
+
+
 .segment "VECTORS"
 - D 3 - - - 0x04000A 0F:FFFA: 19 F2     .word vec_F219_NMI_handler
 - D 3 - - - 0x04000C 0F:FFFC: 74 F1     .word vec_F174_RESET_handler

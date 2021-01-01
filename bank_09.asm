@@ -10810,7 +10810,7 @@ C - - - - - 0x027D94 09:BD84: 20 32 D0  JSR sub_0x03D042
 - D 1 - I - 0x027D99 09:BD89: C4 BD     .word ofs_BDC4_01
 - D 1 - I - 0x027D9B 09:BD8B: 46 BE     .word ofs_BE46_02
 - D 1 - I - 0x027D9D 09:BD8D: B4 BE     .word ofs_BEB4_03
-- D 1 - I - 0x027D9F 09:BD8F: C2 BE     .word ofs_BEC2_04_RTS
+- D 1 - I - 0x027D9F 09:BD8F: C2 BE     .word _common_RTS   ; 04
 
 
 
@@ -10961,12 +10961,12 @@ C - - - - - 0x027EC1 09:BEB1: 4C 8B F6  JMP loc_0x03F69B
 
 ofs_BEB4_03:
 C - - J - - 0x027EC4 09:BEB4: AD 36 04  LDA ram_0436
-C - - - - - 0x027EC7 09:BEB7: D0 8C     BNE bra_BE45_RTS
+C - - - - - 0x027EC7 09:BEB7: D0 8C     BEQ bra_BEB9
+                                        RTS
+bra_BEB9:
 C - - - - - 0x027EC9 09:BEB9: AD 46 04  LDA ram_0446
 C - - - - - 0x027ECC 09:BEBC: 8D 41 04  STA ram_0441
 C - - - - - 0x027ECF 09:BEBF: 4C 9B BD  JMP loc_BD9B
-ofs_BEC2_04_RTS:
-C - - J - - 0x027ED2 09:BEC2: 60        RTS
 
 
 

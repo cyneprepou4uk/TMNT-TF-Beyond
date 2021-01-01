@@ -1834,7 +1834,7 @@ C - - - - - 0x020BDA 08:8BCA: 20 59 8C  JSR sub_8C59
 - D 0 - I - 0x020BDD 08:8BCD: D9 8B     .word ofs_8BD9_00
 - D 0 - I - 0x020BDF 08:8BCF: D9 8B     .word ofs_8BD9_01
 - D 0 - I - 0x020BE1 08:8BD1: DE 8B     .word ofs_8BDE_02
-- D 0 - I - 0x020BE3 08:8BD3: 0B 8C     .word ofs_8C0B_03_RTS
+- D 0 - I - 0x020BE3 08:8BD3: 0B 8C     .word _common_RTS   ; 03
 - D 0 - I - 0x020BE5 08:8BD5: E9 8B     .word ofs_8BE9_04
 - D 0 - I - 0x020BE7 08:8BD7: D9 8B     .word ofs_8BD9_05
 
@@ -1874,7 +1874,6 @@ C - - - - - 0x020C13 08:8C03: 20 25 8C  JSR sub_8C25
 C - - - - - 0x020C16 08:8C06: A6 E4     LDX ram_00E4
 C - - - - - 0x020C18 08:8C08: 8E 61 07  STX ram_0761
 bra_8C0B_RTS:
-ofs_8C0B_03_RTS:
 C - - - - - 0x020C1B 08:8C0B: 60        RTS
 
 
