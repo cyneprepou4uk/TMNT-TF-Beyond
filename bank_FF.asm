@@ -6147,48 +6147,8 @@ C - - - - - 0x03DD1F 0F:DD0F: 29 BF     AND #$BF
 C - - - - - 0x03DD21 0F:DD11: 4C 5F DD  JMP loc_DD5F
 
 
-; bzk мусор
-- - - - - - 0x03DD24 0F:DD14: BD 10 05  LDA ram_0510,X
-- - - - - - 0x03DD27 0F:DD17: 29 BF     AND #$BF
-- - - - - - 0x03DD29 0F:DD19: 85 00     STA ram_0000
-- - - - - - 0x03DD2B 0F:DD1B: BD 40 04  LDA ram_0440,X
-- - - - - - 0x03DD2E 0F:DD1E: CD 40 04  CMP ram_0440
-- - - - - - 0x03DD31 0F:DD21: A9 00     LDA #$00
-- - - - - - 0x03DD33 0F:DD23: 6A        ROR
-- - - - - - 0x03DD34 0F:DD24: 6A        ROR
-- - - - - - 0x03DD35 0F:DD25: BC 30 04  LDY ram_0430,X
-- - - - - - 0x03DD38 0F:DD28: F0 35     BEQ bra_DD5F
-- - - - - - 0x03DD3A 0F:DD2A: 98        TYA
-- - - - - - 0x03DD3B 0F:DD2B: 0A        ASL
-- - - - - - 0x03DD3C 0F:DD2C: A9 40     LDA #$40
-- - - - - - 0x03DD3E 0F:DD2E: 90 2F     BCC bra_DD5F
-- - - - - - 0x03DD40 0F:DD30: A9 00     LDA #$00
-- - - - - - 0x03DD42 0F:DD32: F0 2B     BEQ bra_DD5F
-- - - - - - 0x03DD44 0F:DD34: AD 10 04  LDA ram_0410
-- - - - - - 0x03DD47 0F:DD37: DD 10 04  CMP ram_0410,X
-- - - - - - 0x03DD4A 0F:DD3A: A9 00     LDA #$00
-- - - - - - 0x03DD4C 0F:DD3C: 6A        ROR
-- - - - - - 0x03DD4D 0F:DD3D: 4C 48 DD  JMP loc_DD48
-- - - - - - 0x03DD50 0F:DD40: 20 52 DD  JSR sub_DD52
-- - - - - - 0x03DD53 0F:DD43: BD 60 04  LDA ram_0460,X
-- - - - - - 0x03DD56 0F:DD46: 29 80     AND #$80
-loc_DD48:
-- - - - - - 0x03DD58 0F:DD48: 85 00     STA ram_0000
-- - - - - - 0x03DD5A 0F:DD4A: BD 10 05  LDA ram_0510,X
-- - - - - - 0x03DD5D 0F:DD4D: 29 7F     AND #$7F
-- - - - - - 0x03DD5F 0F:DD4F: 4C 5F DD  JMP loc_DD5F
-sub_DD52:
-- - - - - - 0x03DD62 0F:DD52: BD 80 04  LDA ram_0480,X
-- - - - - - 0x03DD65 0F:DD55: 4A        LSR
-- - - - - - 0x03DD66 0F:DD56: 29 40     AND #$40
-- - - - - - 0x03DD68 0F:DD58: 85 00     STA ram_0000
-- - - - - - 0x03DD6A 0F:DD5A: BD 10 05  LDA ram_0510,X
-- - - - - - 0x03DD6D 0F:DD5D: 29 BF     AND #$BF
-
-
 
 loc_DD5F:
-bra_DD5F:
 C D 2 - - - 0x03DD6F 0F:DD5F: 05 00     ORA ram_0000
 C - - - - - 0x03DD71 0F:DD61: 9D 10 05  STA ram_0510,X
 C - - - - - 0x03DD74 0F:DD64: 60        RTS
