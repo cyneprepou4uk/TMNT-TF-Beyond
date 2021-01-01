@@ -2486,16 +2486,6 @@ _off0118DA8_42:
 - D 0 - I - 0x034DBD 0D:8DAD: FF        .byte $FF   ; 
 
 
-; bzk мусор
-- - - - - - 0x034DBE 0D:8DAE: 0A        .byte $0A   ; 
-- - - - - - 0x034DBF 0D:8DAF: 1C        .byte $1C   ; 
-- - - - - - 0x034DC0 0D:8DB0: 1E        .byte $1E   ; 
-- - - - - - 0x034DC1 0D:8DB1: 28        .byte $28   ; 
-- - - - - - 0x034DC2 0D:8DB2: 1E        .byte $1E   ; 
-- - - - - - 0x034DC3 0D:8DB3: 00        .byte $00   ; 
-- - - - - - 0x034DC4 0D:8DB4: 00        .byte $00   ; 
-
-
 
 tbl_8DB5:
 - D 0 - - - 0x034DC5 0D:8DB5: 40        .byte $40   ; 
