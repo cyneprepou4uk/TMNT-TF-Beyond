@@ -11867,30 +11867,6 @@ bra_BE8A_RTS:
 C - - - - - 0x02FE9A 0B:BE8A: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x02FE9B 0B:BE8B: FF        .byte $FF   ; 
-- - - - - - 0x02FE9C 0B:BE8C: FF        .byte $FF   ; 
-- - - - - - 0x02FE9D 0B:BE8D: FF        .byte $FF   ; 
-- - - - - - 0x02FE9E 0B:BE8E: FF        .byte $FF   ; 
-- - - - - - 0x02FE9F 0B:BE8F: FF        .byte $FF   ; 
-- - - - - - 0x02FEA0 0B:BE90: FF        .byte $FF   ; 
-- - - - - - 0x02FEA1 0B:BE91: FF        .byte $FF   ; 
-- - - - - - 0x02FEA2 0B:BE92: FF        .byte $FF   ; 
-- - - - - - 0x02FEA3 0B:BE93: FF        .byte $FF   ; 
-- - - - - - 0x02FEA4 0B:BE94: FF        .byte $FF   ; 
-- - - - - - 0x02FEA5 0B:BE95: FF        .byte $FF   ; 
-- - - - - - 0x02FEA6 0B:BE96: FF        .byte $FF   ; 
-- - - - - - 0x02FEA7 0B:BE97: FF        .byte $FF   ; 
-- - - - - - 0x02FEA8 0B:BE98: FF        .byte $FF   ; 
-- - - - - - 0x02FEA9 0B:BE99: FF        .byte $FF   ; 
-- - - - - - 0x02FEAA 0B:BE9A: FF        .byte $FF   ; 
-- - - - - - 0x02FEAB 0B:BE9B: FF        .byte $FF   ; 
-- - - - - - 0x02FEAC 0B:BE9C: FF        .byte $FF   ; 
-- - - - - - 0x02FEAD 0B:BE9D: FF        .byte $FF   ; 
-- - - - - - 0x02FEAE 0B:BE9E: FF        .byte $FF   ; 
-- - - - - - 0x02FEAF 0B:BE9F: FF        .byte $FF   ; 
-
-
 
 loc_BEA0:
 C D 1 - - - 0x02FEB0 0B:BEA0: A9 81     LDA #$81
