@@ -11246,10 +11246,6 @@ C - - - - - 0x03F8CB 0F:F8BB: 20 00 F6  JSR sub_F600_prg_bank_0B
 C - - - - - 0x03F8CE 0F:F8BE: 4C 90 AF  JMP loc_0x02EFA0
 
 
-; bzk мусор
-- - - - - - 0x03F8D1 0F:F8C1: EA        NOP
-
-
 
 sub_F8C2:
 C - - - - - 0x03F8D2 0F:F8C2: A5 2C     LDA ram_002C
