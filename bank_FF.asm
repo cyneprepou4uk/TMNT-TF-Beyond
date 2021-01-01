@@ -8037,7 +8037,7 @@ C - - - - - 0x03E747 0F:E737: A9 08     LDA #$08
 C - - - - - 0x03E749 0F:E739: 85 95     STA ram_0095
 C - - - - - 0x03E74B 0F:E73B: A9 00     LDA #$00
 C - - - - - 0x03E74D 0F:E73D: A0 01     LDY #$01
-C - - - - - 0x03E74F 0F:E73F: 4C CC F5  JMP loc_F5CC_RTS
+C - - - - - 0x03E74F 0F:E73F: 4C CC F5  RTS
 
 
 
@@ -10588,7 +10588,6 @@ loc_F5C6:
 C D 3 - - - 0x03F5D6 0F:F5C6: A9 00     LDA #$00
 C - - - - - 0x03F5D8 0F:F5C8: 85 9C     STA ram_009C
 C - - - - - 0x03F5DA 0F:F5CA: 84 9F     STY ram_009F
-loc_F5CC_RTS:
 C D 3 - - - 0x03F5DC 0F:F5CC: 60        RTS
 
 
