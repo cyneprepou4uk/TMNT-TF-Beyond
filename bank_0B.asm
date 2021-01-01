@@ -12005,19 +12005,6 @@ C - - - - - 0x02FFB4 0B:BFA4: 8E 71 06  STX ram_0671
 C - - - - - 0x02FFB7 0B:BFA7: 4C 8A E6  JMP loc_0x03E69A
 
 
-; bzk мусор
-- - - - - - 0x02FFBA 0B:BFAA: FF        .byte $FF   ; 
-- - - - - - 0x02FFBB 0B:BFAB: FF        .byte $FF   ; 
-- - - - - - 0x02FFBC 0B:BFAC: FF        .byte $FF   ; 
-- - - - - - 0x02FFBD 0B:BFAD: FF        .byte $FF   ; 
-- - - - - - 0x02FFBE 0B:BFAE: FF        .byte $FF   ; 
-- - - - - - 0x02FFBF 0B:BFAF: FF        .byte $FF   ; 
-- - - - - - 0x02FFC0 0B:BFB0: FF        .byte $FF   ; 
-- - - - - - 0x02FFC1 0B:BFB1: FF        .byte $FF   ; 
-- - - - - - 0x02FFC2 0B:BFB2: FF        .byte $FF   ; 
-- - - - - - 0x02FFC3 0B:BFB3: FF        .byte $FF   ; 
-
-
 
 .export loc_0x02FFC4
 loc_0x02FFC4:
