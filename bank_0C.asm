@@ -3805,10 +3805,6 @@ tbl_8FFD:
 - D 0 - - - 0x03100E 0C:8FFE: 23        .byte $23   ; 01
 
 
-; bzk мусор
-- - - - - - 0x03100F 0C:8FFF: FF        .byte $FF   ; 
-
-
 
 .export sub_0x031010
 sub_0x031010:
