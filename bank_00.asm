@@ -1222,9 +1222,9 @@ C - - - - - 0x003F2D 00:BF1D: 60        RTS
 
 
 tbl_BF1E:
-- D 1 - - - 0x003F2E 00:BF1E: 9F        .byte $9F   ; 
-- D 1 - - - 0x003F2F 00:BF1F: 9A        .byte $9A   ; 
-- D 1 - - - 0x003F30 00:BF20: 8D        .byte $8D   ; 
+- D 1 - - - 0x003F2E 00:BF1E: 9F        .byte $9F   ; 00
+- D 1 - - - 0x003F2F 00:BF1F: 9A        .byte $9A   ; 01
+- D 1 - - - 0x003F30 00:BF20: 8D        .byte $8D   ; 02
 
 
 ; bzk мусор
