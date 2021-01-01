@@ -1721,7 +1721,7 @@ C - - - - - 0x020B23 08:8B13: 9D 48 07  STA ram_0748,X
 C - - - - - 0x020B26 08:8B16: B5 EA     LDA ram_00EA,X
 C - - - - - 0x020B28 08:8B18: 09 10     ORA #$10
 C - - - - - 0x020B2A 08:8B1A: 95 EA     STA ram_00EA,X
-C - - - - - 0x020B2C 08:8B1C: D0 77     BNE bra_8B95
+C - - - - - 0x020B2C 08:8B1C: D0 77     JMP loc_8B95
 
 
 
@@ -1795,7 +1795,6 @@ C - - - - - 0x020BA4 08:8B94: 60        RTS
 
 
 
-bra_8B95:   ; bzk далекий прыжок
 loc_8B95:
 C D 0 - - - 0x020BA5 08:8B95: A0 00     LDY #$00
 C - - - - - 0x020BA7 08:8B97: BD 12 07  LDA ram_0712,X
