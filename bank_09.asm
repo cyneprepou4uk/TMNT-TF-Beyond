@@ -4895,13 +4895,6 @@ C - - - - - 0x025AC7 09:9AB7: 60        RTS
 
 
 
-loc_9AB8:
-; bzk мусор
-- - - - - - 0x025AC8 09:9AB8: DE 0C 06  DEC ram_060C,X
-- - - - - - 0x025ACB 09:9ABB: D0 92     BNE bra_9A4F_RTS
-
-
-
 bra_9ABD:
 loc_9ABD:
 C D 0 - - - 0x025ACD 09:9ABD: A9 00     LDA #$00
@@ -5133,10 +5126,6 @@ C - - J - - 0x025C41 09:9C31: 20 7B 9C  JSR sub_9C7B
 C - - - - - 0x025C44 09:9C34: 98        TYA
 C - - - - - 0x025C45 09:9C35: F0 05     BEQ bra_9C3C
 C - - - - - 0x025C47 09:9C37: D0 0C     BNE bra_9C45
-
-
-; bzk мусор
-- - - - - - 0x025C49 09:9C39: 4C B8 9A  JMP loc_9AB8
 
 
 
