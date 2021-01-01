@@ -11460,25 +11460,6 @@ tbl_AE31:
 - D 1 - - - 0x02EE4F 0B:AE3F: 8A        .byte $8A   ; 
 
 
-; bzk мусор
-- - - - - - 0x02EE50 0B:AE40: FF        .byte $FF   ; 
-- - - - - - 0x02EE51 0B:AE41: FF        .byte $FF   ; 
-- - - - - - 0x02EE52 0B:AE42: FF        .byte $FF   ; 
-- - - - - - 0x02EE53 0B:AE43: FF        .byte $FF   ; 
-- - - - - - 0x02EE54 0B:AE44: FF        .byte $FF   ; 
-- - - - - - 0x02EE55 0B:AE45: FF        .byte $FF   ; 
-- - - - - - 0x02EE56 0B:AE46: FF        .byte $FF   ; 
-- - - - - - 0x02EE57 0B:AE47: FF        .byte $FF   ; 
-- - - - - - 0x02EE58 0B:AE48: FF        .byte $FF   ; 
-- - - - - - 0x02EE59 0B:AE49: FF        .byte $FF   ; 
-- - - - - - 0x02EE5A 0B:AE4A: FF        .byte $FF   ; 
-- - - - - - 0x02EE5B 0B:AE4B: FF        .byte $FF   ; 
-- - - - - - 0x02EE5C 0B:AE4C: FF        .byte $FF   ; 
-- - - - - - 0x02EE5D 0B:AE4D: FF        .byte $FF   ; 
-- - - - - - 0x02EE5E 0B:AE4E: FF        .byte $FF   ; 
-- - - - - - 0x02EE5F 0B:AE4F: FF        .byte $FF   ; 
-
-
 
 .export sub_0x02EE60
 sub_0x02EE60:
