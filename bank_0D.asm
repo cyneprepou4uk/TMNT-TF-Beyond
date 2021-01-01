@@ -5506,12 +5506,6 @@ C - - - - - 0x035FA7 0D:9F97: 85 17     STA ram_0017
 C - - - - - 0x035FA9 0D:9F99: 60        RTS
 
 
-; bzk мусор
-- - - - - - 0x035FAA 0D:9F9A: 60        RTS
-- - - - - - 0x035FAB 0D:9F9B: 60        RTS
-- - - - - - 0x035FAC 0D:9F9C: 60        RTS
-
-
 
 ofs_9F9D_05_RTS:
 C - - J - - 0x035FAD 0D:9F9D: 60        RTS
