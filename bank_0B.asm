@@ -9812,40 +9812,6 @@ C - - - - - 0x02EA3C 0B:AA2C: A0 01     LDY #$01
 C - - - - - 0x02EA3E 0B:AA2E: 4C 68 F7  JMP loc_0x03F778
 
 
-; bzk мусор
-- - - - - - 0x02EA41 0B:AA31: FF        .byte $FF   ; 
-- - - - - - 0x02EA42 0B:AA32: FF        .byte $FF   ; 
-- - - - - - 0x02EA43 0B:AA33: FF        .byte $FF   ; 
-- - - - - - 0x02EA44 0B:AA34: FF        .byte $FF   ; 
-- - - - - - 0x02EA45 0B:AA35: FF        .byte $FF   ; 
-- - - - - - 0x02EA46 0B:AA36: FF        .byte $FF   ; 
-- - - - - - 0x02EA47 0B:AA37: FF        .byte $FF   ; 
-- - - - - - 0x02EA48 0B:AA38: FF        .byte $FF   ; 
-- - - - - - 0x02EA49 0B:AA39: FF        .byte $FF   ; 
-- - - - - - 0x02EA4A 0B:AA3A: FF        .byte $FF   ; 
-- - - - - - 0x02EA4B 0B:AA3B: FF        .byte $FF   ; 
-- - - - - - 0x02EA4C 0B:AA3C: FF        .byte $FF   ; 
-- - - - - - 0x02EA4D 0B:AA3D: FF        .byte $FF   ; 
-- - - - - - 0x02EA4E 0B:AA3E: FF        .byte $FF   ; 
-- - - - - - 0x02EA4F 0B:AA3F: FF        .byte $FF   ; 
-- - - - - - 0x02EA50 0B:AA40: FF        .byte $FF   ; 
-- - - - - - 0x02EA51 0B:AA41: FF        .byte $FF   ; 
-- - - - - - 0x02EA52 0B:AA42: FF        .byte $FF   ; 
-- - - - - - 0x02EA53 0B:AA43: FF        .byte $FF   ; 
-- - - - - - 0x02EA54 0B:AA44: FF        .byte $FF   ; 
-- - - - - - 0x02EA55 0B:AA45: FF        .byte $FF   ; 
-- - - - - - 0x02EA56 0B:AA46: FF        .byte $FF   ; 
-- - - - - - 0x02EA57 0B:AA47: FF        .byte $FF   ; 
-- - - - - - 0x02EA58 0B:AA48: FF        .byte $FF   ; 
-- - - - - - 0x02EA59 0B:AA49: FF        .byte $FF   ; 
-- - - - - - 0x02EA5A 0B:AA4A: FF        .byte $FF   ; 
-- - - - - - 0x02EA5B 0B:AA4B: FF        .byte $FF   ; 
-- - - - - - 0x02EA5C 0B:AA4C: FF        .byte $FF   ; 
-- - - - - - 0x02EA5D 0B:AA4D: FF        .byte $FF   ; 
-- - - - - - 0x02EA5E 0B:AA4E: FF        .byte $FF   ; 
-- - - - - - 0x02EA5F 0B:AA4F: FF        .byte $FF   ; 
-
-
 
 sub_AA50:
 C - - - - - 0x02EA60 0B:AA50: 48        PHA
