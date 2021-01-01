@@ -7398,10 +7398,6 @@ C - - - - - 0x026A00 09:A9F0: 48        PHA
 C - - - - - 0x026A01 09:A9F1: 4C E7 F5  JMP loc_0x03F5F7_prg_bank_0B
 
 
-; bzk мусор
-- - - - - - 0x026A04 09:A9F4: EA        NOP
-
-
 
 bra_A9F5:
 ofs_A9F5:
