@@ -9618,23 +9618,6 @@ tbl_EFAA:
 - D 3 - - - 0x03EFBD 0F:EFAD: C0        .byte $C0   ; 03
 
 
-; bzk мусор
-- - - - - - 0x03EFBE 0F:EFAE: EA        .byte $EA   ; 
-- - - - - - 0x03EFBF 0F:EFAF: EA        .byte $EA   ; 
-- - - - - - 0x03EFC0 0F:EFB0: EA        .byte $EA   ; 
-- - - - - - 0x03EFC1 0F:EFB1: EA        .byte $EA   ; 
-- - - - - - 0x03EFC2 0F:EFB2: EA        .byte $EA   ; 
-- - - - - - 0x03EFC3 0F:EFB3: EA        .byte $EA   ; 
-- - - - - - 0x03EFC4 0F:EFB4: EA        .byte $EA   ; 
-- - - - - - 0x03EFC5 0F:EFB5: EA        .byte $EA   ; 
-- - - - - - 0x03EFC6 0F:EFB6: EA        .byte $EA   ; 
-- - - - - - 0x03EFC7 0F:EFB7: EA        .byte $EA   ; 
-- - - - - - 0x03EFC8 0F:EFB8: EA        .byte $EA   ; 
-- - - - - - 0x03EFC9 0F:EFB9: EA        .byte $EA   ; 
-- - - - - - 0x03EFCA 0F:EFBA: EA        .byte $EA   ; 
-- - - - - - 0x03EFCB 0F:EFBB: EA        .byte $EA   ; 
-
-
 
 .export sub_0x03EFCC
 sub_0x03EFCC:
