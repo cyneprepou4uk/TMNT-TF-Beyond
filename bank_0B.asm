@@ -9284,7 +9284,7 @@ C - - - - - 0x02E5F0 0B:A5E0: 85 A9     STA ram_00A9
 C - - - - - 0x02E5F2 0B:A5E2: E0 02     CPX #$02
 C - - - - - 0x02E5F4 0B:A5E4: B0 1E     BCS bra_A604
 C - - - - - 0x02E5F6 0B:A5E6: BC 50 05  LDY ram_object_id,X
-C - - - - - 0x02E5F9 0B:A5E9: C0 05     CPY #con_fighter_Hot
+C - - - - - 0x02E5F9 0B:A5E9: C0 05     CPY #$05
 C - - - - - 0x02E5FB 0B:A5EB: F0 20     BEQ bra_A60D
 C - - - - - 0x02E5FD 0B:A5ED: BD 54 05  LDA ram_0554,X
 C - - - - - 0x02E600 0B:A5F0: 49 33     EOR #$33
@@ -9400,7 +9400,7 @@ C - - - - - 0x02E70E 0B:A6FE: BD 40 05  LDA ram_0540,X
 C - - - - - 0x02E711 0B:A701: D0 2D     BNE bra_A730
 C - - - - - 0x02E713 0B:A703: AD 38 06  LDA ram_dist_X_btw_plrs
 C - - - - - 0x02E716 0B:A706: BC 50 05  LDY ram_object_id,X
-C - - - - - 0x02E719 0B:A709: C0 03     CPY #con_fighter_Don
+C - - - - - 0x02E719 0B:A709: C0 03     CPY #$03
 C - - - - - 0x02E71B 0B:A70B: B0 23     BCS bra_A730
 C - - - - - 0x02E71D 0B:A70D: D9 1C DF  CMP tbl_0x03DF2C,Y
 C - - - - - 0x02E720 0B:A710: B0 1E     BCS bra_A730

@@ -857,19 +857,19 @@ bra_D2D6:
 C - - - - - 0x03D2E6 0F:D2D6: A5 28     LDA ram_random_1
 C - - - - - 0x03D2E8 0F:D2D8: 29 07     AND #$07
 C - - - - - 0x03D2EA 0F:D2DA: A8        TAY
-C - - - - - 0x03D2EB 0F:D2DB: B9 EE D2  LDA tbl_D2EE,Y
+C - - - - - 0x03D2EB 0F:D2DB: B9 EE D2  LDA tbl_D2EE_fighter_1p,Y
 C - - - - - 0x03D2EE 0F:D2DE: 8D 50 05  STA ram_object_id
 C - - - - - 0x03D2F1 0F:D2E1: 85 A2     STA ram_option_fighter
-C - - - - - 0x03D2F3 0F:D2E3: B9 EF D2  LDA tbl_D2EF,Y
+C - - - - - 0x03D2F3 0F:D2E3: B9 EF D2  LDA tbl_D2EF_fighter_2p,Y
 C - - - - - 0x03D2F6 0F:D2E6: 8D 51 05  STA ram_object_id + 1
 C - - - - - 0x03D2F9 0F:D2E9: 85 A3     STA ram_option_fighter + 1
 C - - - - - 0x03D2FB 0F:D2EB: 4C A3 D2  JMP loc_D2A3
 
 
 
-tbl_D2EE:
+tbl_D2EE_fighter_1p:
 - D 2 - - - 0x03D2FE 0F:D2EE: 00        .byte con_fighter_Leo   
-tbl_D2EF:
+tbl_D2EF_fighter_2p:
 - D 2 - - - 0x03D2FF 0F:D2EF: 03        .byte con_fighter_Don   
 - D 2 - - - 0x03D300 0F:D2F0: 05        .byte con_fighter_Hot   
 - D 2 - - - 0x03D301 0F:D2F1: 04        .byte con_fighter_Casey 
@@ -2508,7 +2508,7 @@ C - - - - - 0x03DED1 0F:DEC1: 7D 45 06  ADC ram_0645,X
 C - - - - - 0x03DED4 0F:DEC4: 9D 45 06  STA ram_0645,X
 C - - - - - 0x03DED7 0F:DEC7: A4 A9     LDY ram_00A9
 C - - - - - 0x03DED9 0F:DEC9: B9 50 05  LDA ram_object_id,Y
-C - - - - - 0x03DEDC 0F:DECC: C9 04     CMP #con_fighter_Casey
+C - - - - - 0x03DEDC 0F:DECC: C9 04     CMP #$04
 C - - - - - 0x03DEDE 0F:DECE: F0 D9     BEQ bra_DEA9
 C - - - - - 0x03DEE0 0F:DED0: A9 80     LDA #$80
 C - - - - - 0x03DEE2 0F:DED2: D0 D7     BNE bra_DEAB
@@ -5633,7 +5633,7 @@ C - - - - - 0x03EFD7 0F:EFC7: B0 0C     BCS bra_EFD5_RTS
 C - - - - - 0x03EFD9 0F:EFC9: B9 A7 EF  LDA tbl_EFD6 - $2F,Y
 bra_EFCC:
 C - - - - - 0x03EFDC 0F:EFCC: BC 50 05  LDY ram_object_id,X
-C - - - - - 0x03EFDF 0F:EFCF: C0 06     CPY #con_fighter_Shred
+C - - - - - 0x03EFDF 0F:EFCF: C0 06     CPY #$06
 C - - - - - 0x03EFE1 0F:EFD1: D0 02     BNE bra_EFD5_RTS
 C - - - - - 0x03EFE3 0F:EFD3: E9 01     SBC #$01
 bra_EFD5_RTS:

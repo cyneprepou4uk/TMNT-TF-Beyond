@@ -3849,7 +3849,7 @@ C - - - - - 0x039643 0E:9633: A9 0B     LDA #$0B
 C - - - - - 0x039645 0E:9635: 20 14 F8  JSR sub_0x03F824
 C - - - - - 0x039648 0E:9638: A5 A2     LDA ram_option_fighter
 C - - - - - 0x03964A 0E:963A: 8D 50 05  STA ram_object_id
-C - - - - - 0x03964D 0E:963D: A9 06     LDA #con_fighter_Shred
+C - - - - - 0x03964D 0E:963D: A9 06     LDA #$06
 C - - - - - 0x03964F 0E:963F: 8D 51 05  STA ram_object_id + 1
 C - - - - - 0x039652 0E:9642: 85 A3     STA ram_option_fighter + 1
 C - - - - - 0x039654 0E:9644: A0 00     LDY #$00
