@@ -7845,9 +7845,9 @@ C - - - - - 0x03FD44 0F:FD34: 90 F4     BCC bra_FD2A
 C - - - - - 0x03FD46 0F:FD36: 85 AB     STA ram_00AB
 bra_FD38:
 C - - - - - 0x03FD48 0F:FD38: E6 2A     INC ram_002A
-C - - - - - 0x03FD4A 0F:FD3A: AC 30 06  LDY ram_0630
+C - - - - - 0x03FD4A 0F:FD3A: AC 30 06  LDY ram_screen_shake_timer
 C - - - - - 0x03FD4D 0F:FD3D: F0 08     BEQ bra_FD47
-C - - - - - 0x03FD4F 0F:FD3F: CE 30 06  DEC ram_0630
+C - - - - - 0x03FD4F 0F:FD3F: CE 30 06  DEC ram_screen_shake_timer
 C - - - - - 0x03FD52 0F:FD42: B9 36 FE  LDA tbl_FE37 - 1,Y
 C - - - - - 0x03FD55 0F:FD45: 85 86     STA ram_0086
 bra_FD47:
@@ -7971,38 +7971,38 @@ C - - - - - 0x03FE46 0F:FE36: 60        RTS
 
 
 tbl_FE37:
-- D 3 - - - 0x03FE47 0F:FE37: 00        .byte $00   ; 
-- D 3 - - - 0x03FE48 0F:FE38: 01        .byte $01   ; 
-- D 3 - - - 0x03FE49 0F:FE39: FF        .byte $FF   ; 
-- D 3 - - - 0x03FE4A 0F:FE3A: 00        .byte $00   ; 
-- D 3 - - - 0x03FE4B 0F:FE3B: 01        .byte $01   ; 
-- D 3 - - - 0x03FE4C 0F:FE3C: 02        .byte $02   ; 
-- D 3 - - - 0x03FE4D 0F:FE3D: 01        .byte $01   ; 
-- D 3 - - - 0x03FE4E 0F:FE3E: 00        .byte $00   ; 
-- D 3 - - - 0x03FE4F 0F:FE3F: FF        .byte $FF   ; 
-- D 3 - - - 0x03FE50 0F:FE40: FE        .byte $FE   ; 
-- D 3 - - - 0x03FE51 0F:FE41: FF        .byte $FF   ; 
-- D 3 - - - 0x03FE52 0F:FE42: 00        .byte $00   ; 
-- D 3 - - - 0x03FE53 0F:FE43: 02        .byte $02   ; 
-- D 3 - - - 0x03FE54 0F:FE44: FE        .byte $FE   ; 
-- D 3 - - - 0x03FE55 0F:FE45: 00        .byte $00   ; 
-- D 3 - - - 0x03FE56 0F:FE46: 02        .byte $02   ; 
-- D 3 - - - 0x03FE57 0F:FE47: 00        .byte $00   ; 
-- D 3 - - - 0x03FE58 0F:FE48: 00        .byte $00   ; 
-- D 3 - - - 0x03FE59 0F:FE49: FE        .byte $FE   ; 
-- D 3 - - - 0x03FE5A 0F:FE4A: 00        .byte $00   ; 
-- D 3 - - - 0x03FE5B 0F:FE4B: 00        .byte $00   ; 
-- D 3 - - - 0x03FE5C 0F:FE4C: 02        .byte $02   ; 
-- D 3 - - - 0x03FE5D 0F:FE4D: 00        .byte $00   ; 
-- D 3 - - - 0x03FE5E 0F:FE4E: 00        .byte $00   ; 
-- D 3 - - - 0x03FE5F 0F:FE4F: FE        .byte $FE   ; 
-- D 3 - - - 0x03FE60 0F:FE50: 00        .byte $00   ; 
-- D 3 - - - 0x03FE61 0F:FE51: 00        .byte $00   ; 
-- D 3 - - - 0x03FE62 0F:FE52: 00        .byte $00   ; 
-- D 3 - - - 0x03FE63 0F:FE53: 02        .byte $02   ; 
-- D 3 - - - 0x03FE64 0F:FE54: 00        .byte $00   ; 
-- D 3 - - - 0x03FE65 0F:FE55: 00        .byte $00   ; 
-- D 3 - - - 0x03FE66 0F:FE56: FE        .byte $FE   ; 
+- D 3 - - - 0x03FE47 0F:FE37: 00        .byte $00   ; 01
+- D 3 - - - 0x03FE48 0F:FE38: 01        .byte $01   ; 02
+- D 3 - - - 0x03FE49 0F:FE39: FF        .byte $FF   ; 03
+- D 3 - - - 0x03FE4A 0F:FE3A: 00        .byte $00   ; 04
+- D 3 - - - 0x03FE4B 0F:FE3B: 01        .byte $01   ; 05
+- D 3 - - - 0x03FE4C 0F:FE3C: 02        .byte $02   ; 06
+- D 3 - - - 0x03FE4D 0F:FE3D: 01        .byte $01   ; 07
+- D 3 - - - 0x03FE4E 0F:FE3E: 00        .byte $00   ; 08
+- D 3 - - - 0x03FE4F 0F:FE3F: FF        .byte $FF   ; 09
+- D 3 - - - 0x03FE50 0F:FE40: FE        .byte $FE   ; 0A
+- D 3 - - - 0x03FE51 0F:FE41: FF        .byte $FF   ; 0B
+- D 3 - - - 0x03FE52 0F:FE42: 00        .byte $00   ; 0C
+- D 3 - - - 0x03FE53 0F:FE43: 02        .byte $02   ; 0D
+- D 3 - - - 0x03FE54 0F:FE44: FE        .byte $FE   ; 0E
+- D 3 - - - 0x03FE55 0F:FE45: 00        .byte $00   ; 0F
+- D 3 - - - 0x03FE56 0F:FE46: 02        .byte $02   ; 10
+- D 3 - - - 0x03FE57 0F:FE47: 00        .byte $00   ; 11
+- D 3 - - - 0x03FE58 0F:FE48: 00        .byte $00   ; 12
+- D 3 - - - 0x03FE59 0F:FE49: FE        .byte $FE   ; 13
+- D 3 - - - 0x03FE5A 0F:FE4A: 00        .byte $00   ; 14
+- D 3 - - - 0x03FE5B 0F:FE4B: 00        .byte $00   ; 15
+- D 3 - - - 0x03FE5C 0F:FE4C: 02        .byte $02   ; 16
+- D 3 - - - 0x03FE5D 0F:FE4D: 00        .byte $00   ; 17
+- D 3 - - - 0x03FE5E 0F:FE4E: 00        .byte $00   ; 18
+- D 3 - - - 0x03FE5F 0F:FE4F: FE        .byte $FE   ; 19
+- D 3 - - - 0x03FE60 0F:FE50: 00        .byte $00   ; 1A
+- D 3 - - - 0x03FE61 0F:FE51: 00        .byte $00   ; 1B
+- D 3 - - - 0x03FE62 0F:FE52: 00        .byte $00   ; 1C
+- D 3 - - - 0x03FE63 0F:FE53: 02        .byte $02   ; 1D
+- D 3 - - - 0x03FE64 0F:FE54: 00        .byte $00   ; 1E
+- D 3 - - - 0x03FE65 0F:FE55: 00        .byte $00   ; 1F
+- D 3 - - - 0x03FE66 0F:FE56: FE        .byte $FE   ; 20
 
 
 
