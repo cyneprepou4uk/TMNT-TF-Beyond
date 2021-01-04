@@ -4017,11 +4017,11 @@ C - - - - - 0x03976C 0E:975C: 4C E0 DC  JMP loc_0x03DCF0
 ofs_975F_02:
 C - - J - - 0x03976F 0E:975F: 18        CLC
 C - - - - - 0x039770 0E:9760: A9 04     LDA #$04
-C - - - - - 0x039772 0E:9762: 6D 91 04  ADC ram_0491
-C - - - - - 0x039775 0E:9765: 8D 91 04  STA ram_0491
+C - - - - - 0x039772 0E:9762: 6D 91 04  ADC ram_object_X_spd_lo + 1
+C - - - - - 0x039775 0E:9765: 8D 91 04  STA ram_object_X_spd_lo + 1
 C - - - - - 0x039778 0E:9768: A9 00     LDA #$00
-C - - - - - 0x03977A 0E:976A: 6D 81 04  ADC ram_0481
-C - - - - - 0x03977D 0E:976D: 8D 81 04  STA ram_0481
+C - - - - - 0x03977A 0E:976A: 6D 81 04  ADC ram_object_X_spd_hi + 1
+C - - - - - 0x03977D 0E:976D: 8D 81 04  STA ram_object_X_spd_hi + 1
 C - - - - - 0x039780 0E:9770: A0 0E     LDY #$0E
 C - - - - - 0x039782 0E:9772: 20 7C D0  JSR sub_0x03D08C
 C - - - - - 0x039785 0E:9775: A0 0E     LDY #$0E
