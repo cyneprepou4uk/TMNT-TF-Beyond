@@ -1692,7 +1692,7 @@ C - - - - - 0x03890A 0E:88FA: 8D 43 04  STA ram_0443
 C - - - - - 0x03890D 0E:88FD: A9 00     LDA #$00
 C - - - - - 0x03890F 0E:88FF: 8D 32 04  STA ram_0432
 C - - - - - 0x038912 0E:8902: 8D 33 04  STA ram_0433
-C - - - - - 0x038915 0E:8905: 20 B6 89  JSR sub_89B6
+C - - - - - 0x038915 0E:8905: 20 B6 89  JSR sub_89B6_strength_cursor
 C - - - - - 0x038918 0E:8908: 20 07 8A  JSR sub_8A07
 C - - - - - 0x03891B 0E:890B: 4C 41 E1  JMP loc_0x03E151
 
@@ -1732,7 +1732,7 @@ C - - - - - 0x038954 0E:8944: D0 20     BNE bra_8966
 bra_8946:
 C - - - - - 0x038956 0E:8946: CA        DEX
 C - - - - - 0x038957 0E:8947: 10 E1     BPL bra_892A
-C - - - - - 0x038959 0E:8949: 4C B6 89  JMP loc_89B6
+C - - - - - 0x038959 0E:8949: 4C B6 89  JMP loc_89B6_strength_cursor
 bra_894C:
 C - - - - - 0x03895C 0E:894C: A5 90     LDA ram_sum_btn_press
 C - - - - - 0x03895E 0E:894E: 29 03     AND #$03
@@ -1802,31 +1802,31 @@ C - - - - - 0x0389C3 0E:89B3: 4C E5 F6  JMP loc_0x03F6F5
 
 
 
-sub_89B6:
-loc_89B6:
+sub_89B6_strength_cursor:
+loc_89B6_strength_cursor:
 C D 0 - - - 0x0389C6 0E:89B6: 20 E3 89  JSR sub_89E3
 C - - - - - 0x0389C9 0E:89B9: A2 01     LDX #$01
-bra_89BB:
+bra_89BB_loop:
 C - - - - - 0x0389CB 0E:89BB: A9 14     LDA #$14
 C - - - - - 0x0389CD 0E:89BD: 9D 00 04  STA ram_0400,X
 C - - - - - 0x0389D0 0E:89C0: AD 30 05  LDA ram_0530
 C - - - - - 0x0389D3 0E:89C3: 4A        LSR
-C - - - - - 0x0389D4 0E:89C4: B0 09     BCS bra_89CF
+C - - - - - 0x0389D4 0E:89C4: B0 09     BCS bra_89CF_no_flickering
 C - - - - - 0x0389D6 0E:89C6: A5 22     LDA ram_frame_counter
 C - - - - - 0x0389D8 0E:89C8: 29 08     AND #$08
-C - - - - - 0x0389DA 0E:89CA: D0 03     BNE bra_89CF
+C - - - - - 0x0389DA 0E:89CA: D0 03     BNE bra_89CF_no_flickering
 C - - - - - 0x0389DC 0E:89CC: 9D 00 04  STA ram_0400,X
-bra_89CF:
+bra_89CF_no_flickering:
 C - - - - - 0x0389DF 0E:89CF: B5 A0     LDA ram_00A0,X
 C - - - - - 0x0389E1 0E:89D1: 0A        ASL
 C - - - - - 0x0389E2 0E:89D2: 0A        ASL
 C - - - - - 0x0389E3 0E:89D3: 0A        ASL
-C - - - - - 0x0389E4 0E:89D4: 7D 32 8A  ADC tbl_8A32,X
+C - - - - - 0x0389E4 0E:89D4: 7D 32 8A  ADC tbl_8A32_cursor_X_pos,X
 C - - - - - 0x0389E7 0E:89D7: 9D 40 04  STA ram_0440,X
-C - - - - - 0x0389EA 0E:89DA: A9 57     LDA #$57
+C - - - - - 0x0389EA 0E:89DA: A9 57     LDA #$57    ; Y pos
 C - - - - - 0x0389EC 0E:89DC: 9D 10 04  STA ram_0410,X
 C - - - - - 0x0389EF 0E:89DF: CA        DEX
-C - - - - - 0x0389F0 0E:89E0: 10 D9     BPL bra_89BB
+C - - - - - 0x0389F0 0E:89E0: 10 D9     BPL bra_89BB_loop
 bra_89E2_RTS:
 C - - - - - 0x0389F2 0E:89E2: 60        RTS
 
@@ -1890,7 +1890,7 @@ tbl_8A2E:
 
 
 
-tbl_8A32:
+tbl_8A32_cursor_X_pos:
 - D 0 - - - 0x038A42 0E:8A32: 38        .byte $38   ; 00
 - D 0 - - - 0x038A43 0E:8A33: C0        .byte $C0   ; 01
 
@@ -7331,7 +7331,7 @@ C - - - - - 0x03B01B 0E:B00B: 8D 50 01  STA ram_0150
 C - - - - - 0x03B01E 0E:B00E: A9 27     LDA #$27
 C - - - - - 0x03B020 0E:B010: 20 90 F6  JSR sub_0x03F6A0
 bra_B013:
-C - - - - - 0x03B023 0E:B013: 4C B6 89  JMP loc_89B6
+C - - - - - 0x03B023 0E:B013: 4C B6 89  JMP loc_89B6_strength_cursor
 
 
 

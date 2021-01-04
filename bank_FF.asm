@@ -6697,13 +6697,13 @@ C - - - - - 0x03F653 0F:F643: 8E 00 80  STX $8000
 C - - - - - 0x03F656 0F:F646: 8D 01 80  STA $8001
 C - - - - - 0x03F659 0F:F649: E8        INX
 C - - - - - 0x03F65A 0F:F64A: A0 03     LDY #$03
-bra_F64C:
+bra_F64C_loop:
 C - - - - - 0x03F65C 0F:F64C: B5 36     LDA ram_0036,X
 C - - - - - 0x03F65E 0F:F64E: 8E 00 80  STX $8000
 C - - - - - 0x03F661 0F:F651: 8D 01 80  STA $8001
 C - - - - - 0x03F664 0F:F654: E8        INX
 C - - - - - 0x03F665 0F:F655: 88        DEY
-C - - - - - 0x03F666 0F:F656: 10 F4     BPL bra_F64C
+C - - - - - 0x03F666 0F:F656: 10 F4     BPL bra_F64C_loop
 C - - - - - 0x03F668 0F:F658: 60        RTS
 
 
