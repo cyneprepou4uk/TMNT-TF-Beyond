@@ -16,112 +16,112 @@ con_X       = $00   ; координата X
 
 .export tbl_0x028011_turtle
 tbl_0x028011_turtle:
-- D 0 - - - 0x028011 0A:8001: CD 80     .word _off006_80CD_00
-- D 0 - I - 0x028013 0A:8003: F2 80     .word _off006_80F2_01
-- D 0 - I - 0x028015 0A:8005: 17 81     .word _off006_8117_02
-- D 0 - I - 0x028017 0A:8007: 3C 81     .word _off006_813C_03
-- D 0 - I - 0x028019 0A:8009: 55 81     .word _off006_8155_04
-- D 0 - I - 0x02801B 0A:800B: 7A 81     .word _off006_817A_05
-- D 0 - I - 0x02801D 0A:800D: 9F 81     .word _off006_819F_06
-- D 0 - I - 0x02801F 0A:800F: C4 81     .word _off006_81C4_07
-- D 0 - I - 0x028021 0A:8011: E9 81     .word _off006_81E9_08
-- D 0 - I - 0x028023 0A:8013: 12 82     .word _off006_8212_09
-- D 0 - I - 0x028025 0A:8015: 3B 82     .word _off006_823B_0A
-- D 0 - I - 0x028027 0A:8017: 60 82     .word _off006_8260_0B
-- D 0 - I - 0x028029 0A:8019: 85 82     .word _off006_8285_0C
-- D 0 - I - 0x02802B 0A:801B: AE 82     .word _off006_82AE_0D
-- D 0 - I - 0x02802D 0A:801D: D3 82     .word _off006_82D3_0E
-- D 0 - I - 0x02802F 0A:801F: FC 82     .word _off006_82FC_0F
-- D 0 - I - 0x028031 0A:8021: 29 83     .word _off006_8329_10
-- D 0 - I - 0x028033 0A:8023: 4A 83     .word _off006_834A_11
-- D 0 - I - 0x028035 0A:8025: 77 83     .word _off006_8377_12
-- D 0 - I - 0x028037 0A:8027: 98 83     .word _off006_8398_13
-- D 0 - I - 0x028039 0A:8029: B9 83     .word _off006_83B9_14
-- D 0 - I - 0x02803B 0A:802B: DE 83     .word _off006_83DE_15
-- - - - - - 0x02803D 0A:802D: 03 84     .word _off006_8403_16
-- D 0 - I - 0x02803F 0A:802F: 20 84     .word _off006_8420_17
-- D 0 - I - 0x028041 0A:8031: 41 84     .word _off006_8441_18
-- D 0 - I - 0x028043 0A:8033: 6A 84     .word _off006_846A_19
-- D 0 - I - 0x028045 0A:8035: 8B 84     .word _off006_848B_1A
-- D 0 - I - 0x028047 0A:8037: B4 84     .word _off006_84B4_1B
-- D 0 - I - 0x028049 0A:8039: E1 84     .word _off006_84E1_1C
-- D 0 - I - 0x02804B 0A:803B: 06 85     .word _off006_8506_1D
-- D 0 - I - 0x02804D 0A:803D: 23 85     .word _off006_8523_1E
-- D 0 - I - 0x02804F 0A:803F: 48 85     .word _off006_8548_1F
-- D 0 - I - 0x028051 0A:8041: 65 85     .word _off006_8565_20
-- D 0 - I - 0x028053 0A:8043: 8A 85     .word _off006_858A_21
-- D 0 - I - 0x028055 0A:8045: B3 85     .word _off006_85B3_22
-- D 0 - I - 0x028057 0A:8047: DC 85     .word _off006_85DC_23
-- D 0 - I - 0x028059 0A:8049: 05 86     .word _off006_8605_24
-- D 0 - I - 0x02805B 0A:804B: 2E 86     .word _off006_862E_25
-- D 0 - I - 0x02805D 0A:804D: 53 86     .word _off006_8653_26
-- D 0 - I - 0x02805F 0A:804F: 74 86     .word _off006_8674_27
-- D 0 - I - 0x028061 0A:8051: BA 86     .word _off006_86BA_28
-- D 0 - I - 0x028063 0A:8053: DB 86     .word _off006_86DB_29
-- D 0 - I - 0x028065 0A:8055: F8 86     .word _off006_86F8_2A
-- D 0 - I - 0x028067 0A:8057: 19 87     .word _off006_8719_2B
-- D 0 - I - 0x028069 0A:8059: 3A 87     .word _off006_873A_2C
-- D 0 - I - 0x02806B 0A:805B: 5B 87     .word _off006_875B_2D
-- D 0 - I - 0x02806D 0A:805D: 7C 87     .word _off006_877C_2E
-- D 0 - I - 0x02806F 0A:805F: A1 87     .word _off006_87A1_2F
-- D 0 - I - 0x028071 0A:8061: D2 87     .word _off006_87D2_30
-- D 0 - I - 0x028073 0A:8063: FB 87     .word _off006_87FB_31
-- D 0 - I - 0x028075 0A:8065: 18 88     .word _off006_8818_32
-- D 0 - I - 0x028077 0A:8067: 3D 88     .word _off006_883D_33
-- D 0 - I - 0x028079 0A:8069: 5A 88     .word _off006_885A_34
-- D 0 - I - 0x02807B 0A:806B: 7F 88     .word _off006_887F_35
-- D 0 - I - 0x02807D 0A:806D: A4 88     .word _off006_88A4_36
-- D 0 - I - 0x02807F 0A:806F: C5 88     .word _off006_88C5_37
-- D 0 - I - 0x028081 0A:8071: EA 88     .word _off006_88EA_38
-- D 0 - I - 0x028083 0A:8073: 0F 89     .word _off006_890F_39
-- D 0 - I - 0x028085 0A:8075: 2C 89     .word _off006_892C_3A
-- D 0 - I - 0x028087 0A:8077: 55 89     .word _off006_8955_3B
-- D 0 - I - 0x028089 0A:8079: 5A 89     .word _off006_895A_3C
-- D 0 - I - 0x02808B 0A:807B: 63 89     .word _off006_8963_3D
-- D 0 - I - 0x02808D 0A:807D: 68 89     .word _off006_8968_3E
-- D 0 - I - 0x02808F 0A:807F: 71 89     .word _off006_8971_3F
-- D 0 - I - 0x028091 0A:8081: 7E 89     .word _off006_897E_40
-- D 0 - I - 0x028093 0A:8083: 87 89     .word _off006_8987_41
-- D 0 - I - 0x028095 0A:8085: 94 89     .word _off006_8994_42
-- D 0 - I - 0x028097 0A:8087: 9D 89     .word _off006_899D_43
-- D 0 - I - 0x028099 0A:8089: C6 89     .word _off006_89C6_44
-- D 0 - I - 0x02809B 0A:808B: EB 89     .word _off006_89EB_45
-- D 0 - I - 0x02809D 0A:808D: 14 8A     .word _off006_8A14_46
-- D 0 - I - 0x02809F 0A:808F: 35 8A     .word _off006_8A35_47
-- D 0 - I - 0x0280A1 0A:8091: 3A 8A     .word _off006_8A3A_48
-- D 0 - I - 0x0280A3 0A:8093: 5B 8A     .word _off006_8A5B_49
-- D 0 - I - 0x0280A5 0A:8095: 60 8A     .word _off006_8A60_4A
-- D 0 - I - 0x0280A7 0A:8097: 69 8A     .word _off006_8A69_4B
-- D 0 - I - 0x0280A9 0A:8099: 72 8A     .word _off006_8A72_4C
-- D 0 - I - 0x0280AB 0A:809B: 97 8A     .word _off006_8A97_4D
-- D 0 - I - 0x0280AD 0A:809D: BC 8A     .word _off006_8ABC_4E
-- D 0 - I - 0x0280AF 0A:809F: E1 8A     .word _off006_8AE1_4F
-- D 0 - I - 0x0280B1 0A:80A1: 06 8B     .word _off006_8B06_50
-- D 0 - I - 0x0280B3 0A:80A3: 33 8B     .word _off006_8B33_51
-- D 0 - I - 0x0280B5 0A:80A5: 5C 8B     .word _off006_8B5C_52
-- D 0 - I - 0x0280B7 0A:80A7: 7D 8B     .word _off006_8B7D_53
-- D 0 - I - 0x0280B9 0A:80A9: 9E 8B     .word _off006_8B9E_54
-- D 0 - I - 0x0280BB 0A:80AB: C7 8B     .word _off006_8BC7_55
-- D 0 - I - 0x0280BD 0A:80AD: EC 8B     .word _off006_8BEC_56
-- D 0 - I - 0x0280BF 0A:80AF: 11 8C     .word _off006_8C11_57
-- D 0 - I - 0x0280C1 0A:80B1: 3A 8C     .word _off006_8C3A_58
-- D 0 - I - 0x0280C3 0A:80B3: 99 86     .word _off006_8699_59
-- D 0 - I - 0x0280C5 0A:80B5: 5F 8C     .word _off006_8C5F_5A
-- D 0 - I - 0x0280C7 0A:80B7: 80 8C     .word _off006_8C80_5B
-- D 0 - I - 0x0280C9 0A:80B9: A5 8C     .word _off006_8CA5_5C
-- D 0 - I - 0x0280CB 0A:80BB: CA 8C     .word _off006_8CCA_5D
-- D 0 - I - 0x0280CD 0A:80BD: F7 8C     .word _off006_8CF7_5E
-- D 0 - I - 0x0280CF 0A:80BF: 20 8D     .word _off006_8D20_5F
-- D 0 - I - 0x0280D1 0A:80C1: 4D 8D     .word _off006_8D4D_60
-- D 0 - I - 0x0280D3 0A:80C3: 72 8D     .word _off006_8D72_61
-- D 0 - I - 0x0280D5 0A:80C5: 9B 8D     .word _off006_8D9B_62
-- D 0 - I - 0x0280D7 0A:80C7: C0 8D     .word _off006_8DC0_63
-- D 0 - I - 0x0280D9 0A:80C9: E9 8D     .word _off006_8DE9_64
-- D 0 - I - 0x0280DB 0A:80CB: 0A 8E     .word _off006_8E0A_65
+- D 0 - - - 0x028011 0A:8001: CD 80     .word _off006_80CD_80
+- D 0 - I - 0x028013 0A:8003: F2 80     .word _off006_80F2_81
+- D 0 - I - 0x028015 0A:8005: 17 81     .word _off006_8117_82
+- D 0 - I - 0x028017 0A:8007: 3C 81     .word _off006_813C_83
+- D 0 - I - 0x028019 0A:8009: 55 81     .word _off006_8155_84
+- D 0 - I - 0x02801B 0A:800B: 7A 81     .word _off006_817A_85
+- D 0 - I - 0x02801D 0A:800D: 9F 81     .word _off006_819F_86
+- D 0 - I - 0x02801F 0A:800F: C4 81     .word _off006_81C4_87
+- D 0 - I - 0x028021 0A:8011: E9 81     .word _off006_81E9_88
+- D 0 - I - 0x028023 0A:8013: 12 82     .word _off006_8212_89
+- D 0 - I - 0x028025 0A:8015: 3B 82     .word _off006_823B_8A
+- D 0 - I - 0x028027 0A:8017: 60 82     .word _off006_8260_8B
+- D 0 - I - 0x028029 0A:8019: 85 82     .word _off006_8285_8C
+- D 0 - I - 0x02802B 0A:801B: AE 82     .word _off006_82AE_8D
+- D 0 - I - 0x02802D 0A:801D: D3 82     .word _off006_82D3_8E
+- D 0 - I - 0x02802F 0A:801F: FC 82     .word _off006_82FC_8F
+- D 0 - I - 0x028031 0A:8021: 29 83     .word _off006_8329_90
+- D 0 - I - 0x028033 0A:8023: 4A 83     .word _off006_834A_91
+- D 0 - I - 0x028035 0A:8025: 77 83     .word _off006_8377_92
+- D 0 - I - 0x028037 0A:8027: 98 83     .word _off006_8398_93
+- D 0 - I - 0x028039 0A:8029: B9 83     .word _off006_83B9_94
+- D 0 - I - 0x02803B 0A:802B: DE 83     .word _off006_83DE_95
+- - - - - - 0x02803D 0A:802D: 03 84     .word _off006_8403_96
+- D 0 - I - 0x02803F 0A:802F: 20 84     .word _off006_8420_97
+- D 0 - I - 0x028041 0A:8031: 41 84     .word _off006_8441_98
+- D 0 - I - 0x028043 0A:8033: 6A 84     .word _off006_846A_99
+- D 0 - I - 0x028045 0A:8035: 8B 84     .word _off006_848B_9A
+- D 0 - I - 0x028047 0A:8037: B4 84     .word _off006_84B4_9B
+- D 0 - I - 0x028049 0A:8039: E1 84     .word _off006_84E1_9C
+- D 0 - I - 0x02804B 0A:803B: 06 85     .word _off006_8506_9D
+- D 0 - I - 0x02804D 0A:803D: 23 85     .word _off006_8523_9E
+- D 0 - I - 0x02804F 0A:803F: 48 85     .word _off006_8548_9F
+- D 0 - I - 0x028051 0A:8041: 65 85     .word _off006_8565_A0
+- D 0 - I - 0x028053 0A:8043: 8A 85     .word _off006_858A_A1
+- D 0 - I - 0x028055 0A:8045: B3 85     .word _off006_85B3_A2
+- D 0 - I - 0x028057 0A:8047: DC 85     .word _off006_85DC_A3
+- D 0 - I - 0x028059 0A:8049: 05 86     .word _off006_8605_A4
+- D 0 - I - 0x02805B 0A:804B: 2E 86     .word _off006_862E_A5
+- D 0 - I - 0x02805D 0A:804D: 53 86     .word _off006_8653_A6
+- D 0 - I - 0x02805F 0A:804F: 74 86     .word _off006_8674_A7
+- D 0 - I - 0x028061 0A:8051: BA 86     .word _off006_86BA_A8
+- D 0 - I - 0x028063 0A:8053: DB 86     .word _off006_86DB_A9
+- D 0 - I - 0x028065 0A:8055: F8 86     .word _off006_86F8_AA
+- D 0 - I - 0x028067 0A:8057: 19 87     .word _off006_8719_AB
+- D 0 - I - 0x028069 0A:8059: 3A 87     .word _off006_873A_AC
+- D 0 - I - 0x02806B 0A:805B: 5B 87     .word _off006_875B_AD
+- D 0 - I - 0x02806D 0A:805D: 7C 87     .word _off006_877C_AE
+- D 0 - I - 0x02806F 0A:805F: A1 87     .word _off006_87A1_AF
+- D 0 - I - 0x028071 0A:8061: D2 87     .word _off006_87D2_B0
+- D 0 - I - 0x028073 0A:8063: FB 87     .word _off006_87FB_B1
+- D 0 - I - 0x028075 0A:8065: 18 88     .word _off006_8818_B2
+- D 0 - I - 0x028077 0A:8067: 3D 88     .word _off006_883D_B3
+- D 0 - I - 0x028079 0A:8069: 5A 88     .word _off006_885A_B4
+- D 0 - I - 0x02807B 0A:806B: 7F 88     .word _off006_887F_B5
+- D 0 - I - 0x02807D 0A:806D: A4 88     .word _off006_88A4_B6
+- D 0 - I - 0x02807F 0A:806F: C5 88     .word _off006_88C5_B7
+- D 0 - I - 0x028081 0A:8071: EA 88     .word _off006_88EA_B8
+- D 0 - I - 0x028083 0A:8073: 0F 89     .word _off006_890F_B9
+- D 0 - I - 0x028085 0A:8075: 2C 89     .word _off006_892C_BA
+- D 0 - I - 0x028087 0A:8077: 55 89     .word _off006_8955_BB
+- D 0 - I - 0x028089 0A:8079: 5A 89     .word _off006_895A_BC
+- D 0 - I - 0x02808B 0A:807B: 63 89     .word _off006_8963_BD
+- D 0 - I - 0x02808D 0A:807D: 68 89     .word _off006_8968_BE
+- D 0 - I - 0x02808F 0A:807F: 71 89     .word _off006_8971_BF
+- D 0 - I - 0x028091 0A:8081: 7E 89     .word _off006_897E_C0
+- D 0 - I - 0x028093 0A:8083: 87 89     .word _off006_8987_C1
+- D 0 - I - 0x028095 0A:8085: 94 89     .word _off006_8994_C2
+- D 0 - I - 0x028097 0A:8087: 9D 89     .word _off006_899D_C3
+- D 0 - I - 0x028099 0A:8089: C6 89     .word _off006_89C6_C4
+- D 0 - I - 0x02809B 0A:808B: EB 89     .word _off006_89EB_C5
+- D 0 - I - 0x02809D 0A:808D: 14 8A     .word _off006_8A14_C6
+- D 0 - I - 0x02809F 0A:808F: 35 8A     .word _off006_8A35_C7
+- D 0 - I - 0x0280A1 0A:8091: 3A 8A     .word _off006_8A3A_C8
+- D 0 - I - 0x0280A3 0A:8093: 5B 8A     .word _off006_8A5B_C9
+- D 0 - I - 0x0280A5 0A:8095: 60 8A     .word _off006_8A60_CA
+- D 0 - I - 0x0280A7 0A:8097: 69 8A     .word _off006_8A69_CB
+- D 0 - I - 0x0280A9 0A:8099: 72 8A     .word _off006_8A72_CC
+- D 0 - I - 0x0280AB 0A:809B: 97 8A     .word _off006_8A97_CD
+- D 0 - I - 0x0280AD 0A:809D: BC 8A     .word _off006_8ABC_CE
+- D 0 - I - 0x0280AF 0A:809F: E1 8A     .word _off006_8AE1_CF
+- D 0 - I - 0x0280B1 0A:80A1: 06 8B     .word _off006_8B06_D0
+- D 0 - I - 0x0280B3 0A:80A3: 33 8B     .word _off006_8B33_D1
+- D 0 - I - 0x0280B5 0A:80A5: 5C 8B     .word _off006_8B5C_D2
+- D 0 - I - 0x0280B7 0A:80A7: 7D 8B     .word _off006_8B7D_D3
+- D 0 - I - 0x0280B9 0A:80A9: 9E 8B     .word _off006_8B9E_D4
+- D 0 - I - 0x0280BB 0A:80AB: C7 8B     .word _off006_8BC7_D5
+- D 0 - I - 0x0280BD 0A:80AD: EC 8B     .word _off006_8BEC_D6
+- D 0 - I - 0x0280BF 0A:80AF: 11 8C     .word _off006_8C11_D7
+- D 0 - I - 0x0280C1 0A:80B1: 3A 8C     .word _off006_8C3A_D8
+- D 0 - I - 0x0280C3 0A:80B3: 99 86     .word _off006_8699_D9
+- D 0 - I - 0x0280C5 0A:80B5: 5F 8C     .word _off006_8C5F_DA
+- D 0 - I - 0x0280C7 0A:80B7: 80 8C     .word _off006_8C80_DB
+- D 0 - I - 0x0280C9 0A:80B9: A5 8C     .word _off006_8CA5_DC
+- D 0 - I - 0x0280CB 0A:80BB: CA 8C     .word _off006_8CCA_DD
+- D 0 - I - 0x0280CD 0A:80BD: F7 8C     .word _off006_8CF7_DE
+- D 0 - I - 0x0280CF 0A:80BF: 20 8D     .word _off006_8D20_DF
+- D 0 - I - 0x0280D1 0A:80C1: 4D 8D     .word _off006_8D4D_E0
+- D 0 - I - 0x0280D3 0A:80C3: 72 8D     .word _off006_8D72_E1
+- D 0 - I - 0x0280D5 0A:80C5: 9B 8D     .word _off006_8D9B_E2
+- D 0 - I - 0x0280D7 0A:80C7: C0 8D     .word _off006_8DC0_E3
+- D 0 - I - 0x0280D9 0A:80C9: E9 8D     .word _off006_8DE9_E4
+- D 0 - I - 0x0280DB 0A:80CB: 0A 8E     .word _off006_8E0A_E5
 
 
 
-_off006_80CD_00:
+_off006_80CD_80:
 - D 0 - I - 0x0280DD 0A:80CD: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0280DE 0A:80CE: C2        .byte con_Y + $C2   ; 
@@ -172,7 +172,7 @@ _off006_80CD_00:
 
 
 
-_off006_80F2_01:
+_off006_80F2_81:
 - D 0 - I - 0x028102 0A:80F2: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028103 0A:80F3: C1        .byte con_Y + $C1   ; 
@@ -223,7 +223,7 @@ _off006_80F2_01:
 
 
 
-_off006_8117_02:
+_off006_8117_82:
 - D 0 - I - 0x028127 0A:8117: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028128 0A:8118: C2        .byte con_Y + $C2   ; 
@@ -274,7 +274,7 @@ _off006_8117_02:
 
 
 
-_off006_813C_03:
+_off006_813C_83:
 - D 0 - I - 0x02814C 0A:813C: 06        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02814D 0A:813D: D1        .byte con_Y + $D1   ; 
@@ -310,7 +310,7 @@ _off006_813C_03:
 
 
 
-_off006_8155_04:
+_off006_8155_84:
 - D 0 - I - 0x028165 0A:8155: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028166 0A:8156: C2        .byte con_Y + $C2   ; 
@@ -361,7 +361,7 @@ _off006_8155_04:
 
 
 
-_off006_817A_05:
+_off006_817A_85:
 - D 0 - I - 0x02818A 0A:817A: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02818B 0A:817B: D0        .byte con_Y + $D0   ; 
@@ -412,7 +412,7 @@ _off006_817A_05:
 
 
 
-_off006_819F_06:
+_off006_819F_86:
 - D 0 - I - 0x0281AF 0A:819F: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0281B0 0A:81A0: C2        .byte con_Y + $C2   ; 
@@ -463,7 +463,7 @@ _off006_819F_06:
 
 
 
-_off006_81C4_07:
+_off006_81C4_87:
 - D 0 - I - 0x0281D4 0A:81C4: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0281D5 0A:81C5: D0        .byte con_Y + $D0   ; 
@@ -514,7 +514,7 @@ _off006_81C4_07:
 
 
 
-_off006_81E9_08:
+_off006_81E9_88:
 - D 0 - I - 0x0281F9 0A:81E9: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0281FA 0A:81EA: C1        .byte con_Y + $C1   ; 
@@ -570,7 +570,7 @@ _off006_81E9_08:
 
 
 
-_off006_8212_09:
+_off006_8212_89:
 - D 0 - I - 0x028222 0A:8212: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028223 0A:8213: C0        .byte con_Y + $C0   ; 
@@ -626,7 +626,7 @@ _off006_8212_09:
 
 
 
-_off006_823B_0A:
+_off006_823B_8A:
 - D 0 - I - 0x02824B 0A:823B: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02824C 0A:823C: C1        .byte con_Y + $C1   ; 
@@ -677,7 +677,7 @@ _off006_823B_0A:
 
 
 
-_off006_8260_0B:
+_off006_8260_8B:
 - D 0 - I - 0x028270 0A:8260: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028271 0A:8261: C1        .byte con_Y + $C1   ; 
@@ -728,7 +728,7 @@ _off006_8260_0B:
 
 
 
-_off006_8285_0C:
+_off006_8285_8C:
 - D 0 - I - 0x028295 0A:8285: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028296 0A:8286: C0        .byte con_Y + $C0   ; 
@@ -784,7 +784,7 @@ _off006_8285_0C:
 
 
 
-_off006_82AE_0D:
+_off006_82AE_8D:
 - D 0 - I - 0x0282BE 0A:82AE: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0282BF 0A:82AF: C1        .byte con_Y + $C1   ; 
@@ -835,7 +835,7 @@ _off006_82AE_0D:
 
 
 
-_off006_82D3_0E:
+_off006_82D3_8E:
 - D 0 - I - 0x0282E3 0A:82D3: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0282E4 0A:82D4: C0        .byte con_Y + $C0   ; 
@@ -891,7 +891,7 @@ _off006_82D3_0E:
 
 
 
-_off006_82FC_0F:
+_off006_82FC_8F:
 - D 0 - I - 0x02830C 0A:82FC: 0B        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02830D 0A:82FD: C1        .byte con_Y + $C1   ; 
@@ -952,7 +952,7 @@ _off006_82FC_0F:
 
 
 
-_off006_8329_10:
+_off006_8329_90:
 - D 0 - I - 0x028339 0A:8329: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02833A 0A:832A: D2        .byte con_Y + $D2   ; 
@@ -998,7 +998,7 @@ _off006_8329_10:
 
 
 
-_off006_834A_11:
+_off006_834A_91:
 - D 0 - I - 0x02835A 0A:834A: 0B        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02835B 0A:834B: C1        .byte con_Y + $C1   ; 
@@ -1059,7 +1059,7 @@ _off006_834A_11:
 
 
 
-_off006_8377_12:
+_off006_8377_92:
 - D 0 - I - 0x028387 0A:8377: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028388 0A:8378: C1        .byte con_Y + $C1   ; 
@@ -1105,7 +1105,7 @@ _off006_8377_12:
 
 
 
-_off006_8398_13:
+_off006_8398_93:
 - D 0 - I - 0x0283A8 0A:8398: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0283A9 0A:8399: CE        .byte con_Y + $CE   ; 
@@ -1151,7 +1151,7 @@ _off006_8398_13:
 
 
 
-_off006_83B9_14:
+_off006_83B9_94:
 - D 0 - I - 0x0283C9 0A:83B9: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0283CA 0A:83BA: D2        .byte con_Y + $D2   ; 
@@ -1202,7 +1202,7 @@ _off006_83B9_14:
 
 
 
-_off006_83DE_15:
+_off006_83DE_95:
 - D 0 - I - 0x0283EE 0A:83DE: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0283EF 0A:83DF: BA        .byte con_Y + $BA   ; 
@@ -1253,7 +1253,7 @@ _off006_83DE_15:
 
 
 
-_off006_8403_16:
+_off006_8403_96:
 - - - - - - 0x028413 0A:8403: 07        .byte (@end - * - 1) / 4
 
 - - - - - - 0x028414 0A:8404: C4        .byte con_Y + $C4   ; 
@@ -1294,7 +1294,7 @@ _off006_8403_16:
 
 
 
-_off006_8420_17:
+_off006_8420_97:
 - D 0 - I - 0x028430 0A:8420: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028431 0A:8421: C9        .byte con_Y + $C9   ; 
@@ -1340,7 +1340,7 @@ _off006_8420_17:
 
 
 
-_off006_8441_18:
+_off006_8441_98:
 - D 0 - I - 0x028451 0A:8441: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028452 0A:8442: C8        .byte con_Y + $C8   ; 
@@ -1396,7 +1396,7 @@ _off006_8441_18:
 
 
 
-_off006_846A_19:
+_off006_846A_99:
 - D 0 - I - 0x02847A 0A:846A: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02847B 0A:846B: CC        .byte con_Y + $CC   ; 
@@ -1442,7 +1442,7 @@ _off006_846A_19:
 
 
 
-_off006_848B_1A:
+_off006_848B_9A:
 - D 0 - I - 0x02849B 0A:848B: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02849C 0A:848C: DC        .byte con_Y + $DC   ; 
@@ -1498,7 +1498,7 @@ _off006_848B_1A:
 
 
 
-_off006_84B4_1B:
+_off006_84B4_9B:
 - D 0 - I - 0x0284C4 0A:84B4: 0B        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0284C5 0A:84B5: C1        .byte con_Y + $C1   ; 
@@ -1559,7 +1559,7 @@ _off006_84B4_1B:
 
 
 
-_off006_84E1_1C:
+_off006_84E1_9C:
 - D 0 - I - 0x0284F1 0A:84E1: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0284F2 0A:84E2: CC        .byte con_Y + $CC   ; 
@@ -1610,7 +1610,7 @@ _off006_84E1_1C:
 
 
 
-_off006_8506_1D:
+_off006_8506_9D:
 - D 0 - I - 0x028516 0A:8506: 07        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028517 0A:8507: E6        .byte con_Y + $E6   ; 
@@ -1651,7 +1651,7 @@ _off006_8506_1D:
 
 
 
-_off006_8523_1E:
+_off006_8523_9E:
 - D 0 - I - 0x028533 0A:8523: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028534 0A:8524: F0        .byte con_Y + $F0   ; 
@@ -1702,7 +1702,7 @@ _off006_8523_1E:
 
 
 
-_off006_8548_1F:
+_off006_8548_9F:
 - D 0 - I - 0x028558 0A:8548: 07        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028559 0A:8549: E4        .byte con_Y + $E4   ; 
@@ -1743,7 +1743,7 @@ _off006_8548_1F:
 
 
 
-_off006_8565_20:
+_off006_8565_A0:
 - D 0 - I - 0x028575 0A:8565: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028576 0A:8566: CE        .byte con_Y + $CE   ; 
@@ -1794,7 +1794,7 @@ _off006_8565_20:
 
 
 
-_off006_858A_21:
+_off006_858A_A1:
 - D 0 - I - 0x02859A 0A:858A: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02859B 0A:858B: D1        .byte con_Y + $D1   ; 
@@ -1850,7 +1850,7 @@ _off006_858A_21:
 
 
 
-_off006_85B3_22:
+_off006_85B3_A2:
 - D 0 - I - 0x0285C3 0A:85B3: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0285C4 0A:85B4: D1        .byte con_Y + $D1   ; 
@@ -1906,7 +1906,7 @@ _off006_85B3_22:
 
 
 
-_off006_85DC_23:
+_off006_85DC_A3:
 - D 0 - I - 0x0285EC 0A:85DC: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0285ED 0A:85DD: E6        .byte con_Y + $E6   ; 
@@ -1962,7 +1962,7 @@ _off006_85DC_23:
 
 
 
-_off006_8605_24:
+_off006_8605_A4:
 - D 0 - I - 0x028615 0A:8605: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028616 0A:8606: DB        .byte con_Y + $DB   ; 
@@ -2018,7 +2018,7 @@ _off006_8605_24:
 
 
 
-_off006_862E_25:
+_off006_862E_A5:
 - D 0 - I - 0x02863E 0A:862E: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02863F 0A:862F: E1        .byte con_Y + $E1   ; 
@@ -2069,7 +2069,7 @@ _off006_862E_25:
 
 
 
-_off006_8653_26:
+_off006_8653_A6:
 - D 0 - I - 0x028663 0A:8653: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028664 0A:8654: EE        .byte con_Y + $EE   ; 
@@ -2115,7 +2115,7 @@ _off006_8653_26:
 
 
 
-_off006_8674_27:
+_off006_8674_A7:
 - D 0 - I - 0x028684 0A:8674: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028685 0A:8675: D9        .byte con_Y + $D9   ; 
@@ -2166,7 +2166,7 @@ _off006_8674_27:
 
 
 
-_off006_8699_59:
+_off006_8699_D9:
 - D 0 - I - 0x0286A9 0A:8699: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0286AA 0A:869A: CD        .byte con_Y + $CD   ; 
@@ -2212,7 +2212,7 @@ _off006_8699_59:
 
 
 
-_off006_86BA_28:
+_off006_86BA_A8:
 - D 0 - I - 0x0286CA 0A:86BA: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0286CB 0A:86BB: BA        .byte con_Y + $BA   ; 
@@ -2258,7 +2258,7 @@ _off006_86BA_28:
 
 
 
-_off006_86DB_29:
+_off006_86DB_A9:
 - D 0 - I - 0x0286EB 0A:86DB: 07        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0286EC 0A:86DC: C8        .byte con_Y + $C8   ; 
@@ -2299,7 +2299,7 @@ _off006_86DB_29:
 
 
 
-_off006_86F8_2A:
+_off006_86F8_AA:
 - D 0 - I - 0x028708 0A:86F8: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028709 0A:86F9: C1        .byte con_Y + $C1   ; 
@@ -2345,7 +2345,7 @@ _off006_86F8_2A:
 
 
 
-_off006_8719_2B:
+_off006_8719_AB:
 - D 0 - I - 0x028729 0A:8719: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02872A 0A:871A: EB        .byte con_Y + $EB   ; 
@@ -2391,7 +2391,7 @@ _off006_8719_2B:
 
 
 
-_off006_873A_2C:
+_off006_873A_AC:
 - D 0 - I - 0x02874A 0A:873A: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02874B 0A:873B: E9        .byte con_Y + $E9   ; 
@@ -2437,7 +2437,7 @@ _off006_873A_2C:
 
 
 
-_off006_875B_2D:
+_off006_875B_AD:
 - D 0 - I - 0x02876B 0A:875B: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02876C 0A:875C: E9        .byte con_Y + $E9   ; 
@@ -2483,7 +2483,7 @@ _off006_875B_2D:
 
 
 
-_off006_877C_2E:
+_off006_877C_AE:
 - D 0 - I - 0x02878C 0A:877C: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02878D 0A:877D: DB        .byte con_Y + $DB   ; 
@@ -2534,7 +2534,7 @@ _off006_877C_2E:
 
 
 
-_off006_87A1_2F:
+_off006_87A1_AF:
 - D 0 - I - 0x0287B1 0A:87A1: 0C        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0287B2 0A:87A2: E7        .byte con_Y + $E7   ; 
@@ -2600,7 +2600,7 @@ _off006_87A1_2F:
 
 
 
-_off006_87D2_30:
+_off006_87D2_B0:
 - D 0 - I - 0x0287E2 0A:87D2: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0287E3 0A:87D3: E7        .byte con_Y + $E7   ; 
@@ -2656,7 +2656,7 @@ _off006_87D2_30:
 
 
 
-_off006_87FB_31:
+_off006_87FB_B1:
 - D 0 - I - 0x02880B 0A:87FB: 07        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02880C 0A:87FC: D6        .byte con_Y + $D6   ; 
@@ -2697,7 +2697,7 @@ _off006_87FB_31:
 
 
 
-_off006_8818_32:
+_off006_8818_B2:
 - D 0 - I - 0x028828 0A:8818: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028829 0A:8819: 00        .byte con_Y + $00   ; 
@@ -2748,7 +2748,7 @@ _off006_8818_32:
 
 
 
-_off006_883D_33:
+_off006_883D_B3:
 - D 0 - I - 0x02884D 0A:883D: 07        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02884E 0A:883E: E4        .byte con_Y + $E4   ; 
@@ -2789,7 +2789,7 @@ _off006_883D_33:
 
 
 
-_off006_885A_34:
+_off006_885A_B4:
 - D 0 - I - 0x02886A 0A:885A: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02886B 0A:885B: CE        .byte con_Y + $CE   ; 
@@ -2840,7 +2840,7 @@ _off006_885A_34:
 
 
 
-_off006_887F_35:
+_off006_887F_B5:
 - D 0 - I - 0x02888F 0A:887F: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028890 0A:8880: C1        .byte con_Y + $C1   ; 
@@ -2891,7 +2891,7 @@ _off006_887F_35:
 
 
 
-_off006_88A4_36:
+_off006_88A4_B6:
 - D 0 - I - 0x0288B4 0A:88A4: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0288B5 0A:88A5: D1        .byte con_Y + $D1   ; 
@@ -2937,7 +2937,7 @@ _off006_88A4_36:
 
 
 
-_off006_88C5_37:
+_off006_88C5_B7:
 - D 0 - I - 0x0288D5 0A:88C5: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0288D6 0A:88C6: D1        .byte con_Y + $D1   ; 
@@ -2988,7 +2988,7 @@ _off006_88C5_37:
 
 
 
-_off006_88EA_38:
+_off006_88EA_B8:
 - D 0 - I - 0x0288FA 0A:88EA: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0288FB 0A:88EB: C2        .byte con_Y + $C2   ; 
@@ -3039,7 +3039,7 @@ _off006_88EA_38:
 
 
 
-_off006_890F_39:
+_off006_890F_B9:
 - D 0 - I - 0x02891F 0A:890F: 07        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028920 0A:8910: E9        .byte con_Y + $E9   ; 
@@ -3080,7 +3080,7 @@ _off006_890F_39:
 
 
 
-_off006_892C_3A:
+_off006_892C_BA:
 - D 0 - I - 0x02893C 0A:892C: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02893D 0A:892D: F4        .byte con_Y + $F4   ; 
@@ -3136,7 +3136,7 @@ _off006_892C_3A:
 
 
 
-_off006_8955_3B:
+_off006_8955_BB:
 - D 0 - I - 0x028965 0A:8955: 01        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028966 0A:8956: DA        .byte con_Y + $DA   ; 
@@ -3147,7 +3147,7 @@ _off006_8955_3B:
 
 
 
-_off006_895A_3C:
+_off006_895A_BC:
 - D 0 - I - 0x02896A 0A:895A: 02        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02896B 0A:895B: C9        .byte con_Y + $C9   ; 
@@ -3163,7 +3163,7 @@ _off006_895A_3C:
 
 
 
-_off006_8963_3D:
+_off006_8963_BD:
 - D 0 - I - 0x028973 0A:8963: 01        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028974 0A:8964: D1        .byte con_Y + $D1   ; 
@@ -3174,7 +3174,7 @@ _off006_8963_3D:
 
 
 
-_off006_8968_3E:
+_off006_8968_BE:
 - D 0 - I - 0x028978 0A:8968: 02        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028979 0A:8969: C3        .byte con_Y + $C3   ; 
@@ -3190,7 +3190,7 @@ _off006_8968_3E:
 
 
 
-_off006_8971_3F:
+_off006_8971_BF:
 - D 0 - I - 0x028981 0A:8971: 03        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028982 0A:8972: F3        .byte con_Y + $F3   ; 
@@ -3211,7 +3211,7 @@ _off006_8971_3F:
 
 
 
-_off006_897E_40:
+_off006_897E_C0:
 - D 0 - I - 0x02898E 0A:897E: 02        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02898F 0A:897F: EE        .byte con_Y + $EE   ; 
@@ -3227,7 +3227,7 @@ _off006_897E_40:
 
 
 
-_off006_8987_41:
+_off006_8987_C1:
 - D 0 - I - 0x028997 0A:8987: 03        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028998 0A:8988: D7        .byte con_Y + $D7   ; 
@@ -3248,7 +3248,7 @@ _off006_8987_41:
 
 
 
-_off006_8994_42:
+_off006_8994_C2:
 - D 0 - I - 0x0289A4 0A:8994: 02        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0289A5 0A:8995: E0        .byte con_Y + $E0   ; 
@@ -3264,7 +3264,7 @@ _off006_8994_42:
 
 
 
-_off006_899D_43:
+_off006_899D_C3:
 - D 0 - I - 0x0289AD 0A:899D: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0289AE 0A:899E: BE        .byte con_Y + $BE   ; 
@@ -3320,7 +3320,7 @@ _off006_899D_43:
 
 
 
-_off006_89C6_44:
+_off006_89C6_C4:
 - D 0 - I - 0x0289D6 0A:89C6: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0289D7 0A:89C7: D1        .byte con_Y + $D1   ; 
@@ -3371,7 +3371,7 @@ _off006_89C6_44:
 
 
 
-_off006_89EB_45:
+_off006_89EB_C5:
 - D 0 - I - 0x0289FB 0A:89EB: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0289FC 0A:89EC: CA        .byte con_Y + $CA   ; 
@@ -3427,7 +3427,7 @@ _off006_89EB_45:
 
 
 
-_off006_8A14_46:
+_off006_8A14_C6:
 - D 0 - I - 0x028A24 0A:8A14: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028A25 0A:8A15: C9        .byte con_Y + $C9   ; 
@@ -3473,7 +3473,7 @@ _off006_8A14_46:
 
 
 
-_off006_8A35_47:
+_off006_8A35_C7:
 - D 0 - I - 0x028A45 0A:8A35: 01        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028A46 0A:8A36: E9        .byte con_Y + $E9   ; 
@@ -3484,7 +3484,7 @@ _off006_8A35_47:
 
 
 
-_off006_8A3A_48:
+_off006_8A3A_C8:
 - D 0 - I - 0x028A4A 0A:8A3A: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028A4B 0A:8A3B: C1        .byte con_Y + $C1   ; 
@@ -3530,7 +3530,7 @@ _off006_8A3A_48:
 
 
 
-_off006_8A5B_49:
+_off006_8A5B_C9:
 - D 0 - I - 0x028A6B 0A:8A5B: 01        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028A6C 0A:8A5C: D1        .byte con_Y + $D1   ; 
@@ -3541,7 +3541,7 @@ _off006_8A5B_49:
 
 
 
-_off006_8A60_4A:
+_off006_8A60_CA:
 - D 0 - I - 0x028A70 0A:8A60: 02        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028A71 0A:8A61: F8        .byte con_Y + $F8   ; 
@@ -3557,7 +3557,7 @@ _off006_8A60_4A:
 
 
 
-_off006_8A69_4B:
+_off006_8A69_CB:
 - D 0 - I - 0x028A79 0A:8A69: 02        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028A7A 0A:8A6A: F8        .byte con_Y + $F8   ; 
@@ -3573,7 +3573,7 @@ _off006_8A69_4B:
 
 
 
-_off006_8A72_4C:
+_off006_8A72_CC:
 - D 0 - I - 0x028A82 0A:8A72: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028A83 0A:8A73: C9        .byte con_Y + $C9   ; 
@@ -3624,7 +3624,7 @@ _off006_8A72_4C:
 
 
 
-_off006_8A97_4D:
+_off006_8A97_CD:
 - D 0 - I - 0x028AA7 0A:8A97: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028AA8 0A:8A98: CA        .byte con_Y + $CA   ; 
@@ -3675,7 +3675,7 @@ _off006_8A97_4D:
 
 
 
-_off006_8ABC_4E:
+_off006_8ABC_CE:
 - D 0 - I - 0x028ACC 0A:8ABC: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028ACD 0A:8ABD: E1        .byte con_Y + $E1   ; 
@@ -3726,7 +3726,7 @@ _off006_8ABC_4E:
 
 
 
-_off006_8AE1_4F:
+_off006_8AE1_CF:
 - D 0 - I - 0x028AF1 0A:8AE1: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028AF2 0A:8AE2: E1        .byte con_Y + $E1   ; 
@@ -3777,7 +3777,7 @@ _off006_8AE1_4F:
 
 
 
-_off006_8B06_50:
+_off006_8B06_D0:
 - D 0 - I - 0x028B16 0A:8B06: 0B        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028B17 0A:8B07: D3        .byte con_Y + $D3   ; 
@@ -3838,7 +3838,7 @@ _off006_8B06_50:
 
 
 
-_off006_8B33_51:
+_off006_8B33_D1:
 - D 0 - I - 0x028B43 0A:8B33: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028B44 0A:8B34: D2        .byte con_Y + $D2   ; 
@@ -3894,7 +3894,7 @@ _off006_8B33_51:
 
 
 
-_off006_8B5C_52:
+_off006_8B5C_D2:
 - D 0 - I - 0x028B6C 0A:8B5C: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028B6D 0A:8B5D: D2        .byte con_Y + $D2   ; 
@@ -3940,7 +3940,7 @@ _off006_8B5C_52:
 
 
 
-_off006_8B7D_53:
+_off006_8B7D_D3:
 - D 0 - I - 0x028B8D 0A:8B7D: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028B8E 0A:8B7E: D2        .byte con_Y + $D2   ; 
@@ -3986,7 +3986,7 @@ _off006_8B7D_53:
 
 
 
-_off006_8B9E_54:
+_off006_8B9E_D4:
 - D 0 - I - 0x028BAE 0A:8B9E: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028BAF 0A:8B9F: D1        .byte con_Y + $D1   ; 
@@ -4042,7 +4042,7 @@ _off006_8B9E_54:
 
 
 
-_off006_8BC7_55:
+_off006_8BC7_D5:
 - D 0 - I - 0x028BD7 0A:8BC7: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028BD8 0A:8BC8: CB        .byte con_Y + $CB   ; 
@@ -4093,7 +4093,7 @@ _off006_8BC7_55:
 
 
 
-_off006_8BEC_56:
+_off006_8BEC_D6:
 - D 0 - I - 0x028BFC 0A:8BEC: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028BFD 0A:8BED: D1        .byte con_Y + $D1   ; 
@@ -4144,7 +4144,7 @@ _off006_8BEC_56:
 
 
 
-_off006_8C11_57:
+_off006_8C11_D7:
 - D 0 - I - 0x028C21 0A:8C11: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028C22 0A:8C12: D2        .byte con_Y + $D2   ; 
@@ -4200,7 +4200,7 @@ _off006_8C11_57:
 
 
 
-_off006_8C3A_58:
+_off006_8C3A_D8:
 - D 0 - I - 0x028C4A 0A:8C3A: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028C4B 0A:8C3B: DF        .byte con_Y + $DF   ; 
@@ -4251,7 +4251,7 @@ _off006_8C3A_58:
 
 
 
-_off006_8C5F_5A:
+_off006_8C5F_DA:
 - D 0 - I - 0x028C6F 0A:8C5F: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028C70 0A:8C60: ED        .byte con_Y + $ED   ; 
@@ -4297,7 +4297,7 @@ _off006_8C5F_5A:
 
 
 
-_off006_8C80_5B:
+_off006_8C80_DB:
 - D 0 - I - 0x028C90 0A:8C80: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028C91 0A:8C81: CD        .byte con_Y + $CD   ; 
@@ -4348,7 +4348,7 @@ _off006_8C80_5B:
 
 
 
-_off006_8CA5_5C:
+_off006_8CA5_DC:
 - D 0 - I - 0x028CB5 0A:8CA5: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028CB6 0A:8CA6: C2        .byte con_Y + $C2   ; 
@@ -4399,7 +4399,7 @@ _off006_8CA5_5C:
 
 
 
-_off006_8CCA_5D:
+_off006_8CCA_DD:
 - D 0 - I - 0x028CDA 0A:8CCA: 0B        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028CDB 0A:8CCB: BF        .byte con_Y + $BF   ; 
@@ -4460,7 +4460,7 @@ _off006_8CCA_5D:
 
 
 
-_off006_8CF7_5E:
+_off006_8CF7_DE:
 - D 0 - I - 0x028D07 0A:8CF7: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028D08 0A:8CF8: DC        .byte con_Y + $DC   ; 
@@ -4516,7 +4516,7 @@ _off006_8CF7_5E:
 
 
 
-_off006_8D20_5F:
+_off006_8D20_DF:
 - D 0 - I - 0x028D30 0A:8D20: 0B        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028D31 0A:8D21: D1        .byte con_Y + $D1   ; 
@@ -4577,7 +4577,7 @@ _off006_8D20_5F:
 
 
 
-_off006_8D4D_60:
+_off006_8D4D_E0:
 - D 0 - I - 0x028D5D 0A:8D4D: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028D5E 0A:8D4E: CE        .byte con_Y + $CE   ; 
@@ -4628,7 +4628,7 @@ _off006_8D4D_60:
 
 
 
-_off006_8D72_61:
+_off006_8D72_E1:
 - D 0 - I - 0x028D82 0A:8D72: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028D83 0A:8D73: C4        .byte con_Y + $C4   ; 
@@ -4684,7 +4684,7 @@ _off006_8D72_61:
 
 
 
-_off006_8D9B_62:
+_off006_8D9B_E2:
 - D 0 - I - 0x028DAB 0A:8D9B: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028DAC 0A:8D9C: D1        .byte con_Y + $D1   ; 
@@ -4735,7 +4735,7 @@ _off006_8D9B_62:
 
 
 
-_off006_8DC0_63:
+_off006_8DC0_E3:
 - D 0 - I - 0x028DD0 0A:8DC0: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028DD1 0A:8DC1: CF        .byte con_Y + $CF   ; 
@@ -4791,7 +4791,7 @@ _off006_8DC0_63:
 
 
 
-_off006_8DE9_64:
+_off006_8DE9_E4:
 - D 0 - I - 0x028DF9 0A:8DE9: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028DFA 0A:8DEA: D7        .byte con_Y + $D7   ; 
@@ -4837,7 +4837,7 @@ _off006_8DE9_64:
 
 
 
-_off006_8E0A_65:
+_off006_8E0A_E5:
 - D 0 - I - 0x028E1A 0A:8E0A: 02        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028E1B 0A:8E0B: DD        .byte con_Y + $DD   ; 
@@ -4855,99 +4855,99 @@ _off006_8E0A_65:
 
 .export tbl_0x028E23_Casey
 tbl_0x028E23_Casey:
-- D 0 - I - 0x028E23 0A:8E13: C5 8E     .word _off007_8EC5_00
-- D 0 - I - 0x028E25 0A:8E15: F2 8E     .word _off007_8EF2_01
-- D 0 - I - 0x028E27 0A:8E17: 1F 8F     .word _off007_8F1F_02
-- D 0 - I - 0x028E29 0A:8E19: 40 8F     .word _off007_8F40_03
-- D 0 - I - 0x028E2B 0A:8E1B: 65 8F     .word _off007_8F65_04
-- D 0 - I - 0x028E2D 0A:8E1D: 86 8F     .word _off007_8F86_05
-- D 0 - I - 0x028E2F 0A:8E1F: AB 8F     .word _off007_8FAB_06
-- D 0 - I - 0x028E31 0A:8E21: CC 8F     .word _off007_8FCC_07
-- D 0 - I - 0x028E33 0A:8E23: F9 8F     .word _off007_8FF9_08
-- D 0 - I - 0x028E35 0A:8E25: 2E 90     .word _off007_902E_09
-- D 0 - I - 0x028E37 0A:8E27: 63 90     .word _off007_9063_0A
-- D 0 - I - 0x028E39 0A:8E29: 94 90     .word _off007_9094_0B
-- D 0 - I - 0x028E3B 0A:8E2B: C5 90     .word _off007_90C5_0C
-- D 0 - I - 0x028E3D 0A:8E2D: F6 90     .word _off007_90F6_0D
-- D 0 - I - 0x028E3F 0A:8E2F: 23 91     .word _off007_9123_0E
-- D 0 - I - 0x028E41 0A:8E31: 54 91     .word _off007_9154_0F
-- D 0 - I - 0x028E43 0A:8E33: 81 91     .word _off007_9181_10
-- D 0 - I - 0x028E45 0A:8E35: BA 91     .word _off007_91BA_11
-- D 0 - I - 0x028E47 0A:8E37: DF 91     .word _off007_91DF_12
-- D 0 - I - 0x028E49 0A:8E39: 08 92     .word _off007_9208_13
-- D 0 - I - 0x028E4B 0A:8E3B: 29 92     .word _off007_9229_14
-- D 0 - I - 0x028E4D 0A:8E3D: 52 92     .word _off007_9252_15
-- D 0 - I - 0x028E4F 0A:8E3F: 73 92     .word _off007_9273_16
-- D 0 - I - 0x028E51 0A:8E41: 9C 92     .word _off007_929C_17
-- D 0 - I - 0x028E53 0A:8E43: CD 92     .word _off007_92CD_18
-- D 0 - I - 0x028E55 0A:8E45: FE 92     .word _off007_92FE_19
-- D 0 - I - 0x028E57 0A:8E47: 2F 93     .word _off007_932F_1A
-- D 0 - I - 0x028E59 0A:8E49: 54 93     .word _off007_9354_1B
-- D 0 - I - 0x028E5B 0A:8E4B: 81 93     .word _off007_9381_1C
-- D 0 - I - 0x028E5D 0A:8E4D: A6 93     .word _off007_93A6_1D
-- D 0 - I - 0x028E5F 0A:8E4F: CF 93     .word _off007_93CF_1E
-- D 0 - I - 0x028E61 0A:8E51: F8 93     .word _off007_93F8_1F
-- D 0 - I - 0x028E63 0A:8E53: 29 94     .word _off007_9429_20
-- D 0 - I - 0x028E65 0A:8E55: 4A 94     .word _off007_944A_21
-- D 0 - I - 0x028E67 0A:8E57: 6F 94     .word _off007_946F_22
-- D 0 - I - 0x028E69 0A:8E59: 90 94     .word _off007_9490_23
-- D 0 - I - 0x028E6B 0A:8E5B: BD 94     .word _off007_94BD_24
-- D 0 - I - 0x028E6D 0A:8E5D: E2 94     .word _off007_94E2_25
-- D 0 - I - 0x028E6F 0A:8E5F: 07 95     .word _off007_9507_26
-- D 0 - I - 0x028E71 0A:8E61: 2C 95     .word _off007_952C_27
-- D 0 - I - 0x028E73 0A:8E63: 51 95     .word _off007_9551_28
-- D 0 - I - 0x028E75 0A:8E65: 72 95     .word _off007_9572_29
-- D 0 - I - 0x028E77 0A:8E67: 97 95     .word _off007_9597_2A
-- D 0 - I - 0x028E79 0A:8E69: BC 95     .word _off007_95BC_2B
-- D 0 - I - 0x028E7B 0A:8E6B: E1 95     .word _off007_95E1_2C
-- D 0 - I - 0x028E7D 0A:8E6D: 0A 96     .word _off007_960A_2D
-- D 0 - I - 0x028E7F 0A:8E6F: 3B 96     .word _off007_963B_2E
-- D 0 - I - 0x028E81 0A:8E71: 68 96     .word _off007_9668_2F
-- D 0 - I - 0x028E83 0A:8E73: 91 96     .word _off007_9691_30
-- D 0 - I - 0x028E85 0A:8E75: BE 96     .word _off007_96BE_31
-- D 0 - I - 0x028E87 0A:8E77: E3 96     .word _off007_96E3_32
-- D 0 - I - 0x028E89 0A:8E79: 08 97     .word _off007_9708_33
-- D 0 - I - 0x028E8B 0A:8E7B: 31 97     .word _off007_9731_34
-- D 0 - I - 0x028E8D 0A:8E7D: 56 97     .word _off007_9756_35
-- D 0 - I - 0x028E8F 0A:8E7F: 77 97     .word _off007_9777_36
-- D 0 - I - 0x028E91 0A:8E81: 80 97     .word _off007_9780_37
-- D 0 - I - 0x028E93 0A:8E83: 89 97     .word _off007_9789_38
-- D 0 - I - 0x028E95 0A:8E85: B2 97     .word _off007_97B2_39
-- D 0 - I - 0x028E97 0A:8E87: D7 97     .word _off007_97D7_3A
-- D 0 - I - 0x028E99 0A:8E89: 00 98     .word _off007_9800_3B
-- D 0 - I - 0x028E9B 0A:8E8B: 25 98     .word _off007_9825_3C
-- D 0 - I - 0x028E9D 0A:8E8D: 46 98     .word _off007_9846_3D
-- D 0 - I - 0x028E9F 0A:8E8F: 4B 98     .word _off007_984B_3E
-- D 0 - I - 0x028EA1 0A:8E91: 54 98     .word _off007_9854_3F
-- D 0 - I - 0x028EA3 0A:8E93: 6A 98     .word _off007_986A_40
-- D 0 - I - 0x028EA5 0A:8E95: 61 98     .word _off007_9861_41
-- D 0 - I - 0x028EA7 0A:8E97: 73 98     .word _off007_9873_42
-- D 0 - I - 0x028EA9 0A:8E99: 98 98     .word _off007_9898_43
-- D 0 - I - 0x028EAB 0A:8E9B: B9 98     .word _off007_98B9_44
-- D 0 - I - 0x028EAD 0A:8E9D: E2 98     .word _off007_98E2_45
-- D 0 - I - 0x028EAF 0A:8E9F: EB 98     .word _off007_98EB_46
-- D 0 - I - 0x028EB1 0A:8EA1: F4 98     .word _off007_98F4_47
-- D 0 - I - 0x028EB3 0A:8EA3: FD 98     .word _off007_98FD_48
-- D 0 - I - 0x028EB5 0A:8EA5: 1E 99     .word _off007_991E_49
-- D 0 - I - 0x028EB7 0A:8EA7: 2F 99     .word _off007_992F_4A
-- D 0 - I - 0x028EB9 0A:8EA9: 50 99     .word _off007_9950_4B
-- D 0 - I - 0x028EBB 0A:8EAB: 61 99     .word _off007_9961_4C
-- D 0 - I - 0x028EBD 0A:8EAD: 8A 99     .word _off007_998A_4D
-- D 0 - I - 0x028EBF 0A:8EAF: B3 99     .word _off007_99B3_4E
-- D 0 - I - 0x028EC1 0A:8EB1: D8 99     .word _off007_99D8_4F
-- D 0 - I - 0x028EC3 0A:8EB3: 01 9A     .word _off007_9A01_50
-- D 0 - I - 0x028EC5 0A:8EB5: 32 9A     .word _off007_9A32_51
-- D 0 - I - 0x028EC7 0A:8EB7: 5F 9A     .word _off007_9A5F_52
-- D 0 - I - 0x028EC9 0A:8EB9: 80 9A     .word _off007_9A80_53
-- D 0 - I - 0x028ECB 0A:8EBB: A1 9A     .word _off007_9AA1_54
-- D 0 - I - 0x028ECD 0A:8EBD: C6 9A     .word _off007_9AC6_55
-- D 0 - I - 0x028ECF 0A:8EBF: EB 9A     .word _off007_9AEB_56
-- D 0 - I - 0x028ED1 0A:8EC1: 0C 9B     .word _off007_9B0C_57
-- D 0 - I - 0x028ED3 0A:8EC3: 31 9B     .word _off007_9B31_58
+- D 0 - I - 0x028E23 0A:8E13: C5 8E     .word _off007_8EC5_80
+- D 0 - I - 0x028E25 0A:8E15: F2 8E     .word _off007_8EF2_81
+- D 0 - I - 0x028E27 0A:8E17: 1F 8F     .word _off007_8F1F_82
+- D 0 - I - 0x028E29 0A:8E19: 40 8F     .word _off007_8F40_83
+- D 0 - I - 0x028E2B 0A:8E1B: 65 8F     .word _off007_8F65_84
+- D 0 - I - 0x028E2D 0A:8E1D: 86 8F     .word _off007_8F86_85
+- D 0 - I - 0x028E2F 0A:8E1F: AB 8F     .word _off007_8FAB_86
+- D 0 - I - 0x028E31 0A:8E21: CC 8F     .word _off007_8FCC_87
+- D 0 - I - 0x028E33 0A:8E23: F9 8F     .word _off007_8FF9_88
+- D 0 - I - 0x028E35 0A:8E25: 2E 90     .word _off007_902E_89
+- D 0 - I - 0x028E37 0A:8E27: 63 90     .word _off007_9063_8A
+- D 0 - I - 0x028E39 0A:8E29: 94 90     .word _off007_9094_8B
+- D 0 - I - 0x028E3B 0A:8E2B: C5 90     .word _off007_90C5_8C
+- D 0 - I - 0x028E3D 0A:8E2D: F6 90     .word _off007_90F6_8D
+- D 0 - I - 0x028E3F 0A:8E2F: 23 91     .word _off007_9123_8E
+- D 0 - I - 0x028E41 0A:8E31: 54 91     .word _off007_9154_8F
+- D 0 - I - 0x028E43 0A:8E33: 81 91     .word _off007_9181_90
+- D 0 - I - 0x028E45 0A:8E35: BA 91     .word _off007_91BA_91
+- D 0 - I - 0x028E47 0A:8E37: DF 91     .word _off007_91DF_92
+- D 0 - I - 0x028E49 0A:8E39: 08 92     .word _off007_9208_93
+- D 0 - I - 0x028E4B 0A:8E3B: 29 92     .word _off007_9229_94
+- D 0 - I - 0x028E4D 0A:8E3D: 52 92     .word _off007_9252_95
+- D 0 - I - 0x028E4F 0A:8E3F: 73 92     .word _off007_9273_96
+- D 0 - I - 0x028E51 0A:8E41: 9C 92     .word _off007_929C_97
+- D 0 - I - 0x028E53 0A:8E43: CD 92     .word _off007_92CD_98
+- D 0 - I - 0x028E55 0A:8E45: FE 92     .word _off007_92FE_99
+- D 0 - I - 0x028E57 0A:8E47: 2F 93     .word _off007_932F_9A
+- D 0 - I - 0x028E59 0A:8E49: 54 93     .word _off007_9354_9B
+- D 0 - I - 0x028E5B 0A:8E4B: 81 93     .word _off007_9381_9C
+- D 0 - I - 0x028E5D 0A:8E4D: A6 93     .word _off007_93A6_9D
+- D 0 - I - 0x028E5F 0A:8E4F: CF 93     .word _off007_93CF_9E
+- D 0 - I - 0x028E61 0A:8E51: F8 93     .word _off007_93F8_9F
+- D 0 - I - 0x028E63 0A:8E53: 29 94     .word _off007_9429_A0
+- D 0 - I - 0x028E65 0A:8E55: 4A 94     .word _off007_944A_A1
+- D 0 - I - 0x028E67 0A:8E57: 6F 94     .word _off007_946F_A2
+- D 0 - I - 0x028E69 0A:8E59: 90 94     .word _off007_9490_A3
+- D 0 - I - 0x028E6B 0A:8E5B: BD 94     .word _off007_94BD_A4
+- D 0 - I - 0x028E6D 0A:8E5D: E2 94     .word _off007_94E2_A5
+- D 0 - I - 0x028E6F 0A:8E5F: 07 95     .word _off007_9507_A6
+- D 0 - I - 0x028E71 0A:8E61: 2C 95     .word _off007_952C_A7
+- D 0 - I - 0x028E73 0A:8E63: 51 95     .word _off007_9551_A8
+- D 0 - I - 0x028E75 0A:8E65: 72 95     .word _off007_9572_A9
+- D 0 - I - 0x028E77 0A:8E67: 97 95     .word _off007_9597_AA
+- D 0 - I - 0x028E79 0A:8E69: BC 95     .word _off007_95BC_AB
+- D 0 - I - 0x028E7B 0A:8E6B: E1 95     .word _off007_95E1_AC
+- D 0 - I - 0x028E7D 0A:8E6D: 0A 96     .word _off007_960A_AD
+- D 0 - I - 0x028E7F 0A:8E6F: 3B 96     .word _off007_963B_AE
+- D 0 - I - 0x028E81 0A:8E71: 68 96     .word _off007_9668_AF
+- D 0 - I - 0x028E83 0A:8E73: 91 96     .word _off007_9691_B0
+- D 0 - I - 0x028E85 0A:8E75: BE 96     .word _off007_96BE_B1
+- D 0 - I - 0x028E87 0A:8E77: E3 96     .word _off007_96E3_B2
+- D 0 - I - 0x028E89 0A:8E79: 08 97     .word _off007_9708_B3
+- D 0 - I - 0x028E8B 0A:8E7B: 31 97     .word _off007_9731_B4
+- D 0 - I - 0x028E8D 0A:8E7D: 56 97     .word _off007_9756_B5
+- D 0 - I - 0x028E8F 0A:8E7F: 77 97     .word _off007_9777_B6
+- D 0 - I - 0x028E91 0A:8E81: 80 97     .word _off007_9780_B7
+- D 0 - I - 0x028E93 0A:8E83: 89 97     .word _off007_9789_B8
+- D 0 - I - 0x028E95 0A:8E85: B2 97     .word _off007_97B2_B9
+- D 0 - I - 0x028E97 0A:8E87: D7 97     .word _off007_97D7_BA
+- D 0 - I - 0x028E99 0A:8E89: 00 98     .word _off007_9800_BB
+- D 0 - I - 0x028E9B 0A:8E8B: 25 98     .word _off007_9825_BC
+- D 0 - I - 0x028E9D 0A:8E8D: 46 98     .word _off007_9846_BD
+- D 0 - I - 0x028E9F 0A:8E8F: 4B 98     .word _off007_984B_BE
+- D 0 - I - 0x028EA1 0A:8E91: 54 98     .word _off007_9854_BF
+- D 0 - I - 0x028EA3 0A:8E93: 6A 98     .word _off007_986A_C0
+- D 0 - I - 0x028EA5 0A:8E95: 61 98     .word _off007_9861_C1
+- D 0 - I - 0x028EA7 0A:8E97: 73 98     .word _off007_9873_C2
+- D 0 - I - 0x028EA9 0A:8E99: 98 98     .word _off007_9898_C3
+- D 0 - I - 0x028EAB 0A:8E9B: B9 98     .word _off007_98B9_C4
+- D 0 - I - 0x028EAD 0A:8E9D: E2 98     .word _off007_98E2_C5
+- D 0 - I - 0x028EAF 0A:8E9F: EB 98     .word _off007_98EB_C6
+- D 0 - I - 0x028EB1 0A:8EA1: F4 98     .word _off007_98F4_C7
+- D 0 - I - 0x028EB3 0A:8EA3: FD 98     .word _off007_98FD_C8
+- D 0 - I - 0x028EB5 0A:8EA5: 1E 99     .word _off007_991E_C9
+- D 0 - I - 0x028EB7 0A:8EA7: 2F 99     .word _off007_992F_CA
+- D 0 - I - 0x028EB9 0A:8EA9: 50 99     .word _off007_9950_CB
+- D 0 - I - 0x028EBB 0A:8EAB: 61 99     .word _off007_9961_CC
+- D 0 - I - 0x028EBD 0A:8EAD: 8A 99     .word _off007_998A_CD
+- D 0 - I - 0x028EBF 0A:8EAF: B3 99     .word _off007_99B3_CE
+- D 0 - I - 0x028EC1 0A:8EB1: D8 99     .word _off007_99D8_CF
+- D 0 - I - 0x028EC3 0A:8EB3: 01 9A     .word _off007_9A01_D0
+- D 0 - I - 0x028EC5 0A:8EB5: 32 9A     .word _off007_9A32_D1
+- D 0 - I - 0x028EC7 0A:8EB7: 5F 9A     .word _off007_9A5F_D2
+- D 0 - I - 0x028EC9 0A:8EB9: 80 9A     .word _off007_9A80_D3
+- D 0 - I - 0x028ECB 0A:8EBB: A1 9A     .word _off007_9AA1_D4
+- D 0 - I - 0x028ECD 0A:8EBD: C6 9A     .word _off007_9AC6_D5
+- D 0 - I - 0x028ECF 0A:8EBF: EB 9A     .word _off007_9AEB_D6
+- D 0 - I - 0x028ED1 0A:8EC1: 0C 9B     .word _off007_9B0C_D7
+- D 0 - I - 0x028ED3 0A:8EC3: 31 9B     .word _off007_9B31_D8
 
 
 
-_off007_8EC5_00:
+_off007_8EC5_80:
 - D 0 - I - 0x028ED5 0A:8EC5: 0B        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028ED6 0A:8EC6: C1        .byte con_Y + $C1   ; 
@@ -5008,7 +5008,7 @@ _off007_8EC5_00:
 
 
 
-_off007_8EF2_01:
+_off007_8EF2_81:
 - D 0 - I - 0x028F02 0A:8EF2: 0B        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028F03 0A:8EF3: C0        .byte con_Y + $C0   ; 
@@ -5069,7 +5069,7 @@ _off007_8EF2_01:
 
 
 
-_off007_8F1F_02:
+_off007_8F1F_82:
 - D 0 - I - 0x028F2F 0A:8F1F: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028F30 0A:8F20: BF        .byte con_Y + $BF   ; 
@@ -5115,7 +5115,7 @@ _off007_8F1F_02:
 
 
 
-_off007_8F40_03:
+_off007_8F40_83:
 - D 0 - I - 0x028F50 0A:8F40: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028F51 0A:8F41: B9        .byte con_Y + $B9   ; 
@@ -5166,7 +5166,7 @@ _off007_8F40_03:
 
 
 
-_off007_8F65_04:
+_off007_8F65_84:
 - D 0 - I - 0x028F75 0A:8F65: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028F76 0A:8F66: C0        .byte con_Y + $C0   ; 
@@ -5212,7 +5212,7 @@ _off007_8F65_04:
 
 
 
-_off007_8F86_05:
+_off007_8F86_85:
 - D 0 - I - 0x028F96 0A:8F86: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028F97 0A:8F87: B9        .byte con_Y + $B9   ; 
@@ -5263,7 +5263,7 @@ _off007_8F86_05:
 
 
 
-_off007_8FAB_06:
+_off007_8FAB_86:
 - D 0 - I - 0x028FBB 0A:8FAB: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028FBC 0A:8FAC: C0        .byte con_Y + $C0   ; 
@@ -5309,7 +5309,7 @@ _off007_8FAB_06:
 
 
 
-_off007_8FCC_07:
+_off007_8FCC_87:
 - D 0 - I - 0x028FDC 0A:8FCC: 0B        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x028FDD 0A:8FCD: C1        .byte con_Y + $C1   ; 
@@ -5370,7 +5370,7 @@ _off007_8FCC_07:
 
 
 
-_off007_8FF9_08:
+_off007_8FF9_88:
 - D 0 - I - 0x029009 0A:8FF9: 0D        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02900A 0A:8FFA: BF        .byte con_Y + $BF   ; 
@@ -5441,7 +5441,7 @@ _off007_8FF9_08:
 
 
 
-_off007_902E_09:
+_off007_902E_89:
 - D 0 - I - 0x02903E 0A:902E: 0D        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02903F 0A:902F: BF        .byte con_Y + $BF   ; 
@@ -5512,7 +5512,7 @@ _off007_902E_09:
 
 
 
-_off007_9063_0A:
+_off007_9063_8A:
 - D 0 - I - 0x029073 0A:9063: 0C        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029074 0A:9064: C0        .byte con_Y + $C0   ; 
@@ -5578,7 +5578,7 @@ _off007_9063_0A:
 
 
 
-_off007_9094_0B:
+_off007_9094_8B:
 - D 0 - I - 0x0290A4 0A:9094: 0C        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0290A5 0A:9095: BF        .byte con_Y + $BF   ; 
@@ -5644,7 +5644,7 @@ _off007_9094_0B:
 
 
 
-_off007_90C5_0C:
+_off007_90C5_8C:
 - D 0 - I - 0x0290D5 0A:90C5: 0C        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0290D6 0A:90C6: BF        .byte con_Y + $BF   ; 
@@ -5710,7 +5710,7 @@ _off007_90C5_0C:
 
 
 
-_off007_90F6_0D:
+_off007_90F6_8D:
 - D 0 - I - 0x029106 0A:90F6: 0B        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029107 0A:90F7: C0        .byte con_Y + $C0   ; 
@@ -5771,7 +5771,7 @@ _off007_90F6_0D:
 
 
 
-_off007_9123_0E:
+_off007_9123_8E:
 - D 0 - I - 0x029133 0A:9123: 0C        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029134 0A:9124: C0        .byte con_Y + $C0   ; 
@@ -5837,7 +5837,7 @@ _off007_9123_0E:
 
 
 
-_off007_9154_0F:
+_off007_9154_8F:
 - D 0 - I - 0x029164 0A:9154: 0B        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029165 0A:9155: C0        .byte con_Y + $C0   ; 
@@ -5898,7 +5898,7 @@ _off007_9154_0F:
 
 
 
-_off007_9181_10:
+_off007_9181_90:
 - D 0 - I - 0x029191 0A:9181: 0E        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029192 0A:9182: BF        .byte con_Y + $BF   ; 
@@ -5974,7 +5974,7 @@ _off007_9181_10:
 
 
 
-_off007_91BA_11:
+_off007_91BA_91:
 - D 0 - I - 0x0291CA 0A:91BA: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0291CB 0A:91BB: C0        .byte con_Y + $C0   ; 
@@ -6025,7 +6025,7 @@ _off007_91BA_11:
 
 
 
-_off007_91DF_12:
+_off007_91DF_92:
 - D 0 - I - 0x0291EF 0A:91DF: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0291F0 0A:91E0: C0        .byte con_Y + $C0   ; 
@@ -6081,7 +6081,7 @@ _off007_91DF_12:
 
 
 
-_off007_9208_13:
+_off007_9208_93:
 - D 0 - I - 0x029218 0A:9208: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029219 0A:9209: D0        .byte con_Y + $D0   ; 
@@ -6127,7 +6127,7 @@ _off007_9208_13:
 
 
 
-_off007_9229_14:
+_off007_9229_94:
 - D 0 - I - 0x029239 0A:9229: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02923A 0A:922A: D0        .byte con_Y + $D0   ; 
@@ -6183,7 +6183,7 @@ _off007_9229_14:
 
 
 
-_off007_9252_15:
+_off007_9252_95:
 - D 0 - I - 0x029262 0A:9252: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029263 0A:9253: D0        .byte con_Y + $D0   ; 
@@ -6229,7 +6229,7 @@ _off007_9252_15:
 
 
 
-_off007_9273_16:
+_off007_9273_96:
 - D 0 - I - 0x029283 0A:9273: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029284 0A:9274: C0        .byte con_Y + $C0   ; 
@@ -6285,7 +6285,7 @@ _off007_9273_16:
 
 
 
-_off007_929C_17:
+_off007_929C_97:
 - D 0 - I - 0x0292AC 0A:929C: 0C        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0292AD 0A:929D: C0        .byte con_Y + $C0   ; 
@@ -6351,7 +6351,7 @@ _off007_929C_17:
 
 
 
-_off007_92CD_18:
+_off007_92CD_98:
 - D 0 - I - 0x0292DD 0A:92CD: 0C        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0292DE 0A:92CE: C0        .byte con_Y + $C0   ; 
@@ -6417,7 +6417,7 @@ _off007_92CD_18:
 
 
 
-_off007_92FE_19:
+_off007_92FE_99:
 - D 0 - I - 0x02930E 0A:92FE: 0C        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02930F 0A:92FF: BF        .byte con_Y + $BF   ; 
@@ -6483,7 +6483,7 @@ _off007_92FE_19:
 
 
 
-_off007_932F_1A:
+_off007_932F_9A:
 - D 0 - I - 0x02933F 0A:932F: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029340 0A:9330: C0        .byte con_Y + $C0   ; 
@@ -6534,7 +6534,7 @@ _off007_932F_1A:
 
 
 
-_off007_9354_1B:
+_off007_9354_9B:
 - D 0 - I - 0x029364 0A:9354: 0B        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029365 0A:9355: CB        .byte con_Y + $CB   ; 
@@ -6595,7 +6595,7 @@ _off007_9354_1B:
 
 
 
-_off007_9381_1C:
+_off007_9381_9C:
 - D 0 - I - 0x029391 0A:9381: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029392 0A:9382: C0        .byte con_Y + $C0   ; 
@@ -6646,7 +6646,7 @@ _off007_9381_1C:
 
 
 
-_off007_93A6_1D:
+_off007_93A6_9D:
 - D 0 - I - 0x0293B6 0A:93A6: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0293B7 0A:93A7: C7        .byte con_Y + $C7   ; 
@@ -6702,7 +6702,7 @@ _off007_93A6_1D:
 
 
 
-_off007_93CF_1E:
+_off007_93CF_9E:
 - D 0 - I - 0x0293DF 0A:93CF: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0293E0 0A:93D0: DA        .byte con_Y + $DA   ; 
@@ -6758,7 +6758,7 @@ _off007_93CF_1E:
 
 
 
-_off007_93F8_1F:
+_off007_93F8_9F:
 - D 0 - I - 0x029408 0A:93F8: 0C        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029409 0A:93F9: C0        .byte con_Y + $C0   ; 
@@ -6824,7 +6824,7 @@ _off007_93F8_1F:
 
 
 
-_off007_9429_20:
+_off007_9429_A0:
 - D 0 - I - 0x029439 0A:9429: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02943A 0A:942A: D0        .byte con_Y + $D0   ; 
@@ -6870,7 +6870,7 @@ _off007_9429_20:
 
 
 
-_off007_944A_21:
+_off007_944A_A1:
 - D 0 - I - 0x02945A 0A:944A: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02945B 0A:944B: C0        .byte con_Y + $C0   ; 
@@ -6921,7 +6921,7 @@ _off007_944A_21:
 
 
 
-_off007_946F_22:
+_off007_946F_A2:
 - D 0 - I - 0x02947F 0A:946F: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029480 0A:9470: D0        .byte con_Y + $D0   ; 
@@ -6967,7 +6967,7 @@ _off007_946F_22:
 
 
 
-_off007_9490_23:
+_off007_9490_A3:
 - D 0 - I - 0x0294A0 0A:9490: 0B        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0294A1 0A:9491: BF        .byte con_Y + $BF   ; 
@@ -7028,7 +7028,7 @@ _off007_9490_23:
 
 
 
-_off007_94BD_24:
+_off007_94BD_A4:
 - D 0 - I - 0x0294CD 0A:94BD: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0294CE 0A:94BE: CD        .byte con_Y + $CD   ; 
@@ -7079,7 +7079,7 @@ _off007_94BD_24:
 
 
 
-_off007_94E2_25:
+_off007_94E2_A5:
 - D 0 - I - 0x0294F2 0A:94E2: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0294F3 0A:94E3: E1        .byte con_Y + $E1   ; 
@@ -7130,7 +7130,7 @@ _off007_94E2_25:
 
 
 
-_off007_9507_26:
+_off007_9507_A6:
 - D 0 - I - 0x029517 0A:9507: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029518 0A:9508: D7        .byte con_Y + $D7   ; 
@@ -7181,7 +7181,7 @@ _off007_9507_26:
 
 
 
-_off007_952C_27:
+_off007_952C_A7:
 - D 0 - I - 0x02953C 0A:952C: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02953D 0A:952D: E7        .byte con_Y + $E7   ; 
@@ -7232,7 +7232,7 @@ _off007_952C_27:
 
 
 
-_off007_9551_28:
+_off007_9551_A8:
 - D 0 - I - 0x029561 0A:9551: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029562 0A:9552: F3        .byte con_Y + $F3   ; 
@@ -7278,7 +7278,7 @@ _off007_9551_28:
 
 
 
-_off007_9572_29:
+_off007_9572_A9:
 - D 0 - I - 0x029582 0A:9572: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029583 0A:9573: CE        .byte con_Y + $CE   ; 
@@ -7329,7 +7329,7 @@ _off007_9572_29:
 
 
 
-_off007_9597_2A:
+_off007_9597_AA:
 - D 0 - I - 0x0295A7 0A:9597: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0295A8 0A:9598: C9        .byte con_Y + $C9   ; 
@@ -7380,7 +7380,7 @@ _off007_9597_2A:
 
 
 
-_off007_95BC_2B:
+_off007_95BC_AB:
 - D 0 - I - 0x0295CC 0A:95BC: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0295CD 0A:95BD: CF        .byte con_Y + $CF   ; 
@@ -7431,7 +7431,7 @@ _off007_95BC_2B:
 
 
 
-_off007_95E1_2C:
+_off007_95E1_AC:
 - D 0 - I - 0x0295F1 0A:95E1: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0295F2 0A:95E2: D2        .byte con_Y + $D2   ; 
@@ -7487,7 +7487,7 @@ _off007_95E1_2C:
 
 
 
-_off007_960A_2D:
+_off007_960A_AD:
 - D 0 - I - 0x02961A 0A:960A: 0C        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02961B 0A:960B: BF        .byte con_Y + $BF   ; 
@@ -7553,7 +7553,7 @@ _off007_960A_2D:
 
 
 
-_off007_963B_2E:
+_off007_963B_AE:
 - D 0 - I - 0x02964B 0A:963B: 0B        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02964C 0A:963C: C7        .byte con_Y + $C7   ; 
@@ -7614,7 +7614,7 @@ _off007_963B_2E:
 
 
 
-_off007_9668_2F:
+_off007_9668_AF:
 - D 0 - I - 0x029678 0A:9668: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029679 0A:9669: C3        .byte con_Y + $C3   ; 
@@ -7670,7 +7670,7 @@ _off007_9668_2F:
 
 
 
-_off007_9691_30:
+_off007_9691_B0:
 - D 0 - I - 0x0296A1 0A:9691: 0B        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0296A2 0A:9692: B7        .byte con_Y + $B7   ; 
@@ -7731,7 +7731,7 @@ _off007_9691_30:
 
 
 
-_off007_96BE_31:
+_off007_96BE_B1:
 - D 0 - I - 0x0296CE 0A:96BE: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0296CF 0A:96BF: CD        .byte con_Y + $CD   ; 
@@ -7782,7 +7782,7 @@ _off007_96BE_31:
 
 
 
-_off007_96E3_32:
+_off007_96E3_B2:
 - D 0 - I - 0x0296F3 0A:96E3: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0296F4 0A:96E4: BF        .byte con_Y + $BF   ; 
@@ -7833,7 +7833,7 @@ _off007_96E3_32:
 
 
 
-_off007_9708_33:
+_off007_9708_B3:
 - D 0 - I - 0x029718 0A:9708: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029719 0A:9709: C7        .byte con_Y + $C7   ; 
@@ -7889,7 +7889,7 @@ _off007_9708_33:
 
 
 
-_off007_9731_34:
+_off007_9731_B4:
 - D 0 - I - 0x029741 0A:9731: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029742 0A:9732: D7        .byte con_Y + $D7   ; 
@@ -7940,7 +7940,7 @@ _off007_9731_34:
 
 
 
-_off007_9756_35:
+_off007_9756_B5:
 - D 0 - I - 0x029766 0A:9756: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029767 0A:9757: EC        .byte con_Y + $EC   ; 
@@ -7986,7 +7986,7 @@ _off007_9756_35:
 
 
 
-_off007_9777_36:
+_off007_9777_B6:
 - D 0 - I - 0x029787 0A:9777: 02        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029788 0A:9778: DC        .byte con_Y + $DC   ; 
@@ -8002,7 +8002,7 @@ _off007_9777_36:
 
 
 
-_off007_9780_37:
+_off007_9780_B7:
 - D 0 - I - 0x029790 0A:9780: 02        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029791 0A:9781: B9        .byte con_Y + $B9   ; 
@@ -8018,7 +8018,7 @@ _off007_9780_37:
 
 
 
-_off007_9789_38:
+_off007_9789_B8:
 - D 0 - I - 0x029799 0A:9789: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02979A 0A:978A: C0        .byte con_Y + $C0   ; 
@@ -8074,7 +8074,7 @@ _off007_9789_38:
 
 
 
-_off007_97B2_39:
+_off007_97B2_B9:
 - D 0 - I - 0x0297C2 0A:97B2: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0297C3 0A:97B3: D0        .byte con_Y + $D0   ; 
@@ -8125,7 +8125,7 @@ _off007_97B2_39:
 
 
 
-_off007_97D7_3A:
+_off007_97D7_BA:
 - D 0 - I - 0x0297E7 0A:97D7: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0297E8 0A:97D8: C0        .byte con_Y + $C0   ; 
@@ -8181,7 +8181,7 @@ _off007_97D7_3A:
 
 
 
-_off007_9800_3B:
+_off007_9800_BB:
 - D 0 - I - 0x029810 0A:9800: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029811 0A:9801: D6        .byte con_Y + $D6   ; 
@@ -8232,7 +8232,7 @@ _off007_9800_3B:
 
 
 
-_off007_9825_3C:
+_off007_9825_BC:
 - D 0 - I - 0x029835 0A:9825: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029836 0A:9826: D6        .byte con_Y + $D6   ; 
@@ -8278,7 +8278,7 @@ _off007_9825_3C:
 
 
 
-_off007_9846_3D:
+_off007_9846_BD:
 - D 0 - I - 0x029856 0A:9846: 01        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029857 0A:9847: EE        .byte con_Y + $EE   ; 
@@ -8289,7 +8289,7 @@ _off007_9846_3D:
 
 
 
-_off007_984B_3E:
+_off007_984B_BE:
 - D 0 - I - 0x02985B 0A:984B: 02        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02985C 0A:984C: C7        .byte con_Y + $C7   ; 
@@ -8305,7 +8305,7 @@ _off007_984B_3E:
 
 
 
-_off007_9854_3F:
+_off007_9854_BF:
 - D 0 - I - 0x029864 0A:9854: 03        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029865 0A:9855: C5        .byte con_Y + $C5   ; 
@@ -8326,7 +8326,7 @@ _off007_9854_3F:
 
 
 
-_off007_9861_41:
+_off007_9861_C1:
 - D 0 - I - 0x029871 0A:9861: 02        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029872 0A:9862: F9        .byte con_Y + $F9   ; 
@@ -8342,7 +8342,7 @@ _off007_9861_41:
 
 
 
-_off007_986A_40:
+_off007_986A_C0:
 - D 0 - I - 0x02987A 0A:986A: 02        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02987B 0A:986B: F9        .byte con_Y + $F9   ; 
@@ -8358,7 +8358,7 @@ _off007_986A_40:
 
 
 
-_off007_9873_42:
+_off007_9873_C2:
 - D 0 - I - 0x029883 0A:9873: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029884 0A:9874: C8        .byte con_Y + $C8   ; 
@@ -8409,7 +8409,7 @@ _off007_9873_42:
 
 
 
-_off007_9898_43:
+_off007_9898_C3:
 - D 0 - I - 0x0298A8 0A:9898: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0298A9 0A:9899: C4        .byte con_Y + $C4   ; 
@@ -8455,7 +8455,7 @@ _off007_9898_43:
 
 
 
-_off007_98B9_44:
+_off007_98B9_C4:
 - D 0 - I - 0x0298C9 0A:98B9: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0298CA 0A:98BA: C0        .byte con_Y + $C0   ; 
@@ -8511,7 +8511,7 @@ _off007_98B9_44:
 
 
 
-_off007_98E2_45:
+_off007_98E2_C5:
 - D 0 - I - 0x0298F2 0A:98E2: 02        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0298F3 0A:98E3: E4        .byte con_Y + $E4   ; 
@@ -8527,7 +8527,7 @@ _off007_98E2_45:
 
 
 
-_off007_98EB_46:
+_off007_98EB_C6:
 - D 0 - I - 0x0298FB 0A:98EB: 02        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0298FC 0A:98EC: E1        .byte con_Y + $E1   ; 
@@ -8543,7 +8543,7 @@ _off007_98EB_46:
 
 
 
-_off007_98F4_47:
+_off007_98F4_C7:
 - D 0 - I - 0x029904 0A:98F4: 02        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029905 0A:98F5: E8        .byte con_Y + $E8   ; 
@@ -8559,7 +8559,7 @@ _off007_98F4_47:
 
 
 
-_off007_98FD_48:
+_off007_98FD_C8:
 - D 0 - I - 0x02990D 0A:98FD: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02990E 0A:98FE: E1        .byte con_Y + $E1   ; 
@@ -8605,7 +8605,7 @@ _off007_98FD_48:
 
 
 
-_off007_991E_49:
+_off007_991E_C9:
 - D 0 - I - 0x02992E 0A:991E: 04        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02992F 0A:991F: E2        .byte con_Y + $E2   ; 
@@ -8631,7 +8631,7 @@ _off007_991E_49:
 
 
 
-_off007_992F_4A:
+_off007_992F_CA:
 - D 0 - I - 0x02993F 0A:992F: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029940 0A:9930: E2        .byte con_Y + $E2   ; 
@@ -8677,7 +8677,7 @@ _off007_992F_4A:
 
 
 
-_off007_9950_4B:
+_off007_9950_CB:
 - D 0 - I - 0x029960 0A:9950: 04        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029961 0A:9951: E2        .byte con_Y + $E2   ; 
@@ -8703,7 +8703,7 @@ _off007_9950_4B:
 
 
 
-_off007_9961_4C:
+_off007_9961_CC:
 - D 0 - I - 0x029971 0A:9961: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029972 0A:9962: C0        .byte con_Y + $C0   ; 
@@ -8759,7 +8759,7 @@ _off007_9961_4C:
 
 
 
-_off007_998A_4D:
+_off007_998A_CD:
 - D 0 - I - 0x02999A 0A:998A: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x02999B 0A:998B: D0        .byte con_Y + $D0   ; 
@@ -8815,7 +8815,7 @@ _off007_998A_4D:
 
 
 
-_off007_99B3_4E:
+_off007_99B3_CE:
 - D 0 - I - 0x0299C3 0A:99B3: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0299C4 0A:99B4: D0        .byte con_Y + $D0   ; 
@@ -8866,7 +8866,7 @@ _off007_99B3_4E:
 
 
 
-_off007_99D8_4F:
+_off007_99D8_CF:
 - D 0 - I - 0x0299E8 0A:99D8: 0A        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x0299E9 0A:99D9: C0        .byte con_Y + $C0   ; 
@@ -8922,7 +8922,7 @@ _off007_99D8_4F:
 
 
 
-_off007_9A01_50:
+_off007_9A01_D0:
 - D 0 - I - 0x029A11 0A:9A01: 0C        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029A12 0A:9A02: C0        .byte con_Y + $C0   ; 
@@ -8988,7 +8988,7 @@ _off007_9A01_50:
 
 
 
-_off007_9A32_51:
+_off007_9A32_D1:
 - D 0 - I - 0x029A42 0A:9A32: 0B        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029A43 0A:9A33: C0        .byte con_Y + $C0   ; 
@@ -9049,7 +9049,7 @@ _off007_9A32_51:
 
 
 
-_off007_9A5F_52:
+_off007_9A5F_D2:
 - D 0 - I - 0x029A6F 0A:9A5F: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029A70 0A:9A60: CD        .byte con_Y + $CD   ; 
@@ -9095,7 +9095,7 @@ _off007_9A5F_52:
 
 
 
-_off007_9A80_53:
+_off007_9A80_D3:
 - D 0 - I - 0x029A90 0A:9A80: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029A91 0A:9A81: D0        .byte con_Y + $D0   ; 
@@ -9141,7 +9141,7 @@ _off007_9A80_53:
 
 
 
-_off007_9AA1_54:
+_off007_9AA1_D4:
 - D 0 - I - 0x029AB1 0A:9AA1: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029AB2 0A:9AA2: D2        .byte con_Y + $D2   ; 
@@ -9192,7 +9192,7 @@ _off007_9AA1_54:
 
 
 
-_off007_9AC6_55:
+_off007_9AC6_D5:
 - D 0 - I - 0x029AD6 0A:9AC6: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029AD7 0A:9AC7: E5        .byte con_Y + $E5   ; 
@@ -9243,7 +9243,7 @@ _off007_9AC6_55:
 
 
 
-_off007_9AEB_56:
+_off007_9AEB_D6:
 - D 0 - I - 0x029AFB 0A:9AEB: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029AFC 0A:9AEC: D1        .byte con_Y + $D1   ; 
@@ -9289,7 +9289,7 @@ _off007_9AEB_56:
 
 
 
-_off007_9B0C_57:
+_off007_9B0C_D7:
 - D 0 - I - 0x029B1C 0A:9B0C: 09        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029B1D 0A:9B0D: D0        .byte con_Y + $D0   ; 
@@ -9340,7 +9340,7 @@ _off007_9B0C_57:
 
 
 
-_off007_9B31_58:
+_off007_9B31_D8:
 - D 0 - I - 0x029B41 0A:9B31: 08        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029B42 0A:9B32: D1        .byte con_Y + $D1   ; 
@@ -9388,79 +9388,79 @@ _off007_9B31_58:
 
 .export tbl_0x029B62_Hot
 tbl_0x029B62_Hot:
-- D 0 - I - 0x029B62 0A:9B52: DC 9B     .word _off008_9BDC_00
-- D 0 - I - 0x029B64 0A:9B54: 31 9C     .word _off008_9C31_01
-- D 0 - I - 0x029B66 0A:9B56: 86 9C     .word _off008_9C86_02
-- D 0 - I - 0x029B68 0A:9B58: DF 9C     .word _off008_9CDF_03
-- D 0 - I - 0x029B6A 0A:9B5A: 38 9D     .word _off008_9D38_04
-- D 0 - I - 0x029B6C 0A:9B5C: 8D 9D     .word _off008_9D8D_05
-- D 0 - I - 0x029B6E 0A:9B5E: D6 9D     .word _off008_9DD6_06
-- D 0 - I - 0x029B70 0A:9B60: 27 9E     .word _off008_9E27_07
-- D 0 - I - 0x029B72 0A:9B62: 78 9E     .word _off008_9E78_08
-- D 0 - I - 0x029B74 0A:9B64: CD 9E     .word _off008_9ECD_09
-- D 0 - I - 0x029B76 0A:9B66: 16 9F     .word _off008_9F16_0A
-- D 0 - I - 0x029B78 0A:9B68: 67 9F     .word _off008_9F67_0B
-- D 0 - I - 0x029B7A 0A:9B6A: C0 9F     .word _off008_9FC0_0C
-- D 0 - I - 0x029B7C 0A:9B6C: 19 A0     .word _off008_A019_0D
-- D 0 - I - 0x029B7E 0A:9B6E: 72 A0     .word _off008_A072_0E
-- D 0 - I - 0x029B80 0A:9B70: CB A0     .word _off008_A0CB_0F
-- D 0 - I - 0x029B82 0A:9B72: 24 A1     .word _off008_A124_10
-- D 0 - I - 0x029B84 0A:9B74: 81 A1     .word _off008_A181_11
-- D 0 - I - 0x029B86 0A:9B76: D2 A1     .word _off008_A1D2_12
-- D 0 - I - 0x029B88 0A:9B78: 1B A2     .word _off008_A21B_13
-- D 0 - I - 0x029B8A 0A:9B7A: 64 A2     .word _off008_A264_14
-- D 0 - I - 0x029B8C 0A:9B7C: B5 A2     .word _off008_A2B5_15
-- D 0 - I - 0x029B8E 0A:9B7E: 0E A3     .word _off008_A30E_16
-- D 0 - I - 0x029B90 0A:9B80: 67 A3     .word _off008_A367_17
-- D 0 - I - 0x029B92 0A:9B82: B0 A3     .word _off008_A3B0_18
-- D 0 - I - 0x029B94 0A:9B84: 05 A4     .word _off008_A405_19
-- D 0 - I - 0x029B96 0A:9B86: 52 A4     .word _off008_A452_1A
-- D 0 - I - 0x029B98 0A:9B88: A7 A4     .word _off008_A4A7_1B
-- D 0 - I - 0x029B9A 0A:9B8A: EC A4     .word _off008_A4EC_1C
-- D 0 - I - 0x029B9C 0A:9B8C: 41 A5     .word _off008_A541_1D
-- D 0 - I - 0x029B9E 0A:9B8E: 8A A5     .word _off008_A58A_1E
-- D 0 - I - 0x029BA0 0A:9B90: DB A5     .word _off008_A5DB_1F
-- D 0 - I - 0x029BA2 0A:9B92: 30 A6     .word _off008_A630_20
-- D 0 - I - 0x029BA4 0A:9B94: 85 A6     .word _off008_A685_21
-- D 0 - I - 0x029BA6 0A:9B96: CA A6     .word _off008_A6CA_22
-- D 0 - I - 0x029BA8 0A:9B98: 03 A7     .word _off008_A703_23
-- - - - - - 0x029BAA 0A:9B9A: 48 A7     .word _off008_A748_24
-- D 0 - I - 0x029BAC 0A:9B9C: 89 A7     .word _off008_A789_25
-- - - - - - 0x029BAE 0A:9B9E: CE A7     .word _off008_A7CE_26
-- - - - - - 0x029BB0 0A:9BA0: D3 A7     .word _off008_A7D3_27
-- - - - - - 0x029BB2 0A:9BA2: DC A7     .word _off008_A7DC_28
-- - - - - - 0x029BB4 0A:9BA4: E5 A7     .word _off008_A7E5_29
-- D 0 - I - 0x029BB6 0A:9BA6: EE A7     .word _off008_A7EE_2A
-- D 0 - I - 0x029BB8 0A:9BA8: F3 A7     .word _off008_A7F3_2B
-- D 0 - I - 0x029BBA 0A:9BAA: FC A7     .word _off008_A7FC_2C
-- D 0 - I - 0x029BBC 0A:9BAC: 15 A8     .word _off008_A815_2D
-- D 0 - I - 0x029BBE 0A:9BAE: 2A A8     .word _off008_A82A_2E
-- D 0 - I - 0x029BC0 0A:9BB0: 2F A8     .word _off008_A82F_2F
-- D 0 - I - 0x029BC2 0A:9BB2: 84 A8     .word _off008_A884_30
-- D 0 - I - 0x029BC4 0A:9BB4: D5 A8     .word _off008_A8D5_31
-- D 0 - I - 0x029BC6 0A:9BB6: 26 A9     .word _off008_A926_32
-- D 0 - I - 0x029BC8 0A:9BB8: 6F A9     .word _off008_A96F_33
-- D 0 - I - 0x029BCA 0A:9BBA: C0 A9     .word _off008_A9C0_34
-- D 0 - I - 0x029BCC 0A:9BBC: 09 AA     .word _off008_AA09_35
-- D 0 - I - 0x029BCE 0A:9BBE: 62 AA     .word _off008_AA62_36
-- D 0 - I - 0x029BD0 0A:9BC0: C3 AA     .word _off008_AAC3_37
-- D 0 - I - 0x029BD2 0A:9BC2: 1C AB     .word _off008_AB1C_38
-- D 0 - I - 0x029BD4 0A:9BC4: 75 AB     .word _off008_AB75_39
-- D 0 - I - 0x029BD6 0A:9BC6: C6 AB     .word _off008_ABC6_3A
-- D 0 - I - 0x029BD8 0A:9BC8: 13 AC     .word _off008_AC13_3B
-- D 0 - I - 0x029BDA 0A:9BCA: 4C AC     .word _off008_AC4C_3C
-- D 0 - I - 0x029BDC 0A:9BCC: B1 AC     .word _off008_ACB1_3D
-- D 0 - I - 0x029BDE 0A:9BCE: 26 AD     .word _off008_AD26_3E
-- D 0 - I - 0x029BE0 0A:9BD0: 93 AD     .word _off008_AD93_3F
-- D 0 - I - 0x029BE2 0A:9BD2: 00 AE     .word _off008_AE00_40
-- D 0 - I - 0x029BE4 0A:9BD4: 09 AE     .word _off008_AE09_41
-- D 0 - I - 0x029BE6 0A:9BD6: 12 AE     .word _off008_AE12_42
-- D 0 - I - 0x029BE8 0A:9BD8: 1B AE     .word _off008_AE1B_43
-- D 0 - I - 0x029BEA 0A:9BDA: 70 AE     .word _off008_AE70_44
+- D 0 - I - 0x029B62 0A:9B52: DC 9B     .word _off008_9BDC_80
+- D 0 - I - 0x029B64 0A:9B54: 31 9C     .word _off008_9C31_81
+- D 0 - I - 0x029B66 0A:9B56: 86 9C     .word _off008_9C86_82
+- D 0 - I - 0x029B68 0A:9B58: DF 9C     .word _off008_9CDF_83
+- D 0 - I - 0x029B6A 0A:9B5A: 38 9D     .word _off008_9D38_84
+- D 0 - I - 0x029B6C 0A:9B5C: 8D 9D     .word _off008_9D8D_85
+- D 0 - I - 0x029B6E 0A:9B5E: D6 9D     .word _off008_9DD6_86
+- D 0 - I - 0x029B70 0A:9B60: 27 9E     .word _off008_9E27_87
+- D 0 - I - 0x029B72 0A:9B62: 78 9E     .word _off008_9E78_88
+- D 0 - I - 0x029B74 0A:9B64: CD 9E     .word _off008_9ECD_89
+- D 0 - I - 0x029B76 0A:9B66: 16 9F     .word _off008_9F16_8A
+- D 0 - I - 0x029B78 0A:9B68: 67 9F     .word _off008_9F67_8B
+- D 0 - I - 0x029B7A 0A:9B6A: C0 9F     .word _off008_9FC0_8C
+- D 0 - I - 0x029B7C 0A:9B6C: 19 A0     .word _off008_A019_8D
+- D 0 - I - 0x029B7E 0A:9B6E: 72 A0     .word _off008_A072_8E
+- D 0 - I - 0x029B80 0A:9B70: CB A0     .word _off008_A0CB_8F
+- D 0 - I - 0x029B82 0A:9B72: 24 A1     .word _off008_A124_90
+- D 0 - I - 0x029B84 0A:9B74: 81 A1     .word _off008_A181_91
+- D 0 - I - 0x029B86 0A:9B76: D2 A1     .word _off008_A1D2_92
+- D 0 - I - 0x029B88 0A:9B78: 1B A2     .word _off008_A21B_93
+- D 0 - I - 0x029B8A 0A:9B7A: 64 A2     .word _off008_A264_94
+- D 0 - I - 0x029B8C 0A:9B7C: B5 A2     .word _off008_A2B5_95
+- D 0 - I - 0x029B8E 0A:9B7E: 0E A3     .word _off008_A30E_96
+- D 0 - I - 0x029B90 0A:9B80: 67 A3     .word _off008_A367_97
+- D 0 - I - 0x029B92 0A:9B82: B0 A3     .word _off008_A3B0_98
+- D 0 - I - 0x029B94 0A:9B84: 05 A4     .word _off008_A405_99
+- D 0 - I - 0x029B96 0A:9B86: 52 A4     .word _off008_A452_9A
+- D 0 - I - 0x029B98 0A:9B88: A7 A4     .word _off008_A4A7_9B
+- D 0 - I - 0x029B9A 0A:9B8A: EC A4     .word _off008_A4EC_9C
+- D 0 - I - 0x029B9C 0A:9B8C: 41 A5     .word _off008_A541_9D
+- D 0 - I - 0x029B9E 0A:9B8E: 8A A5     .word _off008_A58A_9E
+- D 0 - I - 0x029BA0 0A:9B90: DB A5     .word _off008_A5DB_9F
+- D 0 - I - 0x029BA2 0A:9B92: 30 A6     .word _off008_A630_A0
+- D 0 - I - 0x029BA4 0A:9B94: 85 A6     .word _off008_A685_A1
+- D 0 - I - 0x029BA6 0A:9B96: CA A6     .word _off008_A6CA_A2
+- D 0 - I - 0x029BA8 0A:9B98: 03 A7     .word _off008_A703_A3
+- - - - - - 0x029BAA 0A:9B9A: 48 A7     .word _off008_A748_A4
+- D 0 - I - 0x029BAC 0A:9B9C: 89 A7     .word _off008_A789_A5
+- - - - - - 0x029BAE 0A:9B9E: CE A7     .word _off008_A7CE_A6
+- - - - - - 0x029BB0 0A:9BA0: D3 A7     .word _off008_A7D3_A7
+- - - - - - 0x029BB2 0A:9BA2: DC A7     .word _off008_A7DC_A8
+- - - - - - 0x029BB4 0A:9BA4: E5 A7     .word _off008_A7E5_A9
+- D 0 - I - 0x029BB6 0A:9BA6: EE A7     .word _off008_A7EE_AA
+- D 0 - I - 0x029BB8 0A:9BA8: F3 A7     .word _off008_A7F3_AB
+- D 0 - I - 0x029BBA 0A:9BAA: FC A7     .word _off008_A7FC_AC
+- D 0 - I - 0x029BBC 0A:9BAC: 15 A8     .word _off008_A815_AD
+- D 0 - I - 0x029BBE 0A:9BAE: 2A A8     .word _off008_A82A_AE
+- D 0 - I - 0x029BC0 0A:9BB0: 2F A8     .word _off008_A82F_AF
+- D 0 - I - 0x029BC2 0A:9BB2: 84 A8     .word _off008_A884_B0
+- D 0 - I - 0x029BC4 0A:9BB4: D5 A8     .word _off008_A8D5_B1
+- D 0 - I - 0x029BC6 0A:9BB6: 26 A9     .word _off008_A926_B2
+- D 0 - I - 0x029BC8 0A:9BB8: 6F A9     .word _off008_A96F_B3
+- D 0 - I - 0x029BCA 0A:9BBA: C0 A9     .word _off008_A9C0_B4
+- D 0 - I - 0x029BCC 0A:9BBC: 09 AA     .word _off008_AA09_B5
+- D 0 - I - 0x029BCE 0A:9BBE: 62 AA     .word _off008_AA62_B6
+- D 0 - I - 0x029BD0 0A:9BC0: C3 AA     .word _off008_AAC3_B7
+- D 0 - I - 0x029BD2 0A:9BC2: 1C AB     .word _off008_AB1C_B8
+- D 0 - I - 0x029BD4 0A:9BC4: 75 AB     .word _off008_AB75_B9
+- D 0 - I - 0x029BD6 0A:9BC6: C6 AB     .word _off008_ABC6_BA
+- D 0 - I - 0x029BD8 0A:9BC8: 13 AC     .word _off008_AC13_BB
+- D 0 - I - 0x029BDA 0A:9BCA: 4C AC     .word _off008_AC4C_BC
+- D 0 - I - 0x029BDC 0A:9BCC: B1 AC     .word _off008_ACB1_BD
+- D 0 - I - 0x029BDE 0A:9BCE: 26 AD     .word _off008_AD26_BE
+- D 0 - I - 0x029BE0 0A:9BD0: 93 AD     .word _off008_AD93_BF
+- D 0 - I - 0x029BE2 0A:9BD2: 00 AE     .word _off008_AE00_C0
+- D 0 - I - 0x029BE4 0A:9BD4: 09 AE     .word _off008_AE09_C1
+- D 0 - I - 0x029BE6 0A:9BD6: 12 AE     .word _off008_AE12_C2
+- D 0 - I - 0x029BE8 0A:9BD8: 1B AE     .word _off008_AE1B_C3
+- D 0 - I - 0x029BEA 0A:9BDA: 70 AE     .word _off008_AE70_C4
 
 
 
-_off008_9BDC_00:
+_off008_9BDC_80:
 - D 0 - I - 0x029BEC 0A:9BDC: 15        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029BED 0A:9BDD: B1        .byte con_Y + $B1   ; 
@@ -9571,7 +9571,7 @@ _off008_9BDC_00:
 
 
 
-_off008_9C31_01:
+_off008_9C31_81:
 - D 0 - I - 0x029C41 0A:9C31: 15        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029C42 0A:9C32: B1        .byte con_Y + $B1   ; 
@@ -9682,7 +9682,7 @@ _off008_9C31_01:
 
 
 
-_off008_9C86_02:
+_off008_9C86_82:
 - D 0 - I - 0x029C96 0A:9C86: 16        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029C97 0A:9C87: B1        .byte con_Y + $B1   ; 
@@ -9798,7 +9798,7 @@ _off008_9C86_02:
 
 
 
-_off008_9CDF_03:
+_off008_9CDF_83:
 - D 0 - I - 0x029CEF 0A:9CDF: 16        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029CF0 0A:9CE0: AE        .byte con_Y + $AE   ; 
@@ -9914,7 +9914,7 @@ _off008_9CDF_03:
 
 
 
-_off008_9D38_04:
+_off008_9D38_84:
 - D 0 - I - 0x029D48 0A:9D38: 15        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029D49 0A:9D39: B1        .byte con_Y + $B1   ; 
@@ -10025,7 +10025,7 @@ _off008_9D38_04:
 
 
 
-_off008_9D8D_05:
+_off008_9D8D_85:
 - D 0 - I - 0x029D9D 0A:9D8D: 12        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029D9E 0A:9D8E: B0        .byte con_Y + $B0   ; 
@@ -10121,7 +10121,7 @@ _off008_9D8D_05:
 
 
 
-_off008_9DD6_06:
+_off008_9DD6_86:
 - D 0 - I - 0x029DE6 0A:9DD6: 14        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029DE7 0A:9DD7: AE        .byte con_Y + $AE   ; 
@@ -10227,7 +10227,7 @@ _off008_9DD6_06:
 
 
 
-_off008_9E27_07:
+_off008_9E27_87:
 - D 0 - I - 0x029E37 0A:9E27: 14        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029E38 0A:9E28: B1        .byte con_Y + $B1   ; 
@@ -10333,7 +10333,7 @@ _off008_9E27_07:
 
 
 
-_off008_9E78_08:
+_off008_9E78_88:
 - D 0 - I - 0x029E88 0A:9E78: 15        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029E89 0A:9E79: B1        .byte con_Y + $B1   ; 
@@ -10444,7 +10444,7 @@ _off008_9E78_08:
 
 
 
-_off008_9ECD_09:
+_off008_9ECD_89:
 - D 0 - I - 0x029EDD 0A:9ECD: 12        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029EDE 0A:9ECE: B1        .byte con_Y + $B1   ; 
@@ -10540,7 +10540,7 @@ _off008_9ECD_09:
 
 
 
-_off008_9F16_0A:
+_off008_9F16_8A:
 - D 0 - I - 0x029F26 0A:9F16: 14        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029F27 0A:9F17: B1        .byte con_Y + $B1   ; 
@@ -10646,7 +10646,7 @@ _off008_9F16_0A:
 
 
 
-_off008_9F67_0B:
+_off008_9F67_8B:
 - D 0 - I - 0x029F77 0A:9F67: 16        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029F78 0A:9F68: B1        .byte con_Y + $B1   ; 
@@ -10762,7 +10762,7 @@ _off008_9F67_0B:
 
 
 
-_off008_9FC0_0C:
+_off008_9FC0_8C:
 - D 0 - I - 0x029FD0 0A:9FC0: 16        .byte (@end - * - 1) / 4
 
 - D 0 - I - 0x029FD1 0A:9FC1: B1        .byte con_Y + $B1   ; 
@@ -10878,7 +10878,7 @@ _off008_9FC0_0C:
 
 
 
-_off008_A019_0D:
+_off008_A019_8D:
 - D 1 - I - 0x02A029 0A:A019: 16        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A02A 0A:A01A: B1        .byte con_Y + $B1   ; 
@@ -10994,7 +10994,7 @@ _off008_A019_0D:
 
 
 
-_off008_A072_0E:
+_off008_A072_8E:
 - D 1 - I - 0x02A082 0A:A072: 16        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A083 0A:A073: B0        .byte con_Y + $B0   ; 
@@ -11110,7 +11110,7 @@ _off008_A072_0E:
 
 
 
-_off008_A0CB_0F:
+_off008_A0CB_8F:
 - D 1 - I - 0x02A0DB 0A:A0CB: 16        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A0DC 0A:A0CC: B1        .byte con_Y + $B1   ; 
@@ -11226,7 +11226,7 @@ _off008_A0CB_0F:
 
 
 
-_off008_A124_10:
+_off008_A124_90:
 - D 1 - I - 0x02A134 0A:A124: 17        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A135 0A:A125: A5        .byte con_Y + $A5   ; 
@@ -11347,7 +11347,7 @@ _off008_A124_10:
 
 
 
-_off008_A181_11:
+_off008_A181_91:
 - D 1 - I - 0x02A191 0A:A181: 14        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A192 0A:A182: AD        .byte con_Y + $AD   ; 
@@ -11453,7 +11453,7 @@ _off008_A181_11:
 
 
 
-_off008_A1D2_12:
+_off008_A1D2_92:
 - D 1 - I - 0x02A1E2 0A:A1D2: 12        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A1E3 0A:A1D3: C1        .byte con_Y + $C1   ; 
@@ -11549,7 +11549,7 @@ _off008_A1D2_12:
 
 
 
-_off008_A21B_13:
+_off008_A21B_93:
 - D 1 - I - 0x02A22B 0A:A21B: 12        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A22C 0A:A21C: C1        .byte con_Y + $C1   ; 
@@ -11645,7 +11645,7 @@ _off008_A21B_13:
 
 
 
-_off008_A264_14:
+_off008_A264_94:
 - D 1 - I - 0x02A274 0A:A264: 14        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A275 0A:A265: B1        .byte con_Y + $B1   ; 
@@ -11751,7 +11751,7 @@ _off008_A264_14:
 
 
 
-_off008_A2B5_15:
+_off008_A2B5_95:
 - D 1 - I - 0x02A2C5 0A:A2B5: 16        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A2C6 0A:A2B6: B1        .byte con_Y + $B1   ; 
@@ -11867,7 +11867,7 @@ _off008_A2B5_15:
 
 
 
-_off008_A30E_16:
+_off008_A30E_96:
 - D 1 - I - 0x02A31E 0A:A30E: 16        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A31F 0A:A30F: A5        .byte con_Y + $A5   ; 
@@ -11983,7 +11983,7 @@ _off008_A30E_16:
 
 
 
-_off008_A367_17:
+_off008_A367_97:
 - D 1 - I - 0x02A377 0A:A367: 12        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A378 0A:A368: C1        .byte con_Y + $C1   ; 
@@ -12079,7 +12079,7 @@ _off008_A367_17:
 
 
 
-_off008_A3B0_18:
+_off008_A3B0_98:
 - D 1 - I - 0x02A3C0 0A:A3B0: 15        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A3C1 0A:A3B1: C1        .byte con_Y + $C1   ; 
@@ -12190,7 +12190,7 @@ _off008_A3B0_18:
 
 
 
-_off008_A405_19:
+_off008_A405_99:
 - D 1 - I - 0x02A415 0A:A405: 13        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A416 0A:A406: C1        .byte con_Y + $C1   ; 
@@ -12291,7 +12291,7 @@ _off008_A405_19:
 
 
 
-_off008_A452_1A:
+_off008_A452_9A:
 - D 1 - I - 0x02A462 0A:A452: 15        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A463 0A:A453: B1        .byte con_Y + $B1   ; 
@@ -12402,7 +12402,7 @@ _off008_A452_1A:
 
 
 
-_off008_A4A7_1B:
+_off008_A4A7_9B:
 - D 1 - I - 0x02A4B7 0A:A4A7: 11        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A4B8 0A:A4A8: C1        .byte con_Y + $C1   ; 
@@ -12493,7 +12493,7 @@ _off008_A4A7_1B:
 
 
 
-_off008_A4EC_1C:
+_off008_A4EC_9C:
 - D 1 - I - 0x02A4FC 0A:A4EC: 15        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A4FD 0A:A4ED: A1        .byte con_Y + $A1   ; 
@@ -12604,7 +12604,7 @@ _off008_A4EC_1C:
 
 
 
-_off008_A541_1D:
+_off008_A541_9D:
 - D 1 - I - 0x02A551 0A:A541: 12        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A552 0A:A542: C1        .byte con_Y + $C1   ; 
@@ -12700,7 +12700,7 @@ _off008_A541_1D:
 
 
 
-_off008_A58A_1E:
+_off008_A58A_9E:
 - D 1 - I - 0x02A59A 0A:A58A: 14        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A59B 0A:A58B: B1        .byte con_Y + $B1   ; 
@@ -12806,7 +12806,7 @@ _off008_A58A_1E:
 
 
 
-_off008_A5DB_1F:
+_off008_A5DB_9F:
 - D 1 - I - 0x02A5EB 0A:A5DB: 15        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A5EC 0A:A5DC: AD        .byte con_Y + $AD   ; 
@@ -12917,7 +12917,7 @@ _off008_A5DB_1F:
 
 
 
-_off008_A630_20:
+_off008_A630_A0:
 - D 1 - I - 0x02A640 0A:A630: 15        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A641 0A:A631: F1        .byte con_Y + $F1   ; 
@@ -13028,7 +13028,7 @@ _off008_A630_20:
 
 
 
-_off008_A685_21:
+_off008_A685_A1:
 - D 1 - I - 0x02A695 0A:A685: 11        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A696 0A:A686: D1        .byte con_Y + $D1   ; 
@@ -13119,7 +13119,7 @@ _off008_A685_21:
 
 
 
-_off008_A6CA_22:
+_off008_A6CA_A2:
 - D 1 - I - 0x02A6DA 0A:A6CA: 0E        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A6DB 0A:A6CB: E4        .byte con_Y + $E4   ; 
@@ -13195,7 +13195,7 @@ _off008_A6CA_22:
 
 
 
-_off008_A703_23:
+_off008_A703_A3:
 - D 1 - I - 0x02A713 0A:A703: 11        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A714 0A:A704: E1        .byte con_Y + $E1   ; 
@@ -13286,7 +13286,7 @@ _off008_A703_23:
 
 
 
-_off008_A748_24:
+_off008_A748_A4:
 - - - - - - 0x02A758 0A:A748: 10        .byte (@end - * - 1) / 4
 
 - - - - - - 0x02A759 0A:A749: C1        .byte con_Y + $C1   ; 
@@ -13372,7 +13372,7 @@ _off008_A748_24:
 
 
 
-_off008_A789_25:
+_off008_A789_A5:
 - D 1 - I - 0x02A799 0A:A789: 11        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A79A 0A:A78A: C1        .byte con_Y + $C1   ; 
@@ -13463,7 +13463,7 @@ _off008_A789_25:
 
 
 
-_off008_A7CE_26:
+_off008_A7CE_A6:
 - - - - - - 0x02A7DE 0A:A7CE: 01        .byte (@end - * - 1) / 4
 
 - - - - - - 0x02A7DF 0A:A7CF: FE        .byte con_Y + $FE   ; 
@@ -13474,7 +13474,7 @@ _off008_A7CE_26:
 
 
 
-_off008_A7D3_27:
+_off008_A7D3_A7:
 - - - - - - 0x02A7E3 0A:A7D3: 02        .byte (@end - * - 1) / 4
 
 - - - - - - 0x02A7E4 0A:A7D4: FE        .byte con_Y + $FE   ; 
@@ -13490,7 +13490,7 @@ _off008_A7D3_27:
 
 
 
-_off008_A7DC_28:
+_off008_A7DC_A8:
 - - - - - - 0x02A7EC 0A:A7DC: 02        .byte (@end - * - 1) / 4
 
 - - - - - - 0x02A7ED 0A:A7DD: FE        .byte con_Y + $FE   ; 
@@ -13506,7 +13506,7 @@ _off008_A7DC_28:
 
 
 
-_off008_A7E5_29:
+_off008_A7E5_A9:
 - - - - - - 0x02A7F5 0A:A7E5: 02        .byte (@end - * - 1) / 4
 
 - - - - - - 0x02A7F6 0A:A7E6: FE        .byte con_Y + $FE   ; 
@@ -13522,7 +13522,7 @@ _off008_A7E5_29:
 
 
 
-_off008_A7EE_2A:
+_off008_A7EE_AA:
 - D 1 - I - 0x02A7FE 0A:A7EE: 01        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A7FF 0A:A7EF: E9        .byte con_Y + $E9   ; 
@@ -13533,7 +13533,7 @@ _off008_A7EE_2A:
 
 
 
-_off008_A7F3_2B:
+_off008_A7F3_AB:
 - D 1 - I - 0x02A803 0A:A7F3: 02        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A804 0A:A7F4: E9        .byte con_Y + $E9   ; 
@@ -13549,7 +13549,7 @@ _off008_A7F3_2B:
 
 
 
-_off008_A7FC_2C:
+_off008_A7FC_AC:
 - D 1 - I - 0x02A80C 0A:A7FC: 06        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A80D 0A:A7FD: E9        .byte con_Y + $E9   ; 
@@ -13585,7 +13585,7 @@ _off008_A7FC_2C:
 
 
 
-_off008_A815_2D:
+_off008_A815_AD:
 - D 1 - I - 0x02A825 0A:A815: 05        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A826 0A:A816: F1        .byte con_Y + $F1   ; 
@@ -13616,7 +13616,7 @@ _off008_A815_2D:
 
 
 
-_off008_A82A_2E:
+_off008_A82A_AE:
 - D 1 - I - 0x02A83A 0A:A82A: 01        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A83B 0A:A82B: 01        .byte con_Y + $01   ; 
@@ -13627,7 +13627,7 @@ _off008_A82A_2E:
 
 
 
-_off008_A82F_2F:
+_off008_A82F_AF:
 - D 1 - I - 0x02A83F 0A:A82F: 15        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A840 0A:A830: B1        .byte con_Y + $B1   ; 
@@ -13738,7 +13738,7 @@ _off008_A82F_2F:
 
 
 
-_off008_A884_30:
+_off008_A884_B0:
 - D 1 - I - 0x02A894 0A:A884: 14        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A895 0A:A885: B1        .byte con_Y + $B1   ; 
@@ -13844,7 +13844,7 @@ _off008_A884_30:
 
 
 
-_off008_A8D5_31:
+_off008_A8D5_B1:
 - D 1 - I - 0x02A8E5 0A:A8D5: 14        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A8E6 0A:A8D6: B1        .byte con_Y + $B1   ; 
@@ -13950,7 +13950,7 @@ _off008_A8D5_31:
 
 
 
-_off008_A926_32:
+_off008_A926_B2:
 - D 1 - I - 0x02A936 0A:A926: 12        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A937 0A:A927: C1        .byte con_Y + $C1   ; 
@@ -14046,7 +14046,7 @@ _off008_A926_32:
 
 
 
-_off008_A96F_33:
+_off008_A96F_B3:
 - D 1 - I - 0x02A97F 0A:A96F: 14        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A980 0A:A970: C1        .byte con_Y + $C1   ; 
@@ -14152,7 +14152,7 @@ _off008_A96F_33:
 
 
 
-_off008_A9C0_34:
+_off008_A9C0_B4:
 - D 1 - I - 0x02A9D0 0A:A9C0: 12        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02A9D1 0A:A9C1: AD        .byte con_Y + $AD   ; 
@@ -14248,7 +14248,7 @@ _off008_A9C0_34:
 
 
 
-_off008_AA09_35:
+_off008_AA09_B5:
 - D 1 - I - 0x02AA19 0A:AA09: 16        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02AA1A 0A:AA0A: D1        .byte con_Y + $D1   ; 
@@ -14364,7 +14364,7 @@ _off008_AA09_35:
 
 
 
-_off008_AA62_36:
+_off008_AA62_B6:
 - D 1 - I - 0x02AA72 0A:AA62: 18        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02AA73 0A:AA63: A1        .byte con_Y + $A1   ; 
@@ -14490,7 +14490,7 @@ _off008_AA62_36:
 
 
 
-_off008_AAC3_37:
+_off008_AAC3_B7:
 - D 1 - I - 0x02AAD3 0A:AAC3: 16        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02AAD4 0A:AAC4: B1        .byte con_Y + $B1   ; 
@@ -14606,7 +14606,7 @@ _off008_AAC3_37:
 
 
 
-_off008_AB1C_38:
+_off008_AB1C_B8:
 - D 1 - I - 0x02AB2C 0A:AB1C: 16        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02AB2D 0A:AB1D: B1        .byte con_Y + $B1   ; 
@@ -14722,7 +14722,7 @@ _off008_AB1C_38:
 
 
 
-_off008_AB75_39:
+_off008_AB75_B9:
 - D 1 - I - 0x02AB85 0A:AB75: 14        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02AB86 0A:AB76: B1        .byte con_Y + $B1   ; 
@@ -14828,7 +14828,7 @@ _off008_AB75_39:
 
 
 
-_off008_ABC6_3A:
+_off008_ABC6_BA:
 - D 1 - I - 0x02ABD6 0A:ABC6: 13        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02ABD7 0A:ABC7: C1        .byte con_Y + $C1   ; 
@@ -14929,7 +14929,7 @@ _off008_ABC6_3A:
 
 
 
-_off008_AC13_3B:
+_off008_AC13_BB:
 - D 1 - I - 0x02AC23 0A:AC13: 0E        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02AC24 0A:AC14: E1        .byte con_Y + $E1   ; 
@@ -15005,7 +15005,7 @@ _off008_AC13_3B:
 
 
 
-_off008_AC4C_3C:
+_off008_AC4C_BC:
 - D 1 - I - 0x02AC5C 0A:AC4C: 19        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02AC5D 0A:AC4D: B4        .byte con_Y + $B4   ; 
@@ -15136,7 +15136,7 @@ _off008_AC4C_3C:
 
 
 
-_off008_ACB1_3D:
+_off008_ACB1_BD:
 - D 1 - I - 0x02ACC1 0A:ACB1: 1D        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02ACC2 0A:ACB2: A1        .byte con_Y + $A1   ; 
@@ -15287,7 +15287,7 @@ _off008_ACB1_3D:
 
 
 
-_off008_AD26_3E:
+_off008_AD26_BE:
 - D 1 - I - 0x02AD36 0A:AD26: 1B        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02AD37 0A:AD27: B1        .byte con_Y + $B1   ; 
@@ -15428,7 +15428,7 @@ _off008_AD26_3E:
 
 
 
-_off008_AD93_3F:
+_off008_AD93_BF:
 - D 1 - I - 0x02ADA3 0A:AD93: 1B        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02ADA4 0A:AD94: B1        .byte con_Y + $B1   ; 
@@ -15569,7 +15569,7 @@ _off008_AD93_3F:
 
 
 
-_off008_AE00_40:
+_off008_AE00_C0:
 - D 1 - I - 0x02AE10 0A:AE00: 02        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02AE11 0A:AE01: F8        .byte con_Y + $F8   ; 
@@ -15585,7 +15585,7 @@ _off008_AE00_40:
 
 
 
-_off008_AE09_41:
+_off008_AE09_C1:
 - D 1 - I - 0x02AE19 0A:AE09: 02        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02AE1A 0A:AE0A: F8        .byte con_Y + $F8   ; 
@@ -15601,7 +15601,7 @@ _off008_AE09_41:
 
 
 
-_off008_AE12_42:
+_off008_AE12_C2:
 - D 1 - I - 0x02AE22 0A:AE12: 02        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02AE23 0A:AE13: F8        .byte con_Y + $F8   ; 
@@ -15617,7 +15617,7 @@ _off008_AE12_42:
 
 
 
-_off008_AE1B_43:
+_off008_AE1B_C3:
 - D 1 - I - 0x02AE2B 0A:AE1B: 15        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02AE2C 0A:AE1C: B1        .byte con_Y + $B1   ; 
@@ -15728,7 +15728,7 @@ _off008_AE1B_43:
 
 
 
-_off008_AE70_44:
+_off008_AE70_C4:
 - D 1 - I - 0x02AE80 0A:AE70: 15        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02AE81 0A:AE71: A6        .byte con_Y + $A6   ; 
@@ -15841,85 +15841,85 @@ _off008_AE70_44:
 
 .export tbl_0x02AED5_Shred
 tbl_0x02AED5_Shred:
-- D 1 - I - 0x02AED5 0A:AEC5: 5B AF     .word _off009_AF5B_00
-- D 1 - I - 0x02AED7 0A:AEC7: 8C AF     .word _off009_AF8C_01
-- D 1 - I - 0x02AED9 0A:AEC9: BD AF     .word _off009_AFBD_02
-- D 1 - I - 0x02AEDB 0A:AECB: EE AF     .word _off009_AFEE_03
-- D 1 - I - 0x02AEDD 0A:AECD: 17 B0     .word _off009_B017_04
-- D 1 - I - 0x02AEDF 0A:AECF: 4C B0     .word _off009_B04C_05
-- D 1 - I - 0x02AEE1 0A:AED1: 79 B0     .word _off009_B079_06
-- D 1 - I - 0x02AEE3 0A:AED3: AE B0     .word _off009_B0AE_07
-- D 1 - I - 0x02AEE5 0A:AED5: DB B0     .word _off009_B0DB_08
-- D 1 - I - 0x02AEE7 0A:AED7: 08 B1     .word _off009_B108_09
-- D 1 - I - 0x02AEE9 0A:AED9: 3D B1     .word _off009_B13D_0A
-- D 1 - I - 0x02AEEB 0A:AEDB: 6E B1     .word _off009_B16E_0B
-- D 1 - I - 0x02AEED 0A:AEDD: 9F B1     .word _off009_B19F_0C
-- D 1 - I - 0x02AEEF 0A:AEDF: D0 B1     .word _off009_B1D0_0D
-- D 1 - I - 0x02AEF1 0A:AEE1: 05 B2     .word _off009_B205_0E
-- D 1 - I - 0x02AEF3 0A:AEE3: 32 B2     .word _off009_B232_0F
-- D 1 - I - 0x02AEF5 0A:AEE5: 6B B2     .word _off009_B26B_10
-- D 1 - I - 0x02AEF7 0A:AEE7: 9C B2     .word _off009_B29C_11
-- D 1 - I - 0x02AEF9 0A:AEE9: C1 B2     .word _off009_B2C1_12
-- D 1 - I - 0x02AEFB 0A:AEEB: EA B2     .word _off009_B2EA_13
-- D 1 - I - 0x02AEFD 0A:AEED: 1F B3     .word _off009_B31F_14
-- D 1 - I - 0x02AEFF 0A:AEEF: 54 B3     .word _off009_B354_15
-- D 1 - I - 0x02AF01 0A:AEF1: 89 B3     .word _off009_B389_16
-- D 1 - I - 0x02AF03 0A:AEF3: C2 B3     .word _off009_B3C2_17
-- D 1 - I - 0x02AF05 0A:AEF5: EB B3     .word _off009_B3EB_18
-- D 1 - I - 0x02AF07 0A:AEF7: 20 B4     .word _off009_B420_19
-- D 1 - I - 0x02AF09 0A:AEF9: 4D B4     .word _off009_B44D_1A
-- D 1 - I - 0x02AF0B 0A:AEFB: 72 B4     .word _off009_B472_1B
-- D 1 - I - 0x02AF0D 0A:AEFD: 9F B4     .word _off009_B49F_1C
-- D 1 - I - 0x02AF0F 0A:AEFF: D4 B4     .word _off009_B4D4_1D
-- D 1 - I - 0x02AF11 0A:AF01: F9 B4     .word _off009_B4F9_1E
-- D 1 - I - 0x02AF13 0A:AF03: 1E B5     .word _off009_B51E_1F
-- D 1 - I - 0x02AF15 0A:AF05: 4F B5     .word _off009_B54F_20
-- D 1 - I - 0x02AF17 0A:AF07: 74 B5     .word _off009_B574_21
-- D 1 - I - 0x02AF19 0A:AF09: A1 B5     .word _off009_B5A1_22
-- D 1 - I - 0x02AF1B 0A:AF0B: CE B5     .word _off009_B5CE_23
-- D 1 - I - 0x02AF1D 0A:AF0D: 03 B6     .word _off009_B603_24
-- D 1 - I - 0x02AF1F 0A:AF0F: 38 B6     .word _off009_B638_25
-- D 1 - I - 0x02AF21 0A:AF11: 6D B6     .word _off009_B66D_26
-- D 1 - I - 0x02AF23 0A:AF13: 9A B6     .word _off009_B69A_27
-- D 1 - I - 0x02AF25 0A:AF15: C3 B6     .word _off009_B6C3_28
-- D 1 - I - 0x02AF27 0A:AF17: F0 B6     .word _off009_B6F0_29
-- D 1 - I - 0x02AF29 0A:AF19: 1D B7     .word _off009_B71D_2A
-- D 1 - I - 0x02AF2B 0A:AF1B: 4A B7     .word _off009_B74A_2B
-- D 1 - I - 0x02AF2D 0A:AF1D: 4F B7     .word _off009_B74F_2C
-- D 1 - I - 0x02AF2F 0A:AF1F: 58 B7     .word _off009_B758_2D
-- D 1 - I - 0x02AF31 0A:AF21: 65 B7     .word _off009_B765_2E
-- D 1 - I - 0x02AF33 0A:AF23: 96 B7     .word _off009_B796_2F
-- D 1 - I - 0x02AF35 0A:AF25: BF B7     .word _off009_B7BF_30
-- D 1 - I - 0x02AF37 0A:AF27: F0 B7     .word _off009_B7F0_31
-- D 1 - I - 0x02AF39 0A:AF29: 01 B8     .word _off009_B801_32
-- D 1 - I - 0x02AF3B 0A:AF2B: 12 B8     .word _off009_B812_33
-- D 1 - I - 0x02AF3D 0A:AF2D: 23 B8     .word _off009_B823_34
-- D 1 - I - 0x02AF3F 0A:AF2F: 58 B8     .word _off009_B858_35
-- D 1 - I - 0x02AF41 0A:AF31: 91 B8     .word _off009_B891_36
-- D 1 - I - 0x02AF43 0A:AF33: C6 B8     .word _off009_B8C6_37
-- D 1 - I - 0x02AF45 0A:AF35: EF B8     .word _off009_B8EF_38
-- D 1 - I - 0x02AF47 0A:AF37: 18 B9     .word _off009_B918_39
-- D 1 - I - 0x02AF49 0A:AF39: 45 B9     .word _off009_B945_3A
-- D 1 - I - 0x02AF4B 0A:AF3B: 76 B9     .word _off009_B976_3B
-- D 1 - I - 0x02AF4D 0A:AF3D: A7 B9     .word _off009_B9A7_3C
-- D 1 - I - 0x02AF4F 0A:AF3F: AC B9     .word _off009_B9AC_3D
-- D 1 - I - 0x02AF51 0A:AF41: B9 B9     .word _off009_B9B9_3E
-- D 1 - I - 0x02AF53 0A:AF43: C2 B9     .word _off009_B9C2_3F
-- D 1 - I - 0x02AF55 0A:AF45: C7 B9     .word _off009_B9C7_40
-- D 1 - I - 0x02AF57 0A:AF47: D0 B9     .word _off009_B9D0_41
-- D 1 - I - 0x02AF59 0A:AF49: D9 B9     .word _off009_B9D9_42
-- D 1 - I - 0x02AF5B 0A:AF4B: 06 BA     .word _off009_BA06_43
-- D 1 - I - 0x02AF5D 0A:AF4D: 37 BA     .word _off009_BA37_44
-- D 1 - I - 0x02AF5F 0A:AF4F: 70 BA     .word _off009_BA70_45
-- D 1 - I - 0x02AF61 0A:AF51: A1 BA     .word _off009_BAA1_46
-- D 1 - I - 0x02AF63 0A:AF53: DA BA     .word _off009_BADA_47
-- D 1 - I - 0x02AF65 0A:AF55: 13 BB     .word _off009_BB13_48
-- D 1 - I - 0x02AF67 0A:AF57: 48 BB     .word _off009_BB48_49
-- D 1 - I - 0x02AF69 0A:AF59: 79 BB     .word _off009_BB79_4A
+- D 1 - I - 0x02AED5 0A:AEC5: 5B AF     .word _off009_AF5B_80
+- D 1 - I - 0x02AED7 0A:AEC7: 8C AF     .word _off009_AF8C_81
+- D 1 - I - 0x02AED9 0A:AEC9: BD AF     .word _off009_AFBD_82
+- D 1 - I - 0x02AEDB 0A:AECB: EE AF     .word _off009_AFEE_83
+- D 1 - I - 0x02AEDD 0A:AECD: 17 B0     .word _off009_B017_84
+- D 1 - I - 0x02AEDF 0A:AECF: 4C B0     .word _off009_B04C_85
+- D 1 - I - 0x02AEE1 0A:AED1: 79 B0     .word _off009_B079_86
+- D 1 - I - 0x02AEE3 0A:AED3: AE B0     .word _off009_B0AE_87
+- D 1 - I - 0x02AEE5 0A:AED5: DB B0     .word _off009_B0DB_88
+- D 1 - I - 0x02AEE7 0A:AED7: 08 B1     .word _off009_B108_89
+- D 1 - I - 0x02AEE9 0A:AED9: 3D B1     .word _off009_B13D_8A
+- D 1 - I - 0x02AEEB 0A:AEDB: 6E B1     .word _off009_B16E_8B
+- D 1 - I - 0x02AEED 0A:AEDD: 9F B1     .word _off009_B19F_8C
+- D 1 - I - 0x02AEEF 0A:AEDF: D0 B1     .word _off009_B1D0_8D
+- D 1 - I - 0x02AEF1 0A:AEE1: 05 B2     .word _off009_B205_8E
+- D 1 - I - 0x02AEF3 0A:AEE3: 32 B2     .word _off009_B232_8F
+- D 1 - I - 0x02AEF5 0A:AEE5: 6B B2     .word _off009_B26B_90
+- D 1 - I - 0x02AEF7 0A:AEE7: 9C B2     .word _off009_B29C_91
+- D 1 - I - 0x02AEF9 0A:AEE9: C1 B2     .word _off009_B2C1_92
+- D 1 - I - 0x02AEFB 0A:AEEB: EA B2     .word _off009_B2EA_93
+- D 1 - I - 0x02AEFD 0A:AEED: 1F B3     .word _off009_B31F_94
+- D 1 - I - 0x02AEFF 0A:AEEF: 54 B3     .word _off009_B354_95
+- D 1 - I - 0x02AF01 0A:AEF1: 89 B3     .word _off009_B389_96
+- D 1 - I - 0x02AF03 0A:AEF3: C2 B3     .word _off009_B3C2_97
+- D 1 - I - 0x02AF05 0A:AEF5: EB B3     .word _off009_B3EB_98
+- D 1 - I - 0x02AF07 0A:AEF7: 20 B4     .word _off009_B420_99
+- D 1 - I - 0x02AF09 0A:AEF9: 4D B4     .word _off009_B44D_9A
+- D 1 - I - 0x02AF0B 0A:AEFB: 72 B4     .word _off009_B472_9B
+- D 1 - I - 0x02AF0D 0A:AEFD: 9F B4     .word _off009_B49F_9C
+- D 1 - I - 0x02AF0F 0A:AEFF: D4 B4     .word _off009_B4D4_9D
+- D 1 - I - 0x02AF11 0A:AF01: F9 B4     .word _off009_B4F9_9E
+- D 1 - I - 0x02AF13 0A:AF03: 1E B5     .word _off009_B51E_9F
+- D 1 - I - 0x02AF15 0A:AF05: 4F B5     .word _off009_B54F_A0
+- D 1 - I - 0x02AF17 0A:AF07: 74 B5     .word _off009_B574_A1
+- D 1 - I - 0x02AF19 0A:AF09: A1 B5     .word _off009_B5A1_A2
+- D 1 - I - 0x02AF1B 0A:AF0B: CE B5     .word _off009_B5CE_A3
+- D 1 - I - 0x02AF1D 0A:AF0D: 03 B6     .word _off009_B603_A4
+- D 1 - I - 0x02AF1F 0A:AF0F: 38 B6     .word _off009_B638_A5
+- D 1 - I - 0x02AF21 0A:AF11: 6D B6     .word _off009_B66D_A6
+- D 1 - I - 0x02AF23 0A:AF13: 9A B6     .word _off009_B69A_A7
+- D 1 - I - 0x02AF25 0A:AF15: C3 B6     .word _off009_B6C3_A8
+- D 1 - I - 0x02AF27 0A:AF17: F0 B6     .word _off009_B6F0_A9
+- D 1 - I - 0x02AF29 0A:AF19: 1D B7     .word _off009_B71D_AA
+- D 1 - I - 0x02AF2B 0A:AF1B: 4A B7     .word _off009_B74A_AB
+- D 1 - I - 0x02AF2D 0A:AF1D: 4F B7     .word _off009_B74F_AC
+- D 1 - I - 0x02AF2F 0A:AF1F: 58 B7     .word _off009_B758_AD
+- D 1 - I - 0x02AF31 0A:AF21: 65 B7     .word _off009_B765_AE
+- D 1 - I - 0x02AF33 0A:AF23: 96 B7     .word _off009_B796_AF
+- D 1 - I - 0x02AF35 0A:AF25: BF B7     .word _off009_B7BF_B0
+- D 1 - I - 0x02AF37 0A:AF27: F0 B7     .word _off009_B7F0_B1
+- D 1 - I - 0x02AF39 0A:AF29: 01 B8     .word _off009_B801_B2
+- D 1 - I - 0x02AF3B 0A:AF2B: 12 B8     .word _off009_B812_B3
+- D 1 - I - 0x02AF3D 0A:AF2D: 23 B8     .word _off009_B823_B4
+- D 1 - I - 0x02AF3F 0A:AF2F: 58 B8     .word _off009_B858_B5
+- D 1 - I - 0x02AF41 0A:AF31: 91 B8     .word _off009_B891_B6
+- D 1 - I - 0x02AF43 0A:AF33: C6 B8     .word _off009_B8C6_B7
+- D 1 - I - 0x02AF45 0A:AF35: EF B8     .word _off009_B8EF_B8
+- D 1 - I - 0x02AF47 0A:AF37: 18 B9     .word _off009_B918_B9
+- D 1 - I - 0x02AF49 0A:AF39: 45 B9     .word _off009_B945_BA
+- D 1 - I - 0x02AF4B 0A:AF3B: 76 B9     .word _off009_B976_BB
+- D 1 - I - 0x02AF4D 0A:AF3D: A7 B9     .word _off009_B9A7_BC
+- D 1 - I - 0x02AF4F 0A:AF3F: AC B9     .word _off009_B9AC_BD
+- D 1 - I - 0x02AF51 0A:AF41: B9 B9     .word _off009_B9B9_BE
+- D 1 - I - 0x02AF53 0A:AF43: C2 B9     .word _off009_B9C2_BF
+- D 1 - I - 0x02AF55 0A:AF45: C7 B9     .word _off009_B9C7_C0
+- D 1 - I - 0x02AF57 0A:AF47: D0 B9     .word _off009_B9D0_C1
+- D 1 - I - 0x02AF59 0A:AF49: D9 B9     .word _off009_B9D9_C2
+- D 1 - I - 0x02AF5B 0A:AF4B: 06 BA     .word _off009_BA06_C3
+- D 1 - I - 0x02AF5D 0A:AF4D: 37 BA     .word _off009_BA37_C4
+- D 1 - I - 0x02AF5F 0A:AF4F: 70 BA     .word _off009_BA70_C5
+- D 1 - I - 0x02AF61 0A:AF51: A1 BA     .word _off009_BAA1_C6
+- D 1 - I - 0x02AF63 0A:AF53: DA BA     .word _off009_BADA_C7
+- D 1 - I - 0x02AF65 0A:AF55: 13 BB     .word _off009_BB13_C8
+- D 1 - I - 0x02AF67 0A:AF57: 48 BB     .word _off009_BB48_C9
+- D 1 - I - 0x02AF69 0A:AF59: 79 BB     .word _off009_BB79_CA
 
 
 
-_off009_AF5B_00:
+_off009_AF5B_80:
 - D 1 - I - 0x02AF6B 0A:AF5B: 0C        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02AF6C 0A:AF5C: C4        .byte con_Y + $C4   ; 
@@ -15985,7 +15985,7 @@ _off009_AF5B_00:
 
 
 
-_off009_AF8C_01:
+_off009_AF8C_81:
 - D 1 - I - 0x02AF9C 0A:AF8C: 0C        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02AF9D 0A:AF8D: C1        .byte con_Y + $C1   ; 
@@ -16051,7 +16051,7 @@ _off009_AF8C_01:
 
 
 
-_off009_AFBD_02:
+_off009_AFBD_82:
 - D 1 - I - 0x02AFCD 0A:AFBD: 0C        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02AFCE 0A:AFBE: C4        .byte con_Y + $C4   ; 
@@ -16117,7 +16117,7 @@ _off009_AFBD_02:
 
 
 
-_off009_AFEE_03:
+_off009_AFEE_83:
 - D 1 - I - 0x02AFFE 0A:AFEE: 0A        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02AFFF 0A:AFEF: C3        .byte con_Y + $C3   ; 
@@ -16173,7 +16173,7 @@ _off009_AFEE_03:
 
 
 
-_off009_B017_04:
+_off009_B017_84:
 - D 1 - I - 0x02B027 0A:B017: 0D        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B028 0A:B018: C1        .byte con_Y + $C1   ; 
@@ -16244,7 +16244,7 @@ _off009_B017_04:
 
 
 
-_off009_B04C_05:
+_off009_B04C_85:
 - D 1 - I - 0x02B05C 0A:B04C: 0B        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B05D 0A:B04D: C4        .byte con_Y + $C4   ; 
@@ -16305,7 +16305,7 @@ _off009_B04C_05:
 
 
 
-_off009_B079_06:
+_off009_B079_86:
 - D 1 - I - 0x02B089 0A:B079: 0D        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B08A 0A:B07A: C1        .byte con_Y + $C1   ; 
@@ -16376,7 +16376,7 @@ _off009_B079_06:
 
 
 
-_off009_B0AE_07:
+_off009_B0AE_87:
 - D 1 - I - 0x02B0BE 0A:B0AE: 0B        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B0BF 0A:B0AF: C4        .byte con_Y + $C4   ; 
@@ -16437,7 +16437,7 @@ _off009_B0AE_07:
 
 
 
-_off009_B0DB_08:
+_off009_B0DB_88:
 - D 1 - I - 0x02B0EB 0A:B0DB: 0B        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B0EC 0A:B0DC: C1        .byte con_Y + $C1   ; 
@@ -16498,7 +16498,7 @@ _off009_B0DB_08:
 
 
 
-_off009_B108_09:
+_off009_B108_89:
 - D 1 - I - 0x02B118 0A:B108: 0D        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B119 0A:B109: C4        .byte con_Y + $C4   ; 
@@ -16569,7 +16569,7 @@ _off009_B108_09:
 
 
 
-_off009_B13D_0A:
+_off009_B13D_8A:
 - D 1 - I - 0x02B14D 0A:B13D: 0C        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B14E 0A:B13E: C4        .byte con_Y + $C4   ; 
@@ -16635,7 +16635,7 @@ _off009_B13D_0A:
 
 
 
-_off009_B16E_0B:
+_off009_B16E_8B:
 - D 1 - I - 0x02B17E 0A:B16E: 0C        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B17F 0A:B16F: C4        .byte con_Y + $C4   ; 
@@ -16701,7 +16701,7 @@ _off009_B16E_0B:
 
 
 
-_off009_B19F_0C:
+_off009_B19F_8C:
 - D 1 - I - 0x02B1AF 0A:B19F: 0C        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B1B0 0A:B1A0: C4        .byte con_Y + $C4   ; 
@@ -16767,7 +16767,7 @@ _off009_B19F_0C:
 
 
 
-_off009_B1D0_0D:
+_off009_B1D0_8D:
 - D 1 - I - 0x02B1E0 0A:B1D0: 0D        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B1E1 0A:B1D1: C4        .byte con_Y + $C4   ; 
@@ -16838,7 +16838,7 @@ _off009_B1D0_0D:
 
 
 
-_off009_B205_0E:
+_off009_B205_8E:
 - D 1 - I - 0x02B215 0A:B205: 0B        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B216 0A:B206: C4        .byte con_Y + $C4   ; 
@@ -16899,7 +16899,7 @@ _off009_B205_0E:
 
 
 
-_off009_B232_0F:
+_off009_B232_8F:
 - D 1 - I - 0x02B242 0A:B232: 0E        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B243 0A:B233: C4        .byte con_Y + $C4   ; 
@@ -16975,7 +16975,7 @@ _off009_B232_0F:
 
 
 
-_off009_B26B_10:
+_off009_B26B_90:
 - D 1 - I - 0x02B27B 0A:B26B: 0C        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B27C 0A:B26C: D4        .byte con_Y + $D4   ; 
@@ -17041,7 +17041,7 @@ _off009_B26B_10:
 
 
 
-_off009_B29C_11:
+_off009_B29C_91:
 - D 1 - I - 0x02B2AC 0A:B29C: 09        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B2AD 0A:B29D: D1        .byte con_Y + $D1   ; 
@@ -17092,7 +17092,7 @@ _off009_B29C_11:
 
 
 
-_off009_B2C1_12:
+_off009_B2C1_92:
 - D 1 - I - 0x02B2D1 0A:B2C1: 0A        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B2D2 0A:B2C2: D1        .byte con_Y + $D1   ; 
@@ -17148,7 +17148,7 @@ _off009_B2C1_12:
 
 
 
-_off009_B2EA_13:
+_off009_B2EA_93:
 - D 1 - I - 0x02B2FA 0A:B2EA: 0D        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B2FB 0A:B2EB: C5        .byte con_Y + $C5   ; 
@@ -17219,7 +17219,7 @@ _off009_B2EA_13:
 
 
 
-_off009_B31F_14:
+_off009_B31F_94:
 - D 1 - I - 0x02B32F 0A:B31F: 0D        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B330 0A:B320: C4        .byte con_Y + $C4   ; 
@@ -17290,7 +17290,7 @@ _off009_B31F_14:
 
 
 
-_off009_B354_15:
+_off009_B354_95:
 - D 1 - I - 0x02B364 0A:B354: 0D        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B365 0A:B355: C4        .byte con_Y + $C4   ; 
@@ -17361,7 +17361,7 @@ _off009_B354_15:
 
 
 
-_off009_B389_16:
+_off009_B389_96:
 - D 1 - I - 0x02B399 0A:B389: 0E        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B39A 0A:B38A: C1        .byte con_Y + $C1   ; 
@@ -17437,7 +17437,7 @@ _off009_B389_16:
 
 
 
-_off009_B3C2_17:
+_off009_B3C2_97:
 - D 1 - I - 0x02B3D2 0A:B3C2: 0A        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B3D3 0A:B3C3: C3        .byte con_Y + $C3   ; 
@@ -17493,7 +17493,7 @@ _off009_B3C2_17:
 
 
 
-_off009_B3EB_18:
+_off009_B3EB_98:
 - D 1 - I - 0x02B3FB 0A:B3EB: 0D        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B3FC 0A:B3EC: C1        .byte con_Y + $C1   ; 
@@ -17564,7 +17564,7 @@ _off009_B3EB_18:
 
 
 
-_off009_B420_19:
+_off009_B420_99:
 - D 1 - I - 0x02B430 0A:B420: 0B        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B431 0A:B421: C1        .byte con_Y + $C1   ; 
@@ -17625,7 +17625,7 @@ _off009_B420_19:
 
 
 
-_off009_B44D_1A:
+_off009_B44D_9A:
 - D 1 - I - 0x02B45D 0A:B44D: 09        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B45E 0A:B44E: B9        .byte con_Y + $B9   ; 
@@ -17676,7 +17676,7 @@ _off009_B44D_1A:
 
 
 
-_off009_B472_1B:
+_off009_B472_9B:
 - D 1 - I - 0x02B482 0A:B472: 0B        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B483 0A:B473: C1        .byte con_Y + $C1   ; 
@@ -17737,7 +17737,7 @@ _off009_B472_1B:
 
 
 
-_off009_B49F_1C:
+_off009_B49F_9C:
 - D 1 - I - 0x02B4AF 0A:B49F: 0D        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B4B0 0A:B4A0: D0        .byte con_Y + $D0   ; 
@@ -17808,7 +17808,7 @@ _off009_B49F_1C:
 
 
 
-_off009_B4D4_1D:
+_off009_B4D4_9D:
 - D 1 - I - 0x02B4E4 0A:B4D4: 09        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B4E5 0A:B4D5: D1        .byte con_Y + $D1   ; 
@@ -17859,7 +17859,7 @@ _off009_B4D4_1D:
 
 
 
-_off009_B4F9_1E:
+_off009_B4F9_9E:
 - D 1 - I - 0x02B509 0A:B4F9: 09        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B50A 0A:B4FA: D1        .byte con_Y + $D1   ; 
@@ -17910,7 +17910,7 @@ _off009_B4F9_1E:
 
 
 
-_off009_B51E_1F:
+_off009_B51E_9F:
 - D 1 - I - 0x02B52E 0A:B51E: 0C        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B52F 0A:B51F: C4        .byte con_Y + $C4   ; 
@@ -17976,7 +17976,7 @@ _off009_B51E_1F:
 
 
 
-_off009_B54F_20:
+_off009_B54F_A0:
 - D 1 - I - 0x02B55F 0A:B54F: 09        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B560 0A:B550: D1        .byte con_Y + $D1   ; 
@@ -18027,7 +18027,7 @@ _off009_B54F_20:
 
 
 
-_off009_B574_21:
+_off009_B574_A1:
 - D 1 - I - 0x02B584 0A:B574: 0B        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B585 0A:B575: C1        .byte con_Y + $C1   ; 
@@ -18088,7 +18088,7 @@ _off009_B574_21:
 
 
 
-_off009_B5A1_22:
+_off009_B5A1_A2:
 - D 1 - I - 0x02B5B1 0A:B5A1: 0B        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B5B2 0A:B5A2: D1        .byte con_Y + $D1   ; 
@@ -18149,7 +18149,7 @@ _off009_B5A1_22:
 
 
 
-_off009_B5CE_23:
+_off009_B5CE_A3:
 - D 1 - I - 0x02B5DE 0A:B5CE: 0D        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B5DF 0A:B5CF: C1        .byte con_Y + $C1   ; 
@@ -18220,7 +18220,7 @@ _off009_B5CE_23:
 
 
 
-_off009_B603_24:
+_off009_B603_A4:
 - D 1 - I - 0x02B613 0A:B603: 0D        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B614 0A:B604: C1        .byte con_Y + $C1   ; 
@@ -18291,7 +18291,7 @@ _off009_B603_24:
 
 
 
-_off009_B638_25:
+_off009_B638_A5:
 - D 1 - I - 0x02B648 0A:B638: 0D        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B649 0A:B639: E1        .byte con_Y + $E1   ; 
@@ -18362,7 +18362,7 @@ _off009_B638_25:
 
 
 
-_off009_B66D_26:
+_off009_B66D_A6:
 - D 1 - I - 0x02B67D 0A:B66D: 0B        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B67E 0A:B66E: E1        .byte con_Y + $E1   ; 
@@ -18423,7 +18423,7 @@ _off009_B66D_26:
 
 
 
-_off009_B69A_27:
+_off009_B69A_A7:
 - D 1 - I - 0x02B6AA 0A:B69A: 0A        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B6AB 0A:B69B: F2        .byte con_Y + $F2   ; 
@@ -18479,7 +18479,7 @@ _off009_B69A_27:
 
 
 
-_off009_B6C3_28:
+_off009_B6C3_A8:
 - D 1 - I - 0x02B6D3 0A:B6C3: 0B        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B6D4 0A:B6C4: E1        .byte con_Y + $E1   ; 
@@ -18540,7 +18540,7 @@ _off009_B6C3_28:
 
 
 
-_off009_B6F0_29:
+_off009_B6F0_A9:
 - D 1 - I - 0x02B700 0A:B6F0: 0B        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B701 0A:B6F1: D1        .byte con_Y + $D1   ; 
@@ -18601,7 +18601,7 @@ _off009_B6F0_29:
 
 
 
-_off009_B71D_2A:
+_off009_B71D_AA:
 - D 1 - I - 0x02B72D 0A:B71D: 0B        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B72E 0A:B71E: D1        .byte con_Y + $D1   ; 
@@ -18662,7 +18662,7 @@ _off009_B71D_2A:
 
 
 
-_off009_B74A_2B:
+_off009_B74A_AB:
 - D 1 - I - 0x02B75A 0A:B74A: 01        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B75B 0A:B74B: F1        .byte con_Y + $F1   ; 
@@ -18673,7 +18673,7 @@ _off009_B74A_2B:
 
 
 
-_off009_B74F_2C:
+_off009_B74F_AC:
 - D 1 - I - 0x02B75F 0A:B74F: 02        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B760 0A:B750: F1        .byte con_Y + $F1   ; 
@@ -18689,7 +18689,7 @@ _off009_B74F_2C:
 
 
 
-_off009_B758_2D:
+_off009_B758_AD:
 - D 1 - I - 0x02B768 0A:B758: 03        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B769 0A:B759: E1        .byte con_Y + $E1   ; 
@@ -18710,7 +18710,7 @@ _off009_B758_2D:
 
 
 
-_off009_B765_2E:
+_off009_B765_AE:
 - D 1 - I - 0x02B775 0A:B765: 0C        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B776 0A:B766: CD        .byte con_Y + $CD   ; 
@@ -18776,7 +18776,7 @@ _off009_B765_2E:
 
 
 
-_off009_B796_2F:
+_off009_B796_AF:
 - D 1 - I - 0x02B7A6 0A:B796: 0A        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B7A7 0A:B797: C4        .byte con_Y + $C4   ; 
@@ -18832,7 +18832,7 @@ _off009_B796_2F:
 
 
 
-_off009_B7BF_30:
+_off009_B7BF_B0:
 - D 1 - I - 0x02B7CF 0A:B7BF: 0C        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B7D0 0A:B7C0: CD        .byte con_Y + $CD   ; 
@@ -18898,7 +18898,7 @@ _off009_B7BF_30:
 
 
 
-_off009_B7F0_31:
+_off009_B7F0_B1:
 - D 1 - I - 0x02B800 0A:B7F0: 04        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B801 0A:B7F1: CA        .byte con_Y + $CA   ; 
@@ -18924,7 +18924,7 @@ _off009_B7F0_31:
 
 
 
-_off009_B801_32:
+_off009_B801_B2:
 - D 1 - I - 0x02B811 0A:B801: 04        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B812 0A:B802: C1        .byte con_Y + $C1   ; 
@@ -18950,7 +18950,7 @@ _off009_B801_32:
 
 
 
-_off009_B812_33:
+_off009_B812_B3:
 - D 1 - I - 0x02B822 0A:B812: 04        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B823 0A:B813: C1        .byte con_Y + $C1   ; 
@@ -18976,7 +18976,7 @@ _off009_B812_33:
 
 
 
-_off009_B823_34:
+_off009_B823_B4:
 - D 1 - I - 0x02B833 0A:B823: 0D        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B834 0A:B824: C4        .byte con_Y + $C4   ; 
@@ -19047,7 +19047,7 @@ _off009_B823_34:
 
 
 
-_off009_B858_35:
+_off009_B858_B5:
 - D 1 - I - 0x02B868 0A:B858: 0E        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B869 0A:B859: B1        .byte con_Y + $B1   ; 
@@ -19123,7 +19123,7 @@ _off009_B858_35:
 
 
 
-_off009_B891_36:
+_off009_B891_B6:
 - D 1 - I - 0x02B8A1 0A:B891: 0D        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B8A2 0A:B892: C4        .byte con_Y + $C4   ; 
@@ -19194,7 +19194,7 @@ _off009_B891_36:
 
 
 
-_off009_B8C6_37:
+_off009_B8C6_B7:
 - D 1 - I - 0x02B8D6 0A:B8C6: 0A        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B8D7 0A:B8C7: D1        .byte con_Y + $D1   ; 
@@ -19250,7 +19250,7 @@ _off009_B8C6_37:
 
 
 
-_off009_B8EF_38:
+_off009_B8EF_B8:
 - D 1 - I - 0x02B8FF 0A:B8EF: 0A        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B900 0A:B8F0: D1        .byte con_Y + $D1   ; 
@@ -19306,7 +19306,7 @@ _off009_B8EF_38:
 
 
 
-_off009_B918_39:
+_off009_B918_B9:
 - D 1 - I - 0x02B928 0A:B918: 0B        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B929 0A:B919: C4        .byte con_Y + $C4   ; 
@@ -19367,7 +19367,7 @@ _off009_B918_39:
 
 
 
-_off009_B945_3A:
+_off009_B945_BA:
 - D 1 - I - 0x02B955 0A:B945: 0C        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B956 0A:B946: C4        .byte con_Y + $C4   ; 
@@ -19433,7 +19433,7 @@ _off009_B945_3A:
 
 
 
-_off009_B976_3B:
+_off009_B976_BB:
 - D 1 - I - 0x02B986 0A:B976: 0C        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B987 0A:B977: B1        .byte con_Y + $B1   ; 
@@ -19499,7 +19499,7 @@ _off009_B976_3B:
 
 
 
-_off009_B9A7_3C:
+_off009_B9A7_BC:
 - D 1 - I - 0x02B9B7 0A:B9A7: 01        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B9B8 0A:B9A8: C9        .byte con_Y + $C9   ; 
@@ -19510,7 +19510,7 @@ _off009_B9A7_3C:
 
 
 
-_off009_B9AC_3D:
+_off009_B9AC_BD:
 - D 1 - I - 0x02B9BC 0A:B9AC: 03        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B9BD 0A:B9AD: B9        .byte con_Y + $B9   ; 
@@ -19531,7 +19531,7 @@ _off009_B9AC_3D:
 
 
 
-_off009_B9B9_3E:
+_off009_B9B9_BE:
 - D 1 - I - 0x02B9C9 0A:B9B9: 02        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B9CA 0A:B9BA: C1        .byte con_Y + $C1   ; 
@@ -19547,7 +19547,7 @@ _off009_B9B9_3E:
 
 
 
-_off009_B9C2_3F:
+_off009_B9C2_BF:
 - D 1 - I - 0x02B9D2 0A:B9C2: 01        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B9D3 0A:B9C3: F8        .byte con_Y + $F8   ; 
@@ -19558,7 +19558,7 @@ _off009_B9C2_3F:
 
 
 
-_off009_B9C7_40:
+_off009_B9C7_C0:
 - D 1 - I - 0x02B9D7 0A:B9C7: 02        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B9D8 0A:B9C8: F8        .byte con_Y + $F8   ; 
@@ -19574,7 +19574,7 @@ _off009_B9C7_40:
 
 
 
-_off009_B9D0_41:
+_off009_B9D0_C1:
 - D 1 - I - 0x02B9E0 0A:B9D0: 02        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B9E1 0A:B9D1: F0        .byte con_Y + $F0   ; 
@@ -19590,7 +19590,7 @@ _off009_B9D0_41:
 
 
 
-_off009_B9D9_42:
+_off009_B9D9_C2:
 - D 1 - I - 0x02B9E9 0A:B9D9: 0B        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02B9EA 0A:B9DA: C1        .byte con_Y + $C1   ; 
@@ -19651,7 +19651,7 @@ _off009_B9D9_42:
 
 
 
-_off009_BA06_43:
+_off009_BA06_C3:
 - D 1 - I - 0x02BA16 0A:BA06: 0C        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02BA17 0A:BA07: AC        .byte con_Y + $AC   ; 
@@ -19717,7 +19717,7 @@ _off009_BA06_43:
 
 
 
-_off009_BA37_44:
+_off009_BA37_C4:
 - D 1 - I - 0x02BA47 0A:BA37: 0E        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02BA48 0A:BA38: B1        .byte con_Y + $B1   ; 
@@ -19793,7 +19793,7 @@ _off009_BA37_44:
 
 
 
-_off009_BA70_45:
+_off009_BA70_C5:
 - D 1 - I - 0x02BA80 0A:BA70: 0C        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02BA81 0A:BA71: C1        .byte con_Y + $C1   ; 
@@ -19859,7 +19859,7 @@ _off009_BA70_45:
 
 
 
-_off009_BAA1_46:
+_off009_BAA1_C6:
 - D 1 - I - 0x02BAB1 0A:BAA1: 0E        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02BAB2 0A:BAA2: B1        .byte con_Y + $B1   ; 
@@ -19935,7 +19935,7 @@ _off009_BAA1_46:
 
 
 
-_off009_BADA_47:
+_off009_BADA_C7:
 - D 1 - I - 0x02BAEA 0A:BADA: 0E        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02BAEB 0A:BADB: B1        .byte con_Y + $B1   ; 
@@ -20011,7 +20011,7 @@ _off009_BADA_47:
 
 
 
-_off009_BB13_48:
+_off009_BB13_C8:
 - D 1 - I - 0x02BB23 0A:BB13: 0D        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02BB24 0A:BB14: C4        .byte con_Y + $C4   ; 
@@ -20082,7 +20082,7 @@ _off009_BB13_48:
 
 
 
-_off009_BB48_49:
+_off009_BB48_C9:
 - D 1 - I - 0x02BB58 0A:BB48: 0C        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02BB59 0A:BB49: C4        .byte con_Y + $C4   ; 
@@ -20148,7 +20148,7 @@ _off009_BB48_49:
 
 
 
-_off009_BB79_4A:
+_off009_BB79_CA:
 - D 1 - I - 0x02BB89 0A:BB79: 09        .byte (@end - * - 1) / 4
 
 - D 1 - I - 0x02BB8A 0A:BB7A: E1        .byte con_Y + $E1   ; 
