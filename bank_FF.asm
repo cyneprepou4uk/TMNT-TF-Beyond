@@ -873,11 +873,6 @@ tbl_D2EF_fighter_2p:
 ofs_D2F7_04:
 C - - J - - 0x03D307 0F:D2F7: 20 87 E1  JSR sub_E187
 C - - - - - 0x03D30A 0F:D2FA: 4C A1 E9  JMP loc_E9A1
-- - - - - - 0x03D30D 0F:D2FD: A9 00     LDA #$00
-- - - - - - 0x03D30F 0F:D2FF: 85 20     STA ram_0020
-- - - - - - 0x03D311 0F:D301: 85 21     STA ram_0021
-bra_D303_RTS:
-C - - - - - 0x03D313 0F:D303: 60        RTS
 
 
 
@@ -885,7 +880,7 @@ sub_D304:
 C - - - - - 0x03D314 0F:D304: A5 26     LDA ram_0026
 C - - - - - 0x03D316 0F:D306: 05 98     ORA ram_0098
 C - - - - - 0x03D318 0F:D308: 05 24     ORA ram_0024
-C - - - - - 0x03D31A 0F:D30A: D0 F7     BNE bra_D303_RTS
+C - - - - - 0x03D31A 0F:D30A: D0 F7     BNE bra_D32F_RTS
 C - - - - - 0x03D31C 0F:D30C: A4 8E     LDY ram_btn_press
 C - - - - - 0x03D31E 0F:D30E: 20 24 EA  JSR sub_EA24
 C - - - - - 0x03D321 0F:D311: F0 02     BEQ bra_D315
@@ -903,7 +898,7 @@ C - - - - - 0x03D332 0F:D322: A9 2D     LDA #$2D
 C - - - - - 0x03D334 0F:D324: 4C 90 F6  JMP loc_F690
 bra_D327:
 C - - - - - 0x03D337 0F:D327: 29 10     AND #con_btn_Start
-C - - - - - 0x03D339 0F:D329: F0 D8     BEQ bra_D303_RTS
+C - - - - - 0x03D339 0F:D329: F0 D8     BEQ bra_D32F_RTS
 C - - - - - 0x03D33B 0F:D32B: A9 00     LDA #$00
 C - - - - - 0x03D33D 0F:D32D: F0 F1     BEQ bra_D320
 bra_D32F_RTS:
