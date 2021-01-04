@@ -797,7 +797,7 @@ C - - - - - 0x03D293 0F:D283: 20 32 D0  JSR sub_D032_read_pointers_after_jsr
 
 
 ofs_D290_00:
-C - - J - - 0x03D2A0 0F:D290: 20 09 DE  JSR sub_DE09
+C - - J - - 0x03D2A0 0F:D290: 20 09 DE  JSR sub_DE09_clear_points
 C - - - - - 0x03D2A3 0F:D293: A9 FF     LDA #$FF
 C - - - - - 0x03D2A5 0F:D295: 85 98     STA ram_0098
 C - - - - - 0x03D2A7 0F:D297: AC 25 01  LDY ram_option_difficulty
@@ -2341,30 +2341,30 @@ C - - - - - 0x03DE18 0F:DE08: 60        RTS
 
 
 
-sub_DE09:
-.export sub_0x03DE19
-sub_0x03DE19:
-.export loc_0x03DE19
-loc_0x03DE19:
-C D 2 - - - 0x03DE19 0F:DE09: 20 16 DE  JSR sub_DE16
+sub_DE09_clear_points:
+.export sub_0x03DE19_clear_points
+sub_0x03DE19_clear_points:
+.export loc_0x03DE19_clear_points
+loc_0x03DE19_clear_points:
+C D 2 - - - 0x03DE19 0F:DE09: 20 16 DE  JSR sub_DE16_clear_points_2p
 C - - - - - 0x03DE1C 0F:DE0C: A2 03     LDX #$03
 C - - - - - 0x03DE1E 0F:DE0E: A9 00     LDA #$00
-bra_DE10:
-C - - - - - 0x03DE20 0F:DE10: 95 AE     STA ram_00AE,X
+bra_DE10_loop:
+C - - - - - 0x03DE20 0F:DE10: 95 AE     STA ram_points_6,X
 C - - - - - 0x03DE22 0F:DE12: CA        DEX
-C - - - - - 0x03DE23 0F:DE13: 10 FB     BPL bra_DE10
+C - - - - - 0x03DE23 0F:DE13: 10 FB     BPL bra_DE10_loop
 C - - - - - 0x03DE25 0F:DE15: 60        RTS
 
 
 
-sub_DE16:
-loc_DE16:
+sub_DE16_clear_points_2p:
+loc_DE16_clear_points_2p:
 C D 2 - - - 0x03DE26 0F:DE16: A2 03     LDX #$03
 C - - - - - 0x03DE28 0F:DE18: A9 00     LDA #$00
-bra_DE1A:
-C - - - - - 0x03DE2A 0F:DE1A: 95 B2     STA ram_00B2,X
+bra_DE1A_loop:
+C - - - - - 0x03DE2A 0F:DE1A: 95 B2     STA ram_points_6 + 4,X
 C - - - - - 0x03DE2C 0F:DE1C: CA        DEX
-C - - - - - 0x03DE2D 0F:DE1D: 10 FB     BPL bra_DE1A
+C - - - - - 0x03DE2D 0F:DE1D: 10 FB     BPL bra_DE1A_loop
 C - - - - - 0x03DE2F 0F:DE1F: 60        RTS
 
 
@@ -3217,13 +3217,13 @@ C - - - - - 0x03E199 0F:E189: 20 32 D0  JSR sub_D032_read_pointers_after_jsr
 
 ofs_E1CE_00:
 C - - J - - 0x03E1DE 0F:E1CE: 20 42 F0  JSR sub_F042
-C - - - - - 0x03E1E1 0F:E1D1: A5 AE     LDA ram_00AE
+C - - - - - 0x03E1E1 0F:E1D1: A5 AE     LDA ram_points_6
 C - - - - - 0x03E1E3 0F:E1D3: 48        PHA
-C - - - - - 0x03E1E4 0F:E1D4: A5 AF     LDA ram_00AF
+C - - - - - 0x03E1E4 0F:E1D4: A5 AF     LDA ram_points_5
 C - - - - - 0x03E1E6 0F:E1D6: 48        PHA
-C - - - - - 0x03E1E7 0F:E1D7: A5 B0     LDA ram_00B0
+C - - - - - 0x03E1E7 0F:E1D7: A5 B0     LDA ram_points_4
 C - - - - - 0x03E1E9 0F:E1D9: 48        PHA
-C - - - - - 0x03E1EA 0F:E1DA: A5 B1     LDA ram_00B1
+C - - - - - 0x03E1EA 0F:E1DA: A5 B1     LDA ram_points_3
 C - - - - - 0x03E1EC 0F:E1DC: 48        PHA
 C - - - - - 0x03E1ED 0F:E1DD: A5 A2     LDA ram_option_fighter
 C - - - - - 0x03E1EF 0F:E1DF: 48        PHA
@@ -3235,13 +3235,13 @@ C - - - - - 0x03E1F7 0F:E1E7: 85 A3     STA ram_option_fighter + 1
 C - - - - - 0x03E1F9 0F:E1E9: 68        PLA
 C - - - - - 0x03E1FA 0F:E1EA: 85 A2     STA ram_option_fighter
 C - - - - - 0x03E1FC 0F:E1EC: 68        PLA
-C - - - - - 0x03E1FD 0F:E1ED: 85 B1     STA ram_00B1
+C - - - - - 0x03E1FD 0F:E1ED: 85 B1     STA ram_points_3
 C - - - - - 0x03E1FF 0F:E1EF: 68        PLA
-C - - - - - 0x03E200 0F:E1F0: 85 B0     STA ram_00B0
+C - - - - - 0x03E200 0F:E1F0: 85 B0     STA ram_points_4
 C - - - - - 0x03E202 0F:E1F2: 68        PLA
-C - - - - - 0x03E203 0F:E1F3: 85 AF     STA ram_00AF
+C - - - - - 0x03E203 0F:E1F3: 85 AF     STA ram_points_5
 C - - - - - 0x03E205 0F:E1F5: 68        PLA
-C - - - - - 0x03E206 0F:E1F6: 85 AE     STA ram_00AE
+C - - - - - 0x03E206 0F:E1F6: 85 AE     STA ram_points_6
 C - - - - - 0x03E208 0F:E1F8: E6 95     INC ram_0095
 C - - - - - 0x03E20A 0F:E1FA: 4C 8C FC  JMP loc_FC8C
 
@@ -4080,7 +4080,7 @@ C - - - - - 0x03E785 0F:E775: 85 9F     STA ram_009F
 C - - - - - 0x03E787 0F:E777: A9 60     LDA #$60
 C - - - - - 0x03E789 0F:E779: 8D 60 05  STA ram_0560
 C - - - - - 0x03E78C 0F:E77C: E6 95     INC ram_0095
-C - - - - - 0x03E78E 0F:E77E: A5 AE     LDA ram_00AE
+C - - - - - 0x03E78E 0F:E77E: A5 AE     LDA ram_points_6
 C - - - - - 0x03E790 0F:E780: 20 02 D2  JSR sub_D202_multiply_by_10h
 C - - - - - 0x03E793 0F:E783: 48        PHA
 C - - - - - 0x03E794 0F:E784: 20 E7 F5  JSR sub_F5E7_prg_bank_0B
@@ -4092,7 +4092,7 @@ C - - - - - 0x03E79E 0F:E78E: D0 DF     BNE bra_E76F_RTS
 C - - - - - 0x03E7A0 0F:E790: A9 01     LDA #$01
 C - - - - - 0x03E7A2 0F:E792: 85 2C     STA ram_002C
 C - - - - - 0x03E7A4 0F:E794: 85 94     STA ram_0094
-C - - - - - 0x03E7A6 0F:E796: 4C 16 DE  JMP loc_DE16
+C - - - - - 0x03E7A6 0F:E796: 4C 16 DE  JMP loc_DE16_clear_points_2p
 
 
 

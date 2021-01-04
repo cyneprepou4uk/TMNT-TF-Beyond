@@ -9426,13 +9426,13 @@ C - - - - - 0x02E748 0B:A738: 4C 17 F6  JMP loc_0x03F627_restore_prg_bank
 
 .export sub_0x02E74B
 sub_0x02E74B:
-C - - - - - 0x02E74B 0B:A73B: 05 AF     ORA ram_00AF
+C - - - - - 0x02E74B 0B:A73B: 05 AF     ORA ram_points_5
 C - - - - - 0x02E74D 0B:A73D: 8D 0F 01  STA ram_010F
-C - - - - - 0x02E750 0B:A740: A5 B0     LDA ram_00B0
+C - - - - - 0x02E750 0B:A740: A5 B0     LDA ram_points_4
 C - - - - - 0x02E752 0B:A742: 20 02 D2  JSR sub_0x03D212_multiply_by_10h
-C - - - - - 0x02E755 0B:A745: 05 B1     ORA ram_00B1
+C - - - - - 0x02E755 0B:A745: 05 B1     ORA ram_points_3
 C - - - - - 0x02E757 0B:A747: 8D 10 01  STA ram_0110
-C - - - - - 0x02E75A 0B:A74A: 20 09 DE  JSR sub_0x03DE19
+C - - - - - 0x02E75A 0B:A74A: 20 09 DE  JSR sub_0x03DE19_clear_points
 C - - - - - 0x02E75D 0B:A74D: 4C 17 F6  JMP loc_0x03F627_restore_prg_bank
 
 

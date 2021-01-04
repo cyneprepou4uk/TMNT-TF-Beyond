@@ -1307,7 +1307,7 @@ ofs_8736_05:
 C - - J - - 0x038746 0E:8736: A9 01     LDA #$01
 C - - - - - 0x038748 0E:8738: 85 94     STA ram_0094
 C - - - - - 0x03874A 0E:873A: 20 3C F0  JSR sub_0x03F04C
-C - - - - - 0x03874D 0E:873D: 4C 09 DE  JMP loc_0x03DE19
+C - - - - - 0x03874D 0E:873D: 4C 09 DE  JMP loc_0x03DE19_clear_points
 
 
 
@@ -5737,13 +5737,13 @@ C - - - - - 0x039F4E 0E:9F3E: A5 A8     LDA ram_00A8
 C - - - - - 0x039F50 0E:9F40: 0A        ASL
 C - - - - - 0x039F51 0E:9F41: 0A        ASL
 C - - - - - 0x039F52 0E:9F42: AA        TAX
-C - - - - - 0x039F53 0E:9F43: B5 AE     LDA ram_00AE,X
+C - - - - - 0x039F53 0E:9F43: B5 AE     LDA ram_points_6,X
 C - - - - - 0x039F55 0E:9F45: 20 02 D2  JSR sub_0x03D212_multiply_by_10h
-C - - - - - 0x039F58 0E:9F48: 15 AF     ORA ram_00AF,X
+C - - - - - 0x039F58 0E:9F48: 15 AF     ORA ram_points_5,X
 C - - - - - 0x039F5A 0E:9F4A: 85 00     STA ram_0000
-C - - - - - 0x039F5C 0E:9F4C: B5 B0     LDA ram_00B0,X
+C - - - - - 0x039F5C 0E:9F4C: B5 B0     LDA ram_points_4,X
 C - - - - - 0x039F5E 0E:9F4E: 20 02 D2  JSR sub_0x03D212_multiply_by_10h
-C - - - - - 0x039F61 0E:9F51: 15 B1     ORA ram_00B1,X
+C - - - - - 0x039F61 0E:9F51: 15 B1     ORA ram_points_3,X
 C - - - - - 0x039F63 0E:9F53: 85 01     STA ram_0001
 C - - - - - 0x039F65 0E:9F55: AD 12 01  LDA ram_0112
 C - - - - - 0x039F68 0E:9F58: 20 02 D2  JSR sub_0x03D212_multiply_by_10h
@@ -6774,11 +6774,11 @@ C - - - - - 0x03A514 0E:A504: 84 94     STY ram_0094
 C - - - - - 0x03A516 0E:A506: 4C 0E A5  JMP loc_A50E
 bra_A509:
 C - - - - - 0x03A519 0E:A509: 84 94     STY ram_0094
-C - - - - - 0x03A51B 0E:A50B: 20 09 DE  JSR sub_0x03DE19
+C - - - - - 0x03A51B 0E:A50B: 20 09 DE  JSR sub_0x03DE19_clear_points
 loc_A50E:
 C D 1 - - - 0x03A51E 0E:A50E: 4C 2E E1  JMP loc_0x03E13E
 bra_A511:
-C - - - - - 0x03A521 0E:A511: 20 09 DE  JSR sub_0x03DE19
+C - - - - - 0x03A521 0E:A511: 20 09 DE  JSR sub_0x03DE19_clear_points
 C - - - - - 0x03A524 0E:A514: 4C CD F5  JMP loc_0x03F5DD
 bra_A517_RTS:
 C - - - - - 0x03A527 0E:A517: 60        RTS
@@ -7049,17 +7049,17 @@ C - - - - - 0x03A628 0E:A618: 60        RTS
 
 sub_A619:
 C - - - - - 0x03A629 0E:A619: 20 07 D2  JSR sub_0x03D217_divide_by_10h
-C - - - - - 0x03A62C 0E:A61C: 85 AE     STA ram_00AE
+C - - - - - 0x03A62C 0E:A61C: 85 AE     STA ram_points_6
 C - - - - - 0x03A62E 0E:A61E: AD 0F 01  LDA ram_010F
 C - - - - - 0x03A631 0E:A621: 29 0F     AND #$0F
-C - - - - - 0x03A633 0E:A623: 85 AF     STA ram_00AF
+C - - - - - 0x03A633 0E:A623: 85 AF     STA ram_points_5
 C - - - - - 0x03A635 0E:A625: AD 10 01  LDA ram_0110
 C - - - - - 0x03A638 0E:A628: 29 F0     AND #$F0
 C - - - - - 0x03A63A 0E:A62A: 20 07 D2  JSR sub_0x03D217_divide_by_10h
-C - - - - - 0x03A63D 0E:A62D: 85 B0     STA ram_00B0
+C - - - - - 0x03A63D 0E:A62D: 85 B0     STA ram_points_4
 C - - - - - 0x03A63F 0E:A62F: AD 10 01  LDA ram_0110
 C - - - - - 0x03A642 0E:A632: 29 0F     AND #$0F
-C - - - - - 0x03A644 0E:A634: 85 B1     STA ram_00B1
+C - - - - - 0x03A644 0E:A634: 85 B1     STA ram_points_3
 C - - - - - 0x03A646 0E:A636: A9 00     LDA #$00
 C - - - - - 0x03A648 0E:A638: 85 A0     STA ram_option_strength
 C - - - - - 0x03A64A 0E:A63A: 60        RTS
