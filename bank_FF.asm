@@ -2027,9 +2027,9 @@ C - - - - - 0x03DBE3 0F:DBD3: 60        RTS
 loc_DC04:
 .export sub_0x03DC14
 sub_0x03DC14:
-C D 2 - - - 0x03DC14 0F:DC04: B9 29 DC  LDA tbl_DC29,Y
+C D 2 - - - 0x03DC14 0F:DC04: B9 29 DC  LDA tbl_DC29_chr_bank,Y
 C - - - - - 0x03DC17 0F:DC07: 85 34     STA ram_0034
-C - - - - - 0x03DC19 0F:DC09: B9 2A DC  LDA tbl_DC29 + 1,Y
+C - - - - - 0x03DC19 0F:DC09: B9 2A DC  LDA tbl_DC29_chr_bank + 1,Y
 C - - - - - 0x03DC1C 0F:DC0C: 85 35     STA ram_0035
 C - - - - - 0x03DC1E 0F:DC0E: 60        RTS
 
@@ -2037,9 +2037,9 @@ C - - - - - 0x03DC1E 0F:DC0E: 60        RTS
 
 .export sub_0x03DC1F
 sub_0x03DC1F:
-C - - - - - 0x03DC1F 0F:DC0F: B9 29 DC  LDA tbl_DC29,Y
+C - - - - - 0x03DC1F 0F:DC0F: B9 29 DC  LDA tbl_DC29_chr_bank,Y
 C - - - - - 0x03DC22 0F:DC12: 85 36     STA ram_0036
-C - - - - - 0x03DC24 0F:DC14: B9 2A DC  LDA tbl_DC29 + 1,Y
+C - - - - - 0x03DC24 0F:DC14: B9 2A DC  LDA tbl_DC29_chr_bank + 1,Y
 C - - - - - 0x03DC27 0F:DC17: 85 37     STA ram_0037
 C - - - - - 0x03DC29 0F:DC19: 60        RTS
 
@@ -2053,15 +2053,15 @@ C D 2 - - - 0x03DC35 0F:DC25: A0 06     LDY #$06
 sub_DC1A:
 .export sub_0x03DC2A
 sub_0x03DC2A:
-C - - - - - 0x03DC2A 0F:DC1A: B9 29 DC  LDA tbl_DC29,Y
+C - - - - - 0x03DC2A 0F:DC1A: B9 29 DC  LDA tbl_DC29_chr_bank,Y
 C - - - - - 0x03DC2D 0F:DC1D: 85 32     STA ram_0032
-C - - - - - 0x03DC2F 0F:DC1F: B9 2A DC  LDA tbl_DC29 + 1,Y
+C - - - - - 0x03DC2F 0F:DC1F: B9 2A DC  LDA tbl_DC29_chr_bank + 1,Y
 C - - - - - 0x03DC32 0F:DC22: 85 33     STA ram_0033
 C - - - - - 0x03DC34 0F:DC24: 60        RTS
 
 
 
-tbl_DC29:
+tbl_DC29_chr_bank:
 ; 00
 - - - - - - 0x03DC39 0F:DC29: 0D        .byte $0D   ; 
 - - - - - - 0x03DC3A 0F:DC2A: 09        .byte $09   ; 
