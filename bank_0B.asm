@@ -9231,7 +9231,7 @@ _off003_0x02E51E_1D:
 
 
 sub_A591:
-C - - - - - 0x02E5A1 0B:A591: A4 A9     LDY ram_00A9
+C - - - - - 0x02E5A1 0B:A591: A4 A9     LDY ram_object_index
 C - - - - - 0x02E5A3 0B:A593: BD 40 04  LDA ram_0440,X
 C - - - - - 0x02E5A6 0B:A596: D9 40 04  CMP ram_0440,Y
 C - - - - - 0x02E5A9 0B:A599: A9 00     LDA #$00
@@ -9280,13 +9280,13 @@ C - - - - - 0x02E5E9 0B:A5D9: 8A        TXA
 C - - - - - 0x02E5EA 0B:A5DA: 49 01     EOR #$01
 C - - - - - 0x02E5EC 0B:A5DC: 29 01     AND #$01
 C - - - - - 0x02E5EE 0B:A5DE: 09 02     ORA #$02
-C - - - - - 0x02E5F0 0B:A5E0: 85 A9     STA ram_00A9
+C - - - - - 0x02E5F0 0B:A5E0: 85 A9     STA ram_object_index
 C - - - - - 0x02E5F2 0B:A5E2: E0 02     CPX #$02
 C - - - - - 0x02E5F4 0B:A5E4: B0 1E     BCS bra_A604
 C - - - - - 0x02E5F6 0B:A5E6: BC 50 05  LDY ram_object_id,X
 C - - - - - 0x02E5F9 0B:A5E9: C0 05     CPY #$05
 C - - - - - 0x02E5FB 0B:A5EB: F0 20     BEQ bra_A60D
-C - - - - - 0x02E5FD 0B:A5ED: BD 54 05  LDA ram_0554,X
+C - - - - - 0x02E5FD 0B:A5ED: BD 54 05  LDA ram_special_id,X
 C - - - - - 0x02E600 0B:A5F0: 49 33     EOR #$33
 C - - - - - 0x02E602 0B:A5F2: D0 04     BNE bra_A5F8
 C - - - - - 0x02E604 0B:A5F4: A9 10     LDA #$10
@@ -9524,7 +9524,7 @@ C - - - - - 0x02E7CA 0B:A7BA: BD C0 04  LDA ram_04C0,X
 C - - - - - 0x02E7CD 0B:A7BD: C9 06     CMP #$06
 C - - - - - 0x02E7CF 0B:A7BF: F0 20     BEQ bra_A7E1
 C - - - - - 0x02E7D1 0B:A7C1: C9 03     CMP #$03
-C - - - - - 0x02E7D3 0B:A7C3: A4 A9     LDY ram_00A9
+C - - - - - 0x02E7D3 0B:A7C3: A4 A9     LDY ram_object_index
 C - - - - - 0x02E7D5 0B:A7C5: B9 12 06  LDA ram_0612,Y
 C - - - - - 0x02E7D8 0B:A7C8: B0 10     BCS bra_A7DA
 C - - - - - 0x02E7DA 0B:A7CA: C9 03     CMP #$03
@@ -9591,7 +9591,7 @@ ofs_0x02E86E = ofs_A85E - 1
 C - - - - - 0x02E86E 0B:A85E: B5 91     LDA ram_btn_hold,X
 C - - - - - 0x02E870 0B:A860: 29 08     AND #con_btn_Up
 C - - - - - 0x02E872 0B:A862: F0 1C     BEQ bra_A880
-C - - - - - 0x02E874 0B:A864: A4 A9     LDY ram_00A9
+C - - - - - 0x02E874 0B:A864: A4 A9     LDY ram_object_index
 C - - - - - 0x02E876 0B:A866: B9 20 05  LDA ram_0520,Y
 C - - - - - 0x02E879 0B:A869: C9 03     CMP #$03
 C - - - - - 0x02E87B 0B:A86B: D0 13     BNE bra_A880

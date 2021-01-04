@@ -5802,7 +5802,7 @@ C - - - - - 0x036207 0D:A1F7: F0 03     BEQ bra_A1FC
 C - - - - - 0x036209 0D:A1F9: 4C 57 80  JMP loc_8057
 bra_A1FC:
 C - - - - - 0x03620C 0D:A1FC: BC DE 06  LDY ram_06DE,X
-C - - - - - 0x03620F 0D:A1FF: BD 54 05  LDA ram_0554,X
+C - - - - - 0x03620F 0D:A1FF: BD 54 05  LDA ram_special_id,X
 C - - - - - 0x036212 0D:A202: C9 36     CMP #$36
 C - - - - - 0x036214 0D:A204: D0 20     BNE bra_A226
 C - - - - - 0x036216 0D:A206: AD 26 01  LDA ram_option_speed
@@ -5841,7 +5841,7 @@ C - - - - - 0x03625C 0D:A24C: AD 38 06  LDA ram_dist_X_btw_plrs
 C - - - - - 0x03625F 0D:A24F: C9 18     CMP #$18
 C - - - - - 0x036261 0D:A251: 90 27     BCC bra_A27A
 bra_A253:
-C - - - - - 0x036263 0D:A253: B9 54 05  LDA ram_0554,Y
+C - - - - - 0x036263 0D:A253: B9 54 05  LDA ram_special_id,Y
 C - - - - - 0x036266 0D:A256: C9 32     CMP #$32
 C - - - - - 0x036268 0D:A258: D0 0A     BNE bra_A264
 C - - - - - 0x03626A 0D:A25A: BD 12 06  LDA ram_0612,X
@@ -5862,7 +5862,7 @@ bra_A27A:
 C - - - - - 0x03628A 0D:A27A: A9 40     LDA #con_btn_B
 C - - - - - 0x03628C 0D:A27C: D0 19     BNE bra_A297
 bra_A27E:
-C - - - - - 0x03628E 0D:A27E: B9 54 05  LDA ram_0554,Y
+C - - - - - 0x03628E 0D:A27E: B9 54 05  LDA ram_special_id,Y
 C - - - - - 0x036291 0D:A281: C9 38     CMP #$38
 C - - - - - 0x036293 0D:A283: D0 15     BNE bra_A29A
 C - - - - - 0x036295 0D:A285: BD 10 04  LDA ram_0410,X
@@ -5966,7 +5966,7 @@ C D 1 - - - 0x03635C 0D:A34C: 9D C6 06  STA ram_06C6,X
 C - - - - - 0x03635F 0D:A34F: AD 25 01  LDA ram_option_difficulty
 C - - - - - 0x036362 0D:A352: C9 03     CMP #$03
 C - - - - - 0x036364 0D:A354: D0 48     BNE bra_A39E_RTS
-C - - - - - 0x036366 0D:A356: B9 54 05  LDA ram_0554,Y
+C - - - - - 0x036366 0D:A356: B9 54 05  LDA ram_special_id,Y
 C - - - - - 0x036369 0D:A359: C9 30     CMP #$30
 C - - - - - 0x03636B 0D:A35B: D0 13     BNE bra_A370
 C - - - - - 0x03636D 0D:A35D: 20 AD A1  JSR sub_A1AD
@@ -6047,7 +6047,7 @@ C - - - - - 0x0363EC 0D:A3DC: DD 10 05  CMP ram_0510,X
 C - - - - - 0x0363EF 0D:A3DF: D0 23     BNE bra_A404
 C - - - - - 0x0363F1 0D:A3E1: F0 2A     BEQ bra_A40D
 bra_A3E3:
-C - - - - - 0x0363F3 0D:A3E3: B9 54 05  LDA ram_0554,Y
+C - - - - - 0x0363F3 0D:A3E3: B9 54 05  LDA ram_special_id,Y
 C - - - - - 0x0363F6 0D:A3E6: C9 38     CMP #$38
 C - - - - - 0x0363F8 0D:A3E8: F0 30     BEQ bra_A41A
 C - - - - - 0x0363FA 0D:A3EA: C9 35     CMP #$35
@@ -6416,7 +6416,7 @@ C - - - - - 0x037FD5 0D:BFC5: C9 32     CMP #$32
 C - - - - - 0x037FD7 0D:BFC7: 90 0C     BCC bra_BFD5
 C - - - - - 0x037FD9 0D:BFC9: C9 58     CMP #$58
 C - - - - - 0x037FDB 0D:BFCB: B0 0D     BCS bra_BFDA
-C - - - - - 0x037FDD 0D:BFCD: B9 54 05  LDA ram_0554,Y
+C - - - - - 0x037FDD 0D:BFCD: B9 54 05  LDA ram_special_id,Y
 C - - - - - 0x037FE0 0D:BFD0: D0 13     BNE bra_BFE5
 C - - - - - 0x037FE2 0D:BFD2: 4C E1 9F  JMP loc_9FE1
 bra_BFD5:
@@ -6425,7 +6425,7 @@ C - - - - - 0x037FE8 0D:BFD8: F0 0E     BEQ bra_BFE8
 bra_BFDA:
 C - - - - - 0x037FEA 0D:BFDA: 4C 72 A0  JMP loc_A072
 bra_BFDD:
-C - - - - - 0x037FED 0D:BFDD: B9 54 05  LDA ram_0554,Y
+C - - - - - 0x037FED 0D:BFDD: B9 54 05  LDA ram_special_id,Y
 C - - - - - 0x037FF0 0D:BFE0: F0 03     BEQ bra_BFE5
 bra_BFE2:
 C - - - - - 0x037FF2 0D:BFE2: 4C 95 9F  JMP loc_9F95

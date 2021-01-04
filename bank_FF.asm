@@ -1302,11 +1302,11 @@ C - - - - - 0x03D568 0F:D558: A9 01     LDA #$01
 C - - - - - 0x03D56A 0F:D55A: 20 5D D2  JSR sub_D25D
 C - - - - - 0x03D56D 0F:D55D: A9 00     LDA #$00
 bra_D55F:
-C - - - - - 0x03D56F 0F:D55F: 85 A9     STA ram_00A9
+C - - - - - 0x03D56F 0F:D55F: 85 A9     STA ram_object_index
 C - - - - - 0x03D571 0F:D561: 20 66 D2  JSR sub_D266
 C - - - - - 0x03D574 0F:D564: A9 3F     LDA #$3F
 C - - - - - 0x03D576 0F:D566: 20 66 D2  JSR sub_D266
-C - - - - - 0x03D579 0F:D569: A4 A9     LDY ram_00A9
+C - - - - - 0x03D579 0F:D569: A4 A9     LDY ram_object_index
 bra_D56B:
 C - - - - - 0x03D57B 0F:D56B: B9 4D 06  LDA ram_064D,Y
 C - - - - - 0x03D57E 0F:D56E: 20 66 D2  JSR sub_D266
@@ -2506,7 +2506,7 @@ sub_DEC0:
 C - - - - - 0x03DED0 0F:DEC0: 18        CLC
 C - - - - - 0x03DED1 0F:DEC1: 7D 45 06  ADC ram_0645,X
 C - - - - - 0x03DED4 0F:DEC4: 9D 45 06  STA ram_0645,X
-C - - - - - 0x03DED7 0F:DEC7: A4 A9     LDY ram_00A9
+C - - - - - 0x03DED7 0F:DEC7: A4 A9     LDY ram_object_index
 C - - - - - 0x03DED9 0F:DEC9: B9 50 05  LDA ram_object_id,Y
 C - - - - - 0x03DEDC 0F:DECC: C9 04     CMP #$04
 C - - - - - 0x03DEDE 0F:DECE: F0 D9     BEQ bra_DEA9
@@ -4994,7 +4994,7 @@ tbl_EC54:
 .export sub_0x03EC6B
 sub_0x03EC6B:
 C - - - - - 0x03EC6B 0F:EC5B: BC DE 06  LDY ram_06DE,X
-C - - - - - 0x03EC6E 0F:EC5E: B9 54 05  LDA ram_0554,Y
+C - - - - - 0x03EC6E 0F:EC5E: B9 54 05  LDA ram_special_id,Y
 C - - - - - 0x03EC71 0F:EC61: C9 30     CMP #$30
 C - - - - - 0x03EC73 0F:EC63: F0 0A     BEQ bra_EC6F
 C - - - - - 0x03EC75 0F:EC65: C9 39     CMP #$39
@@ -6768,7 +6768,7 @@ sub_F690:
 sub_0x03F6A0:
 .export loc_0x03F6A0
 loc_0x03F6A0:
-C D 3 - - - 0x03F6A0 0F:F690: 84 A9     STY ram_00A9
+C D 3 - - - 0x03F6A0 0F:F690: 84 A9     STY ram_object_index
 C - - - - - 0x03F6A2 0F:F692: 86 A8     STX ram_00A8
 loc_F694:
 .export sub_0x03F6A4
@@ -6785,7 +6785,7 @@ loc_F6A0:
 C D 3 - - - 0x03F6B0 0F:F6A0: 20 5F F6  JSR sub_F65F
 C - - - - - 0x03F6B3 0F:F6A3: A6 A8     LDX ram_00A8
 bra_F6A5:
-C - - - - - 0x03F6B5 0F:F6A5: A4 A9     LDY ram_00A9
+C - - - - - 0x03F6B5 0F:F6A5: A4 A9     LDY ram_object_index
 C - - - - - 0x03F6B7 0F:F6A7: 60        RTS
 
 
@@ -6796,7 +6796,7 @@ loc_F6C2:
 sub_0x03F6D2:
 .export loc_0x03F6D2
 loc_0x03F6D2:
-C D 3 - - - 0x03F6D2 0F:F6C2: 84 A9     STY ram_00A9
+C D 3 - - - 0x03F6D2 0F:F6C2: 84 A9     STY ram_object_index
 C - - - - - 0x03F6D4 0F:F6C4: A4 2E     LDY ram_002E
 C - - - - - 0x03F6D6 0F:F6C6: D0 DD     BNE bra_F6A5
 C - - - - - 0x03F6D8 0F:F6C8: 86 A8     STX ram_00A8
@@ -8077,7 +8077,7 @@ C - - - - - 0x03FE9A 0F:FE8A: 4C 95 9A  JMP loc_0x025AA5
 
 .export loc_0x03FE9D
 loc_0x03FE9D:
-C D 3 - - - 0x03FE9D 0F:FE8D: BD 52 05  LDA ram_0552,X
+C D 3 - - - 0x03FE9D 0F:FE8D: BD 52 05  LDA ram_blow_id,X
 C - - - - - 0x03FEA0 0F:FE90: C9 0E     CMP #$0E
 C - - - - - 0x03FEA2 0F:FE92: F0 08     BEQ bra_FE9C
 C - - - - - 0x03FEA4 0F:FE94: BD 0C 06  LDA ram_060C,X
