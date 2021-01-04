@@ -3365,9 +3365,9 @@ C - - - - - 0x03E2E7 0F:E2D7: 20 90 F6  JSR sub_F690
 C - - - - - 0x03E2EA 0F:E2DA: A9 D0     LDA #$D0
 C - - - - - 0x03E2EC 0F:E2DC: 8D 60 05  STA ram_0560
 C - - - - - 0x03E2EF 0F:E2DF: A2 FF     LDX #$FF
-C - - - - - 0x03E2F1 0F:E2E1: 86 57     STX ram_0057
+C - - - - - 0x03E2F1 0F:E2E1: 86 57     STX ram_X_scroll + 1
 C - - - - - 0x03E2F3 0F:E2E3: A2 00     LDX #$00
-C - - - - - 0x03E2F5 0F:E2E5: 86 56     STX ram_0056
+C - - - - - 0x03E2F5 0F:E2E5: 86 56     STX ram_X_scroll
 C - - - - - 0x03E2F7 0F:E2E7: A9 06     LDA #$06
 C - - - - - 0x03E2F9 0F:E2E9: 20 14 F8  JSR sub_F814
 C - - - - - 0x03E2FC 0F:E2EC: 4C 41 E1  JMP loc_E141
@@ -3440,22 +3440,22 @@ ofs_E341_04:
 C - - J - - 0x03E351 0F:E341: A5 90     LDA ram_sum_btn_press
 C - - - - - 0x03E353 0F:E343: 29 10     AND #con_btn_Start
 C - - - - - 0x03E355 0F:E345: D0 53     BNE bra_E39A
-C - - - - - 0x03E357 0F:E347: A5 57     LDA ram_0057
+C - - - - - 0x03E357 0F:E347: A5 57     LDA ram_X_scroll + 1
 C - - - - - 0x03E359 0F:E349: 29 F8     AND #$F8
 C - - - - - 0x03E35B 0F:E34B: F0 3F     BEQ bra_E38C
 C - - - - - 0x03E35D 0F:E34D: 38        SEC
-C - - - - - 0x03E35E 0F:E34E: A5 57     LDA ram_0057
+C - - - - - 0x03E35E 0F:E34E: A5 57     LDA ram_X_scroll + 1
 C - - - - - 0x03E360 0F:E350: E9 08     SBC #$08
-C - - - - - 0x03E362 0F:E352: 85 57     STA ram_0057
+C - - - - - 0x03E362 0F:E352: 85 57     STA ram_X_scroll + 1
 C - - - - - 0x03E364 0F:E354: 69 10     ADC #$10
 C - - - - - 0x03E366 0F:E356: 8D 40 04  STA ram_X_pos_hi_object
 C - - - - - 0x03E369 0F:E359: A9 00     LDA #$00
 C - - - - - 0x03E36B 0F:E35B: 2A        ROL
 C - - - - - 0x03E36C 0F:E35C: 8D 30 04  STA ram_0430
 C - - - - - 0x03E36F 0F:E35F: 18        CLC
-C - - - - - 0x03E370 0F:E360: A5 56     LDA ram_0056
+C - - - - - 0x03E370 0F:E360: A5 56     LDA ram_X_scroll
 C - - - - - 0x03E372 0F:E362: 69 08     ADC #$08
-C - - - - - 0x03E374 0F:E364: 85 56     STA ram_0056
+C - - - - - 0x03E374 0F:E364: 85 56     STA ram_X_scroll
 C - - - - - 0x03E376 0F:E366: E9 46     SBC #$46
 C - - - - - 0x03E378 0F:E368: 8D 41 04  STA ram_X_pos_hi_object + 1
 C - - - - - 0x03E37B 0F:E36B: C9 B4     CMP #$B4
@@ -3466,12 +3466,12 @@ C - - - - - 0x03E383 0F:E373: A9 0F     LDA #$0F
 C - - - - - 0x03E385 0F:E375: 8D 10 04  STA ram_Y_pos_hi_object
 C - - - - - 0x03E388 0F:E378: A9 8F     LDA #$8F
 C - - - - - 0x03E38A 0F:E37A: 8D 11 04  STA ram_Y_pos_hi_object + 1
-C - - - - - 0x03E38D 0F:E37D: A5 57     LDA ram_0057
+C - - - - - 0x03E38D 0F:E37D: A5 57     LDA ram_X_scroll + 1
 C - - - - - 0x03E38F 0F:E37F: 29 F8     AND #$F8
 C - - - - - 0x03E391 0F:E381: D0 08     BNE bra_E38B_RTS
 sub_E383:
 C - - - - - 0x03E393 0F:E383: 38        SEC
-C - - - - - 0x03E394 0F:E384: A5 56     LDA ram_0056
+C - - - - - 0x03E394 0F:E384: A5 56     LDA ram_X_scroll
 C - - - - - 0x03E396 0F:E386: E9 4F     SBC #$4F
 C - - - - - 0x03E398 0F:E388: 8D 41 04  STA ram_X_pos_hi_object + 1
 bra_E38B_RTS:
@@ -7075,6 +7075,8 @@ tbl_F885:
 
 
 tbl_F890:
+; первые 5 байтов для указания линии irq
+; вторые 5 для X в 0000,X, откуда будет читаться X скролл
 off_F890:
 - D 3 - - - 0x03F8A0 0F:F890: 04        .byte $04   ; 
 - D 3 - - - 0x03F8A1 0F:F891: 4F        .byte $4F   ; 
@@ -7160,9 +7162,9 @@ ofs_F8D0_02:
 .export ofs_0x03F8E0
 ofs_0x03F8E0:
 C - - J - - 0x03F8E0 0F:F8D0: A0 05     LDY #$05
-bra_F8D2:
+bra_F8D2_garbage_loop:
 C - - - - - 0x03F8E2 0F:F8D2: 88        DEY
-C - - - - - 0x03F8E3 0F:F8D3: D0 FD     BNE bra_F8D2
+C - - - - - 0x03F8E3 0F:F8D3: D0 FD     BNE bra_F8D2_garbage_loop
 C - - - - - 0x03F8E5 0F:F8D5: A5 4D     LDA ram_004D
 C - - - - - 0x03F8E7 0F:F8D7: F0 49     BEQ bra_F922
 C - - - - - 0x03F8E9 0F:F8D9: C9 06     CMP #$06
@@ -7172,8 +7174,8 @@ C - - - - - 0x03F8EF 0F:F8DF: 7D 85 F8  ADC tbl_F885,X
 C - - - - - 0x03F8F2 0F:F8E2: A8        TAY
 C - - - - - 0x03F8F3 0F:F8E3: B9 8F F8  LDA tbl_F890 - 1,Y
 C - - - - - 0x03F8F6 0F:F8E6: BE 94 F8  LDX tbl_F890 - 1 + 5,Y
-C - - - - - 0x03F8F9 0F:F8E9: BC 00 00  LDY ram_0000,X
-bra_F8EC:
+C - - - - - 0x03F8F9 0F:F8E9: BC 00 00  LDY ram_X_scroll - $56,X
+bra_F8EC_loop:
 C - - - - - 0x03F8FC 0F:F8EC: 8D 00 C0  STA $C000
 C - - - - - 0x03F8FF 0F:F8EF: 85 4A     STA ram_004A
 C - - - - - 0x03F901 0F:F8F1: E6 4D     INC ram_004D
@@ -7203,7 +7205,7 @@ C - - - - - 0x03F932 0F:F922: 18        CLC
 C - - - - - 0x03F933 0F:F923: A5 86     LDA ram_0086
 C - - - - - 0x03F935 0F:F925: 85 87     STA ram_0087
 C - - - - - 0x03F937 0F:F927: 69 03     ADC #$03
-C - - - - - 0x03F939 0F:F929: D0 C1     BNE bra_F8EC
+C - - - - - 0x03F939 0F:F929: D0 C1     BNE bra_F8EC_loop
 bra_F92B:
 C - - - - - 0x03F93B 0F:F92B: E6 88     INC ram_0088
 C - - - - - 0x03F93D 0F:F92D: A6 88     LDX ram_0088
@@ -7211,7 +7213,7 @@ C - - - - - 0x03F93F 0F:F92F: E0 0A     CPX #$0A
 C - - - - - 0x03F941 0F:F931: B0 06     BCS bra_F939
 C - - - - - 0x03F943 0F:F933: B4 6D     LDY ram_006D,X
 C - - - - - 0x03F945 0F:F935: A9 03     LDA #$03
-C - - - - - 0x03F947 0F:F937: D0 B3     BNE bra_F8EC
+C - - - - - 0x03F947 0F:F937: D0 B3     BNE bra_F8EC_loop
 bra_F939:
 loc_F939:
 C D 3 - - - 0x03F949 0F:F939: A2 00     LDX #$00
@@ -7246,7 +7248,7 @@ C - - J - - 0x03F97E 0F:F96E: A2 01     LDX #$01
 C - - - - - 0x03F980 0F:F970: 20 81 F8  JSR sub_F881_garbage_loop
 C - - - - - 0x03F983 0F:F973: A4 4D     LDY ram_004D
 C - - - - - 0x03F985 0F:F975: D0 4C     BNE bra_F9C3
-C - - - - - 0x03F987 0F:F977: A5 56     LDA ram_0056
+C - - - - - 0x03F987 0F:F977: A5 56     LDA ram_X_scroll
 C - - - - - 0x03F989 0F:F979: A2 52     LDX #$52
 C - - - - - 0x03F98B 0F:F97B: 8E 00 C0  STX $C000
 C - - - - - 0x03F98E 0F:F97E: 86 4A     STX ram_004A
@@ -7313,7 +7315,7 @@ bra_F9EE:
 C - - - - - 0x03F9FE 0F:F9EE: A2 13     LDX #$13
 C - - - - - 0x03FA00 0F:F9F0: 20 81 F8  JSR sub_F881_garbage_loop
 C - - - - - 0x03FA03 0F:F9F3: AD 02 20  LDA $2002
-C - - - - - 0x03FA06 0F:F9F6: A5 57     LDA ram_0057
+C - - - - - 0x03FA06 0F:F9F6: A5 57     LDA ram_X_scroll + 1
 C - - - - - 0x03FA08 0F:F9F8: 8D 05 20  STA $2005
 C - - - - - 0x03FA0B 0F:F9FB: A5 FC     LDA ram_00FC
 C - - - - - 0x03FA0D 0F:F9FD: 8D 05 20  STA $2005
@@ -7735,7 +7737,7 @@ C - - - - - 0x03FD08 0F:FCF8: A9 00     LDA #$00
 C - - - - - 0x03FD0A 0F:FCFA: 85 BC     STA ram_00BC
 C - - - - - 0x03FD0C 0F:FCFC: 85 BB     STA ram_00BB
 C - - - - - 0x03FD0E 0F:FCFE: A2 00     LDX #$00
-bra_FD00:
+bra_FD00_loop:
 C - - - - - 0x03FD10 0F:FD00: 18        CLC
 C - - - - - 0x03FD11 0F:FD01: A5 BC     LDA ram_00BC
 C - - - - - 0x03FD13 0F:FD03: 65 BA     ADC ram_00BA
@@ -7749,10 +7751,10 @@ C - - - - - 0x03FD21 0F:FD11: 20 FC D1  JSR sub_D1FC_reverse_byte
 bra_FD14:
 C - - - - - 0x03FD24 0F:FD14: 18        CLC
 C - - - - - 0x03FD25 0F:FD15: 69 60     ADC #$60
-C - - - - - 0x03FD27 0F:FD17: 95 56     STA ram_0056,X
+C - - - - - 0x03FD27 0F:FD17: 95 56     STA ram_X_scroll,X
 C - - - - - 0x03FD29 0F:FD19: E8        INX
 C - - - - - 0x03FD2A 0F:FD1A: E0 23     CPX #$23
-C - - - - - 0x03FD2C 0F:FD1C: 90 E2     BCC bra_FD00
+C - - - - - 0x03FD2C 0F:FD1C: 90 E2     BCC bra_FD00_loop
 C - - - - - 0x03FD2E 0F:FD1E: 60        RTS
 
 
