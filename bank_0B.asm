@@ -10418,8 +10418,8 @@ C - - - - - 0x02EFC3 0B:AFB3: 60        RTS
 
 
 
-.export tbl_0x02EFFA
-tbl_0x02EFFA:
+.export tbl_0x02EFFA_night
+tbl_0x02EFFA_night:
 - D 1 - I - 0x02EFFA 0B:AFEA: 20        .byte $20, $20, $20   ; 00
 - D 1 - I - 0x02EFFD 0B:AFED: 16        .byte $16, $1A, $20   ; 01
 - D 1 - I - 0x02F000 0B:AFF0: 01        .byte $01, $11, $21   ; 02
@@ -10526,8 +10526,8 @@ tbl_0x02EFFA:
 
 
 
-.export tbl_0x02F1FA
-tbl_0x02F1FA:
+.export tbl_0x02F1FA_original
+tbl_0x02F1FA_original:
 - D 1 - I - 0x02F1FA 0B:B1EA: 20        .byte $20, $20, $20   ; 00
 - D 1 - I - 0x02F1FD 0B:B1ED: 16        .byte $16, $1A, $20   ; 01
 - D 1 - I - 0x02F200 0B:B1F0: 00        .byte $00, $10, $20   ; 02
@@ -10634,8 +10634,8 @@ tbl_0x02F1FA:
 
 
 
-.export tbl_0x02F3FA
-tbl_0x02F3FA:
+.export tbl_0x02F3FA_green
+tbl_0x02F3FA_green:
 - D 1 - I - 0x02F3FA 0B:B3EA: 20        .byte $20, $20, $20   ; 00
 - D 1 - I - 0x02F3FD 0B:B3ED: 16        .byte $16, $1A, $20   ; 01
 - D 1 - I - 0x02F400 0B:B3F0: 00        .byte $00, $10, $20   ; 02

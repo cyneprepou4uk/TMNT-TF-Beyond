@@ -919,7 +919,7 @@ sub_0x03D356:
 loc_0x03D356:
 C D 2 - - - 0x03D356 0F:D346: 84 04     STY ram_0004
 C - - - - - 0x03D358 0F:D348: 86 03     STX ram_0003
-C - - - - - 0x03D35A 0F:D34A: 20 7C D3  JSR sub_D37C
+C - - - - - 0x03D35A 0F:D34A: 20 7C D3  JSR sub_D37C_calculate_pointer
 C - - - - - 0x03D35D 0F:D34D: 85 00     STA ram_0000
 C - - - - - 0x03D35F 0F:D34F: 84 01     STY ram_0001
                                         LDX ram_0003
@@ -946,10 +946,10 @@ C - - - - - 0x03D37D 0F:D36D: 0D 6D 06  ORA ram_066D
 C - - - - - 0x03D380 0F:D370: 8D 6D 06  STA ram_066D
 C - - - - - 0x03D383 0F:D373: 60        RTS
 
-tbl_D35C:
-    .word tbl_0x02F3FA
-    .word tbl_0x02F1FA
-    .word tbl_0x02EFFA
+tbl_D35C_palette:
+    .word tbl_0x02F3FA_green
+    .word tbl_0x02F1FA_original
+    .word tbl_0x02EFFA_night
 
 
 
@@ -965,19 +965,19 @@ tbl_D374:
 
 
 
-sub_D37C:
+sub_D37C_calculate_pointer:
 C D 2 - - - 0x03D38C 0F:D37C: 85 05     STA ram_0005
                                         LDA ram_option_skin
                                         AND #$07
                                         ASL
                                         TAX
                                         LDA ram_0005
-C - - - - - 0x03D38E 0F:D37E: AC 93 D3  LDY tbl_D35C + 1,X
+C - - - - - 0x03D38E 0F:D37E: AC 93 D3  LDY tbl_D35C_palette + 1,X
 C - - - - - 0x03D391 0F:D381: 0A        ASL
 C - - - - - 0x03D392 0F:D382: 20 8D D3  JSR sub_D38D
 C - - - - - 0x03D395 0F:D385: 65 05     ADC ram_0005
 C - - - - - 0x03D397 0F:D387: 20 8D D3  JSR sub_D38D
-C - - - - - 0x03D39A 0F:D38A: 6D 92 D3  ADC tbl_D35C,X
+C - - - - - 0x03D39A 0F:D38A: 6D 92 D3  ADC tbl_D35C_palette,X
 sub_D38D:
 C - - - - - 0x03D39D 0F:D38D: 90 02     BCC bra_D391_RTS
 C - - - - - 0x03D39F 0F:D38F: 18        CLC
