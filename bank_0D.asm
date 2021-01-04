@@ -4808,7 +4808,6 @@ C - - - - - 0x035BBB 0D:9BAB: 30 07     BMI bra_9BB4
 C - - - - - 0x035BBD 0D:9BAD: 29 07     AND #$07
 C - - - - - 0x035BBF 0D:9BAF: A8        TAY
 C - - - - - 0x035BC0 0D:9BB0: 4C 00 A8  JMP loc_A800
-- - - - - - 0x035BC3 0D:9BB3: 60        RTS
 bra_9BB4:
 C - - - - - 0x035BC4 0D:9BB4: BC DE 06  LDY ram_06DE,X
 C - - - - - 0x035BC7 0D:9BB7: 20 FE ED  JSR sub_0x03EE0E
