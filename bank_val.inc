@@ -20,7 +20,7 @@ con_btns_SS                     = con_btn_Start + con_btn_Select                
 
 
 
-; ram_object_id                 = $0550
+; ram_id_fighter                = $0550
 con_fighter_Leo                 = $00 ; 
 con_fighter_Raph                = $01 ; 
 con_fighter_Mike                = $02 ; 
@@ -29,7 +29,7 @@ con_fighter_Casey               = $04 ;
 con_fighter_Hot                 = $05 ; 
 con_fighter_Shred               = $06 ; 
 
-; ram_blow_id                   = $0552 обычные удары
+; ram_id_blow                   = $0552 обычные удары
 ; черепахи
     ; рука издалека                 = $01
     ; нога вблизи                   = $02
@@ -81,7 +81,7 @@ con_fighter_Shred               = $06 ;
 
 
 
-; ram_special_id                = $0554 спешалы
+; ram_id_special                = $0554 спешалы
     ; Hot бабочка                   = $21
     ; Hot огонь                     = $2F
     ; Shred волна                   = $30
