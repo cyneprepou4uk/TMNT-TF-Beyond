@@ -1,3 +1,6 @@
+; $8000
+con_bank_id                     = $00
+
 ; ram_btn_press                 = $8E
 ; ram_btn_hold                  = $91
 con_btn_Right                   = $01 ; 

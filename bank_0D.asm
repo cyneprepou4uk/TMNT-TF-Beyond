@@ -3,7 +3,7 @@
 .include "copy_bank_val.inc"
 ; 0x034010-0x03800F
 
-- D 0 - - - 0x034010 0D:8000: 0A        .byte $0A   ; 
+    .byte con_bank_id + $0A   ; (!) байт должен находиться по адресу 8000, чтение из 0x03F67D
 
 
 
