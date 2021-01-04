@@ -2045,7 +2045,11 @@ C - - - - - 0x03DC29 0F:DC19: 60        RTS
 
 
 
-bra_DC1A:
+loc_DC25:
+sub_DC25:
+.export sub_0x03DC35
+sub_0x03DC35:
+C D 2 - - - 0x03DC35 0F:DC25: A0 06     LDY #$06
 sub_DC1A:
 .export sub_0x03DC2A
 sub_0x03DC2A:
@@ -2054,15 +2058,6 @@ C - - - - - 0x03DC2D 0F:DC1D: 85 32     STA ram_0032
 C - - - - - 0x03DC2F 0F:DC1F: B9 2A DC  LDA tbl_DC2A,Y
 C - - - - - 0x03DC32 0F:DC22: 85 33     STA ram_0033
 C - - - - - 0x03DC34 0F:DC24: 60        RTS
-
-
-
-loc_DC25:
-sub_DC25:
-.export sub_0x03DC35
-sub_0x03DC35:
-C D 2 - - - 0x03DC35 0F:DC25: A0 06     LDY #$06
-C - - - - - 0x03DC37 0F:DC27: D0 F1     BNE bra_DC1A
 
 
 
