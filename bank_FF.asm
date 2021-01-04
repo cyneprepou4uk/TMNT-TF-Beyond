@@ -2029,7 +2029,7 @@ loc_DC04:
 sub_0x03DC14:
 C D 2 - - - 0x03DC14 0F:DC04: B9 29 DC  LDA tbl_DC29,Y
 C - - - - - 0x03DC17 0F:DC07: 85 34     STA ram_0034
-C - - - - - 0x03DC19 0F:DC09: B9 2A DC  LDA tbl_DC2A,Y
+C - - - - - 0x03DC19 0F:DC09: B9 2A DC  LDA tbl_DC29 + 1,Y
 C - - - - - 0x03DC1C 0F:DC0C: 85 35     STA ram_0035
 C - - - - - 0x03DC1E 0F:DC0E: 60        RTS
 
@@ -2039,7 +2039,7 @@ C - - - - - 0x03DC1E 0F:DC0E: 60        RTS
 sub_0x03DC1F:
 C - - - - - 0x03DC1F 0F:DC0F: B9 29 DC  LDA tbl_DC29,Y
 C - - - - - 0x03DC22 0F:DC12: 85 36     STA ram_0036
-C - - - - - 0x03DC24 0F:DC14: B9 2A DC  LDA tbl_DC2A,Y
+C - - - - - 0x03DC24 0F:DC14: B9 2A DC  LDA tbl_DC29 + 1,Y
 C - - - - - 0x03DC27 0F:DC17: 85 37     STA ram_0037
 C - - - - - 0x03DC29 0F:DC19: 60        RTS
 
@@ -2055,46 +2055,62 @@ sub_DC1A:
 sub_0x03DC2A:
 C - - - - - 0x03DC2A 0F:DC1A: B9 29 DC  LDA tbl_DC29,Y
 C - - - - - 0x03DC2D 0F:DC1D: 85 32     STA ram_0032
-C - - - - - 0x03DC2F 0F:DC1F: B9 2A DC  LDA tbl_DC2A,Y
+C - - - - - 0x03DC2F 0F:DC1F: B9 2A DC  LDA tbl_DC29 + 1,Y
 C - - - - - 0x03DC32 0F:DC22: 85 33     STA ram_0033
 C - - - - - 0x03DC34 0F:DC24: 60        RTS
 
 
 
 tbl_DC29:
+; 00
 - - - - - - 0x03DC39 0F:DC29: 0D        .byte $0D   ; 
-tbl_DC2A:
 - - - - - - 0x03DC3A 0F:DC2A: 09        .byte $09   ; 
+; 01
 - D 2 - - - 0x03DC3B 0F:DC2B: 56        .byte $56   ; 
 - D 2 - - - 0x03DC3C 0F:DC2C: 54        .byte $54   ; 
+; 02
 - D 2 - - - 0x03DC3D 0F:DC2D: 74        .byte $74   ; 
 - D 2 - - - 0x03DC3E 0F:DC2E: 58        .byte $58   ; 
+; 03
 - D 2 - - - 0x03DC3F 0F:DC2F: 7C        .byte $7C   ; 
 - D 2 - - - 0x03DC40 0F:DC30: 7E        .byte $7E   ; 
+; 04
 - D 2 - - - 0x03DC41 0F:DC31: 50        .byte $50   ; 
 - D 2 - - - 0x03DC42 0F:DC32: 51        .byte $51   ; 
+; 05
 - D 2 - - - 0x03DC43 0F:DC33: 48        .byte $48   ; 
 - D 2 - - - 0x03DC44 0F:DC34: 4A        .byte $4A   ; 
+; 06
 - D 2 - - - 0x03DC45 0F:DC35: 10        .byte $10   ; 
 - D 2 - - - 0x03DC46 0F:DC36: 12        .byte $12   ; 
+; 07
 - D 2 - - - 0x03DC47 0F:DC37: 52        .byte $52   ; 
 - D 2 - - - 0x03DC48 0F:DC38: 53        .byte $53   ; 
+; 08
 - - - - - - 0x03DC49 0F:DC39: 5C        .byte $5C   ; 
 - - - - - - 0x03DC4A 0F:DC3A: 5E        .byte $5E   ; 
+; 09
 - D 2 - - - 0x03DC4B 0F:DC3B: 5A        .byte $5A   ; 
 - D 2 - - - 0x03DC4C 0F:DC3C: 58        .byte $58   ; 
+; 0A
 - D 2 - - - 0x03DC4D 0F:DC3D: 70        .byte $70   ; 
 - D 2 - - - 0x03DC4E 0F:DC3E: 76        .byte $76   ; 
+; 0B
 - D 2 - - - 0x03DC4F 0F:DC3F: 22        .byte $22   ; 
 - D 2 - - - 0x03DC50 0F:DC40: 24        .byte $24   ; 
+; 0C
 - D 2 - - - 0x03DC51 0F:DC41: 26        .byte $26   ; 
 - D 2 - - - 0x03DC52 0F:DC42: 27        .byte $27   ; 
+; 0D
 - D 2 - - - 0x03DC53 0F:DC43: 57        .byte $57   ; 
 - D 2 - - - 0x03DC54 0F:DC44: 55        .byte $55   ; 
+; 0E
 - D 2 - - - 0x03DC55 0F:DC45: 7C        .byte $7C   ; 
 - D 2 - - - 0x03DC56 0F:DC46: 72        .byte $72   ; 
+; 0F
 - D 2 - - - 0x03DC57 0F:DC47: 4C        .byte $4C   ; 
 - D 2 - - - 0x03DC58 0F:DC48: 4E        .byte $4E   ; 
+; 10
 - D 2 - - - 0x03DC59 0F:DC49: 36        .byte $36   ; 
 - D 2 - - - 0x03DC5A 0F:DC4A: 34        .byte $34   ; 
 
