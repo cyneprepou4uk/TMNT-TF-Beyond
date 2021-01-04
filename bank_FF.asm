@@ -3584,7 +3584,7 @@ C - - - - - 0x03E428 0F:E418: C6 A8     DEC ram_00A8
 C - - - - - 0x03E42A 0F:E41A: 10 F1     BPL bra_E40D
 C - - - - - 0x03E42C 0F:E41C: 20 3F EB  JSR sub_EB3F
 C - - - - - 0x03E42F 0F:E41F: A2 01     LDX #$01
-bra_E421:
+bra_E421_loop:
 C - - - - - 0x03E431 0F:E421: B5 A2     LDA ram_option_fighter,X
 C - - - - - 0x03E433 0F:E423: 9D 50 05  STA ram_id_object,X
 C - - - - - 0x03E436 0F:E426: BD 69 E4  LDA tbl_E469,X
@@ -3599,7 +3599,7 @@ C - - - - - 0x03E44C 0F:E43C: 8A        TXA
 C - - - - - 0x03E44D 0F:E43D: 09 80     ORA #$80
 C - - - - - 0x03E44F 0F:E43F: 9D 00 05  STA ram_0500,X
 C - - - - - 0x03E452 0F:E442: CA        DEX
-C - - - - - 0x03E453 0F:E443: 10 DC     BPL bra_E421
+C - - - - - 0x03E453 0F:E443: 10 DC     BPL bra_E421_loop
 C - - - - - 0x03E455 0F:E445: A2 0F     LDX #$0F
 bra_E447:
 C - - - - - 0x03E457 0F:E447: 20 D3 DA  JSR sub_DAD3
@@ -5578,12 +5578,12 @@ C - - - - - 0x03EF9E 0F:EF8E: 4C 27 AE  JMP loc_0x026E37
 
 
 
-.export tbl_0x03EFB6
-tbl_0x03EFB6:
-- D 3 - - - 0x03EFB6 0F:EFA6: 00        .byte $00   ; 
-- D 3 - - - 0x03EFB7 0F:EFA7: 48        .byte $48   ; 
-- D 3 - - - 0x03EFB8 0F:EFA8: A0        .byte $A0   ; 
-- D 3 - - - 0x03EFB9 0F:EFA9: A0        .byte $A0   ; 
+.export tbl_0x03EFB6_hp
+tbl_0x03EFB6_hp:
+- D 3 - - - 0x03EFB6 0F:EFA6: 00        .byte $00   ; 00 100%
+- D 3 - - - 0x03EFB7 0F:EFA7: 48        .byte $48   ; 01 150%
+- D 3 - - - 0x03EFB8 0F:EFA8: A0        .byte $A0   ; 02 200%
+- D 3 - - - 0x03EFB9 0F:EFA9: A0        .byte $A0   ; 03 бесконечное
 
 
 
@@ -7957,7 +7957,7 @@ C - - - - - 0x03FE75 0F:FE65: 60        RTS
 .export sub_0x03FE76
 sub_0x03FE76:
 C - - - - - 0x03FE76 0F:FE66: AC 28 01  LDY ram_option_health
-C - - - - - 0x03FE79 0F:FE69: C0 03     CPY #$03
+C - - - - - 0x03FE79 0F:FE69: C0 03     CPY #$03    ; бесконечное хп
 C - - - - - 0x03FE7B 0F:FE6B: F0 0C     BEQ bra_FE79_RTS
 C - - - - - 0x03FE7D 0F:FE6D: BC 0D 01  LDY ram_hp_hi,X
 C - - - - - 0x03FE80 0F:FE70: D0 04     BNE bra_FE76

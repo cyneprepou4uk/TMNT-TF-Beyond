@@ -99,7 +99,7 @@ C - - - - - 0x0240C3 09:80B3: 9D 0E 06  STA ram_060E,X
 C - - - - - 0x0240C6 09:80B6: 9D 06 06  STA ram_0606,X
 C - - - - - 0x0240C9 09:80B9: 9D 04 06  STA ram_0604,X
 C - - - - - 0x0240CC 09:80BC: AC 28 01  LDY ram_option_health
-C - - - - - 0x0240CF 09:80BF: B9 A6 EF  LDA tbl_0x03EFB6,Y
+C - - - - - 0x0240CF 09:80BF: B9 A6 EF  LDA tbl_0x03EFB6_hp,Y
 C - - - - - 0x0240D2 09:80C2: 20 59 FE  JSR sub_0x03FE69
 C - - - - - 0x0240D5 09:80C5: B5 A2     LDA ram_option_fighter,X
 C - - - - - 0x0240D7 09:80C7: 9D 50 05  STA ram_id_object,X

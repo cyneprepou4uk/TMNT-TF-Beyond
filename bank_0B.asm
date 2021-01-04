@@ -9443,7 +9443,7 @@ C - - - - - 0x02E760 0B:A750: BD 90 05  LDA ram_hp_lo,X
 C - - - - - 0x02E763 0B:A753: 20 81 A7  JSR sub_A781
 C - - - - - 0x02E766 0B:A756: 85 02     STA ram_0002
 C - - - - - 0x02E768 0B:A758: BD 90 05  LDA ram_hp_lo,X
-C - - - - - 0x02E76B 0B:A75B: 20 9C A7  JSR sub_A79C
+C - - - - - 0x02E76B 0B:A75B: 20 9C A7  JSR sub_A79C_convert_hp
 C - - - - - 0x02E76E 0B:A75E: 85 05     STA ram_0005
 C - - - - - 0x02E770 0B:A760: BC 0D 01  LDY ram_hp_hi,X
 C - - - - - 0x02E773 0B:A763: F0 14     BEQ bra_A779
@@ -9453,7 +9453,7 @@ C - - - - - 0x02E779 0B:A769: 18        CLC
 C - - - - - 0x02E77A 0B:A76A: 65 02     ADC ram_0002
 C - - - - - 0x02E77C 0B:A76C: 85 02     STA ram_0002
 C - - - - - 0x02E77E 0B:A76E: BD 0D 01  LDA ram_hp_hi,X
-C - - - - - 0x02E781 0B:A771: 20 9C A7  JSR sub_A79C
+C - - - - - 0x02E781 0B:A771: 20 9C A7  JSR sub_A79C_convert_hp
 C - - - - - 0x02E784 0B:A774: 18        CLC
 C - - - - - 0x02E785 0B:A775: 65 05     ADC ram_0005
 C - - - - - 0x02E787 0B:A777: 85 05     STA ram_0005
@@ -9467,13 +9467,13 @@ C - - - - - 0x02E78E 0B:A77E: 4C 17 F6  JMP loc_0x03F627_restore_prg_bank
 
 sub_A781:
 C - - - - - 0x02E791 0B:A781: AC 28 01  LDY ram_option_health
-C - - - - - 0x02E794 0B:A784: F0 04     BEQ bra_A78A
+C - - - - - 0x02E794 0B:A784: F0 04     BEQ bra_A78A_100_percent
 C - - - - - 0x02E796 0B:A786: 4A        LSR
 C - - - - - 0x02E797 0B:A787: 88        DEY
-C - - - - - 0x02E798 0B:A788: F0 03     BEQ bra_A78D
-bra_A78A:
+C - - - - - 0x02E798 0B:A788: F0 03     BEQ bra_A78D_150_percent    ; значит сейчас 200%
+bra_A78A_100_percent:
 C - - - - - 0x02E79A 0B:A78A: 4C 07 D2  JMP loc_0x03D217_divide_by_10h
-bra_A78D:
+bra_A78D_150_percent:
 C - - - - - 0x02E79D 0B:A78D: 4A        LSR
 C - - - - - 0x02E79E 0B:A78E: 4A        LSR
 C - - - - - 0x02E79F 0B:A78F: 85 03     STA ram_0003
@@ -9489,28 +9489,28 @@ C - - - - - 0x02E7AB 0B:A79B: 60        RTS
 
 
 
-sub_A79C:
+sub_A79C_convert_hp:
 C - - - - - 0x02E7AC 0B:A79C: AC 28 01  LDY ram_option_health
-C - - - - - 0x02E7AF 0B:A79F: F0 16     BEQ bra_A7B7
+C - - - - - 0x02E7AF 0B:A79F: F0 16     BEQ bra_A7B7_100_percent
 C - - - - - 0x02E7B1 0B:A7A1: 88        DEY
-C - - - - - 0x02E7B2 0B:A7A2: D0 12     BNE bra_A7B6
-C - - - - - 0x02E7B4 0B:A7A4: 85 03     STA ram_0003
+C - - - - - 0x02E7B2 0B:A7A2: D0 12     BNE bra_A7B6_200_percent
+C - - - - - 0x02E7B4 0B:A7A4: 85 03     STA ram_0003    ; 150%
 C - - - - - 0x02E7B6 0B:A7A6: 4A        LSR
 C - - - - - 0x02E7B7 0B:A7A7: 69 21     ADC #$21
 C - - - - - 0x02E7B9 0B:A7A9: 4A        LSR
 C - - - - - 0x02E7BA 0B:A7AA: A0 03     LDY #$03
-bra_A7AC:
+bra_A7AC_loop:
 C - - - - - 0x02E7BC 0B:A7AC: 18        CLC
 C - - - - - 0x02E7BD 0B:A7AD: 65 03     ADC ram_0003
 C - - - - - 0x02E7BF 0B:A7AF: 6A        ROR
 C - - - - - 0x02E7C0 0B:A7B0: 4A        LSR
 C - - - - - 0x02E7C1 0B:A7B1: 88        DEY
-C - - - - - 0x02E7C2 0B:A7B2: D0 F8     BNE bra_A7AC
+C - - - - - 0x02E7C2 0B:A7B2: D0 F8     BNE bra_A7AC_loop
 C - - - - - 0x02E7C4 0B:A7B4: 0A        ASL
 C - - - - - 0x02E7C5 0B:A7B5: 60        RTS
-bra_A7B6:
+bra_A7B6_200_percent:
 C - - - - - 0x02E7C6 0B:A7B6: 4A        LSR
-bra_A7B7:
+bra_A7B7_100_percent:
 C - - - - - 0x02E7C7 0B:A7B7: 4A        LSR
 C - - - - - 0x02E7C8 0B:A7B8: 0A        ASL
 C - - - - - 0x02E7C9 0B:A7B9: 60        RTS
@@ -9784,7 +9784,8 @@ tbl_A945:
 
 .export sub_0x02EA10
 sub_0x02EA10:
-C - - - - - 0x02EA10 0B:AA00: BD 6B E4  LDA tbl_E46B,X
+; bzk дублирование кода выставления силы в 0x02EA60
+C - - - - - 0x02EA10 0B:AA00: BD 6B E4  LDA tbl_E46B_side,X
 C - - - - - 0x02EA13 0B:AA03: 9D 10 05  STA ram_turn_side_object,X
 C - - - - - 0x02EA16 0B:AA06: A5 2C     LDA ram_002C
 C - - - - - 0x02EA18 0B:AA08: 49 03     EOR #$03
@@ -9810,9 +9811,9 @@ bra_AA2C:
 C - - - - - 0x02EA3C 0B:AA2C: A0 01     LDY #$01
 C - - - - - 0x02EA3E 0B:AA2E: 4C 68 F7  JMP loc_0x03F778
 
-tbl_E46B:
-- D 3 - - - 0x03E47B 0F:E46B: 00        .byte $00   ; 00
-- D 3 - - - 0x03E47C 0F:E46C: 40        .byte $40   ; 01
+tbl_E46B_side:
+- D 3 - - - 0x03E47B 0F:E46B: 00        .byte $00   ; 00 1p
+- D 3 - - - 0x03E47C 0F:E46C: 40        .byte $40   ; 01 2p
 
 
 
@@ -9893,12 +9894,12 @@ C - - - - - 0x02EB2A 0B:AB1A: D0 29     BNE bra_AB45
 C - - - - - 0x02EB2C 0B:AB1C: 48        PHA
 C - - - - - 0x02EB2D 0B:AB1D: B9 0D 01  LDA ram_hp_hi,Y
 C - - - - - 0x02EB30 0B:AB20: F0 03     BEQ bra_AB25
-C - - - - - 0x02EB32 0B:AB22: 20 9C A7  JSR sub_A79C
+C - - - - - 0x02EB32 0B:AB22: 20 9C A7  JSR sub_A79C_convert_hp
 bra_AB25:
 C - - - - - 0x02EB35 0B:AB25: 85 1B     STA ram_001B
 C - - - - - 0x02EB37 0B:AB27: A4 1A     LDY ram_001A
 C - - - - - 0x02EB39 0B:AB29: B9 90 05  LDA ram_hp_lo,Y
-C - - - - - 0x02EB3C 0B:AB2C: 20 9C A7  JSR sub_A79C
+C - - - - - 0x02EB3C 0B:AB2C: 20 9C A7  JSR sub_A79C_convert_hp
 C - - - - - 0x02EB3F 0B:AB2F: 18        CLC
 C - - - - - 0x02EB40 0B:AB30: 65 1B     ADC ram_001B
 C - - - - - 0x02EB42 0B:AB32: C9 90     CMP #$90

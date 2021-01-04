@@ -7184,11 +7184,11 @@ C - - - - - 0x03A72C 0E:A71C: 4C 59 D2  JMP loc_0x03D269
 
 sub_A740:
 C - - - - - 0x03A750 0E:A740: AC 28 01  LDY ram_option_health
-C - - - - - 0x03A753 0E:A743: F0 07     BEQ bra_A74C
+C - - - - - 0x03A753 0E:A743: F0 07     BEQ bra_A74C_100_percent
 C - - - - - 0x03A755 0E:A745: BD 0D 01  LDA ram_hp_hi,X
-C - - - - - 0x03A758 0E:A748: D9 A6 EF  CMP tbl_0x03EFB6,Y
+C - - - - - 0x03A758 0E:A748: D9 A6 EF  CMP tbl_0x03EFB6_hp,Y
 C - - - - - 0x03A75B 0E:A74B: 60        RTS
-bra_A74C:
+bra_A74C_100_percent:
 C - - - - - 0x03A75C 0E:A74C: BD 90 05  LDA ram_hp_lo,X
 C - - - - - 0x03A75F 0E:A74F: C9 B0     CMP #$B0
 C - - - - - 0x03A761 0E:A751: 60        RTS
