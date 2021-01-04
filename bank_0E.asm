@@ -7395,8 +7395,8 @@ C - - - - - 0x03BF48 0E:BF38: 60        RTS
 
 
 tbl_BFD6:
-- D 1 - - - 0x03BFE6 0E:BFD6: 08        .byte $08   ; 00
-- D 1 - - - 0x03BFE7 0E:BFD7: 10        .byte $10   ; 01
+- D 1 - - - 0x03BFE6 0E:BFD6: 08        .byte $08   ; 00 green
+- D 1 - - - 0x03BFE7 0E:BFD7: 10        .byte $10   ; 01 original
 
 tbl_BFD8:
 - D 1 - - - 0x03BFE8 0E:BFD8: 30        .byte $30   ; 00

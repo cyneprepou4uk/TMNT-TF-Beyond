@@ -6635,7 +6635,7 @@ C - - - - - 0x03F668 0F:F658: 60        RTS
 
 
 sub_F659:
-C - - - - - 0x03F669 0F:F659: 20 69 F6  JSR sub_F669
+C - - - - - 0x03F669 0F:F659: 20 69 F6  JSR sub_F669_prg_bank_08
 C - - - - - 0x03F66C 0F:F65C: 20 01 80  JSR sub_0x020011
 sub_F65F:
 C - - - - - 0x03F66F 0F:F65F: A6 46     LDX ram_0046
@@ -6646,12 +6646,12 @@ C - - - - - 0x03F678 0F:F668: 60        RTS
 
 
 
-sub_F669:
+sub_F669_prg_bank_08:
 C - - - - - 0x03F679 0F:F669: A0 01     LDY #$01
 C - - - - - 0x03F67B 0F:F66B: 84 2E     STY ram_002E
 C - - - - - 0x03F67D 0F:F66D: AD 00 80  LDA ram_8000_bank_id
 C - - - - - 0x03F682 0F:F672: 85 46     STA ram_0046
-C - - - - - 0x03F684 0F:F674: A2 30     LDX #$30
+C - - - - - 0x03F684 0F:F674: A2 30     LDX #con_bank_id + $30
 sub_F676:
 C - - - - - 0x03F686 0F:F676: A0 06     LDY #$06
 C - - - - - 0x03F688 0F:F678: 84 43     STY ram_for_8000_2
@@ -6691,7 +6691,7 @@ loc_0x03F6A4:
 C D 3 - - - 0x03F6A4 0F:F694: A4 2E     LDY ram_002E
 C - - - - - 0x03F6A6 0F:F696: D0 0D     BNE bra_F6A5
 C - - - - - 0x03F6A8 0F:F698: 48        PHA
-C - - - - - 0x03F6A9 0F:F699: 20 69 F6  JSR sub_F669
+C - - - - - 0x03F6A9 0F:F699: 20 69 F6  JSR sub_F669_prg_bank_08
 C - - - - - 0x03F6AC 0F:F69C: 68        PLA
 C - - - - - 0x03F6AD 0F:F69D: 20 8D 8E  JSR sub_0x020E9D_play_music
 loc_F6A0:
@@ -6713,7 +6713,7 @@ C D 3 - - - 0x03F6D2 0F:F6C2: 84 A9     STY ram_object_index
 C - - - - - 0x03F6D4 0F:F6C4: A4 2E     LDY ram_002E
 C - - - - - 0x03F6D6 0F:F6C6: D0 DD     BNE bra_F6A5
 C - - - - - 0x03F6D8 0F:F6C8: 86 A8     STX ram_00A8
-C - - - - - 0x03F6DA 0F:F6CA: 20 69 F6  JSR sub_F669
+C - - - - - 0x03F6DA 0F:F6CA: 20 69 F6  JSR sub_F669_prg_bank_08
 C - - - - - 0x03F6DD 0F:F6CD: 20 5D 90  JSR sub_0x02106D
 C - - - - - 0x03F6E0 0F:F6D0: 4C A0 F6  JMP loc_F6A0
 
