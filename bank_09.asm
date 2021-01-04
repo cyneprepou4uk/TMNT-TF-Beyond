@@ -3,7 +3,7 @@
 .include "copy_bank_val.inc"
 ; 0x024010-0x02800F
 
-    .byte con_bank_id + $12   ; (!) байт должен находиться по адресу 8000, чтение из 0x03F67D
+    .byte con_bank_id + $09 * 2   ; (!) байт должен находиться по адресу 8000, чтение из 0x03F67D
 
 
 
@@ -212,7 +212,7 @@ bra_816C:
 C - - - - - 0x02417C 09:816C: 8A        TXA
 C - - - - - 0x02417D 09:816D: D0 05     BNE bra_8174
 C - - - - - 0x02417F 09:816F: A9 51     LDA #$51
-C - - - - - 0x024181 09:8171: 20 94 F6  JSR sub_0x03F6A4
+C - - - - - 0x024181 09:8171: 20 94 F6  JSR sub_0x03F6A4_play_sound
 bra_8174:
 C - - - - - 0x024184 09:8174: FE 30 05  INC ram_0530,X
 C - - - - - 0x024187 09:8177: A9 00     LDA #$00
@@ -696,7 +696,7 @@ C - - - - - 0x0244D1 09:84C1: 8A        TXA
 C - - - - - 0x0244D2 09:84C2: 09 40     ORA #$40
 C - - - - - 0x0244D4 09:84C4: 8D A6 05  STA ram_05A6
 C - - - - - 0x0244D7 09:84C7: A9 15     LDA #$15
-C - - - - - 0x0244D9 09:84C9: 4C 94 F6  JMP loc_0x03F6A4
+C - - - - - 0x0244D9 09:84C9: 4C 94 F6  JMP loc_0x03F6A4_play_sound
 bra_84CC:
 C - - - - - 0x0244DC 09:84CC: B5 91     LDA ram_btn_hold,X
 C - - - - - 0x0244DE 09:84CE: 29 04     AND #con_btn_Down
@@ -775,7 +775,7 @@ C - - - - - 0x024568 09:8558: 9D B0 04  STA ram_04B0,X
 C - - - - - 0x02456B 09:855B: A9 00     LDA #$00
 C - - - - - 0x02456D 09:855D: 9D 39 06  STA ram_0639,X
 C - - - - - 0x024570 09:8560: A9 07     LDA #$07
-C - - - - - 0x024572 09:8562: 4C 94 F6  JMP loc_0x03F6A4
+C - - - - - 0x024572 09:8562: 4C 94 F6  JMP loc_0x03F6A4_play_sound
 bra_8565:
 C - - - - - 0x024575 09:8565: BD 10 06  LDA ram_0610,X
 C - - - - - 0x024578 09:8568: D0 4D     BNE bra_85B7
@@ -1124,7 +1124,7 @@ C - - - - - 0x0247EF 09:87DF: 8D 0F 04  STA ram_040F
 C - - - - - 0x0247F2 09:87E2: A9 03     LDA #$03
 C - - - - - 0x0247F4 09:87E4: 20 7F 84  JSR sub_847F
 C - - - - - 0x0247F7 09:87E7: A9 13     LDA #$13
-C - - - - - 0x0247F9 09:87E9: 4C 94 F6  JMP loc_0x03F6A4
+C - - - - - 0x0247F9 09:87E9: 4C 94 F6  JMP loc_0x03F6A4_play_sound
 bra_87EC_RTS:
 C - - - - - 0x0247FC 09:87EC: 60        RTS
 
@@ -1144,7 +1144,7 @@ C - - - - - 0x024810 09:8800: A9 04     LDA #$04
 C - - - - - 0x024812 09:8802: 20 3C DE  JSR sub_0x03DE4C
 C - - - - - 0x024815 09:8805: 20 77 DE  JSR sub_0x03DE87
 C - - - - - 0x024818 09:8808: A9 1E     LDA #$1E
-C - - - - - 0x02481A 09:880A: 20 94 F6  JSR sub_0x03F6A4
+C - - - - - 0x02481A 09:880A: 20 94 F6  JSR sub_0x03F6A4_play_sound
 C - - - - - 0x02481D 09:880D: A5 22     LDA ram_frame_counter
 C - - - - - 0x02481F 09:880F: 29 18     AND #$18
 C - - - - - 0x024821 09:8811: 4A        LSR
@@ -1249,7 +1249,7 @@ C - - - - - 0x0248D2 09:88C2: FE 40 05  INC ram_0540,X
 C - - - - - 0x0248D5 09:88C5: 20 A3 DF  JSR sub_0x03DFB3
 C - - - - - 0x0248D8 09:88C8: BC 50 05  LDY ram_id_fighter,X
 C - - - - - 0x0248DB 09:88CB: B9 5E E1  LDA tbl_0x03E16E,Y
-C - - - - - 0x0248DE 09:88CE: 4C 94 F6  JMP loc_0x03F6A4
+C - - - - - 0x0248DE 09:88CE: 4C 94 F6  JMP loc_0x03F6A4_play_sound
 
 
 
@@ -1265,7 +1265,7 @@ C - - - - - 0x0248F1 09:88E1: C0 10     CPY #$10
 C - - - - - 0x0248F3 09:88E3: 90 02     BCC bra_88E7
 C - - - - - 0x0248F5 09:88E5: A9 3F     LDA #$3F
 bra_88E7:
-C - - - - - 0x0248F7 09:88E7: 20 90 F6  JSR sub_0x03F6A0
+C - - - - - 0x0248F7 09:88E7: 20 90 F6  JSR sub_0x03F6A0_play_sound
 bra_88EA:
 C - - - - - 0x0248FA 09:88EA: 18        CLC
 C - - - - - 0x0248FB 09:88EB: BD 50 05  LDA ram_id_object,X
@@ -1424,7 +1424,7 @@ C - - - - - 0x0249FD 09:89ED: DE F0 04  DEC ram_04F0,X
 C - - - - - 0x024A00 09:89F0: D0 09     BNE bra_89FB
 C - - - - - 0x024A02 09:89F2: BC 50 05  LDY ram_id_fighter,X
 C - - - - - 0x024A05 09:89F5: B9 D2 99  LDA tbl_99D2,Y
-C - - - - - 0x024A08 09:89F8: 20 90 F6  JSR sub_0x03F6A0
+C - - - - - 0x024A08 09:89F8: 20 90 F6  JSR sub_0x03F6A0_play_sound
 bra_89FB:
 C - - - - - 0x024A0B 09:89FB: A9 50     LDA #$50
 C - - - - - 0x024A0D 09:89FD: BC 10 04  LDY ram_Y_pos_hi_object,X
@@ -1467,7 +1467,7 @@ C - - - - - 0x024A5B 09:8A4B: BC 20 05  LDY ram_0520,X
 C - - - - - 0x024A5E 09:8A4E: C0 03     CPY #$03
 C - - - - - 0x024A60 09:8A50: B0 0E     BCS bra_8A60
 C - - - - - 0x024A62 09:8A52: B9 BE 8A  LDA tbl_8ABF - 1,Y
-C - - - - - 0x024A65 09:8A55: 20 94 F6  JSR sub_0x03F6A4
+C - - - - - 0x024A65 09:8A55: 20 94 F6  JSR sub_0x03F6A4_play_sound
 C - - - - - 0x024A68 09:8A58: A9 20     LDA #$20
 C - - - - - 0x024A6A 09:8A5A: 8D 30 06  STA ram_0630
 C - - - - - 0x024A6D 09:8A5D: 4C D1 89  JMP loc_89D1
@@ -1502,7 +1502,7 @@ C - - - - - 0x024AA2 09:8A92: BD 60 05  LDA ram_0560,X
 C - - - - - 0x024AA5 09:8A95: C9 30     CMP #$30
 C - - - - - 0x024AA7 09:8A97: D0 05     BNE bra_8A9E
 C - - - - - 0x024AA9 09:8A99: A9 2A     LDA #$2A
-C - - - - - 0x024AAB 09:8A9B: 20 90 F6  JSR sub_0x03F6A0
+C - - - - - 0x024AAB 09:8A9B: 20 90 F6  JSR sub_0x03F6A0_play_sound
 bra_8A9E:
 C - - - - - 0x024AAE 09:8A9E: DE 60 05  DEC ram_0560,X
 C - - - - - 0x024AB1 09:8AA1: A0 0A     LDY #$0A
@@ -1707,7 +1707,7 @@ C - - - - - 0x024BF8 09:8BE8: 60        RTS
 bra_8BE9_FE:
 C - - - - - 0x024BF9 09:8BE9: C8        INY
 C - - - - - 0x024BFA 09:8BEA: B1 00     LDA (ram_0000),Y
-C - - - - - 0x024BFC 09:8BEC: 20 94 F6  JSR sub_0x03F6A4
+C - - - - - 0x024BFC 09:8BEC: 20 94 F6  JSR sub_0x03F6A4_play_sound
 C - - - - - 0x024BFF 09:8BEF: 4C 07 8C  JMP loc_8C07
 bra_8BF2_FF:
 C - - - - - 0x024C02 09:8BF2: C8        INY
@@ -2167,7 +2167,7 @@ C - - - - - 0x024F1F 09:8F0F: A9 04     LDA #$04
 C - - - - - 0x024F21 09:8F11: 20 3C DE  JSR sub_0x03DE4C
 C - - - - - 0x024F24 09:8F14: 20 77 DE  JSR sub_0x03DE87
 C - - - - - 0x024F27 09:8F17: A9 0C     LDA #$0C
-C - - - - - 0x024F29 09:8F19: 20 94 F6  JSR sub_0x03F6A4
+C - - - - - 0x024F29 09:8F19: 20 94 F6  JSR sub_0x03F6A4_play_sound
 bra_8F1C:
 C - - - - - 0x024F2C 09:8F1C: A4 A9     LDY ram_object_index
 C - - - - - 0x024F2E 09:8F1E: B9 34 04  LDA ram_X_pos_max_object + 4,Y
@@ -2372,7 +2372,7 @@ bra_9086:
 C - - - - - 0x025096 09:9086: 90 1B     BCC bra_90A3_RTS
 C - - - - - 0x025098 09:9088: 20 03 FF  JSR sub_0x03FF13
 C - - - - - 0x02509B 09:908B: A9 1C     LDA #$1C
-C - - - - - 0x02509D 09:908D: 20 94 F6  JSR sub_0x03F6A4
+C - - - - - 0x02509D 09:908D: 20 94 F6  JSR sub_0x03F6A4_play_sound
 C - - - - - 0x0250A0 09:9090: A6 AD     LDX ram_00AD
 C - - - - - 0x0250A2 09:9092: BD 50 05  LDA ram_id_object,X
 C - - - - - 0x0250A5 09:9095: C9 04     CMP #$04
@@ -2424,7 +2424,7 @@ C - - - - - 0x0250F6 09:90E6: 10 1A     BPL bra_9102
 C - - - - - 0x0250F8 09:90E8: A9 14     LDA #$14
 C - - - - - 0x0250FA 09:90EA: 9D D0 04  STA ram_04D0,X
 C - - - - - 0x0250FD 09:90ED: A9 17     LDA #$17
-C - - - - - 0x0250FF 09:90EF: 20 94 F6  JSR sub_0x03F6A4
+C - - - - - 0x0250FF 09:90EF: 20 94 F6  JSR sub_0x03F6A4_play_sound
 C - - - - - 0x025102 09:90F2: A9 07     LDA #$07
 C - - - - - 0x025104 09:90F4: A6 A9     LDX ram_object_index
 C - - - - - 0x025106 09:90F6: 20 3C DE  JSR sub_0x03DE4C
@@ -2464,7 +2464,7 @@ C - - - - - 0x025142 09:9132: 60        RTS
 bra_9133:
 C - - - - - 0x025143 09:9133: 20 69 B0  JSR sub_B069
 C - - - - - 0x025146 09:9136: A9 1C     LDA #$1C
-C - - - - - 0x025148 09:9138: 20 94 F6  JSR sub_0x03F6A4
+C - - - - - 0x025148 09:9138: 20 94 F6  JSR sub_0x03F6A4_play_sound
 C - - - - - 0x02514B 09:913B: A9 02     LDA #$02
 C - - - - - 0x02514D 09:913D: 99 40 05  STA ram_0540,Y
 sub_9140:
@@ -2483,7 +2483,7 @@ C - - - - - 0x025168 09:9158: A6 A9     LDX ram_object_index
 C - - - - - 0x02516A 09:915A: 20 7C DE  JSR sub_0x03DE8C
 sub_915D:
 C - - - - - 0x02516D 09:915D: B9 4D 97  LDA tbl_974C + 1,Y
-C - - - - - 0x025170 09:9160: 20 94 F6  JSR sub_0x03F6A4
+C - - - - - 0x025170 09:9160: 20 94 F6  JSR sub_0x03F6A4_play_sound
 C - - - - - 0x025173 09:9163: A6 AD     LDX ram_00AD
 C - - - - - 0x025175 09:9165: FE D0 05  INC ram_05D0,X
 C - - - - - 0x025178 09:9168: 4C A4 90  JMP loc_90A4
@@ -2670,7 +2670,7 @@ C - - - - - 0x0252B2 09:92A2: 8D 30 06  STA ram_0630
 C - - - - - 0x0252B5 09:92A5: BC 40 05  LDY ram_0540,X
 bra_92A8:
 C - - - - - 0x0252B8 09:92A8: B9 71 93  LDA tbl_9371,Y
-C - - - - - 0x0252BB 09:92AB: 20 94 F6  JSR sub_0x03F6A4
+C - - - - - 0x0252BB 09:92AB: 20 94 F6  JSR sub_0x03F6A4_play_sound
 C - - - - - 0x0252BE 09:92AE: BD 40 05  LDA ram_0540,X
 C - - - - - 0x0252C1 09:92B1: C9 04     CMP #$04
 C - - - - - 0x0252C3 09:92B3: B0 16     BCS bra_92CB
@@ -5438,7 +5438,7 @@ C - - - - - 0x025EE1 09:9ED1: F0 0A     BEQ bra_9EDD
 C - - - - - 0x025EE3 09:9ED3: CD 31 05  CMP ram_0531
 C - - - - - 0x025EE6 09:9ED6: F0 05     BEQ bra_9EDD
 C - - - - - 0x025EE8 09:9ED8: A9 0A     LDA #$0A
-C - - - - - 0x025EEA 09:9EDA: 20 90 F6  JSR sub_0x03F6A0
+C - - - - - 0x025EEA 09:9EDA: 20 90 F6  JSR sub_0x03F6A0_play_sound
 bra_9EDD:
 C - - - - - 0x025EED 09:9EDD: A9 AC     LDA #$AC
 C - - - - - 0x025EEF 09:9EDF: 8D 16 04  STA ram_0416
@@ -5651,7 +5651,7 @@ C - - - - - 0x026052 09:A042: 18        CLC
 C - - - - - 0x026053 09:A043: 6D 46 04  ADC ram_0446
 C - - - - - 0x026056 09:A046: 8D 46 04  STA ram_0446
 C - - - - - 0x026059 09:A049: A9 18     LDA #$18
-C - - - - - 0x02605B 09:A04B: 4C 90 F6  JMP loc_0x03F6A0
+C - - - - - 0x02605B 09:A04B: 4C 90 F6  JMP loc_0x03F6A0_play_sound
 bra_A04E:
 C - - - - - 0x02605E 09:A04E: A0 00     LDY #$00
 C - - - - - 0x026060 09:A050: AD 16 05  LDA ram_0516
@@ -6269,7 +6269,7 @@ C - - J - - 0x0263E2 09:A3D2: A9 10     LDA #$10
 C - - - - - 0x0263E4 09:A3D4: A0 00     LDY #$00
 C - - - - - 0x0263E6 09:A3D6: 20 75 A4  JSR sub_A475
 C - - - - - 0x0263E9 09:A3D9: A9 1D     LDA #$1D
-C - - - - - 0x0263EB 09:A3DB: 20 90 F6  JSR sub_0x03F6A0
+C - - - - - 0x0263EB 09:A3DB: 20 90 F6  JSR sub_0x03F6A0_play_sound
 C - - - - - 0x0263EE 09:A3DE: A9 06     LDA #$06
 C - - - - - 0x0263F0 09:A3E0: 20 B6 8B  JSR sub_8BB6
 C - - - - - 0x0263F3 09:A3E3: 9D 60 05  STA ram_0560,X
@@ -6372,7 +6372,7 @@ C - - - - - 0x02648F 09:A47F: A9 80     LDA #$80
 C - - - - - 0x026491 09:A481: 9D 60 05  STA ram_0560,X
 C - - - - - 0x026494 09:A484: 20 C7 A4  JSR sub_A4C7
 C - - - - - 0x026497 09:A487: A9 18     LDA #$18
-C - - - - - 0x026499 09:A489: 4C 94 F6  JMP loc_0x03F6A4
+C - - - - - 0x026499 09:A489: 4C 94 F6  JMP loc_0x03F6A4_play_sound
 bra_A48C_RTS:
 C - - - - - 0x02649C 09:A48C: 60        RTS
 
@@ -6543,7 +6543,7 @@ C - - - - - 0x026567 09:A557: BD D0 04  LDA ram_04D0,X
 C - - - - - 0x02656A 09:A55A: 4A        LSR
 C - - - - - 0x02656B 09:A55B: 90 05     BCC bra_A562
 C - - - - - 0x02656D 09:A55D: A9 18     LDA #$18
-C - - - - - 0x02656F 09:A55F: 20 94 F6  JSR sub_0x03F6A4
+C - - - - - 0x02656F 09:A55F: 20 94 F6  JSR sub_0x03F6A4_play_sound
 bra_A562:
 C - - - - - 0x026572 09:A562: BD D0 04  LDA ram_04D0,X
 C - - - - - 0x026575 09:A565: 29 03     AND #$03
@@ -6554,7 +6554,7 @@ C - - - - - 0x02657D 09:A56D: B9 DE A7  LDA tbl_A7DE,Y
 C - - - - - 0x026580 09:A570: 9D B0 04  STA ram_04B0,X
 C - - - - - 0x026583 09:A573: 20 34 A5  JSR sub_A534
 C - - - - - 0x026586 09:A576: A9 06     LDA #$06
-C - - - - - 0x026588 09:A578: 4C 90 F6  JMP loc_0x03F6A0
+C - - - - - 0x026588 09:A578: 4C 90 F6  JMP loc_0x03F6A0_play_sound
 bra_A57B:
 C - - - - - 0x02658B 09:A57B: 4C 66 A3  JMP loc_A366
 
@@ -6617,7 +6617,7 @@ C - - - - - 0x0265D9 09:A5C9: 9D 60 05  STA ram_0560,X
 C - - - - - 0x0265DC 09:A5CC: A9 C0     LDA #$C0
 C - - - - - 0x0265DE 09:A5CE: 9D 80 05  STA ram_0580,X
 C - - - - - 0x0265E1 09:A5D1: A9 1B     LDA #$1B
-C - - - - - 0x0265E3 09:A5D3: 20 90 F6  JSR sub_0x03F6A0
+C - - - - - 0x0265E3 09:A5D3: 20 90 F6  JSR sub_0x03F6A0_play_sound
 C - - - - - 0x0265E6 09:A5D6: 4C 13 A3  JMP loc_A313
 
 
@@ -6746,7 +6746,7 @@ C - - - - - 0x0266B7 09:A6A7: A5 22     LDA ram_frame_counter
 C - - - - - 0x0266B9 09:A6A9: 29 07     AND #$07
 C - - - - - 0x0266BB 09:A6AB: D0 B7     BNE bra_A664_RTS
 C - - - - - 0x0266BD 09:A6AD: A9 1A     LDA #$1A
-C - - - - - 0x0266BF 09:A6AF: 4C 94 F6  JMP loc_0x03F6A4
+C - - - - - 0x0266BF 09:A6AF: 4C 94 F6  JMP loc_0x03F6A4_play_sound
 
 
 
@@ -7269,7 +7269,7 @@ C - - - - - 0x026917 09:A907: A9 C0     LDA #$C0
 C - - - - - 0x026919 09:A909: 9D 80 05  STA ram_0580,X
 C - - - - - 0x02691C 09:A90C: 20 7D D1  JSR sub_0x03D18D
 C - - - - - 0x02691F 09:A90F: A9 20     LDA #$20
-C - - - - - 0x026921 09:A911: 20 90 F6  JSR sub_0x03F6A0
+C - - - - - 0x026921 09:A911: 20 90 F6  JSR sub_0x03F6A0_play_sound
 C - - - - - 0x026924 09:A914: A9 38     LDA #$38
 C - - - - - 0x026926 09:A916: 9D 10 04  STA ram_Y_pos_hi_object,X
 C - - - - - 0x026929 09:A919: D0 D0     BNE bra_A8EB
@@ -7572,7 +7572,7 @@ C - - - - - 0x026B3B 09:AB2B: B0 1B     BCS bra_AB48
 C - - - - - 0x026B3D 09:AB2D: 20 0E AC  JSR sub_AC0E
 C - - - - - 0x026B40 09:AB30: A9 08     LDA #$08
 C - - - - - 0x026B42 09:AB32: 99 E0 04  STA ram_04E0,Y
-C - - - - - 0x026B45 09:AB35: 20 94 F6  JSR sub_0x03F6A4
+C - - - - - 0x026B45 09:AB35: 20 94 F6  JSR sub_0x03F6A4_play_sound
 C - - - - - 0x026B48 09:AB38: 20 E3 AC  JSR sub_ACE3
 C - - - - - 0x026B4B 09:AB3B: A9 03     LDA #$03
 C - - - - - 0x026B4D 09:AB3D: 4C F8 AB  JMP loc_ABF8
@@ -7702,14 +7702,14 @@ C - - - - - 0x026C2C 09:AC1C: 60        RTS
 
 
 sub_AC1D:
-C - - - - - 0x026C2D 09:AC1D: 20 94 F6  JSR sub_0x03F6A4
+C - - - - - 0x026C2D 09:AC1D: 20 94 F6  JSR sub_0x03F6A4_play_sound
 C - - - - - 0x026C30 09:AC20: A9 80     LDA #$80
 C - - - - - 0x026C32 09:AC22: D0 05     BNE bra_AC29
 
 
 
 sub_AC24:
-C - - - - - 0x026C34 09:AC24: 20 94 F6  JSR sub_0x03F6A4
+C - - - - - 0x026C34 09:AC24: 20 94 F6  JSR sub_0x03F6A4_play_sound
 C - - - - - 0x026C37 09:AC27: A9 00     LDA #$00
 bra_AC29:
 C - - - - - 0x026C39 09:AC29: 85 10     STA ram_0010
@@ -7781,7 +7781,7 @@ bra_ACAA:
 C - - - - - 0x026CBA 09:ACAA: 68        PLA
 C - - - - - 0x026CBB 09:ACAB: 68        PLA
 C - - - - - 0x026CBC 09:ACAC: A9 11     LDA #$11
-C - - - - - 0x026CBE 09:ACAE: 20 94 F6  JSR sub_0x03F6A4
+C - - - - - 0x026CBE 09:ACAE: 20 94 F6  JSR sub_0x03F6A4_play_sound
 C - - - - - 0x026CC1 09:ACB1: A6 AC     LDX ram_00AC
 C - - - - - 0x026CC3 09:ACB3: A9 00     LDA #$00
 C - - - - - 0x026CC5 09:ACB5: 9D 2C 06  STA ram_knockout_hits,X
@@ -7804,7 +7804,7 @@ C - - - - - 0x026CE8 09:ACD8: 8A        TXA
 C - - - - - 0x026CE9 09:ACD9: 49 01     EOR #$01
 C - - - - - 0x026CEB 09:ACDB: 8D 71 06  STA ram_0671
 C - - - - - 0x026CEE 09:ACDE: A9 23     LDA #$23
-C - - - - - 0x026CF0 09:ACE0: 4C 8B F6  JMP loc_0x03F69B
+C - - - - - 0x026CF0 09:ACE0: 4C 8B F6  JMP loc_0x03F69B_play_sound
 
 
 
@@ -9230,7 +9230,7 @@ C - - - - - 0x0273A6 09:B396: 9D C0 04  STA ram_04C0,X
 C - - - - - 0x0273A9 09:B399: A9 20     LDA #$20
 C - - - - - 0x0273AB 09:B39B: 9D 80 05  STA ram_0580,X
 C - - - - - 0x0273AE 09:B39E: A9 54     LDA #$54
-C - - - - - 0x0273B0 09:B3A0: 20 94 F6  JSR sub_0x03F6A4
+C - - - - - 0x0273B0 09:B3A0: 20 94 F6  JSR sub_0x03F6A4_play_sound
 loc_B3A3:
 C D 1 - - - 0x0273B3 09:B3A3: A9 04     LDA #$04
 C - - - - - 0x0273B5 09:B3A5: 4C 38 DF  JMP loc_0x03DF48
@@ -9261,7 +9261,7 @@ C - - - - - 0x0273D4 09:B3C4: 60        RTS
 sub_B3C5:
 C - - - - - 0x0273D5 09:B3C5: 48        PHA
 C - - - - - 0x0273D6 09:B3C6: A9 16     LDA #$16
-C - - - - - 0x0273D8 09:B3C8: 20 90 F6  JSR sub_0x03F6A0
+C - - - - - 0x0273D8 09:B3C8: 20 90 F6  JSR sub_0x03F6A0_play_sound
 C - - - - - 0x0273DB 09:B3CB: 68        PLA
 sub_B3CC:
 C - - - - - 0x0273DC 09:B3CC: 48        PHA
@@ -9450,7 +9450,7 @@ C - - - - - 0x0274E6 09:B4D6: DE D0 05  DEC ram_05D0,X
 C - - - - - 0x0274E9 09:B4D9: 30 13     BMI bra_B4EE
 C - - - - - 0x0274EB 09:B4DB: D0 05     BNE bra_B4E2
 C - - - - - 0x0274ED 09:B4DD: A9 54     LDA #$54
-C - - - - - 0x0274EF 09:B4DF: 20 94 F6  JSR sub_0x03F6A4
+C - - - - - 0x0274EF 09:B4DF: 20 94 F6  JSR sub_0x03F6A4_play_sound
 bra_B4E2:
 C - - - - - 0x0274F2 09:B4E2: A9 99     LDA #$99
 C - - - - - 0x0274F4 09:B4E4: BC D0 05  LDY ram_05D0,X
@@ -9473,7 +9473,7 @@ C - - - - - 0x027514 09:B504: 9D A0 04  STA ram_04A0,X
 C - - - - - 0x027517 09:B507: A9 98     LDA #$98
 C - - - - - 0x027519 09:B509: 9D 10 04  STA ram_Y_pos_hi_object,X
 C - - - - - 0x02751C 09:B50C: A9 0B     LDA #$0B
-C - - - - - 0x02751E 09:B50E: 20 90 F6  JSR sub_0x03F6A0
+C - - - - - 0x02751E 09:B50E: 20 90 F6  JSR sub_0x03F6A0_play_sound
 ofs_B511_02:
 C - - - - - 0x027521 09:B511: A0 03     LDY #$03
 C - - - - - 0x027523 09:B513: 20 7C D0  JSR sub_0x03D08C
@@ -9575,7 +9575,7 @@ C - - - - - 0x0275D2 09:B5C2: A9 00     LDA #$00
 bra_B5C4:
 C - - - - - 0x0275D4 09:B5C4: 9D E0 04  STA ram_04E0,X
 C - - - - - 0x0275D7 09:B5C7: A9 54     LDA #$54
-C - - - - - 0x0275D9 09:B5C9: 20 94 F6  JSR sub_0x03F6A4
+C - - - - - 0x0275D9 09:B5C9: 20 94 F6  JSR sub_0x03F6A4_play_sound
 sub_B5CC:
 C - - - - - 0x0275DC 09:B5CC: 20 F9 BF  JSR sub_BFF9
 C - - - - - 0x0275DF 09:B5CF: 4C AA B8  JMP loc_B8AA
@@ -9723,7 +9723,7 @@ C - - - - - 0x0276DB 09:B6CB: FE 40 05  INC ram_0540,X
 C - - - - - 0x0276DE 09:B6CE: 1E 80 05  ASL ram_0580,X
 C - - - - - 0x0276E1 09:B6D1: 5E 80 05  LSR ram_0580,X
 C - - - - - 0x0276E4 09:B6D4: A9 54     LDA #$54
-C - - - - - 0x0276E6 09:B6D6: 4C 94 F6  JMP loc_0x03F6A4
+C - - - - - 0x0276E6 09:B6D6: 4C 94 F6  JMP loc_0x03F6A4_play_sound
 
 
 
@@ -9889,7 +9889,7 @@ C - - - - - 0x0277FF 09:B7EF: DE D0 05  DEC ram_05D0,X
 C - - - - - 0x027802 09:B7F2: 30 1D     BMI bra_B811
 C - - - - - 0x027804 09:B7F4: D0 05     BNE bra_B7FB
 C - - - - - 0x027806 09:B7F6: A9 57     LDA #$57
-C - - - - - 0x027808 09:B7F8: 20 94 F6  JSR sub_0x03F6A4
+C - - - - - 0x027808 09:B7F8: 20 94 F6  JSR sub_0x03F6A4_play_sound
 bra_B7FB:
 C - - - - - 0x02780B 09:B7FB: BC D0 05  LDY ram_05D0,X
 C - - - - - 0x02780E 09:B7FE: B9 88 BA  LDA tbl_BA88,Y
@@ -9928,7 +9928,7 @@ C - - - - - 0x027846 09:B836: 20 67 D0  JSR sub_0x03D077
 C - - - - - 0x027849 09:B839: A9 08     LDA #$08
 C - - - - - 0x02784B 09:B83B: 9D B0 04  STA ram_04B0,X
 C - - - - - 0x02784E 09:B83E: A9 56     LDA #$56
-C - - - - - 0x027850 09:B840: 20 94 F6  JSR sub_0x03F6A4
+C - - - - - 0x027850 09:B840: 20 94 F6  JSR sub_0x03F6A4_play_sound
 C - - - - - 0x027853 09:B843: FE 40 05  INC ram_0540,X
 C - - - - - 0x027856 09:B846: D0 1C     BNE bra_B864
 
@@ -9978,7 +9978,7 @@ C - - - - - 0x0278A8 09:B898: 20 D6 DC  JSR sub_0x03DCE6
 C - - - - - 0x0278AB 09:B89B: A9 37     LDA #$37
 C - - - - - 0x0278AD 09:B89D: 20 CC B3  JSR sub_B3CC
 C - - - - - 0x0278B0 09:B8A0: A9 56     LDA #$56
-C - - - - - 0x0278B2 09:B8A2: 4C 90 F6  JMP loc_0x03F6A0
+C - - - - - 0x0278B2 09:B8A2: 4C 90 F6  JMP loc_0x03F6A0_play_sound
 bra_B8A5:
 C - - - - - 0x0278B5 09:B8A5: FE 40 05  INC ram_0540,X
 C - - - - - 0x0278B8 09:B8A8: A9 0C     LDA #$0C
@@ -10061,7 +10061,7 @@ C D 1 - - - 0x027935 09:B925: BC 40 05  LDY ram_0540,X
 C - - - - - 0x027938 09:B928: D0 0F     BNE bra_B939
 C - - - - - 0x02793A 09:B92A: FE 40 05  INC ram_0540,X
 C - - - - - 0x02793D 09:B92D: A9 58     LDA #$58
-C - - - - - 0x02793F 09:B92F: 20 94 F6  JSR sub_0x03F6A4
+C - - - - - 0x02793F 09:B92F: 20 94 F6  JSR sub_0x03F6A4_play_sound
 C - - - - - 0x027942 09:B932: A9 05     LDA #$05
 C - - - - - 0x027944 09:B934: 9D D0 05  STA ram_05D0,X
 C - - - - - 0x027947 09:B937: D0 0A     BNE bra_B943
@@ -10121,7 +10121,7 @@ C - - J - - 0x027999 09:B989: DE 60 05  DEC ram_0560,X
 C - - - - - 0x02799C 09:B98C: D0 FA     BNE bra_B988_RTS
 C - - - - - 0x02799E 09:B98E: FE 40 05  INC ram_0540,X
 C - - - - - 0x0279A1 09:B991: A9 56     LDA #$56
-C - - - - - 0x0279A3 09:B993: 20 94 F6  JSR sub_0x03F6A4
+C - - - - - 0x0279A3 09:B993: 20 94 F6  JSR sub_0x03F6A4_play_sound
 C - - - - - 0x0279A6 09:B996: A9 F9     LDA #$F9
 C - - - - - 0x0279A8 09:B998: AC 26 01  LDY ram_option_speed
 C - - - - - 0x0279AB 09:B99B: F0 02     BEQ bra_B99F
@@ -10721,7 +10721,7 @@ C - - - - - 0x027D07 09:BCF7: A9 1F     LDA #$1F
 C - - - - - 0x027D09 09:BCF9: A9 10     LDA #$10
 C - - - - - 0x027D0B 09:BCFB: 9D F0 05  STA ram_05F0,X
 C - - - - - 0x027D0E 09:BCFE: A9 12     LDA #$12
-C - - - - - 0x027D10 09:BD00: 20 94 F6  JSR sub_0x03F6A4
+C - - - - - 0x027D10 09:BD00: 20 94 F6  JSR sub_0x03F6A4_play_sound
 C - - - - - 0x027D13 09:BD03: 20 1D BD  JSR sub_BD1D
 C - - - - - 0x027D16 09:BD06: BD 90 05  LDA ram_hp_lo,X
 C - - - - - 0x027D19 09:BD09: 38        SEC
@@ -10902,7 +10902,7 @@ C - - - - - 0x027E55 09:BE45: 60        RTS
 
 ofs_BE46_02:
 C - - J - - 0x027E56 09:BE46: A9 14     LDA #$14
-C - - - - - 0x027E58 09:BE48: 20 90 F6  JSR sub_0x03F6A0
+C - - - - - 0x027E58 09:BE48: 20 90 F6  JSR sub_0x03F6A0_play_sound
 C - - - - - 0x027E5B 09:BE4B: 20 C3 BE  JSR sub_BEC3
 C - - - - - 0x027E5E 09:BE4E: A9 04     LDA #$04
 C - - - - - 0x027E60 09:BE50: 85 00     STA ram_0000
@@ -10949,7 +10949,7 @@ C - - - - - 0x027EB7 09:BEA7: 8C 41 04  STY ram_X_pos_hi_object + 1
 C - - - - - 0x027EBA 09:BEAA: A9 05     LDA #$05
 C - - - - - 0x027EBC 09:BEAC: 8D 21 05  STA ram_0521
 C - - - - - 0x027EBF 09:BEAF: A9 1D     LDA #$1D
-C - - - - - 0x027EC1 09:BEB1: 4C 8B F6  JMP loc_0x03F69B
+C - - - - - 0x027EC1 09:BEB1: 4C 8B F6  JMP loc_0x03F69B_play_sound
 
 
 

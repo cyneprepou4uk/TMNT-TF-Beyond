@@ -3,7 +3,7 @@
 .include "copy_bank_val.inc"
 ; 0x02C010-0x03000F
 
-    .byte con_bank_id + $16   ; (!) байт должен находиться по адресу 8000, чтение из 0x03F67D
+    .byte con_bank_id + $0B * 2   ; (!) байт должен находиться по адресу 8000, чтение из 0x03F67D
 
 
 
@@ -67,7 +67,7 @@ C - - - - - 0x02C13F 0B:812F: 20 4F 81  JSR sub_814F
 C - - - - - 0x02C142 0B:8132: C6 08     DEC ram_0008
 C - - - - - 0x02C144 0B:8134: 10 F7     BPL bra_812D
 C - - - - - 0x02C146 0B:8136: A9 37     LDA #$37
-C - - - - - 0x02C148 0B:8138: 20 90 F6  JSR sub_0x03F6A0
+C - - - - - 0x02C148 0B:8138: 20 90 F6  JSR sub_0x03F6A0_play_sound
 C - - - - - 0x02C14B 0B:813B: A2 00     LDX #$00
 C - - - - - 0x02C14D 0B:813D: 20 2F 82  JSR sub_822F
 C - - - - - 0x02C150 0B:8140: A5 2C     LDA ram_002C
@@ -222,7 +222,7 @@ C - - - - - 0x02C232 0B:8222: A9 00     LDA #$00
 C - - - - - 0x02C234 0B:8224: 9D D0 05  STA ram_05D0,X
 C - - - - - 0x02C237 0B:8227: 9D C0 05  STA ram_05C0,X
 C - - - - - 0x02C23A 0B:822A: A9 25     LDA #$25
-C - - - - - 0x02C23C 0B:822C: 20 90 F6  JSR sub_0x03F6A0
+C - - - - - 0x02C23C 0B:822C: 20 90 F6  JSR sub_0x03F6A0_play_sound
 sub_822F:
 loc_822F:
 C D 0 - - - 0x02C23F 0B:822F: B4 A2     LDY ram_option_fighter,X
@@ -265,7 +265,7 @@ C - - - - - 0x02C282 0B:8272: A9 3C     LDA #$3C
 C - - - - - 0x02C284 0B:8274: 9D A0 04  STA ram_04A0,X
 C - - - - - 0x02C287 0B:8277: B4 A2     LDY ram_option_fighter,X
 C - - - - - 0x02C289 0B:8279: B9 5E E1  LDA tbl_0x03E16E,Y
-C - - - - - 0x02C28C 0B:827C: 4C 90 F6  JMP loc_0x03F6A0
+C - - - - - 0x02C28C 0B:827C: 4C 90 F6  JMP loc_0x03F6A0_play_sound
 
 
 
@@ -10798,7 +10798,7 @@ C - - - - - 0x02FDEE 0B:BDDE: 8D 00 04  STA ram_anim_object
 C - - - - - 0x02FDF1 0B:BDE1: B9 7D BD  LDA tbl_BD7D,Y
 C - - - - - 0x02FDF4 0B:BDE4: 8D 01 04  STA ram_anim_object + 1
 C - - - - - 0x02FDF7 0B:BDE7: A9 27     LDA #$27
-C - - - - - 0x02FDF9 0B:BDE9: 20 90 F6  JSR sub_0x03F6A0
+C - - - - - 0x02FDF9 0B:BDE9: 20 90 F6  JSR sub_0x03F6A0_play_sound
 bra_BDEC:
 C - - - - - 0x02FDFC 0B:BDEC: AD 4E 01  LDA ram_014E
 C - - - - - 0x02FDFF 0B:BDEF: F0 03     BEQ bra_BDF4
@@ -10844,7 +10844,7 @@ C - - - - - 0x02FE8E 0B:BE7E: F0 0A     BEQ bra_BE8A_RTS
 C - - - - - 0x02FE90 0B:BE80: A9 FE     LDA #$FE
 C - - - - - 0x02FE92 0B:BE82: 9D 44 01  STA ram_0144,X
 C - - - - - 0x02FE95 0B:BE85: A9 0A     LDA #$0A
-C - - - - - 0x02FE97 0B:BE87: 4C 90 F6  JMP loc_0x03F6A0
+C - - - - - 0x02FE97 0B:BE87: 4C 90 F6  JMP loc_0x03F6A0_play_sound
 bra_BE8A_RTS:
 C - - - - - 0x02FE9A 0B:BE8A: 60        RTS
 

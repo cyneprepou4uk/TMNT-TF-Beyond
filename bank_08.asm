@@ -4,7 +4,7 @@
 ; 0x020010-0x02400F
 ; звуковой движок
 
-    .byte con_bank_id + $10   ; (!) байт должен находиться по адресу 8000, чтение из 0x03F67D
+    .byte con_bank_id + $08 * 2   ; (!) байт должен находиться по адресу 8000, чтение из 0x03F67D
 
 
 
@@ -986,7 +986,7 @@ C - - - - - 0x020675 08:8665: AA        TAX
 C - - - - - 0x020676 08:8666: BD 7C 86  LDA tbl_867C,X
 C - - - - - 0x020679 08:8669: C9 47     CMP #$47
 C - - - - - 0x02067B 08:866B: B0 06     BCS bra_8673
-C - - - - - 0x02067D 08:866D: 20 8D 8E  JSR sub_8E8D
+C - - - - - 0x02067D 08:866D: 20 8D 8E  JSR sub_8E8D_sound_driver
 C - - - - - 0x020680 08:8670: 4C 76 86  JMP loc_8676
 bra_8673:
 C - - - - - 0x020683 08:8673: 20 88 86  JSR sub_8688
@@ -2291,16 +2291,16 @@ tbl_8E88:
 
 
 
-sub_8E8D:
-.export sub_0x020E9D_play_music
-sub_0x020E9D_play_music:
+sub_8E8D_sound_driver:
+.export sub_0x020E9D_sound_driver
+sub_0x020E9D_sound_driver:
 C - - - - - 0x020E9D 08:8E8D: 86 E4     STX ram_00E4
 C - - - - - 0x020E9F 08:8E8F: 84 E5     STY ram_00E5
 C - - - - - 0x020EA1 08:8E91: A0 00     LDY #$00
 C - - - - - 0x020EA3 08:8E93: 8C 77 07  STY ram_0777
 C - - - - - 0x020EA6 08:8E96: 8D 5C 07  STA ram_music_id
 C - - - - - 0x020EA9 08:8E99: C9 2E     CMP #$2E
-C - - - - - 0x020EAB 08:8E9B: 90 03     BCC bra_8EA0_2D_or_less
+C - - - - - 0x020EAB 08:8E9B: 90 03     BCC bra_8EA0_2D_or_less     ; это музыка, а не звук
 C - - - - - 0x020EAD 08:8E9D: 4C F6 8F  JMP loc_8FF6_2E_or_higher
 bra_8EA0_2D_or_less:
 C - - - - - 0x020EB0 08:8EA0: 0A        ASL
