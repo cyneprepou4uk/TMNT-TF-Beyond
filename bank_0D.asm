@@ -49,7 +49,7 @@ C D 0 - - - 0x034069 0D:8059: 95 8E     STA ram_008E,X
 loc_805B:
 C D 0 - - - 0x03406B 0D:805B: 95 91     STA ram_0091,X
 C - - - - - 0x03406D 0D:805D: BD CA 06  LDA ram_06CA,X
-C - - - - - 0x034070 0D:8060: 20 32 D0  JSR sub_0x03D042
+C - - - - - 0x034070 0D:8060: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x034073 0D:8063: 69 80     .word ofs_8069_00
 - D 0 - I - 0x034075 0D:8065: 74 81     .word ofs_8174_01
 - D 0 - I - 0x034077 0D:8067: 16 81     .word ofs_8116_02
@@ -221,7 +221,7 @@ C - - - - - 0x0341A1 0D:8191: D0 E7     BNE bra_817A
 
 sub_8193:
 C - - - - - 0x0341A3 0D:8193: BD 50 05  LDA ram_0550,X
-C - - - - - 0x0341A6 0D:8196: 20 32 D0  JSR sub_0x03D042
+C - - - - - 0x0341A6 0D:8196: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x0341A9 0D:8199: 11 9C     .word ofs_9C11_00
 - D 0 - I - 0x0341AB 0D:819B: F6 9C     .word ofs_9CF6_01
 - D 0 - I - 0x0341AD 0D:819D: 1C 9D     .word ofs_9D1C_02
@@ -234,7 +234,7 @@ C - - - - - 0x0341A6 0D:8196: 20 32 D0  JSR sub_0x03D042
 
 sub_81A7:
 C - - - - - 0x0341B7 0D:81A7: BD 50 05  LDA ram_0550,X
-C - - - - - 0x0341BA 0D:81AA: 20 32 D0  JSR sub_0x03D042
+C - - - - - 0x0341BA 0D:81AA: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x0341BD 0D:81AD: EB 8D     .word ofs_8DEB_00
 - D 0 - I - 0x0341BF 0D:81AF: BC 90     .word ofs_90BC_01
 - D 0 - I - 0x0341C1 0D:81B1: BD 93     .word ofs_93BD_02
@@ -280,7 +280,7 @@ C - - - - - 0x03420C 0D:81FC: F0 01     BEQ bra_81FF
 C - - - - - 0x03420E 0D:81FE: 60        RTS
 bra_81FF:
 C - - - - - 0x03420F 0D:81FF: BD D2 06  LDA ram_06D2,X
-C - - - - - 0x034212 0D:8202: 20 32 D0  JSR sub_0x03D042
+C - - - - - 0x034212 0D:8202: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x034215 0D:8205: 43 82     .word ofs_8243_00
 - D 0 - I - 0x034217 0D:8207: 0D 82     .word ofs_820D_01
 - D 0 - I - 0x034219 0D:8209: 28 82     .word ofs_8228_02
@@ -679,7 +679,7 @@ C - - - - - 0x0344B5 0D:84A5: 85 0F     STA ram_000F
 C - - - - - 0x0344B7 0D:84A7: AD D7 06  LDA ram_06D7
 C - - - - - 0x0344BA 0D:84AA: 85 0E     STA ram_000E
 C - - - - - 0x0344BC 0D:84AC: BD D4 06  LDA ram_06D4,X
-C - - - - - 0x0344BF 0D:84AF: 20 32 D0  JSR sub_0x03D042
+C - - - - - 0x0344BF 0D:84AF: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x0344C2 0D:84B2: 6F 89     .word ofs_896F_00
 - D 0 - I - 0x0344C4 0D:84B4: 2A 8A     .word ofs_8A2A_01
 - D 0 - I - 0x0344C6 0D:84B6: 3C 8A     .word ofs_8A3C_02
@@ -867,7 +867,7 @@ C - - - - - 0x034617 0D:8607: 4C 0E 8A  JMP loc_8A0E
 
 ofs_860A_15:
 C - - J - - 0x03461A 0D:860A: BD DA 06  LDA ram_06DA,X
-C - - - - - 0x03461D 0D:860D: 20 32 D0  JSR sub_0x03D042
+C - - - - - 0x03461D 0D:860D: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x034620 0D:8610: 08 87     .word ofs_8708_00
 - D 0 - I - 0x034622 0D:8612: D8 86     .word ofs_86D8_01
 - D 0 - I - 0x034624 0D:8614: CB 86     .word ofs_86CB_02
@@ -1258,7 +1258,7 @@ C - - J - - 0x0348B2 0D:88A2: BD 20 05  LDA ram_0520,X
 C - - - - - 0x0348B5 0D:88A5: C9 03     CMP #$03
 C - - - - - 0x0348B7 0D:88A7: F0 1E     BEQ bra_88C7
 C - - - - - 0x0348B9 0D:88A9: BD DA 06  LDA ram_06DA,X
-C - - - - - 0x0348BC 0D:88AC: 20 32 D0  JSR sub_0x03D042
+C - - - - - 0x0348BC 0D:88AC: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x0348BF 0D:88AF: B5 88     .word ofs_88B5_00
 - D 0 - I - 0x0348C1 0D:88B1: CA 88     .word ofs_88CA_01
 - D 0 - I - 0x0348C3 0D:88B3: E0 88     .word ofs_88E0_02
@@ -1345,7 +1345,7 @@ C - - - - - 0x034942 0D:8932: F0 93     BEQ bra_88C7
 C - - - - - 0x034944 0D:8934: BD DA 06  LDA ram_06DA,X
 C - - - - - 0x034947 0D:8937: C9 04     CMP #$04
 C - - - - - 0x034949 0D:8939: B0 0B     BCS bra_8946
-C - - - - - 0x03494B 0D:893B: 20 32 D0  JSR sub_0x03D042
+C - - - - - 0x03494B 0D:893B: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x03494E 0D:893E: B5 88     .word ofs_88B5_00
 - D 0 - I - 0x034950 0D:8940: CA 88     .word ofs_88CA_01
 - D 0 - I - 0x034952 0D:8942: 4D 89     .word ofs_894D_02
@@ -2560,7 +2560,7 @@ C - - - - - 0x034E08 0D:8DF8: A9 20     LDA #$20
 C - - - - - 0x034E0A 0D:8DFA: 60        RTS
 bra_8DFB:
 C - - - - - 0x034E0B 0D:8DFB: A5 13     LDA ram_0013
-C - - - - - 0x034E0D 0D:8DFD: 20 32 D0  JSR sub_0x03D042
+C - - - - - 0x034E0D 0D:8DFD: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x034E10 0D:8E00: 17 8E     .word ofs_8E17_00
 - D 0 - I - 0x034E12 0D:8E02: C4 8E     .word ofs_8EC4_01
 - D 0 - I - 0x034E14 0D:8E04: 94 8F     .word ofs_8F94_02
@@ -3003,7 +3003,7 @@ tbl_90B4:
 
 ofs_90BC_01:
 C - - J - - 0x0350CC 0D:90BC: A5 13     LDA ram_0013
-C - - - - - 0x0350CE 0D:90BE: 20 32 D0  JSR sub_0x03D042
+C - - - - - 0x0350CE 0D:90BE: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x0350D1 0D:90C1: C9 90     .word ofs_90C9_00
 - D 0 - I - 0x0350D3 0D:90C3: 34 91     .word ofs_9134_01
 - D 0 - I - 0x0350D5 0D:90C5: AB 91     .word ofs_91AB_02
@@ -3337,7 +3337,7 @@ tbl_929C:
 
 ofs_92A4_03:
 C - - J - - 0x0352B4 0D:92A4: A5 13     LDA ram_0013
-C - - - - - 0x0352B6 0D:92A6: 20 32 D0  JSR sub_0x03D042
+C - - - - - 0x0352B6 0D:92A6: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x0352B9 0D:92A9: B1 92     .word ofs_92B1_00
 - D 0 - I - 0x0352BB 0D:92AB: 0D 93     .word ofs_930D_01
 - D 0 - I - 0x0352BD 0D:92AD: 6F 93     .word ofs_936F_02
@@ -3544,7 +3544,7 @@ tbl_93B5:
 
 ofs_93BD_02:
 C - - J - - 0x0353CD 0D:93BD: A5 13     LDA ram_0013
-C - - - - - 0x0353CF 0D:93BF: 20 32 D0  JSR sub_0x03D042
+C - - - - - 0x0353CF 0D:93BF: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x0353D2 0D:93C2: CA 93     .word ofs_93CA_00
 - D 0 - I - 0x0353D4 0D:93C4: 41 94     .word ofs_9441_01
 - D 0 - I - 0x0353D6 0D:93C6: 1E 95     .word ofs_951E_02
@@ -3870,7 +3870,7 @@ C - - - - - 0x0355B4 0D:95A4: A9 3A     LDA #$3A
 C - - - - - 0x0355B6 0D:95A6: 60        RTS
 bra_95A7:
 C - - - - - 0x0355B7 0D:95A7: A5 13     LDA ram_0013
-C - - - - - 0x0355B9 0D:95A9: 20 32 D0  JSR sub_0x03D042
+C - - - - - 0x0355B9 0D:95A9: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x0355BC 0D:95AC: B4 95     .word ofs_95B4_00
 - D 0 - I - 0x0355BE 0D:95AE: 6F 96     .word ofs_966F_01
 - D 0 - I - 0x0355C0 0D:95B0: A6 97     .word ofs_97A6_02
@@ -4295,7 +4295,7 @@ C - - - - - 0x035884 0D:9874: A9 23     LDA #$23
 C - - - - - 0x035886 0D:9876: 60        RTS
 bra_9877:
 C - - - - - 0x035887 0D:9877: A5 13     LDA ram_0013
-C - - - - - 0x035889 0D:9879: 20 32 D0  JSR sub_0x03D042
+C - - - - - 0x035889 0D:9879: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x03588C 0D:987C: 84 98     .word ofs_9884_00
 - D 0 - I - 0x03588E 0D:987E: E8 98     .word ofs_98E8_01
 - D 0 - I - 0x035890 0D:9880: 5D 99     .word ofs_995D_02
@@ -4540,7 +4540,7 @@ C - - - - - 0x0359F4 0D:99E4: D0 03     BNE bra_99E9
 C - - - - - 0x0359F6 0D:99E6: 4C E2 9A  JMP loc_9AE2
 bra_99E9:
 C - - - - - 0x0359F9 0D:99E9: A5 13     LDA ram_0013
-C - - - - - 0x0359FB 0D:99EB: 20 32 D0  JSR sub_0x03D042
+C - - - - - 0x0359FB 0D:99EB: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x0359FE 0D:99EE: F6 99     .word ofs_99F6_00
 - D 0 - I - 0x035A00 0D:99F0: 88 9A     .word ofs_9A88_01
 - D 0 - I - 0x035A02 0D:99F2: 61 9B     .word ofs_9B61_02
@@ -4902,7 +4902,7 @@ C - - - - - 0x035C2A 0D:9C1A: 60        RTS
 bra_9C1B:
 C - - - - - 0x035C2B 0D:9C1B: BC DE 06  LDY ram_06DE,X
 C - - - - - 0x035C2E 0D:9C1E: B9 50 05  LDA ram_0550,Y
-C - - - - - 0x035C31 0D:9C21: 20 32 D0  JSR sub_0x03D042
+C - - - - - 0x035C31 0D:9C21: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x035C34 0D:9C24: 32 9C     .word ofs_9C32_00
 - D 0 - I - 0x035C36 0D:9C26: 75 9C     .word ofs_9C75_01
 - D 0 - I - 0x035C38 0D:9C28: B2 9C     .word _common_RTS   ; 02
@@ -5065,7 +5065,7 @@ C - - - - - 0x035D0F 0D:9CFF: 60        RTS
 bra_9D00:
 C - - - - - 0x035D10 0D:9D00: BC DE 06  LDY ram_06DE,X
 C - - - - - 0x035D13 0D:9D03: B9 50 05  LDA ram_0550,Y
-C - - - - - 0x035D16 0D:9D06: 20 32 D0  JSR sub_0x03D042
+C - - - - - 0x035D16 0D:9D06: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x035D19 0D:9D09: 32 9C     .word ofs_9C32_00
 - D 0 - I - 0x035D1B 0D:9D0B: 75 9C     .word ofs_9C75_01
 - D 0 - I - 0x035D1D 0D:9D0D: 17 9D     .word _common_RTS   ; 02
@@ -5085,7 +5085,7 @@ C - - - - - 0x035D35 0D:9D25: 60        RTS
 bra_9D26:
 C - - - - - 0x035D36 0D:9D26: BC DE 06  LDY ram_06DE,X
 C - - - - - 0x035D39 0D:9D29: B9 50 05  LDA ram_0550,Y
-C - - - - - 0x035D3C 0D:9D2C: 20 32 D0  JSR sub_0x03D042
+C - - - - - 0x035D3C 0D:9D2C: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x035D3F 0D:9D2F: 3D 9D     .word ofs_9D3D_00
 - D 0 - I - 0x035D41 0D:9D31: 75 9C     .word ofs_9C75_01
 - D 0 - I - 0x035D43 0D:9D33: 5F 9D     .word _common_RTS   ; 02
@@ -5143,7 +5143,7 @@ C - - - - - 0x035DA2 0D:9D92: 60        RTS
 bra_9D93:
 C - - - - - 0x035DA3 0D:9D93: BC DE 06  LDY ram_06DE,X
 C - - - - - 0x035DA6 0D:9D96: B9 50 05  LDA ram_0550,Y
-C - - - - - 0x035DA9 0D:9D99: 20 32 D0  JSR sub_0x03D042
+C - - - - - 0x035DA9 0D:9D99: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x035DAC 0D:9D9C: 32 9C     .word ofs_9C32_00
 - D 0 - I - 0x035DAE 0D:9D9E: 75 9C     .word ofs_9C75_01
 - D 0 - I - 0x035DB0 0D:9DA0: AA 9D     .word _common_RTS   ; 02
@@ -5177,7 +5177,7 @@ C - - - - - 0x035DE5 0D:9DD5: 4C 31 9E  JMP loc_9E31
 bra_9DD8:
 C - - - - - 0x035DE8 0D:9DD8: BC DE 06  LDY ram_06DE,X
 C - - - - - 0x035DEB 0D:9DDB: B9 50 05  LDA ram_0550,Y
-C - - - - - 0x035DEE 0D:9DDE: 20 32 D0  JSR sub_0x03D042
+C - - - - - 0x035DEE 0D:9DDE: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x035DF1 0D:9DE1: EF 9D     .word ofs_9DEF_00
 - D 0 - I - 0x035DF3 0D:9DE3: 36 9E     .word ofs_9E36_01
 - D 0 - I - 0x035DF5 0D:9DE5: 7F 9E     .word ofs_9E7F_02
@@ -5355,7 +5355,7 @@ C - - - - - 0x035F14 0D:9F04: 60        RTS
 bra_9F05:
 C - - - - - 0x035F15 0D:9F05: BC DE 06  LDY ram_06DE,X
 C - - - - - 0x035F18 0D:9F08: B9 50 05  LDA ram_0550,Y
-C - - - - - 0x035F1B 0D:9F0B: 20 32 D0  JSR sub_0x03D042
+C - - - - - 0x035F1B 0D:9F0B: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x035F1E 0D:9F0E: 1C 9F     .word ofs_9F1C_00
 - D 0 - I - 0x035F20 0D:9F10: 68 9F     .word ofs_9F68_01
 - D 0 - I - 0x035F22 0D:9F12: 84 A0     .word ofs_A084_02
@@ -5510,7 +5510,7 @@ tbl_9FF5:
 bra_9FF9:
 C - - - - - 0x036009 0D:9FF9: BC DE 06  LDY ram_06DE,X
 C - - - - - 0x03600C 0D:9FFC: B9 50 05  LDA ram_0550,Y
-C - - - - - 0x03600F 0D:9FFF: 20 32 D0  JSR sub_0x03D042
+C - - - - - 0x03600F 0D:9FFF: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 1 - I - 0x036012 0D:A002: 10 A0     .word ofs_A010_00
 - D 1 - I - 0x036014 0D:A004: 46 A0     .word ofs_A046_01
 - D 1 - I - 0x036016 0D:A006: 84 A0     .word ofs_A084_02

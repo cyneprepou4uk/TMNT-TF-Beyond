@@ -260,9 +260,9 @@ C - - - - - 0x03D041 0F:D031: 60        RTS
 
 
 
-sub_D032:
-.export sub_0x03D042
-sub_0x03D042:
+sub_D032_read_pointers_after_jsr:
+.export sub_0x03D042_read_pointers_after_jsr
+sub_0x03D042_read_pointers_after_jsr:
 C - - - - - 0x03D042 0F:D032: 84 04     STY ram_0004
 C - - - - - 0x03D044 0F:D034: 85 05     STA ram_0005
 C - - - - - 0x03D046 0F:D036: 0A        ASL
@@ -797,10 +797,10 @@ C - - - - - 0x03D28E 0F:D27E: F0 01     BEQ bra_D281
 C - - - - - 0x03D290 0F:D280: 60        RTS
 bra_D281:
 C - - - - - 0x03D291 0F:D281: A5 94     LDA ram_0094
-C - - - - - 0x03D293 0F:D283: 20 32 D0  JSR sub_D032
+C - - - - - 0x03D293 0F:D283: 20 32 D0  JSR sub_D032_read_pointers_after_jsr
 - D 2 - I - 0x03D296 0F:D286: 90 D2     .word ofs_D290_00
 - D 2 - I - 0x03D298 0F:D288: AD D2     .word ofs_D2AD_01
-- D 2 - I - 0x03D29A 0F:D28A: BB D2     .word ofs_D2BB_02
+- D 2 - I - 0x03D29A 0F:D28A: BB D2     .word ofs_D2BB_02_random_fighters_for_demo
 - D 2 - I - 0x03D29C 0F:D28C: 48 F7     .word ofs_F748_03
 - D 2 - I - 0x03D29E 0F:D28E: F7 D2     .word ofs_D2F7_04
 
@@ -840,7 +840,7 @@ C - - - - - 0x03D2C8 0F:D2B8: 4C 88 FB  JMP loc_FB88
 
 
 
-ofs_D2BB_02:
+ofs_D2BB_02_random_fighters_for_demo:
 C - - J - - 0x03D2CB 0F:D2BB: A9 00     LDA #$00
 C - - - - - 0x03D2CD 0F:D2BD: 8D 49 06  STA ram_0649
 C - - - - - 0x03D2D0 0F:D2C0: 8D 4A 06  STA ram_064A
@@ -3178,7 +3178,7 @@ C - - - - - 0x03E196 0F:E186: 60        RTS
 
 sub_E187:
 C - - - - - 0x03E197 0F:E187: A5 95     LDA ram_0095
-C - - - - - 0x03E199 0F:E189: 20 32 D0  JSR sub_D032
+C - - - - - 0x03E199 0F:E189: 20 32 D0  JSR sub_D032_read_pointers_after_jsr
 - D 3 - I - 0x03E19C 0F:E18C: CE E1     .word ofs_E1CE_00
 - D 3 - I - 0x03E19E 0F:E18E: FD E1     .word ofs_E1FD_01
 - D 3 - I - 0x03E1A0 0F:E190: E7 F7     .word ofs_F7E7_02
@@ -6243,7 +6243,7 @@ sub_F380:
 C - - - - - 0x03F390 0F:F380: A5 30     LDA ram_0030
 C - - - - - 0x03F392 0F:F382: D0 1F     BNE bra_F3A3
 C - - - - - 0x03F394 0F:F384: A5 20     LDA ram_0020
-C - - - - - 0x03F396 0F:F386: 20 32 D0  JSR sub_D032
+C - - - - - 0x03F396 0F:F386: 20 32 D0  JSR sub_D032_read_pointers_after_jsr
 - D 3 - I - 0x03F399 0F:F389: BF F3     .word ofs_F3BF_00
 - D 3 - I - 0x03F39B 0F:F38B: AC F4     .word ofs_F4AC_01
 - D 3 - I - 0x03F39D 0F:F38D: E5 F4     .word ofs_F4E5_02

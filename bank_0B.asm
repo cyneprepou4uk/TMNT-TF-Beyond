@@ -15,7 +15,7 @@ C - - - - - 0x02C0E1 0B:80D1: 4C D4 82  JMP loc_82D4
 
 sub_80D4:
 C - - - - - 0x02C0E4 0B:80D4: AD 3E 06  LDA ram_063E
-C - - - - - 0x02C0E7 0B:80D7: 20 32 D0  JSR sub_0x03D042
+C - - - - - 0x02C0E7 0B:80D7: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x02C0EA 0B:80DA: E4 80     .word ofs_80E4_00
 - D 0 - I - 0x02C0EC 0B:80DC: 06 81     .word ofs_8106_01
 - D 0 - I - 0x02C0EE 0B:80DE: 58 81     .word ofs_8158_02
@@ -114,7 +114,7 @@ C - - - - - 0x02C187 0B:8177: 60        RTS
 
 sub_8178:
 C - - - - - 0x02C188 0B:8178: BD 30 05  LDA ram_0530,X
-C - - - - - 0x02C18B 0B:817B: 20 32 D0  JSR sub_0x03D042
+C - - - - - 0x02C18B 0B:817B: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x02C18E 0B:817E: C9 81     .word ofs_81C9_00
 - D 0 - I - 0x02C190 0B:8180: 93 82     .word ofs_8293_01
 - D 0 - I - 0x02C192 0B:8182: BC 82     .word ofs_82BC_02
@@ -134,7 +134,7 @@ C - - - - - 0x02C1A5 0B:8195: 8E 01 05  STX ram_0501
 C - - - - - 0x02C1A8 0B:8198: CA        DEX
 C - - - - - 0x02C1A9 0B:8199: 8E 00 05  STX ram_0500
 C - - - - - 0x02C1AC 0B:819C: AD 30 05  LDA ram_0530
-C - - - - - 0x02C1AF 0B:819F: 20 32 D0  JSR sub_0x03D042
+C - - - - - 0x02C1AF 0B:819F: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x02C1B2 0B:81A2: C5 81     .word ofs_81C5_00
 - D 0 - I - 0x02C1B4 0B:81A4: 91 82     .word ofs_8291_01
 - D 0 - I - 0x02C1B6 0B:81A6: AE 81     .word ofs_81AE_02
