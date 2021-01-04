@@ -6319,7 +6319,7 @@ C - - - - - 0x037F42 0D:BF32: 98        TYA
 C - - - - - 0x037F43 0D:BF33: 09 80     ORA #$80
 C - - - - - 0x037F45 0D:BF35: CD A6 05  CMP ram_05A6
 C - - - - - 0x037F48 0D:BF38: D0 03     BNE bra_BF3D_RTS
-C - - - - - 0x037F4A 0D:BF3A: AD 36 04  LDA ram_0436
+C - - - - - 0x037F4A 0D:BF3A: AD 36 04  LDA ram_X_pos_max_object + 6
 bra_BF3D_RTS:
 C - - - - - 0x037F4D 0D:BF3D: 60        RTS
 

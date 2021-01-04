@@ -1604,7 +1604,7 @@ C - - - - - 0x03D743 0F:D733: A5 0A     LDA ram_000A
 C - - - - - 0x03D745 0F:D735: 30 6B     BMI bra_D7A2_RTS
 C - - - - - 0x03D747 0F:D737: BD 00 04  LDA ram_anim_object,X
 C - - - - - 0x03D74A 0F:D73A: F0 52     BEQ bra_D78E
-C - - - - - 0x03D74C 0F:D73C: BC 30 04  LDY ram_0430,X
+C - - - - - 0x03D74C 0F:D73C: BC 30 04  LDY ram_X_pos_max_object,X
 C - - - - - 0x03D74F 0F:D73F: D0 4D     BNE bra_D78E
 C - - - - - 0x03D751 0F:D741: A8        TAY
 C - - - - - 0x03D752 0F:D742: 30 03     BMI bra_D747
@@ -1890,7 +1890,7 @@ loc_0x03DAE3:
 C D 2 - - - 0x03DAE3 0F:DAD3: A9 00     LDA #$00
 C - - - - - 0x03DAE5 0F:DAD5: 9D 50 05  STA ram_id_object,X
 C - - - - - 0x03DAE8 0F:DAD8: A9 00     LDA #$00
-C - - - - - 0x03DAEA 0F:DADA: 9D 30 04  STA ram_0430,X
+C - - - - - 0x03DAEA 0F:DADA: 9D 30 04  STA ram_X_pos_max_object,X
 C - - - - - 0x03DAED 0F:DADD: 9D 40 04  STA ram_X_pos_hi_object,X
 C - - - - - 0x03DAF0 0F:DAE0: 9D 10 04  STA ram_Y_pos_hi_object,X
 C - - - - - 0x03DAF3 0F:DAE3: 9D 50 04  STA ram_X_pos_lo_object,X
@@ -1992,8 +1992,8 @@ bra_DB77:
 C - - - - - 0x03DB87 0F:DB77: 7D 40 04  ADC ram_X_pos_hi_object,X
 C - - - - - 0x03DB8A 0F:DB7A: 9D 40 04  STA ram_X_pos_hi_object,X
 C - - - - - 0x03DB8D 0F:DB7D: 98        TYA
-C - - - - - 0x03DB8E 0F:DB7E: 7D 30 04  ADC ram_0430,X
-C - - - - - 0x03DB91 0F:DB81: 9D 30 04  STA ram_0430,X
+C - - - - - 0x03DB8E 0F:DB7E: 7D 30 04  ADC ram_X_pos_max_object,X
+C - - - - - 0x03DB91 0F:DB81: 9D 30 04  STA ram_X_pos_max_object,X
 C - - - - - 0x03DB94 0F:DB84: 60        RTS
 
 
@@ -2004,8 +2004,8 @@ C - - - - - 0x03DBC5 0F:DBB5: BD 50 04  LDA ram_X_pos_lo_object,X
 C - - - - - 0x03DBC8 0F:DBB8: 99 50 04  STA ram_X_pos_lo_object,Y
 C - - - - - 0x03DBCB 0F:DBBB: BD 40 04  LDA ram_X_pos_hi_object,X
 C - - - - - 0x03DBCE 0F:DBBE: 99 40 04  STA ram_X_pos_hi_object,Y
-C - - - - - 0x03DBD1 0F:DBC1: BD 30 04  LDA ram_0430,X
-C - - - - - 0x03DBD4 0F:DBC4: 99 30 04  STA ram_0430,Y
+C - - - - - 0x03DBD1 0F:DBC1: BD 30 04  LDA ram_X_pos_max_object,X
+C - - - - - 0x03DBD4 0F:DBC4: 99 30 04  STA ram_X_pos_max_object,Y
 C - - - - - 0x03DBD7 0F:DBC7: BD 20 04  LDA ram_Y_pos_lo_object,X
 C - - - - - 0x03DBDA 0F:DBCA: 99 20 04  STA ram_Y_pos_lo_object,Y
 C - - - - - 0x03DBDD 0F:DBCD: BD 10 04  LDA ram_Y_pos_hi_object,X
@@ -3396,7 +3396,7 @@ C - - - - - 0x03E31C 0F:E30C: 99 02 04  STA ram_0402,Y
 C - - - - - 0x03E31F 0F:E30F: 98        TYA
 C - - - - - 0x03E320 0F:E310: 09 82     ORA #$82
 C - - - - - 0x03E322 0F:E312: 99 02 05  STA ram_0502,Y
-C - - - - - 0x03E325 0F:E315: 99 32 04  STA ram_0432,Y
+C - - - - - 0x03E325 0F:E315: 99 32 04  STA ram_X_pos_max_object + 2,Y
 C - - - - - 0x03E328 0F:E318: C6 08     DEC ram_0008
 C - - - - - 0x03E32A 0F:E31A: 10 D7     BPL bra_E2F3_loop
 C - - - - - 0x03E32C 0F:E31C: 60        RTS
@@ -3451,7 +3451,7 @@ C - - - - - 0x03E364 0F:E354: 69 10     ADC #$10
 C - - - - - 0x03E366 0F:E356: 8D 40 04  STA ram_X_pos_hi_object
 C - - - - - 0x03E369 0F:E359: A9 00     LDA #$00
 C - - - - - 0x03E36B 0F:E35B: 2A        ROL
-C - - - - - 0x03E36C 0F:E35C: 8D 30 04  STA ram_0430
+C - - - - - 0x03E36C 0F:E35C: 8D 30 04  STA ram_X_pos_max_object
 C - - - - - 0x03E36F 0F:E35F: 18        CLC
 C - - - - - 0x03E370 0F:E360: A5 56     LDA ram_X_scroll
 C - - - - - 0x03E372 0F:E362: 69 08     ADC #$08
@@ -3461,7 +3461,7 @@ C - - - - - 0x03E378 0F:E368: 8D 41 04  STA ram_X_pos_hi_object + 1
 C - - - - - 0x03E37B 0F:E36B: C9 B4     CMP #$B4
 C - - - - - 0x03E37D 0F:E36D: A9 00     LDA #$00
 C - - - - - 0x03E37F 0F:E36F: 2A        ROL
-C - - - - - 0x03E380 0F:E370: 8D 31 04  STA ram_0431
+C - - - - - 0x03E380 0F:E370: 8D 31 04  STA ram_X_pos_max_object + 1
 C - - - - - 0x03E383 0F:E373: A9 0F     LDA #$0F
 C - - - - - 0x03E385 0F:E375: 8D 10 04  STA ram_Y_pos_hi_object
 C - - - - - 0x03E388 0F:E378: A9 8F     LDA #$8F
@@ -4270,7 +4270,7 @@ C - - - - - 0x03E8DB 0F:E8CB: 20 D3 F7  JSR sub_F7D3
 C - - - - - 0x03E8DE 0F:E8CE: 68        PLA
 C - - - - - 0x03E8DF 0F:E8CF: 85 A2     STA ram_option_fighter
 C - - - - - 0x03E8E1 0F:E8D1: A9 00     LDA #$00
-C - - - - - 0x03E8E3 0F:E8D3: 8D 30 04  STA ram_0430
+C - - - - - 0x03E8E3 0F:E8D3: 8D 30 04  STA ram_X_pos_max_object
 C - - - - - 0x03E8E6 0F:E8D6: A9 2F     LDA #$2F
 C - - - - - 0x03E8E8 0F:E8D8: 8D 10 04  STA ram_Y_pos_hi_object
 C - - - - - 0x03E8EB 0F:E8DB: A9 60     LDA #$60
@@ -5324,7 +5324,7 @@ sub_0x03EE24:
 C - - - - - 0x03EE24 0F:EE14: AD 36 05  LDA ram_0536
 C - - - - - 0x03EE27 0F:EE17: C9 02     CMP #$02
 C - - - - - 0x03EE29 0F:EE19: D0 12     BNE bra_EE2D
-C - - - - - 0x03EE2B 0F:EE1B: AD 36 04  LDA ram_0436
+C - - - - - 0x03EE2B 0F:EE1B: AD 36 04  LDA ram_X_pos_max_object + 6
 C - - - - - 0x03EE2E 0F:EE1E: D0 0D     BNE bra_EE2D
 C - - - - - 0x03EE30 0F:EE20: AD 46 04  LDA ram_0446
 C - - - - - 0x03EE33 0F:EE23: C9 E8     CMP #$E8
@@ -5421,8 +5421,8 @@ C - - - - - 0x03EEA7 0F:EE97: B9 40 04  LDA ram_X_pos_hi_object,Y
 C - - - - - 0x03EEAA 0F:EE9A: 38        SEC
 C - - - - - 0x03EEAB 0F:EE9B: FD 40 04  SBC ram_X_pos_hi_object,X
 C - - - - - 0x03EEAE 0F:EE9E: 85 0E     STA ram_000E
-C - - - - - 0x03EEB0 0F:EEA0: B9 30 04  LDA ram_0430,Y
-C - - - - - 0x03EEB3 0F:EEA3: FD 30 04  SBC ram_0430,X
+C - - - - - 0x03EEB0 0F:EEA0: B9 30 04  LDA ram_X_pos_max_object,Y
+C - - - - - 0x03EEB3 0F:EEA3: FD 30 04  SBC ram_X_pos_max_object,X
 C - - - - - 0x03EEB6 0F:EEA6: 85 0F     STA ram_000F
 C - - - - - 0x03EEB8 0F:EEA8: 60        RTS
 
@@ -7891,9 +7891,9 @@ bra_FE22:
 C - - - - - 0x03FE32 0F:FE22: BD 40 04  LDA ram_X_pos_hi_object,X
 C - - - - - 0x03FE35 0F:FE25: ED 3C 06  SBC ram_063C
 C - - - - - 0x03FE38 0F:FE28: 9D 40 04  STA ram_X_pos_hi_object,X
-C - - - - - 0x03FE3B 0F:FE2B: BD 30 04  LDA ram_0430,X
+C - - - - - 0x03FE3B 0F:FE2B: BD 30 04  LDA ram_X_pos_max_object,X
 C - - - - - 0x03FE3E 0F:FE2E: E5 00     SBC ram_0000
-C - - - - - 0x03FE40 0F:FE30: 9D 30 04  STA ram_0430,X
+C - - - - - 0x03FE40 0F:FE30: 9D 30 04  STA ram_X_pos_max_object,X
 bra_FE33:
 C - - - - - 0x03FE43 0F:FE33: CA        DEX
 C - - - - - 0x03FE44 0F:FE34: 10 D1     BPL bra_FE07_loop

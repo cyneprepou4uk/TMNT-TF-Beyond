@@ -2170,7 +2170,7 @@ C - - - - - 0x024F27 09:8F17: A9 0C     LDA #$0C
 C - - - - - 0x024F29 09:8F19: 20 94 F6  JSR sub_0x03F6A4
 bra_8F1C:
 C - - - - - 0x024F2C 09:8F1C: A4 A9     LDY ram_object_index
-C - - - - - 0x024F2E 09:8F1E: B9 34 04  LDA ram_0434,Y
+C - - - - - 0x024F2E 09:8F1E: B9 34 04  LDA ram_X_pos_max_object + 4,Y
 C - - - - - 0x024F31 09:8F21: D0 E3     BNE bra_8F06_RTS
 C - - - - - 0x024F33 09:8F23: B9 44 04  LDA ram_X_pos_hi_special,Y
 C - - - - - 0x024F36 09:8F26: DD 40 04  CMP ram_X_pos_hi_object,X
@@ -5382,7 +5382,7 @@ C - - - - - 0x025E69 09:9E59: B0 1B     BCS bra_9E76
 C - - - - - 0x025E6B 09:9E5B: AD 46 04  LDA ram_0446
 C - - - - - 0x025E6E 09:9E5E: 65 A6     ADC ram_00A6
 C - - - - - 0x025E70 09:9E60: A9 00     LDA #$00
-C - - - - - 0x025E72 09:9E62: 6D 36 04  ADC ram_0436
+C - - - - - 0x025E72 09:9E62: 6D 36 04  ADC ram_X_pos_max_object + 6
 C - - - - - 0x025E75 09:9E65: C9 02     CMP #$02
 C - - - - - 0x025E77 09:9E67: 90 0D     BCC bra_9E76
 - - - - - - 0x025E79 09:9E69: A9 AC     LDA #$AC
@@ -5603,7 +5603,7 @@ C - - - - - 0x026001 09:9FF1: AD 46 04  LDA ram_0446
 C - - - - - 0x026004 09:9FF4: 65 A6     ADC ram_00A6
 C - - - - - 0x026006 09:9FF6: A8        TAY
 C - - - - - 0x026007 09:9FF7: A9 00     LDA #$00
-C - - - - - 0x026009 09:9FF9: 6D 36 04  ADC ram_0436
+C - - - - - 0x026009 09:9FF9: 6D 36 04  ADC ram_X_pos_max_object + 6
 C - - - - - 0x02600C 09:9FFC: 85 00     STA ram_0000
 C - - - - - 0x02600E 09:9FFE: A5 00     LDA ram_0000
 C - - - - - 0x026010 09:A000: D0 06     BNE bra_A008
@@ -5905,7 +5905,7 @@ C - - - - - 0x0261F9 09:A1E9: AD 46 04  LDA ram_0446
 C - - - - - 0x0261FC 09:A1EC: 65 A6     ADC ram_00A6
 C - - - - - 0x0261FE 09:A1EE: A8        TAY
 C - - - - - 0x0261FF 09:A1EF: A9 00     LDA #$00
-C - - - - - 0x026201 09:A1F1: 6D 36 04  ADC ram_0436
+C - - - - - 0x026201 09:A1F1: 6D 36 04  ADC ram_X_pos_max_object + 6
 C - - - - - 0x026204 09:A1F4: 85 00     STA ram_0000
 C - - - - - 0x026206 09:A1F6: AD 86 04  LDA ram_0486
 C - - - - - 0x026209 09:A1F9: 10 12     BPL bra_A20D
@@ -5938,7 +5938,7 @@ C - - - - - 0x026230 09:A220: E5 A6     SBC ram_00A6
 C - - - - - 0x026232 09:A222: 8D 46 04  STA ram_0446
 C - - - - - 0x026235 09:A225: A5 00     LDA ram_0000
 C - - - - - 0x026237 09:A227: E9 00     SBC #$00
-C - - - - - 0x026239 09:A229: 8D 36 04  STA ram_0436
+C - - - - - 0x026239 09:A229: 8D 36 04  STA ram_X_pos_max_object + 6
 C - - - - - 0x02623C 09:A22C: A2 06     LDX #$06
 C - - - - - 0x02623E 09:A22E: 20 3C DB  JSR sub_0x03DB4C
 C - - - - - 0x026241 09:A231: 38        SEC
@@ -7322,7 +7322,7 @@ C - - - - - 0x02696F 09:A95F: 9D 60 05  STA ram_0560,X
 C - - - - - 0x026972 09:A962: FE 30 05  INC ram_0530,X
 C - - - - - 0x026975 09:A965: A9 00     LDA #$00
 C - - - - - 0x026977 09:A967: 8D 36 05  STA ram_0536
-C - - - - - 0x02697A 09:A96A: 8D 36 04  STA ram_0436
+C - - - - - 0x02697A 09:A96A: 8D 36 04  STA ram_X_pos_max_object + 6
 C - - - - - 0x02697D 09:A96D: 9D 00 05  STA ram_0500,X
 C - - - - - 0x026980 09:A970: BD 10 04  LDA ram_Y_pos_hi_object,X
 C - - - - - 0x026983 09:A973: 69 20     ADC #$20
@@ -7422,7 +7422,7 @@ C - - - - - 0x026A1D 09:AA0D: F0 4C     BEQ bra_AA5B_next_object
 C - - - - - 0x026A1F 09:AA0F: 85 09     STA ram_0009
 C - - - - - 0x026A21 09:AA11: B9 B0 05  LDA ram_05B0,Y
 C - - - - - 0x026A24 09:AA14: F0 45     BEQ bra_AA5B_next_object
-C - - - - - 0x026A26 09:AA16: B9 30 04  LDA ram_0430,Y
+C - - - - - 0x026A26 09:AA16: B9 30 04  LDA ram_X_pos_max_object,Y
 C - - - - - 0x026A29 09:AA19: D0 40     BNE bra_AA5B_next_object
 C - - - - - 0x026A2B 09:AA1B: BE 70 05  LDX ram_0570,Y
 C - - - - - 0x026A2E 09:AA1E: F0 3B     BEQ bra_AA5B_next_object
@@ -8629,7 +8629,7 @@ tbl_B118:
 
 
 sub_B11A:
-C - - - - - 0x02712A 09:B11A: AD 36 04  LDA ram_0436
+C - - - - - 0x02712A 09:B11A: AD 36 04  LDA ram_X_pos_max_object + 6
 C - - - - - 0x02712D 09:B11D: D0 21     BNE bra_B140
 C - - - - - 0x02712F 09:B11F: AD A6 05  LDA ram_05A6
 C - - - - - 0x027132 09:B122: 29 C0     AND #$C0
@@ -10629,9 +10629,9 @@ bra_BC4E:
 C - - - - - 0x027C5E 09:BC4E: BD 40 04  LDA ram_X_pos_hi_object,X
 C - - - - - 0x027C61 09:BC51: ED 3C 06  SBC ram_063C
 C - - - - - 0x027C64 09:BC54: 9D 40 04  STA ram_X_pos_hi_object,X
-C - - - - - 0x027C67 09:BC57: BD 30 04  LDA ram_0430,X
+C - - - - - 0x027C67 09:BC57: BD 30 04  LDA ram_X_pos_max_object,X
 C - - - - - 0x027C6A 09:BC5A: E5 00     SBC ram_0000
-C - - - - - 0x027C6C 09:BC5C: 9D 30 04  STA ram_0430,X
+C - - - - - 0x027C6C 09:BC5C: 9D 30 04  STA ram_X_pos_max_object,X
 bra_BC5F:
 C - - - - - 0x027C6F 09:BC5F: CA        DEX
 C - - - - - 0x027C70 09:BC60: 10 D1     BPL bra_BC33
@@ -10663,7 +10663,7 @@ C - - - - - 0x027C98 09:BC88: B9 80 05  LDA ram_0580,Y
 C - - - - - 0x027C9B 09:BC8B: 30 28     BMI bra_BCB5
 C - - - - - 0x027C9D 09:BC8D: B9 B0 05  LDA ram_05B0,Y
 C - - - - - 0x027CA0 09:BC90: F0 23     BEQ bra_BCB5
-C - - - - - 0x027CA2 09:BC92: B9 30 04  LDA ram_0430,Y
+C - - - - - 0x027CA2 09:BC92: B9 30 04  LDA ram_X_pos_max_object,Y
 C - - - - - 0x027CA5 09:BC95: D0 1E     BNE bra_BCB5
 C - - - - - 0x027CA7 09:BC97: BE 70 05  LDX ram_0570,Y
 C - - - - - 0x027CAA 09:BC9A: F0 19     BEQ bra_BCB5
@@ -10926,9 +10926,9 @@ C - - - - - 0x027E84 09:BE74: 18        CLC
 C - - - - - 0x027E85 09:BE75: AD 41 04  LDA ram_X_pos_hi_object + 1
 C - - - - - 0x027E88 09:BE78: 69 40     ADC #$40
 C - - - - - 0x027E8A 09:BE7A: 8D 46 04  STA ram_0446
-C - - - - - 0x027E8D 09:BE7D: AD 31 04  LDA ram_0431
+C - - - - - 0x027E8D 09:BE7D: AD 31 04  LDA ram_X_pos_max_object + 1
 C - - - - - 0x027E90 09:BE80: 69 00     ADC #$00
-C - - - - - 0x027E92 09:BE82: 8D 36 04  STA ram_0436
+C - - - - - 0x027E92 09:BE82: 8D 36 04  STA ram_X_pos_max_object + 6
 C - - - - - 0x027E95 09:BE85: A9 80     LDA #$80
 C - - - - - 0x027E97 09:BE87: 8D E6 05  STA ram_05E6
 C - - - - - 0x027E9A 09:BE8A: EE 31 05  INC ram_0531
@@ -10954,7 +10954,7 @@ C - - - - - 0x027EC1 09:BEB1: 4C 8B F6  JMP loc_0x03F69B
 
 
 ofs_BEB4_03:
-C - - J - - 0x027EC4 09:BEB4: AD 36 04  LDA ram_0436
+C - - J - - 0x027EC4 09:BEB4: AD 36 04  LDA ram_X_pos_max_object + 6
 C - - - - - 0x027EC7 09:BEB7: D0 8C     BEQ bra_BEB9
                                         RTS
 bra_BEB9:
