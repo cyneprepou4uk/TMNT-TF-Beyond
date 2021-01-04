@@ -1483,9 +1483,9 @@ C - - - - - 0x024A7E 09:8A6E: B9 30 05  LDA ram_0530,Y
 C - - - - - 0x024A81 09:8A71: C9 04     CMP #$04
 C - - - - - 0x024A83 09:8A73: F0 46     BEQ bra_8ABB_RTS
 C - - - - - 0x024A85 09:8A75: 18        CLC
-C - - - - - 0x024A86 09:8A76: B9 49 06  LDA ram_0649,Y
+C - - - - - 0x024A86 09:8A76: B9 49 06  LDA ram_wins,Y
 C - - - - - 0x024A89 09:8A79: 69 01     ADC #$01
-C - - - - - 0x024A8B 09:8A7B: 99 49 06  STA ram_0649,Y
+C - - - - - 0x024A8B 09:8A7B: 99 49 06  STA ram_wins,Y
 C - - - - - 0x024A8E 09:8A7E: 4C 3F EB  JMP loc_0x03EB4F
 
 
@@ -10472,7 +10472,7 @@ C - - - - - 0x027B52 09:BB42: AC 60 05  LDY ram_0560
 C - - - - - 0x027B55 09:BB45: C0 40     CPY #$40
 C - - - - - 0x027B57 09:BB47: 90 3A     BCC bra_BB83
 C - - - - - 0x027B59 09:BB49: 18        CLC
-C - - - - - 0x027B5A 09:BB4A: AD 40 06  LDA ram_0640
+C - - - - - 0x027B5A 09:BB4A: AD 40 06  LDA ram_round
 C - - - - - 0x027B5D 09:BB4D: 69 06     ADC #$06
 C - - - - - 0x027B5F 09:BB4F: D0 32     BNE bra_BB83
 

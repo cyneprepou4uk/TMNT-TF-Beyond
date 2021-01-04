@@ -831,8 +831,8 @@ C - - - - - 0x03D2C8 0F:D2B8: 4C 88 FB  JMP loc_FB88
 
 ofs_D2BB_02_random_fighters_for_demo:
 C - - J - - 0x03D2CB 0F:D2BB: A9 00     LDA #$00
-C - - - - - 0x03D2CD 0F:D2BD: 8D 49 06  STA ram_0649
-C - - - - - 0x03D2D0 0F:D2C0: 8D 4A 06  STA ram_064A
+C - - - - - 0x03D2CD 0F:D2BD: 8D 49 06  STA ram_wins
+C - - - - - 0x03D2D0 0F:D2C0: 8D 4A 06  STA ram_wins + 1
 C - - - - - 0x03D2D3 0F:D2C3: A5 26     LDA ram_0026
 C - - - - - 0x03D2D5 0F:D2C5: D0 0F     BNE bra_D2D6
 C - - - - - 0x03D2D7 0F:D2C7: A5 2C     LDA ram_002C
@@ -3307,9 +3307,9 @@ C - - - - - 0x03E261 0F:E251: A2 28     LDX #$28
 C - - - - - 0x03E263 0F:E253: 20 44 F0  JSR sub_F044
 C - - - - - 0x03E266 0F:E256: E6 95     INC ram_0095
 C - - - - - 0x03E268 0F:E258: A9 00     LDA #$00
-C - - - - - 0x03E26A 0F:E25A: 8D 49 06  STA ram_0649
-C - - - - - 0x03E26D 0F:E25D: 8D 4A 06  STA ram_064A
-C - - - - - 0x03E270 0F:E260: 8D 40 06  STA ram_0640
+C - - - - - 0x03E26A 0F:E25A: 8D 49 06  STA ram_wins
+C - - - - - 0x03E26D 0F:E25D: 8D 4A 06  STA ram_wins + 1
+C - - - - - 0x03E270 0F:E260: 8D 40 06  STA ram_round
 C - - - - - 0x03E273 0F:E263: A5 2C     LDA ram_002C
 C - - - - - 0x03E275 0F:E265: C9 03     CMP #$03
 C - - - - - 0x03E277 0F:E267: 90 62     BCC bra_E2CB
@@ -3683,8 +3683,8 @@ C - - - - - 0x03E4D8 0F:E4C8: B9 55 01  LDA ram_0155,Y
 C - - - - - 0x03E4DB 0F:E4CB: 39 56 01  AND ram_0156,Y
 C - - - - - 0x03E4DE 0F:E4CE: 10 22     BPL bra_E4F2
 C - - - - - 0x03E4E0 0F:E4D0: A0 00     LDY #$00
-C - - - - - 0x03E4E2 0F:E4D2: AD 49 06  LDA ram_0649
-C - - - - - 0x03E4E5 0F:E4D5: CD 4A 06  CMP ram_064A
+C - - - - - 0x03E4E2 0F:E4D2: AD 49 06  LDA ram_wins
+C - - - - - 0x03E4E5 0F:E4D5: CD 4A 06  CMP ram_wins + 1
 C - - - - - 0x03E4E8 0F:E4D8: D0 02     BNE bra_E4DC
 C - - - - - 0x03E4EA 0F:E4DA: 46 28     LSR ram_random_1
 bra_E4DC:
@@ -3692,7 +3692,7 @@ C - - - - - 0x03E4EC 0F:E4DC: B0 01     BCS bra_E4DF
 C - - - - - 0x03E4EE 0F:E4DE: C8        INY
 bra_E4DF:
 C - - - - - 0x03E4EF 0F:E4DF: A9 02     LDA #$02
-C - - - - - 0x03E4F1 0F:E4E1: 99 49 06  STA ram_0649,Y
+C - - - - - 0x03E4F1 0F:E4E1: 99 49 06  STA ram_wins,Y
 C - - - - - 0x03E4F4 0F:E4E4: A9 0A     LDA #$0A
 C - - - - - 0x03E4F6 0F:E4E6: 85 95     STA ram_0095
 C - - - - - 0x03E4F8 0F:E4E8: A9 5B     LDA #$5B
@@ -3776,25 +3776,25 @@ C - - - - - 0x03E584 0F:E574: AD 24 06  LDA ram_0624
 C - - - - - 0x03E587 0F:E577: D0 A8     BNE bra_E521_RTS
 bra_E579:
 C - - - - - 0x03E589 0F:E579: 20 2E E1  JSR sub_E12E
-C - - - - - 0x03E58C 0F:E57C: EE 40 06  INC ram_0640
-C - - - - - 0x03E58F 0F:E57F: AD 49 06  LDA ram_0649
-C - - - - - 0x03E592 0F:E582: 0D 4A 06  ORA ram_064A
+C - - - - - 0x03E58C 0F:E57C: EE 40 06  INC ram_round
+C - - - - - 0x03E58F 0F:E57F: AD 49 06  LDA ram_wins
+C - - - - - 0x03E592 0F:E582: 0D 4A 06  ORA ram_wins + 1
 C - - - - - 0x03E595 0F:E585: C9 02     CMP #$02
 C - - - - - 0x03E597 0F:E587: B0 3E     BCS bra_E5C7
 C - - - - - 0x03E599 0F:E589: A5 2C     LDA ram_002C
 C - - - - - 0x03E59B 0F:E58B: C9 03     CMP #$03
 C - - - - - 0x03E59D 0F:E58D: B0 2A     BCS bra_E5B9
-C - - - - - 0x03E59F 0F:E58F: AD 40 06  LDA ram_0640
+C - - - - - 0x03E59F 0F:E58F: AD 40 06  LDA ram_round
 C - - - - - 0x03E5A2 0F:E592: C9 03     CMP #$03
 C - - - - - 0x03E5A4 0F:E594: 90 23     BCC bra_E5B9
 C - - - - - 0x03E5A6 0F:E596: D0 08     BNE bra_E5A0
-C - - - - - 0x03E5A8 0F:E598: AD 49 06  LDA ram_0649
-C - - - - - 0x03E5AB 0F:E59B: 0D 4A 06  ORA ram_064A
+C - - - - - 0x03E5A8 0F:E598: AD 49 06  LDA ram_wins
+C - - - - - 0x03E5AB 0F:E59B: 0D 4A 06  ORA ram_wins + 1
 C - - - - - 0x03E5AE 0F:E59E: D0 19     BNE bra_E5B9
 bra_E5A0:
 C - - - - - 0x03E5B0 0F:E5A0: A2 00     LDX #$00
-C - - - - - 0x03E5B2 0F:E5A2: BD 49 06  LDA ram_0649,X
-C - - - - - 0x03E5B5 0F:E5A5: DD 4A 06  CMP ram_064A,X
+C - - - - - 0x03E5B2 0F:E5A2: BD 49 06  LDA ram_wins,X
+C - - - - - 0x03E5B5 0F:E5A5: DD 4A 06  CMP ram_wins + 1,X
 C - - - - - 0x03E5B8 0F:E5A8: F0 05     BEQ bra_E5AF
 - - - - - - 0x03E5BA 0F:E5AA: B0 28     BCS bra_E5D4
 - - - - - - 0x03E5BC 0F:E5AC: E8        INX
@@ -3821,7 +3821,7 @@ C - - - - - 0x03E5D9 0F:E5C9: 60        RTS
 
 ofs_E5CA_0A:
 C - - J - - 0x03E5DA 0F:E5CA: A2 00     LDX #$00
-C - - - - - 0x03E5DC 0F:E5CC: AD 49 06  LDA ram_0649
+C - - - - - 0x03E5DC 0F:E5CC: AD 49 06  LDA ram_wins
 C - - - - - 0x03E5DF 0F:E5CF: C9 02     CMP #$02
 C - - - - - 0x03E5E1 0F:E5D1: B0 01     BCS bra_E5D4
 C - - - - - 0x03E5E3 0F:E5D3: E8        INX
@@ -3981,10 +3981,10 @@ C - - - - - 0x03E6CD 0F:E6BD: D0 25     BNE bra_E6E4
 bra_E6BF:
 C - - - - - 0x03E6CF 0F:E6BF: 90 06     BCC bra_E6C7
 C - - - - - 0x03E6D1 0F:E6C1: CA        DEX
-C - - - - - 0x03E6D2 0F:E6C2: EE 49 06  INC ram_0649
+C - - - - - 0x03E6D2 0F:E6C2: EE 49 06  INC ram_wins
 C - - - - - 0x03E6D5 0F:E6C5: D0 03     BNE bra_E6CA
 bra_E6C7:
-C - - - - - 0x03E6D7 0F:E6C7: EE 4A 06  INC ram_064A
+C - - - - - 0x03E6D7 0F:E6C7: EE 4A 06  INC ram_wins + 1
 bra_E6CA:
 C - - - - - 0x03E6DA 0F:E6CA: 8E 71 06  STX ram_0671
 C - - - - - 0x03E6DF 0F:E6CF: 20 A3 DF  JSR sub_DFA3
@@ -4725,7 +4725,7 @@ C D 3 - - - 0x03EB4F 0F:EB3F: A2 01     LDX #$01
 C - - - - - 0x03EB51 0F:EB41: 86 00     STX ram_0000
 bra_EB43:
 C - - - - - 0x03EB53 0F:EB43: A6 00     LDX ram_0000
-C - - - - - 0x03EB55 0F:EB45: BD 49 06  LDA ram_0649,X
+C - - - - - 0x03EB55 0F:EB45: BD 49 06  LDA ram_wins,X
 C - - - - - 0x03EB58 0F:EB48: F0 17     BEQ bra_EB61
 C - - - - - 0x03EB5A 0F:EB4A: 0A        ASL
 C - - - - - 0x03EB5B 0F:EB4B: 65 00     ADC ram_0000
@@ -8231,7 +8231,7 @@ C - - - - - 0x03FF6B 0F:FF5B: AD 90 05  LDA ram_hp_lo
 C - - - - - 0x03FF6E 0F:FF5E: CD 91 05  CMP ram_hp_lo + 1
 loc_FF61:
 C D 3 - - - 0x03FF71 0F:FF61: D0 07     BNE bra_FF6A
-C - - - - - 0x03FF73 0F:FF63: AD 40 06  LDA ram_0640
+C - - - - - 0x03FF73 0F:FF63: AD 40 06  LDA ram_round
 C - - - - - 0x03FF76 0F:FF66: 29 01     AND #$01
 C - - - - - 0x03FF78 0F:FF68: D0 02     BNE bra_FF6C
 bra_FF6A:
