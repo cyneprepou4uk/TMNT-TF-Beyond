@@ -169,15 +169,15 @@ ofs_81C9_00:
 C - - J - - 0x02C1D9 0B:81C9: B5 8E     LDA ram_btn_press,X
 sub_81CB:
 C - - - - - 0x02C1DB 0B:81CB: A8        TAY
-C - - - - - 0x02C1DC 0B:81CC: 29 D0     AND #$D0
+C - - - - - 0x02C1DC 0B:81CC: 29 D0     AND #con_btns_AB + con_btn_Start
 C - - - - - 0x02C1DE 0B:81CE: F0 03     BEQ bra_81D3
 C - - - - - 0x02C1E0 0B:81D0: 4C 48 BE  JMP loc_BE48
 bra_81D3:
 C - - - - - 0x02C1E3 0B:81D3: 98        TYA
-C - - - - - 0x02C1E4 0B:81D4: 29 0F     AND #$0F
+C - - - - - 0x02C1E4 0B:81D4: 29 0F     AND #con_btns_Dpad
 C - - - - - 0x02C1E6 0B:81D6: F0 EC     BEQ bra_81C4_RTS
 C - - - - - 0x02C1E8 0B:81D8: A0 FF     LDY #$FF
-C - - - - - 0x02C1EA 0B:81DA: 29 09     AND #$09
+C - - - - - 0x02C1EA 0B:81DA: 29 09     AND #con_btn_Up + con_btn_Right
 C - - - - - 0x02C1EC 0B:81DC: F0 02     BEQ bra_81E0
 C - - - - - 0x02C1EE 0B:81DE: A0 01     LDY #$01
 bra_81E0:
@@ -9252,7 +9252,7 @@ C - - - - - 0x02E5BA 0B:A5AA: 9D 1C 05  STA ram_051C,X
 C - - - - - 0x02E5BD 0B:A5AD: BD D0 04  LDA ram_04D0,X
 C - - - - - 0x02E5C0 0B:A5B0: D0 1E     BNE bra_A5D0
 C - - - - - 0x02E5C2 0B:A5B2: B5 8E     LDA ram_btn_press,X
-C - - - - - 0x02E5C4 0B:A5B4: 29 08     AND #$08
+C - - - - - 0x02E5C4 0B:A5B4: 29 08     AND #con_btn_Up
 C - - - - - 0x02E5C6 0B:A5B6: F0 03     BEQ bra_A5BB
 C - - - - - 0x02E5C8 0B:A5B8: 9D 33 06  STA ram_0633,X
 bra_A5BB:
@@ -9407,7 +9407,7 @@ C - - - - - 0x02E720 0B:A710: B0 1E     BCS bra_A730
 C - - - - - 0x02E722 0B:A712: 20 91 A5  JSR sub_A591
 C - - - - - 0x02E725 0B:A715: D0 19     BNE bra_A730
 C - - - - - 0x02E727 0B:A717: B5 8E     LDA ram_btn_press,X
-C - - - - - 0x02E729 0B:A719: 49 40     EOR #$40
+C - - - - - 0x02E729 0B:A719: 49 40     EOR #con_btn_B
 C - - - - - 0x02E72B 0B:A71B: 1D 10 06  ORA ram_0610,X
 C - - - - - 0x02E72E 0B:A71E: 19 80 05  ORA ram_0580,Y
 C - - - - - 0x02E731 0B:A721: 19 F0 05  ORA ram_05F0,Y
@@ -10810,7 +10810,7 @@ C - - - - - 0x02FDA2 0B:BD92: F0 0C     BEQ bra_BDA0
 C - - - - - 0x02FDA4 0B:BD94: 4A        LSR
 C - - - - - 0x02FDA5 0B:BD95: F0 55     BEQ bra_BDEC
 C - - - - - 0x02FDA7 0B:BD97: B5 8E     LDA ram_btn_press,X
-C - - - - - 0x02FDA9 0B:BD99: 49 40     EOR #$40
+C - - - - - 0x02FDA9 0B:BD99: 49 40     EOR #con_btn_B
 C - - - - - 0x02FDAB 0B:BD9B: D0 03     BNE bra_BDA0
 C - - - - - 0x02FDAD 0B:BD9D: 9D 30 05  STA ram_0530,X
 bra_BDA0:
@@ -10823,7 +10823,7 @@ C - - - - - 0x02FDB8 0B:BDA8: B0 42     BCS bra_BDEC
 C - - - - - 0x02FDBA 0B:BDAA: 88        DEY
 C - - - - - 0x02FDBB 0B:BDAB: F0 3F     BEQ bra_BDEC
 C - - - - - 0x02FDBD 0B:BDAD: A5 8E     LDA ram_btn_press
-C - - - - - 0x02FDBF 0B:BDAF: 29 20     AND #$20
+C - - - - - 0x02FDBF 0B:BDAF: 29 20     AND #con_btn_Select
 C - - - - - 0x02FDC1 0B:BDB1: F0 39     BEQ bra_BDEC
 C - - - - - 0x02FDC3 0B:BDB3: A9 01     LDA #$01
 C - - - - - 0x02FDC5 0B:BDB5: 6D 4E 01  ADC ram_014E
@@ -10866,12 +10866,12 @@ C D 1 - - - 0x02FE58 0B:BE48: A5 2C     LDA ram_002C
 C - - - - - 0x02FE5A 0B:BE4A: C9 03     CMP #$03
 C - - - - - 0x02FE5C 0B:BE4C: D0 2A     BNE bra_BE78
 C - - - - - 0x02FE5E 0B:BE4E: 98        TYA
-C - - - - - 0x02FE5F 0B:BE4F: 29 10     AND #$10
+C - - - - - 0x02FE5F 0B:BE4F: 29 10     AND #con_btn_Start
 C - - - - - 0x02FE61 0B:BE51: F0 03     BEQ bra_BE56
 C - - - - - 0x02FE63 0B:BE53: DE 42 01  DEC ram_0142,X
 bra_BE56:
 C - - - - - 0x02FE66 0B:BE56: 98        TYA
-C - - - - - 0x02FE67 0B:BE57: 29 40     AND #$40
+C - - - - - 0x02FE67 0B:BE57: 29 40     AND #con_btn_B
 C - - - - - 0x02FE69 0B:BE59: D0 20     BNE bra_BE7B
 C - - - - - 0x02FE6B 0B:BE5B: BD 40 01  LDA ram_0140,X
 C - - - - - 0x02FE6E 0B:BE5E: C9 07     CMP #$07

@@ -898,14 +898,14 @@ C - - - - - 0x03D316 0F:D306: 05 98     ORA ram_0098
 C - - - - - 0x03D318 0F:D308: 05 24     ORA ram_0024
 C - - - - - 0x03D31A 0F:D30A: D0 F7     BNE bra_D303_RTS
 C - - - - - 0x03D31C 0F:D30C: A4 8E     LDY ram_btn_press
-C - - - - - 0x03D31E 0F:D30E: 20 24 EA  JSR sub_EA24
+C - - - - - 0x03D31E 0F:D30E: 20 24 EA  JSR sub_EA24    ; bzk опт
 C - - - - - 0x03D321 0F:D311: F0 02     BEQ bra_D315
 C - - - - - 0x03D323 0F:D313: A4 90     LDY ram_sum_btn_press
 bra_D315:
 C - - - - - 0x03D325 0F:D315: 98        TYA
 C - - - - - 0x03D326 0F:D316: A4 97     LDY ram_0097
 C - - - - - 0x03D328 0F:D318: D0 0D     BNE bra_D327
-C - - - - - 0x03D32A 0F:D31A: 29 10     AND #$10
+C - - - - - 0x03D32A 0F:D31A: 29 10     AND #con_btn_Start
 C - - - - - 0x03D32C 0F:D31C: F0 11     BEQ bra_D32F_RTS
 C - - - - - 0x03D32E 0F:D31E: A9 01     LDA #$01
 bra_D320:
@@ -913,7 +913,7 @@ C - - - - - 0x03D330 0F:D320: 85 97     STA ram_0097
 C - - - - - 0x03D332 0F:D322: A9 2D     LDA #$2D
 C - - - - - 0x03D334 0F:D324: 4C 90 F6  JMP loc_F690
 bra_D327:
-C - - - - - 0x03D337 0F:D327: 29 10     AND #$10
+C - - - - - 0x03D337 0F:D327: 29 10     AND #con_btn_Start
 C - - - - - 0x03D339 0F:D329: F0 D8     BEQ bra_D303_RTS
 C - - - - - 0x03D33B 0F:D32B: A9 00     LDA #$00
 C - - - - - 0x03D33D 0F:D32D: F0 F1     BEQ bra_D320
@@ -3714,10 +3714,10 @@ bra_E4F2:
 C - - - - - 0x03E502 0F:E4F2: 20 24 EA  JSR sub_EA24
 C - - - - - 0x03E505 0F:E4F5: D0 0C     BNE bra_E503
 C - - - - - 0x03E507 0F:E4F7: A5 8F     LDA ram_btn_press + 1
-C - - - - - 0x03E509 0F:E4F9: 29 10     AND #$10
+C - - - - - 0x03E509 0F:E4F9: 29 10     AND #con_btn_Start
 C - - - - - 0x03E50B 0F:E4FB: D0 25     BNE bra_E522
 C - - - - - 0x03E50D 0F:E4FD: A5 92     LDA ram_btn_hold + 1
-C - - - - - 0x03E50F 0F:E4FF: C9 C8     CMP #$C8
+C - - - - - 0x03E50F 0F:E4FF: C9 C8     CMP #con_btns_AB + con_btn_Up
 C - - - - - 0x03E511 0F:E501: F0 1F     BEQ bra_E522
 bra_E503:
 C - - - - - 0x03E513 0F:E503: 4C 94 F7  JMP loc_F794
@@ -5017,10 +5017,10 @@ C - - - - - 0x03EC8A 0F:EC7A: 60        RTS
 sub_0x03EC8B:
 C - - - - - 0x03EC8B 0F:EC7B: AD D6 06  LDA ram_06D6
 C - - - - - 0x03EC8E 0F:EC7E: 10 03     BPL bra_EC83
-C - - - - - 0x03EC90 0F:EC80: A9 02     LDA #$02
+C - - - - - 0x03EC90 0F:EC80: A9 02     LDA #con_btn_Left
 C - - - - - 0x03EC92 0F:EC82: 60        RTS
 bra_EC83:
-C - - - - - 0x03EC93 0F:EC83: A9 01     LDA #$01
+C - - - - - 0x03EC93 0F:EC83: A9 01     LDA #con_btn_Right
 C - - - - - 0x03EC95 0F:EC85: 60        RTS
 
 

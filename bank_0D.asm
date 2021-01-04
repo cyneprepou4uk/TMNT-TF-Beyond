@@ -256,7 +256,7 @@ C - - - - - 0x0341D7 0D:81C7: D0 0D     BNE bra_81D6
 C - - - - - 0x0341D9 0D:81C9: A5 13     LDA ram_0013
 C - - - - - 0x0341DB 0D:81CB: C9 02     CMP #$02
 C - - - - - 0x0341DD 0D:81CD: B0 07     BCS bra_81D6
-C - - - - - 0x0341DF 0D:81CF: A9 80     LDA #$80
+C - - - - - 0x0341DF 0D:81CF: A9 80     LDA #con_btn_A
 C - - - - - 0x0341E1 0D:81D1: 95 91     STA ram_btn_hold,X
 C - - - - - 0x0341E3 0D:81D3: 95 8E     STA ram_btn_press,X
 C - - - - - 0x0341E5 0D:81D5: 60        RTS
@@ -456,7 +456,7 @@ bra_8342:
 C - - - - - 0x034352 0D:8342: C9 DD     CMP #$DD
 C - - - - - 0x034354 0D:8344: D0 0A     BNE bra_8350
 C - - - - - 0x034356 0D:8346: FE DC 06  INC ram_06DC,X
-C - - - - - 0x034359 0D:8349: A9 40     LDA #$40
+C - - - - - 0x034359 0D:8349: A9 40     LDA #con_btn_B
 C - - - - - 0x03435B 0D:834B: 95 8E     STA ram_btn_press,X
 C - - - - - 0x03435D 0D:834D: 95 91     STA ram_btn_hold,X
 C - - - - - 0x03435F 0D:834F: 60        RTS
@@ -852,12 +852,12 @@ ofs_85EC_16:
 C - - J - - 0x0345FC 0D:85EC: BD 20 05  LDA ram_0520,X
 C - - - - - 0x0345FF 0D:85EF: D0 16     BNE bra_8607
 C - - - - - 0x034601 0D:85F1: BD C6 06  LDA ram_06C6,X
-C - - - - - 0x034604 0D:85F4: 09 40     ORA #$40
-C - - - - - 0x034606 0D:85F6: 29 C3     AND #$C3
+C - - - - - 0x034604 0D:85F4: 09 40     ORA #con_btn_B  ; bzk выглядит бесполезным
+C - - - - - 0x034606 0D:85F6: 29 C3     AND #con_btns_AB + con_btn_Right + con_btn_Left
 C - - - - - 0x034608 0D:85F8: 95 91     STA ram_btn_hold,X
 C - - - - - 0x03460A 0D:85FA: 9D C6 06  STA ram_06C6,X
 C - - - - - 0x03460D 0D:85FD: 9D C8 06  STA ram_06C8,X
-C - - - - - 0x034610 0D:8600: A9 40     LDA #$40
+C - - - - - 0x034610 0D:8600: A9 40     LDA #con_btn_B
 C - - - - - 0x034612 0D:8602: 95 8E     STA ram_btn_press,X
 C - - - - - 0x034614 0D:8604: 4C FB 89  JMP loc_89FB
 bra_8607:
@@ -1055,12 +1055,12 @@ C - - - - - 0x034751 0D:8741: BD 20 05  LDA ram_0520,X
 C - - - - - 0x034754 0D:8744: C9 01     CMP #$01
 C - - - - - 0x034756 0D:8746: F0 4B     BEQ bra_8793
 C - - - - - 0x034758 0D:8748: BD C6 06  LDA ram_06C6,X
-C - - - - - 0x03475B 0D:874B: 09 40     ORA #$40
-C - - - - - 0x03475D 0D:874D: 29 C3     AND #$C3
+C - - - - - 0x03475B 0D:874B: 09 40     ORA #con_btn_B  ; bzk выглядит бесполезным
+C - - - - - 0x03475D 0D:874D: 29 C3     AND #con_btns_AB + con_btn_Right + con_btn_Left
 C - - - - - 0x03475F 0D:874F: 95 91     STA ram_btn_hold,X
 C - - - - - 0x034761 0D:8751: 9D C6 06  STA ram_06C6,X
 C - - - - - 0x034764 0D:8754: 9D C8 06  STA ram_06C8,X
-C - - - - - 0x034767 0D:8757: A9 40     LDA #$40
+C - - - - - 0x034767 0D:8757: A9 40     LDA #con_btn_B
 C - - - - - 0x034769 0D:8759: 95 8E     STA ram_btn_press,X
 C - - - - - 0x03476B 0D:875B: 4C 97 88  JMP loc_8897
 
@@ -1241,7 +1241,7 @@ loc_888B:
 C D 0 - - - 0x03489B 0D:888B: 95 91     STA ram_btn_hold,X
 C - - - - - 0x03489D 0D:888D: 9D C6 06  STA ram_06C6,X
 C - - - - - 0x0348A0 0D:8890: 9D C8 06  STA ram_06C8,X
-C - - - - - 0x0348A3 0D:8893: A9 40     LDA #$40
+C - - - - - 0x0348A3 0D:8893: A9 40     LDA #con_btn_B
 loc_8895:
 C D 0 - - - 0x0348A5 0D:8895: 95 8E     STA ram_btn_press,X
 loc_8897:
@@ -1268,7 +1268,7 @@ C - - - - - 0x0348BC 0D:88AC: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 ofs_88B5_00:
 C - - J - - 0x0348C5 0D:88B5: A9 05     LDA #$05
 C - - - - - 0x0348C7 0D:88B7: 9D E0 06  STA ram_06E0,X
-C - - - - - 0x0348CA 0D:88BA: A9 04     LDA #$04
+C - - - - - 0x0348CA 0D:88BA: A9 04     LDA #con_btn_Down
 C - - - - - 0x0348CC 0D:88BC: 9D C8 06  STA ram_06C8,X
 C - - - - - 0x0348CF 0D:88BF: 95 8E     STA ram_btn_press,X
 C - - - - - 0x0348D1 0D:88C1: 95 91     STA ram_btn_hold,X
@@ -1587,10 +1587,10 @@ C - - - - - 0x034AFE 0D:8AEE: BD 20 05  LDA ram_0520,X
 C - - - - - 0x034B01 0D:8AF1: C9 00     CMP #$00
 C - - - - - 0x034B03 0D:8AF3: D0 E4     BNE bra_8AD9
 C - - - - - 0x034B05 0D:8AF5: BD C6 06  LDA ram_06C6,X
-C - - - - - 0x034B08 0D:8AF8: 09 80     ORA #$80
+C - - - - - 0x034B08 0D:8AF8: 09 80     ORA #con_btn_A
 C - - - - - 0x034B0A 0D:8AFA: 95 91     STA ram_btn_hold,X
 C - - - - - 0x034B0C 0D:8AFC: 9D C6 06  STA ram_06C6,X
-C - - - - - 0x034B0F 0D:8AFF: A9 80     LDA #$80
+C - - - - - 0x034B0F 0D:8AFF: A9 80     LDA #con_btn_A
 C - - - - - 0x034B11 0D:8B01: 4C 95 88  JMP loc_8895
 
 
@@ -4929,7 +4929,7 @@ C - - - - - 0x035C5E 0D:9C4E: AD 38 06  LDA ram_dist_X_btw_plrs
 C - - - - - 0x035C61 0D:9C51: C9 2C     CMP #$2C
 C - - - - - 0x035C63 0D:9C53: 90 1B     BCC bra_9C70
 C - - - - - 0x035C65 0D:9C55: 20 7B EC  JSR sub_0x03EC8B
-C - - - - - 0x035C68 0D:9C58: 09 08     ORA #$08
+C - - - - - 0x035C68 0D:9C58: 09 08     ORA #con_btn_Up
 C - - - - - 0x035C6A 0D:9C5A: 95 8E     STA ram_btn_press,X
 C - - - - - 0x035C6C 0D:9C5C: 95 91     STA ram_btn_hold,X
 C - - - - - 0x035C6E 0D:9C5E: D0 0B     BNE bra_9C6B
@@ -5211,7 +5211,7 @@ C - - - - - 0x035E27 0D:9E17: AD 38 06  LDA ram_dist_X_btw_plrs
 C - - - - - 0x035E2A 0D:9E1A: C9 20     CMP #$20
 C - - - - - 0x035E2C 0D:9E1C: 90 09     BCC bra_9E27
 C - - - - - 0x035E2E 0D:9E1E: 20 7B EC  JSR sub_0x03EC8B
-C - - - - - 0x035E31 0D:9E21: 09 08     ORA #$08
+C - - - - - 0x035E31 0D:9E21: 09 08     ORA #con_btn_Up
 C - - - - - 0x035E33 0D:9E23: 95 91     STA ram_btn_hold,X
 C - - - - - 0x035E35 0D:9E25: 95 8E     STA ram_btn_press,X
 bra_9E27:
@@ -5817,7 +5817,7 @@ bra_A219:
 C - - - - - 0x036229 0D:A219: 20 AD A1  JSR sub_A1AD
 C - - - - - 0x03622C 0D:A21C: F0 08     BEQ bra_A226
 bra_A21E:
-C - - - - - 0x03622E 0D:A21E: A9 08     LDA #$08
+C - - - - - 0x03622E 0D:A21E: A9 08     LDA #con_btn_Up
 C - - - - - 0x036230 0D:A220: 9D 33 06  STA ram_0633,X
 C - - - - - 0x036233 0D:A223: 4C 59 80  JMP loc_8059
 bra_A226:
@@ -5859,7 +5859,7 @@ C - - - - - 0x036283 0D:A273: D0 09     BNE bra_A27E
 C - - - - - 0x036285 0D:A275: BD 2C 06  LDA ram_062C,X
 C - - - - - 0x036288 0D:A278: F0 04     BEQ bra_A27E
 bra_A27A:
-C - - - - - 0x03628A 0D:A27A: A9 40     LDA #$40
+C - - - - - 0x03628A 0D:A27A: A9 40     LDA #con_btn_B
 C - - - - - 0x03628C 0D:A27C: D0 19     BNE bra_A297
 bra_A27E:
 C - - - - - 0x03628E 0D:A27E: B9 54 05  LDA ram_0554,Y
@@ -5872,7 +5872,7 @@ C - - - - - 0x03629C 0D:A28C: C9 70     CMP #$70
 C - - - - - 0x03629E 0D:A28E: 90 0A     BCC bra_A29A
 C - - - - - 0x0362A0 0D:A290: BD 60 04  LDA ram_0460,X
 C - - - - - 0x0362A3 0D:A293: 30 05     BMI bra_A29A
-C - - - - - 0x0362A5 0D:A295: A9 80     LDA #$80
+C - - - - - 0x0362A5 0D:A295: A9 80     LDA #con_btn_A
 bra_A297:
 C - - - - - 0x0362A7 0D:A297: 4C 59 80  JMP loc_8059
 bra_A29A:
@@ -5938,12 +5938,12 @@ C - - - - - 0x03632F 0D:A31F: 1D 10 06  ORA ram_0610,X
 C - - - - - 0x036332 0D:A322: 29 80     AND #$80
 C - - - - - 0x036334 0D:A324: D0 23     BNE bra_A349
 bra_A326:
-C - - - - - 0x036336 0D:A326: A9 40     LDA #$40
+C - - - - - 0x036336 0D:A326: A9 40     LDA #con_btn_B
 C - - - - - 0x036338 0D:A328: 95 8E     STA ram_btn_press,X
-C - - - - - 0x03633A 0D:A32A: 69 01     ADC #$01
+C - - - - - 0x03633A 0D:A32A: 69 01     ADC #con_btn_Right
 C - - - - - 0x03633C 0D:A32C: 4C 5B 80  JMP loc_805B
 bra_A32F:
-C - - - - - 0x03633F 0D:A32F: A9 80     LDA #$80
+C - - - - - 0x03633F 0D:A32F: A9 80     LDA #con_btn_A
 C - - - - - 0x036341 0D:A331: 4C 59 80  JMP loc_8059
 bra_A334:
 C - - - - - 0x036344 0D:A334: B9 20 05  LDA ram_0520,Y
