@@ -3637,9 +3637,9 @@ C - - - - - 0x03E4A2 0F:E492: AD 27 01  LDA ram_option_timer
 bra_E495:
 C - - - - - 0x03E4A5 0F:E495: 0A        ASL
 C - - - - - 0x03E4A6 0F:E496: A8        TAY
-C - - - - - 0x03E4A7 0F:E497: B9 79 E9  LDA tbl_E979,Y
+C - - - - - 0x03E4A7 0F:E497: B9 79 E9  LDA tbl_E979_tens,Y
 C - - - - - 0x03E4AA 0F:E49A: 8D 72 06  STA ram_game_time_tens
-C - - - - - 0x03E4AD 0F:E49D: B9 7A E9  LDA tbl_E97A,Y
+C - - - - - 0x03E4AD 0F:E49D: B9 7A E9  LDA tbl_E979_ones + 1,Y
 C - - - - - 0x03E4B0 0F:E4A0: 8D 73 06  STA ram_game_time_ones
 C - - - - - 0x03E4B3 0F:E4A3: 60        RTS
 
@@ -3778,7 +3778,7 @@ C - - - - - 0x03E5A8 0F:E598: AD 49 06  LDA ram_wins
 C - - - - - 0x03E5AB 0F:E59B: 0D 4A 06  ORA ram_wins + 1
 C - - - - - 0x03E5AE 0F:E59E: D0 19     BNE bra_E5B9
 bra_E5A0:
-C - - - - - 0x03E5B0 0F:E5A0: A2 00     LDX #$00
+C - - - - - 0x03E5B0 0F:E5A0: A2 00     LDX #$00        ; bzk опт, вероятно хотели сделать некий цикл, но адресов с победами-то всего 2
 C - - - - - 0x03E5B2 0F:E5A2: BD 49 06  LDA ram_wins,X
 C - - - - - 0x03E5B5 0F:E5A5: DD 4A 06  CMP ram_wins + 1,X
 C - - - - - 0x03E5B8 0F:E5A8: F0 05     BEQ bra_E5AF
@@ -4387,14 +4387,17 @@ tbl_E957:
 
 
 
-tbl_E979:
+tbl_E979_tens:
+tbl_E979_ones:
 - D 3 - - - 0x03E989 0F:E979: 04        .byte $04   ; 
-tbl_E97A:
 - D 3 - - - 0x03E98A 0F:E97A: 05        .byte $05   ; 
+
 - D 3 - - - 0x03E98B 0F:E97B: 06        .byte $06   ; 
 - D 3 - - - 0x03E98C 0F:E97C: 00        .byte $00   ; 
+
 - D 3 - - - 0x03E98D 0F:E97D: 09        .byte $09   ; 
 - D 3 - - - 0x03E98E 0F:E97E: 09        .byte $09   ; 
+
 - D 3 - - - 0x03E98F 0F:E97F: 0A        .byte $0A   ; 
 - D 3 - - - 0x03E990 0F:E980: 0A        .byte $0A   ; 
 ; bzk мусор возможно
