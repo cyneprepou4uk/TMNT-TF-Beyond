@@ -376,7 +376,6 @@ C - - - - - 0x0342B3 0D:82A3: D0 09     BNE bra_82AE
 C - - - - - 0x0342B5 0D:82A5: A9 00     LDA #$00
 C - - - - - 0x0342B7 0D:82A7: 9D E6 06  STA ram_06E6,X
 C - - - - - 0x0342BA 0D:82AA: 4C 96 ED  JMP loc_0x03EDA6
-- - - - - - 0x0342BD 0D:82AD: 60        RTS
 bra_82AE:
 C - - - - - 0x0342BE 0D:82AE: C9 FC     CMP #$FC
 C - - - - - 0x0342C0 0D:82B0: D0 0B     BNE bra_82BD
@@ -513,7 +512,7 @@ C - - - - - 0x0343B9 0D:83A9: A9 15     LDA #$15
 C - - - - - 0x0343BB 0D:83AB: 4C 70 83  JMP loc_8370
 bra_83AE:
 C - - - - - 0x0343BE 0D:83AE: C9 D8     CMP #$D8
-C - - - - - 0x0343C0 0D:83B0: D0 13     BNE bra_83C5
+C - - - - - 0x0343C0 0D:83B0: D0 13     BNE bra_83C5_RTS
 C - - - - - 0x0343C2 0D:83B2: FE C2 06  INC ram_06C2,X
 C - - - - - 0x0343C5 0D:83B5: C8        INY
 C - - - - - 0x0343C6 0D:83B6: 20 20 ED  JSR sub_0x03ED30
@@ -521,7 +520,7 @@ C - - - - - 0x0343C9 0D:83B9: 9D C0 06  STA ram_06C0,X
 C - - - - - 0x0343CC 0D:83BC: 9D E2 06  STA ram_06E2,X
 C - - - - - 0x0343CF 0D:83BF: 20 48 82  JSR sub_8248
 C - - - - - 0x0343D2 0D:83C2: 4C 05 ED  JMP loc_0x03ED15
-bra_83C5:
+bra_83C5_RTS:
 - - - - - - 0x0343D5 0D:83C5: 60        RTS
 
 
@@ -2926,12 +2925,8 @@ C - - - - - 0x035072 0D:9062: D0 02     BNE bra_9066
 - - - - - - 0x035074 0D:9064: 38        SEC
 - - - - - - 0x035075 0D:9065: 60        RTS
 bra_9066:
-loc_9066:
 C - - - - - 0x035076 0D:9066: 18        CLC
 C - - - - - 0x035077 0D:9067: 60        RTS
-- - - - - - 0x035078 0D:9068: 4C 66 90  JMP loc_9066
-- - - - - - 0x03507B 0D:906B: 38        SEC
-- - - - - - 0x03507C 0D:906C: 60        RTS
 
 
 

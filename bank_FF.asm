@@ -3297,7 +3297,6 @@ loc_0x03E256:
 C D 3 - - - 0x03E256 0F:E246: A9 03     LDA #$03
 C - - - - - 0x03E258 0F:E248: 85 95     STA ram_0095
 C - - - - - 0x03E25A 0F:E24A: 4C 25 DC  JMP loc_DC25
-- - - - - - 0x03E25D 0F:E24D: 60        RTS
 
 
 
