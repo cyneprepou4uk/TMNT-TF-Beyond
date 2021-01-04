@@ -133,7 +133,7 @@ bra_80CE:
 C - - - - - 0x0380DE 0E:80CE: 29 81     AND #$81
 C - - - - - 0x0380E0 0E:80D0: D0 0E     BNE bra_80E0
 C - - - - - 0x0380E2 0E:80D2: AD 25 01  LDA ram_option_difficulty
-C - - - - - 0x0380E5 0E:80D5: F0 F6     BEQ bra_80CD_RTS
+C - - - - - 0x0380E5 0E:80D5: F0 F6     BEQ bra_80CD_RTS    ; easy
 C - - - - - 0x0380E7 0E:80D7: CE 25 01  DEC ram_option_difficulty
 C - - - - - 0x0380EA 0E:80DA: 20 A6 81  JSR sub_81A6
 C - - - - - 0x0380ED 0E:80DD: 4C 54 80  JMP loc_8054
@@ -1131,7 +1131,7 @@ C - - - - - 0x03861A 0E:860A: 8D 61 05  STA ram_0561
 C - - - - - 0x03861D 0E:860D: A5 2C     LDA ram_002C
 C - - - - - 0x03861F 0E:860F: C9 02     CMP #$02
 C - - - - - 0x038621 0E:8611: F0 51     BEQ bra_8664
-C - - - - - 0x038623 0E:8613: A5 31     LDA ram_0031
+C - - - - - 0x038623 0E:8613: A5 31     LDA ram_continues
 C - - - - - 0x038625 0E:8615: F0 4D     BEQ bra_8664
 C - - - - - 0x038627 0E:8617: A9 07     LDA #$07
 C - - - - - 0x038629 0E:8619: 20 E5 F6  JSR sub_0x03F6F5
@@ -1173,7 +1173,7 @@ C D 0 - - - 0x038662 0E:8652: A9 22     LDA #$22
 C - - - - - 0x038664 0E:8654: A0 35     LDY #$35
 C - - - - - 0x038666 0E:8656: 20 6B D2  JSR sub_0x03D27B
 C - - - - - 0x038669 0E:8659: 18        CLC
-C - - - - - 0x03866A 0E:865A: A5 31     LDA ram_0031
+C - - - - - 0x03866A 0E:865A: A5 31     LDA ram_continues
 C - - - - - 0x03866C 0E:865C: 69 81     ADC #$81
 C - - - - - 0x03866E 0E:865E: 20 5D D2  JSR sub_0x03D26D
 C - - - - - 0x038671 0E:8661: 4C 5B D2  JMP loc_0x03D26B
@@ -1238,7 +1238,7 @@ C - - - - - 0x0386D0 0E:86C0: A9 28     LDA #$28
 C - - - - - 0x0386D2 0E:86C2: 20 90 F6  JSR sub_0x03F6A0
 C - - - - - 0x0386D5 0E:86C5: A9 80     LDA #$80
 C - - - - - 0x0386D7 0E:86C7: 8D B0 04  STA ram_04B0
-C - - - - - 0x0386DA 0E:86CA: C6 31     DEC ram_0031
+C - - - - - 0x0386DA 0E:86CA: C6 31     DEC ram_continues
 C - - - - - 0x0386DC 0E:86CC: A9 04     LDA #$04
 C - - - - - 0x0386DE 0E:86CE: 8D 30 05  STA ram_0530
 C - - - - - 0x0386E1 0E:86D1: CE 00 04  DEC ram_anim_object
@@ -3902,10 +3902,10 @@ C - - J - - 0x0396AE 0E:969E: 20 36 9B  JSR sub_9B36
 C - - - - - 0x0396B1 0E:96A1: AD 31 06  LDA ram_0631
 C - - - - - 0x0396B4 0E:96A4: D0 B2     BNE bra_9658_RTS
 C - - - - - 0x0396B6 0E:96A6: AD 25 01  LDA ram_option_difficulty
-C - - - - - 0x0396B9 0E:96A9: F0 05     BEQ bra_96B0
+C - - - - - 0x0396B9 0E:96A9: F0 05     BEQ bra_96B0_easy
 C - - - - - 0x0396BB 0E:96AB: E6 21     INC ram_0021
 C - - - - - 0x0396BD 0E:96AD: 4C 2E E1  JMP loc_0x03E13E
-bra_96B0:
+bra_96B0_easy:
 C - - - - - 0x0396C0 0E:96B0: A9 0D     LDA #$0D
 C - - - - - 0x0396C2 0E:96B2: 85 21     STA ram_0021
 C - - - - - 0x0396C4 0E:96B4: A9 C0     LDA #$C0

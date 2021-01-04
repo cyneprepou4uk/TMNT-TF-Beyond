@@ -801,8 +801,8 @@ C - - J - - 0x03D2A0 0F:D290: 20 09 DE  JSR sub_DE09
 C - - - - - 0x03D2A3 0F:D293: A9 FF     LDA #$FF
 C - - - - - 0x03D2A5 0F:D295: 85 98     STA ram_0098
 C - - - - - 0x03D2A7 0F:D297: AC 25 01  LDY ram_option_difficulty
-C - - - - - 0x03D2AA 0F:D29A: B9 FC BF  LDA tbl_BFFC,Y
-C - - - - - 0x03D2AD 0F:D29D: 85 31     STA ram_0031
+C - - - - - 0x03D2AA 0F:D29A: B9 FC BF  LDA tbl_BFFC_credits,Y
+C - - - - - 0x03D2AD 0F:D29D: 85 31     STA ram_continues
 C - - - - - 0x03D2AF 0F:D29F: A9 00     LDA #$00
 C - - - - - 0x03D2B1 0F:D2A1: 85 89     STA ram_0089
 bra_D2A3:
@@ -812,11 +812,11 @@ C - - - - - 0x03D2B5 0F:D2A5: A9 00     LDA #$00
 C - - - - - 0x03D2B7 0F:D2A7: 85 95     STA ram_0095
 C - - - - - 0x03D2B9 0F:D2A9: 60        RTS
 
-tbl_BFFC:
-- D 1 - - - 0x02400C 08:BFFC: 02        .byte $02   ; 00
-- D 1 - - - 0x02400D 08:BFFD: 01        .byte $01   ; 01
-- D 1 - - - 0x02400E 08:BFFE: 00        .byte $00   ; 02
-- D 1 - - - 0x02400F 08:BFFF: 00        .byte $00   ; 03
+tbl_BFFC_credits:
+- D 1 - - - 0x02400C 08:BFFC: 02        .byte $02   ; 00 Easy
+- D 1 - - - 0x02400D 08:BFFD: 01        .byte $01   ; 01 Normal
+- D 1 - - - 0x02400E 08:BFFE: 00        .byte $00   ; 02 Hard
+- D 1 - - - 0x02400F 08:BFFF: 00        .byte $00   ; 03 Expert
 
 
 

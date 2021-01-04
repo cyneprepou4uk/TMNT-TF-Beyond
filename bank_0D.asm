@@ -6243,7 +6243,7 @@ C - - - - - 0x036550 0D:A540: 60        RTS
 loc_A800:
 C D 1 - - - 0x036810 0D:A800: AD 25 01  LDA ram_option_difficulty
 C - - - - - 0x036813 0D:A803: 49 03     EOR #$03
-C - - - - - 0x036815 0D:A805: D0 05     BNE bra_A80C
+C - - - - - 0x036815 0D:A805: D0 05     BNE bra_A80C    ; not expert
 C - - - - - 0x036817 0D:A807: C0 03     CPY #$03
 C - - - - - 0x036819 0D:A809: B0 01     BCS bra_A80C
 C - - - - - 0x03681B 0D:A80B: A8        TAY
@@ -6257,7 +6257,7 @@ loc_BEB1:
 C D 1 - - - 0x037EC1 0D:BEB1: 85 17     STA ram_0017
 C - - - - - 0x037EC3 0D:BEB3: AD 25 01  LDA ram_option_difficulty
 C - - - - - 0x037EC6 0D:BEB6: C9 03     CMP #$03
-C - - - - - 0x037EC8 0D:BEB8: D0 70     BNE bra_BF2A_RTS
+C - - - - - 0x037EC8 0D:BEB8: D0 70     BNE bra_BF2A_RTS    ; not expert
 C - - - - - 0x037ECA 0D:BEBA: BC DE 06  LDY ram_06DE,X
 C - - - - - 0x037ECD 0D:BEBD: 20 AD A1  JSR sub_A1AD
 C - - - - - 0x037ED0 0D:BEC0: D0 68     BNE bra_BF2A_RTS
@@ -6334,7 +6334,7 @@ C - - - - - 0x037F4D 0D:BF3D: 60        RTS
 loc_BF3E:
 C D 1 - - - 0x037F4E 0D:BF3E: AD 25 01  LDA ram_option_difficulty
 C - - - - - 0x037F51 0D:BF41: C9 03     CMP #$03
-C - - - - - 0x037F53 0D:BF43: D0 15     BNE bra_BF5A
+C - - - - - 0x037F53 0D:BF43: D0 15     BNE bra_BF5A    ; not expert
 C - - - - - 0x037F55 0D:BF45: BD 20 05  LDA ram_0520,X
 C - - - - - 0x037F58 0D:BF48: C9 08     CMP #$08
 C - - - - - 0x037F5A 0D:BF4A: B0 12     BCS bra_BF5E_RTS
@@ -6355,7 +6355,7 @@ C - - - - - 0x037F6E 0D:BF5E: 60        RTS
 loc_BF5F:
 C D 1 - - - 0x037F6F 0D:BF5F: AD 25 01  LDA ram_option_difficulty
 C - - - - - 0x037F72 0D:BF62: C9 03     CMP #$03
-C - - - - - 0x037F74 0D:BF64: D0 34     BNE bra_BF9A
+C - - - - - 0x037F74 0D:BF64: D0 34     BNE bra_BF9A    ; not expert
 C - - - - - 0x037F76 0D:BF66: BD 50 05  LDA ram_id_object,X
 C - - - - - 0x037F79 0D:BF69: C9 06     CMP #$06
 C - - - - - 0x037F7B 0D:BF6B: D0 2D     BNE bra_BF9A
@@ -6394,11 +6394,11 @@ loc_BFA4:
 ofs_9C75_01_Raph:
 C D 1 - - - 0x037FB4 0D:BFA4: AD 25 01  LDA ram_option_difficulty
 C - - - - - 0x037FB7 0D:BFA7: C9 03     CMP #$03
-C - - - - - 0x037FB9 0D:BFA9: F0 07     BEQ bra_BFB2_RTS
+C - - - - - 0x037FB9 0D:BFA9: F0 07     BEQ bra_BFB2_expert
 C - - - - - 0x037FBB 0D:BFAB: A5 11     LDA ram_0011
 C - - - - - 0x037FBD 0D:BFAD: C9 08     CMP #$08
 C - - - - - 0x037FBF 0D:BFAF: 4C 79 9C  JMP loc_9C79
-bra_BFB2_RTS:
+bra_BFB2_expert:
 C - - - - - 0x037FC2 0D:BFB2: 60        RTS
 
 
@@ -6406,7 +6406,7 @@ C - - - - - 0x037FC2 0D:BFB2: 60        RTS
 loc_BFB3:
 C D 1 - - - 0x037FC3 0D:BFB3: AD 25 01  LDA ram_option_difficulty
 C - - - - - 0x037FC6 0D:BFB6: C9 03     CMP #$03
-C - - - - - 0x037FC8 0D:BFB8: 90 31     BCC bra_BFEB
+C - - - - - 0x037FC8 0D:BFB8: 90 31     BCC bra_BFEB_not_expert
 C - - - - - 0x037FCA 0D:BFBA: AD 38 06  LDA ram_dist_X_btw_plrs
 C - - - - - 0x037FCD 0D:BFBD: C9 10     CMP #$10
 C - - - - - 0x037FCF 0D:BFBF: 90 21     BCC bra_BFE2
@@ -6433,7 +6433,7 @@ bra_BFE5:
 C - - - - - 0x037FF5 0D:BFE5: 4C 5B A0  JMP loc_A05B
 bra_BFE8:
 C - - - - - 0x037FF8 0D:BFE8: 4C 6A A0  JMP loc_A06A
-bra_BFEB:
+bra_BFEB_not_expert:
 C - - - - - 0x037FFB 0D:BFEB: 4C 4F A0  JMP loc_A04F
 
 
