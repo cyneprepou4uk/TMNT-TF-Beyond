@@ -3175,7 +3175,7 @@ C - - - - - 0x03E199 0F:E189: 20 32 D0  JSR sub_D032_read_pointers_after_jsr
 - D 3 - I - 0x03E19E 0F:E18E: FD E1     .word ofs_E1FD_01
 - D 3 - I - 0x03E1A0 0F:E190: E7 F7     .word ofs_F7E7_02
 - D 3 - I - 0x03E1A2 0F:E192: 4E E2     .word ofs_E24E_03
-- D 3 - I - 0x03E1A4 0F:E194: 41 E3     .word ofs_E341_04
+- D 3 - I - 0x03E1A4 0F:E194: 41 E3     .word ofs_E341_04_vs_screen
 - D 3 - I - 0x03E1A6 0F:E196: F3 E3     .word ofs_E3F3_05
 - D 3 - I - 0x03E1A8 0F:E198: 6D E4     .word ofs_E46D_06
 - D 3 - I - 0x03E1AA 0F:E19A: A4 E4     .word ofs_E4A4_07
@@ -3436,10 +3436,10 @@ C - - - - - 0x03E34E 0F:E33E: 4C 46 D3  JMP loc_D346
 
 
 
-ofs_E341_04:
+ofs_E341_04_vs_screen:
 C - - J - - 0x03E351 0F:E341: A5 90     LDA ram_sum_btn_press
 C - - - - - 0x03E353 0F:E343: 29 10     AND #con_btn_Start
-C - - - - - 0x03E355 0F:E345: D0 53     BNE bra_E39A
+C - - - - - 0x03E355 0F:E345: D0 53     BNE bra_E39A_skip_screen
 C - - - - - 0x03E357 0F:E347: A5 57     LDA ram_X_scroll + 1
 C - - - - - 0x03E359 0F:E349: 29 F8     AND #$F8
 C - - - - - 0x03E35B 0F:E34B: F0 3F     BEQ bra_E38C
@@ -3483,7 +3483,7 @@ C - - - - - 0x03E3A2 0F:E392: F0 11     BEQ bra_E3A5
 C - - - - - 0x03E3A4 0F:E394: AC 60 05  LDY ram_0560
 C - - - - - 0x03E3A7 0F:E397: 88        DEY
 C - - - - - 0x03E3A8 0F:E398: D0 F1     BNE bra_E38B_RTS
-bra_E39A:
+bra_E39A_skip_screen:
 C - - - - - 0x03E3AA 0F:E39A: 20 83 E3  JSR sub_E383
 C - - - - - 0x03E3AD 0F:E39D: A9 01     LDA #$01
 C - - - - - 0x03E3AF 0F:E39F: 8D 60 05  STA ram_0560
