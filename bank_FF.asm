@@ -6608,29 +6608,29 @@ C - - - - - 0x03F5E8 0F:F5D8: 4C 3E E1  JMP loc_E13E
 
 
 sub_F5DF_prg_bank_09:
-C - - - - - 0x03F5EF 0F:F5DF: A9 32     LDA #$32
+C - - - - - 0x03F5EF 0F:F5DF: A9 32     LDA #con_prg_bank + $12
 C - - - - - 0x03F5F1 0F:F5E1: D0 16     BNE bra_F5F9_swap_prg_bank
 
 sub_F5E3_prg_bank_0A:
-C - - - - - 0x03F5F3 0F:F5E3: A9 34     LDA #$34
+C - - - - - 0x03F5F3 0F:F5E3: A9 34     LDA #con_prg_bank + $14
 C - - - - - 0x03F5F5 0F:F5E5: D0 12     BNE bra_F5F9_swap_prg_bank
 
 sub_F5E7_prg_bank_0B:
 .export loc_0x03F5F7_prg_bank_0B
 loc_0x03F5F7_prg_bank_0B:
-C D 3 - - - 0x03F5F7 0F:F5E7: A9 36     LDA #$36
+C D 3 - - - 0x03F5F7 0F:F5E7: A9 36     LDA #con_prg_bank + $16
 C - - - - - 0x03F5F9 0F:F5E9: D0 0E     BNE bra_F5F9_swap_prg_bank
 
 sub_F5EB_prg_bank_0C:
-C - - - - - 0x03F5FB 0F:F5EB: A9 38     LDA #$38
+C - - - - - 0x03F5FB 0F:F5EB: A9 38     LDA #con_prg_bank + $18
 C - - - - - 0x03F5FD 0F:F5ED: D0 0A     BNE bra_F5F9_swap_prg_bank
 
 sub_F5EF_prg_bank_0D:
-C - - - - - 0x03F5FF 0F:F5EF: A9 3A     LDA #$3A
+C - - - - - 0x03F5FF 0F:F5EF: A9 3A     LDA #con_prg_bank + $1A
 C - - - - - 0x03F601 0F:F5F1: D0 06     BNE bra_F5F9_swap_prg_bank
 
 sub_F5F3_prg_bank_0E:
-C - - - - - 0x03F603 0F:F5F3: A9 3C     LDA #$3C
+C - - - - - 0x03F603 0F:F5F3: A9 3C     LDA #con_prg_bank + $1C
 bra_F5F9_swap_prg_bank:
 sub_F5F9_swap_prg_bank:
 C - - - - - 0x03F609 0F:F5F9: E6 3D     INC ram_003D
@@ -6711,7 +6711,6 @@ sub_F669:
 C - - - - - 0x03F679 0F:F669: A0 01     LDY #$01
 C - - - - - 0x03F67B 0F:F66B: 84 2E     STY ram_002E
 C - - - - - 0x03F67D 0F:F66D: AD 00 80  LDA $8000
-C - - - - - 0x03F680 0F:F670: 09 30     ORA #$30
 C - - - - - 0x03F682 0F:F672: 85 46     STA ram_0046
 C - - - - - 0x03F684 0F:F674: A2 30     LDX #$30
 sub_F676:
