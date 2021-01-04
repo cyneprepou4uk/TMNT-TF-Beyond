@@ -9269,7 +9269,7 @@ C - - - - - 0x02E5E0 0B:A5D0: A9 B7     LDA #> ofs_0x0277E7
 C - - - - - 0x02E5E2 0B:A5D2: 48        PHA
 C - - - - - 0x02E5E3 0B:A5D3: A9 D6     LDA #< ofs_0x0277E7
 C - - - - - 0x02E5E5 0B:A5D5: 48        PHA
-C - - - - - 0x02E5E6 0B:A5D6: 4C 17 F6  JMP loc_0x03F627
+C - - - - - 0x02E5E6 0B:A5D6: 4C 17 F6  JMP loc_0x03F627_restore_prg_bank
 
 
 
@@ -9303,7 +9303,7 @@ C D 1 - - - 0x02E614 0B:A604: A9 A9     LDA #> ofs_0x026A05
 C - - - - - 0x02E616 0B:A606: 48        PHA
 C - - - - - 0x02E617 0B:A607: A9 F4     LDA #< ofs_0x026A05
 C - - - - - 0x02E619 0B:A609: 48        PHA
-C - - - - - 0x02E61A 0B:A60A: 4C 17 F6  JMP loc_0x03F627
+C - - - - - 0x02E61A 0B:A60A: 4C 17 F6  JMP loc_0x03F627_restore_prg_bank
 bra_A60D:
 C - - - - - 0x02E61D 0B:A60D: BD 20 05  LDA ram_0520,X
 C - - - - - 0x02E620 0B:A610: C9 08     CMP #$08
@@ -9388,7 +9388,7 @@ C - - - - - 0x02E700 0B:A6F0: 18        CLC
 bra_A6F1:
 C - - - - - 0x02E701 0B:A6F1: 7D 50 05  ADC ram_object_id,X
 C - - - - - 0x02E704 0B:A6F4: 85 12     STA ram_0012
-C - - - - - 0x02E706 0B:A6F6: 4C 17 F6  JMP loc_0x03F627
+C - - - - - 0x02E706 0B:A6F6: 4C 17 F6  JMP loc_0x03F627_restore_prg_bank
 
 
 
@@ -9420,7 +9420,7 @@ bra_A730:
 C - - - - - 0x02E740 0B:A730: A9 00     LDA #$00
 C - - - - - 0x02E742 0B:A732: 9D 0C 04  STA ram_animation_special,X
 C - - - - - 0x02E745 0B:A735: 9D 10 06  STA ram_0610,X
-C - - - - - 0x02E748 0B:A738: 4C 17 F6  JMP loc_0x03F627
+C - - - - - 0x02E748 0B:A738: 4C 17 F6  JMP loc_0x03F627_restore_prg_bank
 
 
 
@@ -9433,7 +9433,7 @@ C - - - - - 0x02E752 0B:A742: 20 02 D2  JSR sub_0x03D212_multiply_by_10h
 C - - - - - 0x02E755 0B:A745: 05 B1     ORA ram_00B1
 C - - - - - 0x02E757 0B:A747: 8D 10 01  STA ram_0110
 C - - - - - 0x02E75A 0B:A74A: 20 09 DE  JSR sub_0x03DE19
-C - - - - - 0x02E75D 0B:A74D: 4C 17 F6  JMP loc_0x03F627
+C - - - - - 0x02E75D 0B:A74D: 4C 17 F6  JMP loc_0x03F627_restore_prg_bank
 
 
 
@@ -9461,7 +9461,7 @@ bra_A779:
 C - - - - - 0x02E789 0B:A779: 29 0F     AND #$0F
 C - - - - - 0x02E78B 0B:A77B: 4A        LSR
 C - - - - - 0x02E78C 0B:A77C: 85 03     STA ram_0003
-C - - - - - 0x02E78E 0B:A77E: 4C 17 F6  JMP loc_0x03F627
+C - - - - - 0x02E78E 0B:A77E: 4C 17 F6  JMP loc_0x03F627_restore_prg_bank
 
 
 
@@ -9540,7 +9540,7 @@ C - - - - - 0x02E7EA 0B:A7DA: C9 20     CMP #$20
 C - - - - - 0x02E7EC 0B:A7DC: D0 03     BNE bra_A7E1
 C - - - - - 0x02E7EE 0B:A7DE: FE D0 04  INC ram_04D0,X
 bra_A7E1:
-C - - - - - 0x02E7F1 0B:A7E1: 4C 17 F6  JMP loc_0x03F627
+C - - - - - 0x02E7F1 0B:A7E1: 4C 17 F6  JMP loc_0x03F627_restore_prg_bank
 
 
 
@@ -9570,7 +9570,7 @@ C - - - - - 0x02E834 0B:A824: B9 50 05  LDA ram_object_id,Y
 C - - - - - 0x02E837 0B:A827: A8        TAY
 C - - - - - 0x02E838 0B:A828: B9 31 A8  LDA tbl_A831,Y
 C - - - - - 0x02E83B 0B:A82B: 9D B0 05  STA ram_05B0,X
-C - - - - - 0x02E83E 0B:A82E: 4C 17 F6  JMP loc_0x03F627
+C - - - - - 0x02E83E 0B:A82E: 4C 17 F6  JMP loc_0x03F627_restore_prg_bank
 
 
 
@@ -9612,7 +9612,7 @@ C - - - - - 0x02E899 0B:A889: A9 86     LDA #> ofs_0x024635
 C - - - - - 0x02E89B 0B:A88B: 48        PHA
 C - - - - - 0x02E89C 0B:A88C: A9 24     LDA #< ofs_0x024635
 C - - - - - 0x02E89E 0B:A88E: 48        PHA
-C - - - - - 0x02E89F 0B:A88F: 4C 17 F6  JMP loc_0x03F627
+C - - - - - 0x02E89F 0B:A88F: 4C 17 F6  JMP loc_0x03F627_restore_prg_bank
 
 
 
@@ -9978,7 +9978,7 @@ C - - - - - 0x02EB61 0B:AB51: A9 DE     LDA #> ofs_0x03DE76
 C - - - - - 0x02EB63 0B:AB53: 48        PHA
 C - - - - - 0x02EB64 0B:AB54: A9 65     LDA #< ofs_0x03DE76
 C - - - - - 0x02EB66 0B:AB56: 48        PHA
-C - - - - - 0x02EB67 0B:AB57: 4C 17 F6  JMP loc_0x03F627
+C - - - - - 0x02EB67 0B:AB57: 4C 17 F6  JMP loc_0x03F627_restore_prg_bank
 
 
 
@@ -10925,7 +10925,7 @@ C - - - - - 0x02FED1 0B:BEC1: C8        INY
 bra_BEC2:
 C - - - - - 0x02FED2 0B:BEC2: 98        TYA
 C - - - - - 0x02FED3 0B:BEC3: 20 5D D2  JSR sub_0x03D26D
-C - - - - - 0x02FED6 0B:BEC6: 4C 17 F6  JMP loc_0x03F627
+C - - - - - 0x02FED6 0B:BEC6: 4C 17 F6  JMP loc_0x03F627_restore_prg_bank
 
 
 

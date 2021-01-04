@@ -7228,7 +7228,7 @@ C - - - - - 0x03A791 0E:A781: A9 E6     LDA #> ofs_0x03E6C5
 C - - - - - 0x03A793 0E:A783: 48        PHA
 C - - - - - 0x03A794 0E:A784: A9 B4     LDA #< ofs_0x03E6C5
 C - - - - - 0x03A796 0E:A786: 48        PHA
-C - - - - - 0x03A797 0E:A787: 4C 17 F6  JMP loc_0x03F627
+C - - - - - 0x03A797 0E:A787: 4C 17 F6  JMP loc_0x03F627_restore_prg_bank
 
 
 

@@ -936,7 +936,7 @@ bra_D359_loop:
                                         DEX
                                         DEY
                                         BPL bra_D359_loop
-                                        JSR sub_F617
+                                        JSR sub_F617_restore_prg_bank
 C - - - - - 0x03D371 0F:D361: A9 0F     LDA #$0F
 C - - - - - 0x03D373 0F:D363: 9D 4C 06  STA ram_064C,X
 C - - - - - 0x03D376 0F:D366: A6 03     LDX ram_0003
@@ -1646,7 +1646,7 @@ C - - - - - 0x03D791 0F:D781: 20 A3 D7  JSR sub_D7A3
 C - - - - - 0x03D794 0F:D784: A6 05     LDX ram_0005
 C - - - - - 0x03D796 0F:D786: BD 00 04  LDA ram_animation_id,X
 C - - - - - 0x03D799 0F:D789: 30 03     BMI bra_D78E
-C - - - - - 0x03D79B 0F:D78B: 20 17 F6  JSR sub_F617
+C - - - - - 0x03D79B 0F:D78B: 20 17 F6  JSR sub_F617_restore_prg_bank
 bra_D78E:
 C - - - - - 0x03D79E 0F:D78E: E6 05     INC ram_0005
 C - - - - - 0x03D7A0 0F:D790: D0 9B     BNE bra_D72D
@@ -5727,7 +5727,7 @@ C - - - - - 0x03F056 0F:F046: A8        TAY
 C - - - - - 0x03F057 0F:F047: B9 B8 E3  LDA tbl_E3B8_prg_bank,Y
 C - - - - - 0x03F05A 0F:F04A: 20 F9 F5  JSR sub_F5F9
 C - - - - - 0x03F05D 0F:F04D: 20 53 F0  JSR sub_F053
-C - - - - - 0x03F060 0F:F050: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F060 0F:F050: 4C 17 F6  JMP loc_F617_restore_prg_bank
 sub_F053:
 C - - - - - 0x03F063 0F:F053: BD DE F0  LDA tbl_F0DE,X
 C - - - - - 0x03F066 0F:F056: 85 00     STA ram_0000
@@ -6036,7 +6036,7 @@ bra_F242:
 C - - - - - 0x03F252 0F:F242: 8D 01 20  STA $2001
 C - - - - - 0x03F255 0F:F245: 20 95 FB  JSR sub_FB95
 C - - - - - 0x03F258 0F:F248: 20 9B F2  JSR sub_F29B
-C - - - - - 0x03F25B 0F:F24B: 20 20 F6  JSR sub_F620
+C - - - - - 0x03F25B 0F:F24B: 20 20 F6  JSR sub_F620_chr_bankswitch
 C - - - - - 0x03F25E 0F:F24E: E6 23     INC ram_0023
 C - - - - - 0x03F260 0F:F250: A5 2E     LDA ram_002E
 C - - - - - 0x03F262 0F:F252: D0 03     BNE bra_F257
@@ -6069,7 +6069,7 @@ bra_F285:
 C - - - - - 0x03F295 0F:F285: 8D 01 20  STA $2001
 C - - - - - 0x03F298 0F:F288: 20 95 FB  JSR sub_FB95
 C - - - - - 0x03F29B 0F:F28B: 20 9B F2  JSR sub_F29B
-C - - - - - 0x03F29E 0F:F28E: 20 20 F6  JSR sub_F620
+C - - - - - 0x03F29E 0F:F28E: 20 20 F6  JSR sub_F620_chr_bankswitch
 C - - - - - 0x03F2A1 0F:F291: A4 2E     LDY ram_002E
 C - - - - - 0x03F2A3 0F:F293: D0 03     BNE bra_F298
 C - - - - - 0x03F2A5 0F:F295: 20 59 F6  JSR sub_F659
@@ -6667,15 +6667,16 @@ C - - - - - 0x03F626 0F:F616: 60        RTS
 
 
 
-sub_F617:
-loc_F617:
-.export loc_0x03F627
-loc_0x03F627:
+sub_F617_restore_prg_bank:
+loc_F617_restore_prg_bank:
+.export loc_0x03F627_restore_prg_bank
+loc_0x03F627_restore_prg_bank:
 C D 3 - - - 0x03F627 0F:F617: C6 3D     DEC ram_003D
 C - - - - - 0x03F629 0F:F619: A4 3D     LDY ram_003D
 C - - - - - 0x03F62B 0F:F61B: B9 3E 00  LDA ram_003E,Y
 C - - - - - 0x03F62E 0F:F61E: 10 E0     BPL bra_F600
-sub_F620:
+
+sub_F620_chr_bankswitch:
 C - - - - - 0x03F630 0F:F620: A5 23     LDA ram_0023
 C - - - - - 0x03F632 0F:F622: 85 3C     STA ram_003C
 C - - - - - 0x03F634 0F:F624: D0 10     BNE bra_F636
@@ -6699,7 +6700,7 @@ C - - - - - 0x03F656 0F:F646: 8D 01 80  STA $8001
 C - - - - - 0x03F659 0F:F649: E8        INX
 C - - - - - 0x03F65A 0F:F64A: A0 03     LDY #$03
 bra_F64C_loop:
-C - - - - - 0x03F65C 0F:F64C: B5 36     LDA ram_0036,X
+C - - - - - 0x03F65C 0F:F64C: B5 36     LDA ram_0038 - 2,X
 C - - - - - 0x03F65E 0F:F64E: 8E 00 80  STX $8000
 C - - - - - 0x03F661 0F:F651: 8D 01 80  STA $8001
 C - - - - - 0x03F664 0F:F654: E8        INX
@@ -6798,14 +6799,14 @@ C - - - - - 0x03F6E0 0F:F6D0: 4C A0 F6  JMP loc_F6A0
 sub_F6D3:
 C - - - - - 0x03F6E3 0F:F6D3: 20 E3 F5  JSR sub_F5E3_prg_bank_0A
 C - - - - - 0x03F6E6 0F:F6D6: 20 1F D7  JSR sub_D71F
-C - - - - - 0x03F6E9 0F:F6D9: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F6E9 0F:F6D9: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
 ofs_F6DC_07:
 C - - J - - 0x03F6EC 0F:F6DC: 20 F3 F5  JSR sub_F5F3_prg_bank_0E
 C - - - - - 0x03F6EF 0F:F6DF: 20 01 80  JSR sub_0x038011
-C - - - - - 0x03F6F2 0F:F6E2: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F6F2 0F:F6E2: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
@@ -6818,28 +6819,28 @@ C D 3 - - - 0x03F6F5 0F:F6E5: 48        PHA
 C - - - - - 0x03F6F6 0F:F6E6: 20 EB F5  JSR sub_F5EB_prg_bank_0C
 C - - - - - 0x03F6F9 0F:F6E9: 68        PLA
 C - - - - - 0x03F6FA 0F:F6EA: 20 76 80  JSR sub_0x030086
-C - - - - - 0x03F6FD 0F:F6ED: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F6FD 0F:F6ED: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
 sub_F6F9:
 C - - - - - 0x03F709 0F:F6F9: 20 E7 F5  JSR sub_F5E7_prg_bank_0B
 C - - - - - 0x03F70C 0F:F6FC: 20 CE 80  JSR sub_0x02C0DE
-C - - - - - 0x03F70F 0F:F6FF: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F70F 0F:F6FF: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
 sub_F702:
 C - - - - - 0x03F712 0F:F702: 20 EB F5  JSR sub_F5EB_prg_bank_0C
 C - - - - - 0x03F715 0F:F705: 20 00 90  JSR sub_0x031010
-C - - - - - 0x03F718 0F:F708: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F718 0F:F708: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
 sub_F70B:
 C - - - - - 0x03F71B 0F:F70B: 20 EF F5  JSR sub_F5EF_prg_bank_0D
 C - - - - - 0x03F71E 0F:F70E: 20 01 80  JSR sub_0x034011
-C - - - - - 0x03F721 0F:F711: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F721 0F:F711: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
@@ -6851,21 +6852,21 @@ sub_0x03F724:
 loc_0x03F724:
 C D 3 - - - 0x03F724 0F:F714: 20 DF F5  JSR sub_F5DF_prg_bank_09
 C - - - - - 0x03F727 0F:F717: 20 42 B1  JSR sub_0x027152
-C - - - - - 0x03F72A 0F:F71A: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F72A 0F:F71A: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
 ofs_F5A4_09:
 C D 3 - - - 0x03F72D 0F:F71D: 20 F3 F5  JSR sub_F5F3_prg_bank_0E
 C - - - - - 0x03F730 0F:F720: 20 7B 8C  JSR sub_0x038C8B
-C - - - - - 0x03F733 0F:F723: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F733 0F:F723: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
 sub_F726:
 C - - - - - 0x03F736 0F:F726: 20 F3 F5  JSR sub_F5F3_prg_bank_0E
 C - - - - - 0x03F739 0F:F729: 20 BB 82  JSR sub_0x0382CB
-C - - - - - 0x03F73C 0F:F72C: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F73C 0F:F72C: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
@@ -6875,21 +6876,21 @@ C - - - - - 0x03F73F 0F:F72F: A9 02     LDA #$02
 C - - - - - 0x03F744 0F:F734: 85 0A     STA ram_000A
 C - - - - - 0x03F746 0F:F736: 20 F3 F5  JSR sub_F5F3_prg_bank_0E
 C - - - - - 0x03F749 0F:F739: 20 52 84  JSR sub_0x038462
-C - - - - - 0x03F74C 0F:F73C: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F74C 0F:F73C: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
 ofs_F73F_0E:
 C - - J - - 0x03F74F 0F:F73F: 20 F3 F5  JSR sub_F5F3_prg_bank_0E
 C - - - - - 0x03F752 0F:F742: 20 D6 85  JSR sub_0x0385E6
-C - - - - - 0x03F755 0F:F745: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F755 0F:F745: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
 ofs_F748_03:
 C - - J - - 0x03F758 0F:F748: 20 F3 F5  JSR sub_F5F3_prg_bank_0E
 C - - - - - 0x03F75B 0F:F74B: 20 90 88  JSR sub_0x0388A0
-C - - - - - 0x03F75E 0F:F74E: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F75E 0F:F74E: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
@@ -6897,7 +6898,7 @@ loc_F751:
 sub_F751:
 C D 3 - - - 0x03F761 0F:F751: 20 DF F5  JSR sub_F5DF_prg_bank_09
 C - - - - - 0x03F764 0F:F754: 20 51 BB  JSR sub_0x027B61
-C - - - - - 0x03F767 0F:F757: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F767 0F:F757: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
@@ -6908,7 +6909,7 @@ C - - - - - 0x03F76B 0F:F75B: 20 DF F5  JSR sub_F5DF_prg_bank_09
 C - - - - - 0x03F76E 0F:F75E: 68        PLA
 C - - - - - 0x03F76F 0F:F75F: 20 B3 B0  JSR sub_0x0270C3
 C - - - - - 0x03F772 0F:F762: 20 F6 AF  JSR sub_0x027006
-C - - - - - 0x03F775 0F:F765: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F775 0F:F765: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
@@ -6920,7 +6921,7 @@ C - - - - - 0x03F77A 0F:F76A: 20 DF F5  JSR sub_F5DF_prg_bank_09
 C - - - - - 0x03F77D 0F:F76D: 68        PLA
 C - - - - - 0x03F77E 0F:F76E: A8        TAY
 C - - - - - 0x03F77F 0F:F76F: 20 E7 8A  JSR sub_0x024AF7
-C - - - - - 0x03F782 0F:F772: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F782 0F:F772: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
@@ -6949,35 +6950,35 @@ C - - - - - 0x03F7A3 0F:F793: 60        RTS
 loc_F794:
 C D 3 - - - 0x03F7A4 0F:F794: 20 DF F5  JSR sub_F5DF_prg_bank_09
 C - - - - - 0x03F7A7 0F:F797: 20 1F FD  JSR sub_FD1F
-C - - - - - 0x03F7AA 0F:F79A: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F7AA 0F:F79A: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
 sub_F79D:
 C - - - - - 0x03F7AD 0F:F79D: 20 DF F5  JSR sub_F5DF_prg_bank_09
 C - - - - - 0x03F7B0 0F:F7A0: 20 B7 BB  JSR sub_0x027BC7
-C - - - - - 0x03F7B3 0F:F7A3: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F7B3 0F:F7A3: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
 sub_F7A6:
 C - - - - - 0x03F7B6 0F:F7A6: 20 F3 F5  JSR sub_F5F3_prg_bank_0E
 C - - - - - 0x03F7B9 0F:F7A9: 20 6A 8A  JSR sub_0x038A7A
-C - - - - - 0x03F7BC 0F:F7AC: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F7BC 0F:F7AC: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
 ofs_F7AF_0A:
 C - - J - - 0x03F7BF 0F:F7AF: 20 F3 F5  JSR sub_F5F3_prg_bank_0E
 C - - - - - 0x03F7C2 0F:F7B2: 20 9F 90  JSR sub_0x0390AF
-C - - - - - 0x03F7C5 0F:F7B5: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F7C5 0F:F7B5: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
 ofs_F7B8_0B:
 C - - J - - 0x03F7C8 0F:F7B8: 20 F3 F5  JSR sub_F5F3_prg_bank_0E
 C - - - - - 0x03F7CB 0F:F7BB: 20 00 96  JSR sub_0x039610
-C - - - - - 0x03F7CE 0F:F7BE: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F7CE 0F:F7BE: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
@@ -6985,14 +6986,14 @@ C - - - - - 0x03F7CE 0F:F7BE: 4C 17 F6  JMP loc_F617
 sub_0x03F7D1:
 C - - - - - 0x03F7D1 0F:F7C1: 20 F3 F5  JSR sub_F5F3_prg_bank_0E
 C - - - - - 0x03F7D4 0F:F7C4: 20 2B 9F  JSR sub_0x039F3B
-C - - - - - 0x03F7D7 0F:F7C7: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F7D7 0F:F7C7: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
 ofs_F7CA_0C:
 C - - J - - 0x03F7DA 0F:F7CA: 20 F3 F5  JSR sub_F5F3_prg_bank_0E
 C - - - - - 0x03F7DD 0F:F7CD: 20 BF 9F  JSR sub_0x039FCF
-C - - - - - 0x03F7E0 0F:F7D0: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F7E0 0F:F7D0: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
@@ -7005,14 +7006,14 @@ C D 3 - - - 0x03F7E3 0F:F7D3: 48        PHA
 C - - - - - 0x03F7E4 0F:F7D4: 20 F3 F5  JSR sub_F5F3_prg_bank_0E
 C - - - - - 0x03F7E7 0F:F7D7: 68        PLA
 C - - - - - 0x03F7E8 0F:F7D8: 20 E3 A0  JSR sub_0x03A0F3
-C - - - - - 0x03F7EB 0F:F7DB: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F7EB 0F:F7DB: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
 sub_F7DE:
 C - - - - - 0x03F7EE 0F:F7DE: 20 F3 F5  JSR sub_F5F3_prg_bank_0E
 C - - - - - 0x03F7F1 0F:F7E1: 20 36 9B  JSR sub_0x039B46
-C - - - - - 0x03F7F4 0F:F7E4: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F7F4 0F:F7E4: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
@@ -7020,35 +7021,35 @@ sub_F7E7:
 ofs_F7E7_02:
 C - - J - - 0x03F7F7 0F:F7E7: 20 F3 F5  JSR sub_F5F3_prg_bank_0E
 C - - - - - 0x03F7FA 0F:F7EA: 20 6C A3  JSR sub_0x03A37C
-C - - - - - 0x03F7FD 0F:F7ED: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F7FD 0F:F7ED: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
 ofs_F7F0_12:
 C - - J - - 0x03F800 0F:F7F0: 20 F3 F5  JSR sub_F5F3_prg_bank_0E
 C - - - - - 0x03F803 0F:F7F3: 20 8F A4  JSR sub_0x03A49F
-C - - - - - 0x03F806 0F:F7F6: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F806 0F:F7F6: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
 ofs_F7F9_11:
 C - - J - - 0x03F809 0F:F7F9: 20 F3 F5  JSR sub_F5F3_prg_bank_0E
 C - - - - - 0x03F80C 0F:F7FC: 20 27 A4  JSR sub_0x03A437
-C - - - - - 0x03F80F 0F:F7FF: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F80F 0F:F7FF: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
 loc_F802:
 C D 3 - - - 0x03F812 0F:F802: 20 DF F5  JSR sub_F5DF_prg_bank_09
 C - - - - - 0x03F815 0F:F805: 20 11 BF  JSR sub_0x027F21
-C - - - - - 0x03F818 0F:F808: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F818 0F:F808: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
 sub_F80B:
 C - - - - - 0x03F81B 0F:F80B: 20 DF F5  JSR sub_F5DF_prg_bank_09
 C - - - - - 0x03F81E 0F:F80E: 20 F6 AF  JSR sub_0x027006
-C - - - - - 0x03F821 0F:F811: 4C 17 F6  JMP loc_F617
+C - - - - - 0x03F821 0F:F811: 4C 17 F6  JMP loc_F617_restore_prg_bank
 
 
 
