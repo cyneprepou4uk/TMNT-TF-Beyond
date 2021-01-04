@@ -14,8 +14,8 @@ con_X       = $00   ; координата X
 
 
 
-.export tbl_0x028011
-tbl_0x028011:
+.export tbl_0x028011_turtle
+tbl_0x028011_turtle:
 - D 0 - - - 0x028011 0A:8001: CD 80     .word _off006_80CD_00
 - D 0 - I - 0x028013 0A:8003: F2 80     .word _off006_80F2_01
 - D 0 - I - 0x028015 0A:8005: 17 81     .word _off006_8117_02
@@ -4853,8 +4853,8 @@ _off006_8E0A_65:
 
 
 
-.export tbl_0x028E23
-tbl_0x028E23:
+.export tbl_0x028E23_Casey
+tbl_0x028E23_Casey:
 - D 0 - I - 0x028E23 0A:8E13: C5 8E     .word _off007_8EC5_00
 - D 0 - I - 0x028E25 0A:8E15: F2 8E     .word _off007_8EF2_01
 - D 0 - I - 0x028E27 0A:8E17: 1F 8F     .word _off007_8F1F_02
@@ -9386,8 +9386,8 @@ _off007_9B31_58:
 
 
 
-.export tbl_0x029B62
-tbl_0x029B62:
+.export tbl_0x029B62_Hot
+tbl_0x029B62_Hot:
 - D 0 - I - 0x029B62 0A:9B52: DC 9B     .word _off008_9BDC_00
 - D 0 - I - 0x029B64 0A:9B54: 31 9C     .word _off008_9C31_01
 - D 0 - I - 0x029B66 0A:9B56: 86 9C     .word _off008_9C86_02
@@ -15839,8 +15839,8 @@ _off008_AE70_44:
 
 
 
-.export tbl_0x02AED5
-tbl_0x02AED5:
+.export tbl_0x02AED5_Shred
+tbl_0x02AED5_Shred:
 - D 1 - I - 0x02AED5 0A:AEC5: 5B AF     .word _off009_AF5B_00
 - D 1 - I - 0x02AED7 0A:AEC7: 8C AF     .word _off009_AF8C_01
 - D 1 - I - 0x02AED9 0A:AEC9: BD AF     .word _off009_AFBD_02

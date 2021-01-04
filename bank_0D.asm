@@ -92,13 +92,13 @@ C - - - - - 0x0340CD 0D:80BD: 8A        TXA
 C - - - - - 0x0340CE 0D:80BE: 0A        ASL
 C - - - - - 0x0340CF 0D:80BF: 0A        ASL
 C - - - - - 0x0340D0 0D:80C0: 85 10     STA ram_0010
-C - - - - - 0x0340D2 0D:80C2: BC 50 05  LDY ram_0550,X
+C - - - - - 0x0340D2 0D:80C2: BC 50 05  LDY ram_fighter_id,X
 C - - - - - 0x0340D5 0D:80C5: B9 1C DF  LDA tbl_0x03DF2C,Y
 C - - - - - 0x0340D8 0D:80C8: 38        SEC
 C - - - - - 0x0340D9 0D:80C9: E9 01     SBC #$01
 C - - - - - 0x0340DB 0D:80CB: A4 10     LDY ram_0010
 C - - - - - 0x0340DD 0D:80CD: 99 E8 06  STA ram_06E8,Y
-C - - - - - 0x0340E0 0D:80D0: BD 50 05  LDA ram_0550,X
+C - - - - - 0x0340E0 0D:80D0: BD 50 05  LDA ram_fighter_id,X
 C - - - - - 0x0340E3 0D:80D3: 0A        ASL
 C - - - - - 0x0340E4 0D:80D4: 0A        ASL
 C - - - - - 0x0340E5 0D:80D5: 85 11     STA ram_0011
@@ -221,28 +221,28 @@ C - - - - - 0x0341A1 0D:8191: D0 E7     BNE bra_817A
 
 
 sub_8193:
-C - - - - - 0x0341A3 0D:8193: BD 50 05  LDA ram_0550,X
+C - - - - - 0x0341A3 0D:8193: BD 50 05  LDA ram_fighter_id,X
 C - - - - - 0x0341A6 0D:8196: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
-- D 0 - I - 0x0341A9 0D:8199: 11 9C     .word ofs_9C11_00
-- D 0 - I - 0x0341AB 0D:819B: F6 9C     .word ofs_9CF6_01
-- D 0 - I - 0x0341AD 0D:819D: 1C 9D     .word ofs_9D1C_02
-- D 0 - I - 0x0341AF 0D:819F: 64 9D     .word ofs_9D64_03
-- D 0 - I - 0x0341B1 0D:81A1: AF 9D     .word ofs_9DAF_04
-- D 0 - I - 0x0341B3 0D:81A3: E4 9E     .word ofs_9EE4_05
-- D 0 - I - 0x0341B5 0D:81A5: AF 9F     .word ofs_9FAF_06
+- D 0 - I - 0x0341A9 0D:8199: 11 9C     .word ofs_9C11_00_Leo
+- D 0 - I - 0x0341AB 0D:819B: F6 9C     .word ofs_9CF6_01_Raph
+- D 0 - I - 0x0341AD 0D:819D: 1C 9D     .word ofs_9D1C_02_Mike
+- D 0 - I - 0x0341AF 0D:819F: 64 9D     .word ofs_9D64_03_Don
+- D 0 - I - 0x0341B1 0D:81A1: AF 9D     .word ofs_9DAF_04_Casey
+- D 0 - I - 0x0341B3 0D:81A3: E4 9E     .word ofs_9EE4_05_Hot
+- D 0 - I - 0x0341B5 0D:81A5: AF 9F     .word ofs_9FAF_06_Shred
 
 
 
 sub_81A7:
-C - - - - - 0x0341B7 0D:81A7: BD 50 05  LDA ram_0550,X
+C - - - - - 0x0341B7 0D:81A7: BD 50 05  LDA ram_fighter_id,X
 C - - - - - 0x0341BA 0D:81AA: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
-- D 0 - I - 0x0341BD 0D:81AD: EB 8D     .word ofs_8DEB_00
-- D 0 - I - 0x0341BF 0D:81AF: BC 90     .word ofs_90BC_01
-- D 0 - I - 0x0341C1 0D:81B1: BD 93     .word ofs_93BD_02
-- D 0 - I - 0x0341C3 0D:81B3: A4 92     .word ofs_92A4_03
-- D 0 - I - 0x0341C5 0D:81B5: 97 95     .word ofs_9597_04
-- D 0 - I - 0x0341C7 0D:81B7: 5C 98     .word ofs_985C_05
-- D 0 - I - 0x0341C9 0D:81B9: CA 99     .word ofs_99CA_06
+- D 0 - I - 0x0341BD 0D:81AD: EB 8D     .word ofs_8DEB_00_Leo
+- D 0 - I - 0x0341BF 0D:81AF: BC 90     .word ofs_90BC_01_Raph
+- D 0 - I - 0x0341C1 0D:81B1: BD 93     .word ofs_93BD_02_Mike
+- D 0 - I - 0x0341C3 0D:81B3: A4 92     .word ofs_92A4_03_Don
+- D 0 - I - 0x0341C5 0D:81B5: 97 95     .word ofs_9597_04_Casey
+- D 0 - I - 0x0341C7 0D:81B7: 5C 98     .word ofs_985C_05_Hot
+- D 0 - I - 0x0341C9 0D:81B9: CA 99     .word ofs_99CA_06_Shred
 
 
 
@@ -1415,8 +1415,8 @@ C - - - - - 0x0349B2 0D:89A2: AC 25 01  LDY ram_option_difficulty
 C - - - - - 0x0349B5 0D:89A5: B9 91 A1  LDA tbl_A191,Y
 C - - - - - 0x0349B8 0D:89A8: 9D DA 06  STA ram_06DA,X
 C - - - - - 0x0349BB 0D:89AB: BC DE 06  LDY ram_06DE,X
-C - - - - - 0x0349BE 0D:89AE: B9 50 05  LDA ram_0550,Y
-C - - - - - 0x0349C1 0D:89B1: C9 03     CMP #$03
+C - - - - - 0x0349BE 0D:89AE: B9 50 05  LDA ram_fighter_id,Y
+C - - - - - 0x0349C1 0D:89B1: C9 03     CMP #con_fighter_Don
 C - - - - - 0x0349C3 0D:89B3: D0 18     BNE bra_89CD
 C - - - - - 0x0349C5 0D:89B5: B9 7A 06  LDA ram_067A,Y
 C - - - - - 0x0349C8 0D:89B8: D0 13     BNE bra_89CD
@@ -2549,7 +2549,7 @@ tbl_8DD0:
 
 
 
-ofs_8DEB_00:
+ofs_8DEB_00_Leo:
 C - - J - - 0x034DFB 0D:8DEB: A5 11     LDA ram_0011
 C - - - - - 0x034DFD 0D:8DED: C9 03     CMP #$03
 C - - - - - 0x034DFF 0D:8DEF: D0 0A     BNE bra_8DFB
@@ -3001,7 +3001,7 @@ tbl_90B4:
 
 
 
-ofs_90BC_01:
+ofs_90BC_01_Raph:
 C - - J - - 0x0350CC 0D:90BC: A5 13     LDA ram_0013
 C - - - - - 0x0350CE 0D:90BE: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x0350D1 0D:90C1: C9 90     .word ofs_90C9_00
@@ -3335,7 +3335,7 @@ tbl_929C:
 
 
 
-ofs_92A4_03:
+ofs_92A4_03_Don:
 C - - J - - 0x0352B4 0D:92A4: A5 13     LDA ram_0013
 C - - - - - 0x0352B6 0D:92A6: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x0352B9 0D:92A9: B1 92     .word ofs_92B1_00
@@ -3541,7 +3541,7 @@ tbl_93B5:
 
 
 
-ofs_93BD_02:
+ofs_93BD_02_Mike:
 C - - J - - 0x0353CD 0D:93BD: A5 13     LDA ram_0013
 C - - - - - 0x0353CF 0D:93BF: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x0353D2 0D:93C2: CA 93     .word ofs_93CA_00
@@ -3858,7 +3858,7 @@ tbl_958F:
 
 
 
-ofs_9597_04:
+ofs_9597_04_Casey:
 C - - J - - 0x0355A7 0D:9597: A5 11     LDA ram_0011
 C - - - - - 0x0355A9 0D:9599: C9 03     CMP #$03
 C - - - - - 0x0355AB 0D:959B: D0 0A     BNE bra_95A7
@@ -4211,8 +4211,8 @@ C - - - - - 0x035835 0D:9825: 60        RTS
 bra_9826:
 loc_9826:
 C D 0 - - - 0x035836 0D:9826: BC DE 06  LDY ram_06DE,X
-C - - - - - 0x035839 0D:9829: B9 50 05  LDA ram_0550,Y
-C - - - - - 0x03583C 0D:982C: C9 01     CMP #$01
+C - - - - - 0x035839 0D:9829: B9 50 05  LDA ram_fighter_id,Y
+C - - - - - 0x03583C 0D:982C: C9 01     CMP #con_fighter_Raph
 C - - - - - 0x03583E 0D:982E: F0 06     BEQ bra_9836
 C - - - - - 0x035840 0D:9830: 20 96 ED  JSR sub_0x03EDA6
 C - - - - - 0x035843 0D:9833: A9 3A     LDA #$3A
@@ -4276,7 +4276,7 @@ tbl_9858:
 
 
 
-ofs_985C_05:
+ofs_985C_05_Hot:
 C - - J - - 0x03586C 0D:985C: A5 12     LDA ram_0012
 C - - - - - 0x03586E 0D:985E: C9 03     CMP #$03
 C - - - - - 0x035870 0D:9860: B0 05     BCS bra_9867
@@ -4521,7 +4521,7 @@ tbl_99C6:
 
 
 
-ofs_99CA_06:
+ofs_99CA_06_Shred:
 C - - J - - 0x0359DA 0D:99CA: BC DE 06  LDY ram_06DE,X
 C - - - - - 0x0359DD 0D:99CD: B9 10 06  LDA ram_0610,Y
 C - - - - - 0x0359E0 0D:99D0: F0 17     BEQ bra_99E9
@@ -4858,8 +4858,8 @@ tbl_9BD2:
 
 sub_9BD6:
 C - - - - - 0x035BE6 0D:9BD6: BC DE 06  LDY ram_06DE,X
-C - - - - - 0x035BE9 0D:9BD9: B9 50 05  LDA ram_0550,Y
-C - - - - - 0x035BEC 0D:9BDC: C9 04     CMP #$04
+C - - - - - 0x035BE9 0D:9BD9: B9 50 05  LDA ram_fighter_id,Y
+C - - - - - 0x035BEC 0D:9BDC: C9 04     CMP #con_fighter_Casey
 C - - - - - 0x035BEE 0D:9BDE: B0 29     BCS bra_9C09
 C - - - - - 0x035BF0 0D:9BE0: A5 13     LDA ram_0013
 C - - - - - 0x035BF2 0D:9BE2: C9 01     CMP #$01
@@ -4891,7 +4891,7 @@ C - - - - - 0x035C20 0D:9C10: 60        RTS
 
 
 
-ofs_9C11_00:
+ofs_9C11_00_Leo:
 C - - J - - 0x035C21 0D:9C11: A9 00     LDA #$00
 C - - - - - 0x035C23 0D:9C13: 85 17     STA ram_0017
 C - - - - - 0x035C25 0D:9C15: 20 D6 9B  JSR sub_9BD6
@@ -4899,20 +4899,20 @@ C - - - - - 0x035C28 0D:9C18: F0 01     BEQ bra_9C1B
 C - - - - - 0x035C2A 0D:9C1A: 60        RTS
 bra_9C1B:
 C - - - - - 0x035C2B 0D:9C1B: BC DE 06  LDY ram_06DE,X
-C - - - - - 0x035C2E 0D:9C1E: B9 50 05  LDA ram_0550,Y
+C - - - - - 0x035C2E 0D:9C1E: B9 50 05  LDA ram_fighter_id,Y
 C - - - - - 0x035C31 0D:9C21: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
-- D 0 - I - 0x035C34 0D:9C24: 32 9C     .word ofs_9C32_00
-- D 0 - I - 0x035C36 0D:9C26: 75 9C     .word ofs_9C75_01
-- D 0 - I - 0x035C38 0D:9C28: B2 9C     .word _common_RTS   ; 02
-- D 0 - I - 0x035C3A 0D:9C2A: B3 9C     .word ofs_9CB3_03
-- D 0 - I - 0x035C3C 0D:9C2C: C4 9C     .word _common_RTS   ; 04
-- D 0 - I - 0x035C3E 0D:9C2E: C5 9C     .word ofs_9CC5_05
-- D 0 - I - 0x035C40 0D:9C30: D0 9C     .word ofs_9CD0_06
+- D 0 - I - 0x035C34 0D:9C24: 32 9C     .word ofs_9C32_00_Leo
+- D 0 - I - 0x035C36 0D:9C26: 75 9C     .word ofs_9C75_01_Raph
+- D 0 - I - 0x035C38 0D:9C28: B2 9C     .word _common_RTS   ; 02 Mike
+- D 0 - I - 0x035C3A 0D:9C2A: B3 9C     .word ofs_9CB3_03_Don
+- D 0 - I - 0x035C3C 0D:9C2C: C4 9C     .word _common_RTS   ; 04 Casey
+- D 0 - I - 0x035C3E 0D:9C2E: C5 9C     .word ofs_9CC5_05_Hot
+- D 0 - I - 0x035C40 0D:9C30: D0 9C     .word ofs_9CD0_06_Shred
 
 
 
 loc_9C32:
-ofs_9C32_00:
+ofs_9C32_00_Leo:
 C D 0 J - - 0x035C42 0D:9C32: A5 11     LDA ram_0011
 C - - - - - 0x035C44 0D:9C34: C9 08     CMP #$08
 C - - - - - 0x035C46 0D:9C36: D0 37     BNE bra_9C6F_RTS
@@ -4959,7 +4959,7 @@ C - - - - - 0x035C8E 0D:9C7E: C9 10     CMP #$10
 C - - - - - 0x035C90 0D:9C80: 90 28     BCC bra_9CAA_RTS
 C - - - - - 0x035C92 0D:9C82: 20 FE ED  JSR sub_0x03EE0E
 C - - - - - 0x035C95 0D:9C85: B0 11     BCS bra_9C98
-- - - - - - 0x035C97 0D:9C87: BD 50 05  LDA ram_0550,X
+- - - - - - 0x035C97 0D:9C87: BD 50 05  LDA ram_fighter_id,X
 - - - - - - 0x035C9A 0D:9C8A: A8        TAY
 - - - - - - 0x035C9B 0D:9C8B: B9 AB 9C  LDA tbl_9CAB,Y
 - - - - - - 0x035C9E 0D:9C8E: CD 38 06  CMP ram_dist_X_btw_plrs
@@ -4992,7 +4992,7 @@ tbl_9CAB:
 
 
 
-ofs_9CB3_03:
+ofs_9CB3_03_Don:
 C - - J - - 0x035CC3 0D:9CB3: A5 11     LDA ram_0011
 C - - - - - 0x035CC5 0D:9CB5: C9 08     CMP #$08
 C - - - - - 0x035CC7 0D:9CB7: D0 0A     BNE bra_9CC3_RTS
@@ -5010,7 +5010,7 @@ C - - - - - 0x035CD3 0D:9CC3: 60        RTS
 
 
 
-ofs_9CC5_05:
+ofs_9CC5_05_Hot:
 C - - J - - 0x035CD5 0D:9CC5: A5 11     LDA ram_0011
 C - - - - - 0x035CD7 0D:9CC7: C9 08     CMP #$08
 C - - - - - 0x035CD9 0D:9CC9: D0 04     BNE bra_9CCF_RTS
@@ -5021,7 +5021,7 @@ C - - - - - 0x035CDF 0D:9CCF: 60        RTS
 
 
 
-ofs_9CD0_06:
+ofs_9CD0_06_Shred:
 C - - J - - 0x035CE0 0D:9CD0: A5 13     LDA ram_0013
 C - - - - - 0x035CE2 0D:9CD2: C9 02     CMP #$02
 C - - - - - 0x035CE4 0D:9CD4: B0 12     BCS bra_9CE8_RTS
@@ -5053,7 +5053,7 @@ tbl_9CEE:
 
 
 
-ofs_9CF6_01:
+ofs_9CF6_01_Raph:
 C - - J - - 0x035D06 0D:9CF6: A9 00     LDA #$00
 C - - - - - 0x035D08 0D:9CF8: 85 17     STA ram_0017
 C - - - - - 0x035D0A 0D:9CFA: 20 D6 9B  JSR sub_9BD6
@@ -5061,19 +5061,19 @@ C - - - - - 0x035D0D 0D:9CFD: F0 01     BEQ bra_9D00
 C - - - - - 0x035D0F 0D:9CFF: 60        RTS
 bra_9D00:
 C - - - - - 0x035D10 0D:9D00: BC DE 06  LDY ram_06DE,X
-C - - - - - 0x035D13 0D:9D03: B9 50 05  LDA ram_0550,Y
+C - - - - - 0x035D13 0D:9D03: B9 50 05  LDA ram_fighter_id,Y
 C - - - - - 0x035D16 0D:9D06: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
-- D 0 - I - 0x035D19 0D:9D09: 32 9C     .word ofs_9C32_00
-- D 0 - I - 0x035D1B 0D:9D0B: 75 9C     .word ofs_9C75_01
-- D 0 - I - 0x035D1D 0D:9D0D: 17 9D     .word _common_RTS   ; 02
-- D 0 - I - 0x035D1F 0D:9D0F: B3 9C     .word ofs_9CB3_03
-- D 0 - I - 0x035D21 0D:9D11: 19 9D     .word _common_RTS   ; 04
-- D 0 - I - 0x035D23 0D:9D13: 1A 9D     .word _common_RTS   ; 05
-- D 0 - I - 0x035D25 0D:9D15: 1B 9D     .word _common_RTS   ; 06
+- D 0 - I - 0x035D19 0D:9D09: 32 9C     .word ofs_9C32_00_Leo
+- D 0 - I - 0x035D1B 0D:9D0B: 75 9C     .word ofs_9C75_01_Raph
+- D 0 - I - 0x035D1D 0D:9D0D: 17 9D     .word _common_RTS   ; 02 Mike
+- D 0 - I - 0x035D1F 0D:9D0F: B3 9C     .word ofs_9CB3_03_Don
+- D 0 - I - 0x035D21 0D:9D11: 19 9D     .word _common_RTS   ; 04 Casey
+- D 0 - I - 0x035D23 0D:9D13: 1A 9D     .word _common_RTS   ; 05 Hot
+- D 0 - I - 0x035D25 0D:9D15: 1B 9D     .word _common_RTS   ; 06 Shred
 
 
 
-ofs_9D1C_02:
+ofs_9D1C_02_Mike:
 C - - J - - 0x035D2C 0D:9D1C: A9 00     LDA #$00
 C - - - - - 0x035D2E 0D:9D1E: 85 17     STA ram_0017
 C - - - - - 0x035D30 0D:9D20: 20 D6 9B  JSR sub_9BD6
@@ -5081,19 +5081,19 @@ C - - - - - 0x035D33 0D:9D23: F0 01     BEQ bra_9D26
 C - - - - - 0x035D35 0D:9D25: 60        RTS
 bra_9D26:
 C - - - - - 0x035D36 0D:9D26: BC DE 06  LDY ram_06DE,X
-C - - - - - 0x035D39 0D:9D29: B9 50 05  LDA ram_0550,Y
+C - - - - - 0x035D39 0D:9D29: B9 50 05  LDA ram_fighter_id,Y
 C - - - - - 0x035D3C 0D:9D2C: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
-- D 0 - I - 0x035D3F 0D:9D2F: 3D 9D     .word ofs_9D3D_00
-- D 0 - I - 0x035D41 0D:9D31: 75 9C     .word ofs_9C75_01
-- D 0 - I - 0x035D43 0D:9D33: 5F 9D     .word _common_RTS   ; 02
-- D 0 - I - 0x035D45 0D:9D35: B3 9C     .word ofs_9CB3_03
-- D 0 - I - 0x035D47 0D:9D37: 61 9D     .word _common_RTS   ; 04
-- D 0 - I - 0x035D49 0D:9D39: 62 9D     .word _common_RTS   ; 05
-- D 0 - I - 0x035D4B 0D:9D3B: 63 9D     .word _common_RTS   ; 06
+- D 0 - I - 0x035D3F 0D:9D2F: 3D 9D     .word ofs_9D3D_00_Leo
+- D 0 - I - 0x035D41 0D:9D31: 75 9C     .word ofs_9C75_01_Raph
+- D 0 - I - 0x035D43 0D:9D33: 5F 9D     .word _common_RTS   ; 02 Mike
+- D 0 - I - 0x035D45 0D:9D35: B3 9C     .word ofs_9CB3_03_Don
+- D 0 - I - 0x035D47 0D:9D37: 61 9D     .word _common_RTS   ; 04 Casey
+- D 0 - I - 0x035D49 0D:9D39: 62 9D     .word _common_RTS   ; 05 Hot
+- D 0 - I - 0x035D4B 0D:9D3B: 63 9D     .word _common_RTS   ; 06 Shred
 
 
 
-ofs_9D3D_00:
+ofs_9D3D_00_Leo:
 C - - J - - 0x035D4D 0D:9D3D: A5 11     LDA ram_0011
 C - - - - - 0x035D4F 0D:9D3F: C9 08     CMP #$08
 C - - - - - 0x035D51 0D:9D41: D0 19     BNE bra_9D5C
@@ -5114,7 +5114,7 @@ C - - - - - 0x035D6C 0D:9D5C: 4C 32 9C  JMP loc_9C32
 
 
 
-ofs_9D64_03:
+ofs_9D64_03_Don:
 C - - J - - 0x035D74 0D:9D64: A9 00     LDA #$00
 C - - - - - 0x035D76 0D:9D66: 85 17     STA ram_0017
 C - - - - - 0x035D78 0D:9D68: 20 D6 9B  JSR sub_9BD6
@@ -5139,19 +5139,19 @@ C - - - - - 0x035DA0 0D:9D90: 85 17     STA ram_0017
 C - - - - - 0x035DA2 0D:9D92: 60        RTS
 bra_9D93:
 C - - - - - 0x035DA3 0D:9D93: BC DE 06  LDY ram_06DE,X
-C - - - - - 0x035DA6 0D:9D96: B9 50 05  LDA ram_0550,Y
+C - - - - - 0x035DA6 0D:9D96: B9 50 05  LDA ram_fighter_id,Y
 C - - - - - 0x035DA9 0D:9D99: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
-- D 0 - I - 0x035DAC 0D:9D9C: 32 9C     .word ofs_9C32_00
-- D 0 - I - 0x035DAE 0D:9D9E: 75 9C     .word ofs_9C75_01
-- D 0 - I - 0x035DB0 0D:9DA0: AA 9D     .word _common_RTS   ; 02
-- D 0 - I - 0x035DB2 0D:9DA2: B3 9C     .word ofs_9CB3_03
-- D 0 - I - 0x035DB4 0D:9DA4: AC 9D     .word _common_RTS   ; 04
-- D 0 - I - 0x035DB6 0D:9DA6: AD 9D     .word _common_RTS   ; 05
-- D 0 - I - 0x035DB8 0D:9DA8: AE 9D     .word _common_RTS   ; 06
+- D 0 - I - 0x035DAC 0D:9D9C: 32 9C     .word ofs_9C32_00_Leo
+- D 0 - I - 0x035DAE 0D:9D9E: 75 9C     .word ofs_9C75_01_Raph
+- D 0 - I - 0x035DB0 0D:9DA0: AA 9D     .word _common_RTS   ; 02 Mike
+- D 0 - I - 0x035DB2 0D:9DA2: B3 9C     .word ofs_9CB3_03_Don
+- D 0 - I - 0x035DB4 0D:9DA4: AC 9D     .word _common_RTS   ; 04 Casey
+- D 0 - I - 0x035DB6 0D:9DA6: AD 9D     .word _common_RTS   ; 05 Hot
+- D 0 - I - 0x035DB8 0D:9DA8: AE 9D     .word _common_RTS   ; 06 Shred
 
 
 
-ofs_9DAF_04:
+ofs_9DAF_04_Casey:
 C - - J - - 0x035DBF 0D:9DAF: A9 00     LDA #$00
 C - - - - - 0x035DC1 0D:9DB1: 85 17     STA ram_0017
 C - - - - - 0x035DC3 0D:9DB3: 20 D6 9B  JSR sub_9BD6
@@ -5173,19 +5173,19 @@ C - - - - - 0x035DE3 0D:9DD3: D0 03     BNE bra_9DD8
 C - - - - - 0x035DE5 0D:9DD5: 4C 31 9E  JMP loc_9E31
 bra_9DD8:
 C - - - - - 0x035DE8 0D:9DD8: BC DE 06  LDY ram_06DE,X
-C - - - - - 0x035DEB 0D:9DDB: B9 50 05  LDA ram_0550,Y
+C - - - - - 0x035DEB 0D:9DDB: B9 50 05  LDA ram_fighter_id,Y
 C - - - - - 0x035DEE 0D:9DDE: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
-- D 0 - I - 0x035DF1 0D:9DE1: EF 9D     .word ofs_9DEF_00
-- D 0 - I - 0x035DF3 0D:9DE3: 36 9E     .word ofs_9E36_01
-- D 0 - I - 0x035DF5 0D:9DE5: 7F 9E     .word ofs_9E7F_02
-- D 0 - I - 0x035DF7 0D:9DE7: B3 9C     .word ofs_9CB3_03
-- D 0 - I - 0x035DF9 0D:9DE9: B1 9E     .word _common_RTS   ; 04
-- D 0 - I - 0x035DFB 0D:9DEB: B2 9E     .word ofs_9EB2_05
-- D 0 - I - 0x035DFD 0D:9DED: E3 9E     .word _common_RTS   ; 06
+- D 0 - I - 0x035DF1 0D:9DE1: EF 9D     .word ofs_9DEF_00_Leo
+- D 0 - I - 0x035DF3 0D:9DE3: 36 9E     .word ofs_9E36_01_Raph
+- D 0 - I - 0x035DF5 0D:9DE5: 7F 9E     .word ofs_9E7F_02_Mike
+- D 0 - I - 0x035DF7 0D:9DE7: B3 9C     .word ofs_9CB3_03_Don
+- D 0 - I - 0x035DF9 0D:9DE9: B1 9E     .word _common_RTS   ; 04 Casey
+- D 0 - I - 0x035DFB 0D:9DEB: B2 9E     .word ofs_9EB2_05_Hot
+- D 0 - I - 0x035DFD 0D:9DED: E3 9E     .word _common_RTS   ; 06 Shred
 
 
 
-ofs_9DEF_00:
+ofs_9DEF_00_Leo:
 C - - J - - 0x035DFF 0D:9DEF: BD 20 05  LDA ram_0520,X
 C - - - - - 0x035E02 0D:9DF2: C9 08     CMP #$08
 C - - - - - 0x035E04 0D:9DF4: F0 07     BEQ bra_9DFD
@@ -5229,7 +5229,7 @@ C - - - - - 0x035E45 0D:9E35: 60        RTS
 
 
 
-ofs_9E36_01:
+ofs_9E36_01_Raph:
 C - - J - - 0x035E46 0D:9E36: BD 20 05  LDA ram_0520,X
 C - - - - - 0x035E49 0D:9E39: C9 08     CMP #$08
 C - - - - - 0x035E4B 0D:9E3B: D0 3A     BNE bra_9E77
@@ -5269,7 +5269,7 @@ C - - - - - 0x035E8E 0D:9E7E: 60        RTS
 
 
 
-ofs_9E7F_02:
+ofs_9E7F_02_Mike:
 C - - J - - 0x035E8F 0D:9E7F: A5 11     LDA ram_0011
 C - - - - - 0x035E91 0D:9E81: C9 08     CMP #$08
 C - - - - - 0x035E93 0D:9E83: D0 1C     BNE bra_9EA1_RTS
@@ -5300,7 +5300,7 @@ C - - - - - 0x035EBF 0D:9EAF: 60        RTS
 
 
 
-ofs_9EB2_05:
+ofs_9EB2_05_Hot:
 C - - J - - 0x035EC2 0D:9EB2: A5 11     LDA ram_0011
 C - - - - - 0x035EC4 0D:9EB4: C9 08     CMP #$08
 C - - - - - 0x035EC6 0D:9EB6: F0 0B     BEQ bra_9EC3
@@ -5331,7 +5331,7 @@ bra_9EDE:
 
 
 
-ofs_9EE4_05:
+ofs_9EE4_05_Hot:
 C - - J - - 0x035EF4 0D:9EE4: A9 00     LDA #$00
 C - - - - - 0x035EF6 0D:9EE6: 85 17     STA ram_0017
 C - - - - - 0x035EF8 0D:9EE8: A5 13     LDA ram_0013
@@ -5351,19 +5351,19 @@ C - - - - - 0x035F12 0D:9F02: F0 01     BEQ bra_9F05
 C - - - - - 0x035F14 0D:9F04: 60        RTS
 bra_9F05:
 C - - - - - 0x035F15 0D:9F05: BC DE 06  LDY ram_06DE,X
-C - - - - - 0x035F18 0D:9F08: B9 50 05  LDA ram_0550,Y
+C - - - - - 0x035F18 0D:9F08: B9 50 05  LDA ram_fighter_id,Y
 C - - - - - 0x035F1B 0D:9F0B: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
-- D 0 - I - 0x035F1E 0D:9F0E: 1C 9F     .word ofs_9F1C_00
-- D 0 - I - 0x035F20 0D:9F10: 68 9F     .word ofs_9F68_01
-- D 0 - I - 0x035F22 0D:9F12: 84 A0     .word ofs_A084_02
-- D 0 - I - 0x035F24 0D:9F14: B3 9C     .word ofs_9CB3_03
-- D 0 - I - 0x035F26 0D:9F16: 15 A1     .word ofs_A115_04
-- D 0 - I - 0x035F28 0D:9F18: 9D 9F     .word _common_RTS   ; 05
-- D 0 - I - 0x035F2A 0D:9F1A: 9E 9F     .word ofs_9F9E_06
+- D 0 - I - 0x035F1E 0D:9F0E: 1C 9F     .word ofs_9F1C_00_Leo
+- D 0 - I - 0x035F20 0D:9F10: 68 9F     .word ofs_9F68_01_Raph
+- D 0 - I - 0x035F22 0D:9F12: 84 A0     .word ofs_A084_02_Mike
+- D 0 - I - 0x035F24 0D:9F14: B3 9C     .word ofs_9CB3_03_Don
+- D 0 - I - 0x035F26 0D:9F16: 15 A1     .word ofs_A115_04_Casey
+- D 0 - I - 0x035F28 0D:9F18: 9D 9F     .word _common_RTS   ; 05 Hot
+- D 0 - I - 0x035F2A 0D:9F1A: 9E 9F     .word ofs_9F9E_06_Shred
 
 
 
-ofs_9F1C_00:
+ofs_9F1C_00_Leo:
 C - - J - - 0x035F2C 0D:9F1C: BD 20 05  LDA ram_0520,X
 C - - - - - 0x035F2F 0D:9F1F: C9 01     CMP #$01
 C - - - - - 0x035F31 0D:9F21: D0 09     BNE bra_9F2C
@@ -5410,7 +5410,7 @@ bra_9F63:
 
 
 
-ofs_9F68_01:
+ofs_9F68_01_Raph:
 C - - J - - 0x035F78 0D:9F68: A5 11     LDA ram_0011
 C - - - - - 0x035F7A 0D:9F6A: C9 08     CMP #$08
 C - - - - - 0x035F7C 0D:9F6C: D0 1B     BNE bra_9F89
@@ -5442,7 +5442,7 @@ C - - - - - 0x035FA9 0D:9F99: 60        RTS
 
 
 
-ofs_9F9E_06:
+ofs_9F9E_06_Shred:
 C - - J - - 0x035FAE 0D:9F9E: A5 11     LDA ram_0011
 C - - - - - 0x035FB0 0D:9FA0: C9 08     CMP #$08
 C - - - - - 0x035FB2 0D:9FA2: D0 0A     BNE bra_9FAE_RTS
@@ -5456,7 +5456,7 @@ C - - - - - 0x035FBE 0D:9FAE: 60        RTS
 
 
 
-ofs_9FAF_06:
+ofs_9FAF_06_Shred:
 C - - J - - 0x035FBF 0D:9FAF: A9 00     LDA #$00
 C - - - - - 0x035FC1 0D:9FB1: 85 17     STA ram_0017
 C - - - - - 0x035FC3 0D:9FB3: BC DE 06  LDY ram_06DE,X
@@ -5506,19 +5506,19 @@ tbl_9FF5:
 
 bra_9FF9:
 C - - - - - 0x036009 0D:9FF9: BC DE 06  LDY ram_06DE,X
-C - - - - - 0x03600C 0D:9FFC: B9 50 05  LDA ram_0550,Y
+C - - - - - 0x03600C 0D:9FFC: B9 50 05  LDA ram_fighter_id,Y
 C - - - - - 0x03600F 0D:9FFF: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
-- D 1 - I - 0x036012 0D:A002: 10 A0     .word ofs_A010_00
-- D 1 - I - 0x036014 0D:A004: 46 A0     .word ofs_A046_01
-- D 1 - I - 0x036016 0D:A006: 84 A0     .word ofs_A084_02
-- D 1 - I - 0x036018 0D:A008: B3 9C     .word ofs_9CB3_03
-- D 1 - I - 0x03601A 0D:A00A: 15 A1     .word ofs_A115_04
-- D 1 - I - 0x03601C 0D:A00C: 30 A1     .word ofs_A130_05
-- D 1 - I - 0x03601E 0D:A00E: 67 A1     .word ofs_A167_06
+- D 1 - I - 0x036012 0D:A002: 10 A0     .word ofs_A010_00_Leo
+- D 1 - I - 0x036014 0D:A004: 46 A0     .word ofs_A046_01_Raph
+- D 1 - I - 0x036016 0D:A006: 84 A0     .word ofs_A084_02_Mike
+- D 1 - I - 0x036018 0D:A008: B3 9C     .word ofs_9CB3_03_Don
+- D 1 - I - 0x03601A 0D:A00A: 15 A1     .word ofs_A115_04_Casey
+- D 1 - I - 0x03601C 0D:A00C: 30 A1     .word ofs_A130_05_Hot
+- D 1 - I - 0x03601E 0D:A00E: 67 A1     .word ofs_A167_06_Shred
 
 
 
-ofs_A010_00:
+ofs_A010_00_Leo:
 C - - J - - 0x036020 0D:A010: 20 8E EC  JSR sub_0x03EC9E
 C - - - - - 0x036023 0D:A013: B0 2D     BCS bra_A042_RTS
 C - - - - - 0x036025 0D:A015: A5 11     LDA ram_0011
@@ -5555,7 +5555,7 @@ C - - - - - 0x036053 0D:A043: 4C 32 9C  JMP loc_9C32
 
 
 
-ofs_A046_01:
+ofs_A046_01_Raph:
 C - - J - - 0x036056 0D:A046: A5 11     LDA ram_0011
 C - - - - - 0x036058 0D:A048: C9 08     CMP #$08
 C - - - - - 0x03605A 0D:A04A: D0 23     BNE bra_A06F
@@ -5602,7 +5602,7 @@ C D 1 - - - 0x036107 0D:A0F7: 4C 9F A3  JMP loc_A39F
 
 
 
-ofs_A084_02:
+ofs_A084_02_Mike:
 C - - J - - 0x036094 0D:A084: A5 11     LDA ram_0011
 C - - - - - 0x036096 0D:A086: C9 08     CMP #$08
 C - - - - - 0x036098 0D:A088: F0 05     BEQ bra_A08F
@@ -5635,7 +5635,7 @@ C - - - - - 0x0360C4 0D:A0B4: 60        RTS
 
 
 
-ofs_A115_04:
+ofs_A115_04_Casey:
 C - - J - - 0x036125 0D:A115: A5 11     LDA ram_0011
 C - - - - - 0x036127 0D:A117: C9 08     CMP #$08
 C - - - - - 0x036129 0D:A119: D0 14     BNE bra_A12F_RTS
@@ -5654,7 +5654,7 @@ C - - - - - 0x03613F 0D:A12F: 60        RTS
 
 
 
-ofs_A130_05:
+ofs_A130_05_Hot:
 C - - J - - 0x036140 0D:A130: A5 11     LDA ram_0011
 C - - - - - 0x036142 0D:A132: C9 08     CMP #$08
 C - - - - - 0x036144 0D:A134: D0 2B     BNE bra_A161_RTS
@@ -5687,7 +5687,7 @@ bra_A162:
 
 
 
-ofs_A167_06:
+ofs_A167_06_Shred:
 C - - J - - 0x036177 0D:A167: AD F8 06  LDA ram_06F8
 C - - - - - 0x03617A 0D:A16A: 30 12     BMI bra_A17E_RTS
 C - - - - - 0x03617C 0D:A16C: AD 38 06  LDA ram_dist_X_btw_plrs
@@ -5738,7 +5738,7 @@ sub_A19A:
 C - - - - - 0x0361AA 0D:A19A: AD 25 01  LDA ram_option_difficulty
 C - - - - - 0x0361AD 0D:A19D: 49 03     EOR #$03
 C - - - - - 0x0361AF 0D:A19F: F0 03     BEQ bra_A1A4_RTS
-C - - - - - 0x0361B1 0D:A1A1: BD 50 05  LDA ram_0550,X
+C - - - - - 0x0361B1 0D:A1A1: BD 50 05  LDA ram_fighter_id,X
 bra_A1A4_RTS:
 C - - - - - 0x0361B4 0D:A1A4: 60        RTS
 
@@ -5821,13 +5821,13 @@ C - - - - - 0x03622E 0D:A21E: A9 08     LDA #con_btn_Up
 C - - - - - 0x036230 0D:A220: 9D 33 06  STA ram_0633,X
 C - - - - - 0x036233 0D:A223: 4C 59 80  JMP loc_8059
 bra_A226:
-C - - - - - 0x036236 0D:A226: BD 50 05  LDA ram_0550,X
-C - - - - - 0x036239 0D:A229: C9 06     CMP #$06
+C - - - - - 0x036236 0D:A226: BD 50 05  LDA ram_fighter_id,X
+C - - - - - 0x036239 0D:A229: C9 06     CMP #con_fighter_Shred
 C - - - - - 0x03623B 0D:A22B: D0 51     BNE bra_A27E
 C - - - - - 0x03623D 0D:A22D: 20 B4 A4  JSR sub_A4B4
 C - - - - - 0x036240 0D:A230: D0 32     BNE bra_A264
-C - - - - - 0x036242 0D:A232: B9 50 05  LDA ram_0550,Y
-C - - - - - 0x036245 0D:A235: C9 04     CMP #$04
+C - - - - - 0x036242 0D:A232: B9 50 05  LDA ram_fighter_id,Y
+C - - - - - 0x036245 0D:A235: C9 04     CMP #con_fighter_Casey
 C - - - - - 0x036247 0D:A237: D0 1A     BNE bra_A253
 C - - - - - 0x036249 0D:A239: B9 20 05  LDA ram_0520,Y
 C - - - - - 0x03624C 0D:A23C: C9 08     CMP #$08
@@ -5898,8 +5898,8 @@ C - - - - - 0x0362CF 0D:A2BF: A9 01     LDA #$01
 C - - - - - 0x0362D1 0D:A2C1: 9D C0 06  STA ram_06C0,X
 C - - - - - 0x0362D4 0D:A2C4: 20 7C A3  JSR sub_A37C
 bra_A2C7:
-C - - - - - 0x0362D7 0D:A2C7: BD 50 05  LDA ram_0550,X
-C - - - - - 0x0362DA 0D:A2CA: 49 06     EOR #$06
+C - - - - - 0x0362D7 0D:A2C7: BD 50 05  LDA ram_fighter_id,X
+C - - - - - 0x0362DA 0D:A2CA: 49 06     EOR #con_fighter_Shred
 C - - - - - 0x0362DC 0D:A2CC: F0 61     BEQ bra_A32F
 C - - - - - 0x0362DE 0D:A2CE: A5 8C     LDA ram_random_2
 C - - - - - 0x0362E0 0D:A2D0: 29 C0     AND #$C0
@@ -5924,14 +5924,14 @@ C - - - - - 0x03630B 0D:A2FB: C9 01     CMP #$01
 C - - - - - 0x03630D 0D:A2FD: F0 35     BEQ bra_A334
 C - - - - - 0x03630F 0D:A2FF: C9 07     CMP #$07
 C - - - - - 0x036311 0D:A301: D0 46     BNE bra_A349
-C - - - - - 0x036313 0D:A303: B9 50 05  LDA ram_0550,Y
-C - - - - - 0x036316 0D:A306: D0 41     BNE bra_A349
+C - - - - - 0x036313 0D:A303: B9 50 05  LDA ram_fighter_id,Y
+C - - - - - 0x036316 0D:A306: D0 41     BNE bra_A349    ; con_fighter_Leo
 C - - - - - 0x036318 0D:A308: B9 00 04  LDA ram_0400,Y
 C - - - - - 0x03631B 0D:A30B: C9 9A     CMP #$9A
 C - - - - - 0x03631D 0D:A30D: F0 20     BEQ bra_A32F
 bra_A30F:
-C - - - - - 0x03631F 0D:A30F: BD 50 05  LDA ram_0550,X
-C - - - - - 0x036322 0D:A312: 49 06     EOR #$06
+C - - - - - 0x03631F 0D:A30F: BD 50 05  LDA ram_fighter_id,X
+C - - - - - 0x036322 0D:A312: 49 06     EOR #con_fighter_Shred
 C - - - - - 0x036324 0D:A314: F0 10     BEQ bra_A326
 C - - - - - 0x03632D 0D:A31D: A5 8C     LDA ram_random_2
 C - - - - - 0x03632F 0D:A31F: 1D 10 06  ORA ram_0610,X
@@ -5949,8 +5949,8 @@ bra_A334:
 C - - - - - 0x036344 0D:A334: B9 20 05  LDA ram_0520,Y
 C - - - - - 0x036347 0D:A337: C9 04     CMP #$04
 C - - - - - 0x036349 0D:A339: F0 0E     BEQ bra_A349
-C - - - - - 0x03634B 0D:A33B: BD 50 05  LDA ram_0550,X
-C - - - - - 0x03634E 0D:A33E: C9 06     CMP #$06
+C - - - - - 0x03634B 0D:A33B: BD 50 05  LDA ram_fighter_id,X
+C - - - - - 0x03634E 0D:A33E: C9 06     CMP #con_fighter_Shred
 C - - - - - 0x036350 0D:A340: D0 07     BNE bra_A349
 C - - - - - 0x036352 0D:A342: BD 10 04  LDA ram_0410,X
 C - - - - - 0x036355 0D:A345: C9 A0     CMP #$A0
@@ -6032,10 +6032,10 @@ C - - - - - 0x0363CD 0D:A3BD: D0 41     BNE bra_A400
 C - - - - - 0x0363CF 0D:A3BF: BC DE 06  LDY ram_06DE,X
 C - - - - - 0x0363D2 0D:A3C2: 20 2B BF  JSR sub_BF2B
 C - - - - - 0x0363D5 0D:A3C5: D0 1C     BNE bra_A3E3
-C - - - - - 0x0363D7 0D:A3C7: B9 50 05  LDA ram_0550,Y
-C - - - - - 0x0363DA 0D:A3CA: C9 02     CMP #$02
+C - - - - - 0x0363D7 0D:A3C7: B9 50 05  LDA ram_fighter_id,Y
+C - - - - - 0x0363DA 0D:A3CA: C9 02     CMP #con_fighter_Mike
 C - - - - - 0x0363DC 0D:A3CC: F0 04     BEQ bra_A3D2
-C - - - - - 0x0363DE 0D:A3CE: C9 05     CMP #$05
+C - - - - - 0x0363DE 0D:A3CE: C9 05     CMP #con_fighter_Hot
 C - - - - - 0x0363E0 0D:A3D0: 90 3B     BCC bra_A40D
 bra_A3D2:
 C - - - - - 0x0363E2 0D:A3D2: AD 46 04  LDA ram_0446
@@ -6092,14 +6092,14 @@ C - - - - - 0x03643A 0D:A42A: AC 25 01  LDY ram_option_difficulty
 C - - - - - 0x03643D 0D:A42D: C0 03     CPY #$03
 C - - - - - 0x03643F 0D:A42F: D0 43     BNE bra_A474_RTS
 C - - - - - 0x036441 0D:A431: BC DE 06  LDY ram_06DE,X
-C - - - - - 0x036444 0D:A434: BD 50 05  LDA ram_0550,X
-C - - - - - 0x036447 0D:A437: C9 06     CMP #$06
+C - - - - - 0x036444 0D:A434: BD 50 05  LDA ram_fighter_id,X
+C - - - - - 0x036447 0D:A437: C9 06     CMP #con_fighter_Shred
 C - - - - - 0x036449 0D:A439: D0 39     BNE bra_A474_RTS
 C - - - - - 0x03644B 0D:A43B: B9 20 05  LDA ram_0520,Y
 C - - - - - 0x03644E 0D:A43E: C9 08     CMP #$08
 C - - - - - 0x036450 0D:A440: D0 1F     BNE bra_A461
-C - - - - - 0x036452 0D:A442: B9 50 05  LDA ram_0550,Y
-C - - - - - 0x036455 0D:A445: C9 05     CMP #$05
+C - - - - - 0x036452 0D:A442: B9 50 05  LDA ram_fighter_id,Y
+C - - - - - 0x036455 0D:A445: C9 05     CMP #con_fighter_Hot
 C - - - - - 0x036457 0D:A447: D0 2B     BNE bra_A474_RTS
 C - - - - - 0x036459 0D:A449: B9 D0 05  LDA ram_05D0,Y
 C - - - - - 0x03645C 0D:A44C: F0 26     BEQ bra_A474_RTS
@@ -6133,8 +6133,8 @@ loc_A475:
 C D 1 - - - 0x036485 0D:A475: AD 25 01  LDA ram_option_difficulty
 C - - - - - 0x036488 0D:A478: C9 03     CMP #$03
 C - - - - - 0x03648A 0D:A47A: D0 1E     BNE bra_A49A
-C - - - - - 0x03648C 0D:A47C: B9 50 05  LDA ram_0550,Y
-C - - - - - 0x03648F 0D:A47F: C9 01     CMP #$01
+C - - - - - 0x03648C 0D:A47C: B9 50 05  LDA ram_fighter_id,Y
+C - - - - - 0x03648F 0D:A47F: C9 01     CMP #con_fighter_Raph
 C - - - - - 0x036491 0D:A481: D0 17     BNE bra_A49A
 C - - - - - 0x036493 0D:A483: AD 38 06  LDA ram_dist_X_btw_plrs
 C - - - - - 0x036496 0D:A486: C9 60     CMP #$60
@@ -6154,8 +6154,8 @@ C - - - - - 0x0364AC 0D:A49C: 60        RTS
 
 
 loc_A49D:
-C D 1 - - - 0x0364AD 0D:A49D: BD 50 05  LDA ram_0550,X
-C - - - - - 0x0364B0 0D:A4A0: C9 06     CMP #$06
+C D 1 - - - 0x0364AD 0D:A49D: BD 50 05  LDA ram_fighter_id,X
+C - - - - - 0x0364B0 0D:A4A0: C9 06     CMP #con_fighter_Shred
 C - - - - - 0x0364B2 0D:A4A2: D0 0A     BNE bra_A4AE
 C - - - - - 0x0364B4 0D:A4A4: BD C0 06  LDA ram_06C0,X
 C - - - - - 0x0364B7 0D:A4A7: C9 40     CMP #$40
@@ -6192,8 +6192,8 @@ bra_A4DF:
 C - - - - - 0x0364EF 0D:A4DF: B9 20 05  LDA ram_0520,Y
 C - - - - - 0x0364F2 0D:A4E2: C9 01     CMP #$01
 C - - - - - 0x0364F4 0D:A4E4: D0 21     BNE bra_A507
-C - - - - - 0x0364F6 0D:A4E6: B9 50 05  LDA ram_0550,Y
-C - - - - - 0x0364F9 0D:A4E9: C9 04     CMP #$04
+C - - - - - 0x0364F6 0D:A4E6: B9 50 05  LDA ram_fighter_id,Y
+C - - - - - 0x0364F9 0D:A4E9: C9 04     CMP #con_fighter_Casey
 C - - - - - 0x0364FB 0D:A4EB: B0 1A     BCS bra_A507
 C - - - - - 0x0364FD 0D:A4ED: B9 80 04  LDA ram_0480,Y
 C - - - - - 0x036500 0D:A4F0: D0 04     BNE bra_A4F6
@@ -6210,8 +6210,8 @@ bra_A503:
 C - - - - - 0x036513 0D:A503: A9 0A     LDA #$0A
 C - - - - - 0x036515 0D:A505: D0 30     BNE bra_A537
 bra_A507:
-C - - - - - 0x036517 0D:A507: B9 50 05  LDA ram_0550,Y
-C - - - - - 0x03651A 0D:A50A: C9 01     CMP #$01
+C - - - - - 0x036517 0D:A507: B9 50 05  LDA ram_fighter_id,Y
+C - - - - - 0x03651A 0D:A50A: C9 01     CMP #con_fighter_Raph
 C - - - - - 0x03651C 0D:A50C: D0 2C     BNE bra_A53A
 C - - - - - 0x03651E 0D:A50E: BD F0 05  LDA ram_05F0,X
 C - - - - - 0x036521 0D:A511: C9 16     CMP #$16
@@ -6283,8 +6283,8 @@ C - - - - - 0x037EFA 0D:BEEA: A9 25     LDA #$25
 C - - - - - 0x037EFC 0D:BEEC: D0 3A     BNE bra_BF28
 bra_BEEE:
 C - - - - - 0x037EFE 0D:BEEE: F0 0B     BEQ bra_BEFB
-C - - - - - 0x037F00 0D:BEF0: B9 50 05  LDA ram_0550,Y
-C - - - - - 0x037F03 0D:BEF3: C9 04     CMP #$04
+C - - - - - 0x037F00 0D:BEF0: B9 50 05  LDA ram_fighter_id,Y
+C - - - - - 0x037F03 0D:BEF3: C9 04     CMP #con_fighter_Casey
 C - - - - - 0x037F05 0D:BEF5: D0 04     BNE bra_BEFB
 C - - - - - 0x037F07 0D:BEF7: A9 00     LDA #$00
 C - - - - - 0x037F09 0D:BEF9: F0 2D     BEQ bra_BF28
@@ -6294,8 +6294,8 @@ C - - - - - 0x037F0E 0D:BEFE: D0 2A     BNE bra_BF2A_RTS
 C - - - - - 0x037F10 0D:BF00: A9 10     LDA #$10
 C - - - - - 0x037F12 0D:BF02: D0 24     BNE bra_BF28
 bra_BF04:
-C - - - - - 0x037F14 0D:BF04: B9 50 05  LDA ram_0550,Y
-C - - - - - 0x037F17 0D:BF07: C9 05     CMP #$05
+C - - - - - 0x037F14 0D:BF04: B9 50 05  LDA ram_fighter_id,Y
+C - - - - - 0x037F17 0D:BF07: C9 05     CMP #con_fighter_Hot
 C - - - - - 0x037F19 0D:BF09: D0 0F     BNE bra_BF1A
 C - - - - - 0x037F1B 0D:BF0B: AD 38 06  LDA ram_dist_X_btw_plrs
 C - - - - - 0x037F1E 0D:BF0E: C9 12     CMP #$12
@@ -6356,8 +6356,8 @@ loc_BF5F:
 C D 1 - - - 0x037F6F 0D:BF5F: AD 25 01  LDA ram_option_difficulty
 C - - - - - 0x037F72 0D:BF62: C9 03     CMP #$03
 C - - - - - 0x037F74 0D:BF64: D0 34     BNE bra_BF9A
-C - - - - - 0x037F76 0D:BF66: BD 50 05  LDA ram_0550,X
-C - - - - - 0x037F79 0D:BF69: C9 06     CMP #$06
+C - - - - - 0x037F76 0D:BF66: BD 50 05  LDA ram_fighter_id,X
+C - - - - - 0x037F79 0D:BF69: C9 06     CMP #con_fighter_Shred
 C - - - - - 0x037F7B 0D:BF6B: D0 2D     BNE bra_BF9A
 C - - - - - 0x037F7D 0D:BF6D: BD 10 05  LDA ram_0510,X
 C - - - - - 0x037F80 0D:BF70: D9 10 05  CMP ram_0510,Y
@@ -6391,7 +6391,7 @@ C - - - - - 0x037FB1 0D:BFA1: 4C BF 9C  JMP loc_9CBF
 
 
 loc_BFA4:
-ofs_9C75_01:
+ofs_9C75_01_Raph:
 C D 1 - - - 0x037FB4 0D:BFA4: AD 25 01  LDA ram_option_difficulty
 C - - - - - 0x037FB7 0D:BFA7: C9 03     CMP #$03
 C - - - - - 0x037FB9 0D:BFA9: F0 07     BEQ bra_BFB2_RTS

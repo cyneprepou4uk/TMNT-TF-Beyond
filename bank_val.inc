@@ -16,3 +16,14 @@ con_btns_Dpad                   = con_btn_Right + con_btn_Left + con_btn_Down + 
 con_btns_AB                     = con_btn_A + con_btn_B                                     ; C0
 con_btns_LR                     = con_btn_Left + con_btn_Right                              ; 03
 
+
+
+; ram_fighter_id                = $0550
+con_fighter_Leo                 = $00 ; 
+con_fighter_Raph                = $01 ; 
+con_fighter_Mike                = $02 ; 
+con_fighter_Don                 = $03 ; 
+con_fighter_Casey               = $04 ; 
+con_fighter_Hot                 = $05 ; 
+con_fighter_Shred               = $06 ; 
+
