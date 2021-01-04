@@ -2452,7 +2452,7 @@ C - - - - - 0x025130 09:9120: 0A        ASL
 C - - - - - 0x025131 09:9121: 0A        ASL
 C - - - - - 0x025132 09:9122: A5 01     LDA ram_0001
 C - - - - - 0x025134 09:9124: 90 03     BCC bra_9129
-C - - - - - 0x025136 09:9126: 20 FC D1  JSR sub_0x03D20C
+C - - - - - 0x025136 09:9126: 20 FC D1  JSR sub_0x03D20C_reverse_byte
 bra_9129:
 C - - - - - 0x025139 09:9129: 18        CLC
 C - - - - - 0x02513A 09:912A: 7D 40 04  ADC ram_object_X_pos,X
@@ -6131,7 +6131,7 @@ C - - - - - 0x02632A 09:A31A: 0A        ASL
 C - - - - - 0x02632B 09:A31B: 0A        ASL
 C - - - - - 0x02632C 09:A31C: BD A0 04  LDA ram_04A0,X
 C - - - - - 0x02632F 09:A31F: 90 03     BCC bra_A324
-C - - - - - 0x026331 09:A321: 20 FC D1  JSR sub_0x03D20C
+C - - - - - 0x026331 09:A321: 20 FC D1  JSR sub_0x03D20C_reverse_byte
 bra_A324:
 C - - - - - 0x026334 09:A324: 18        CLC
 C - - - - - 0x026335 09:A325: 79 40 04  ADC ram_object_X_pos,Y
@@ -7331,7 +7331,7 @@ ofs_A978_04:
 C - - - - - 0x026988 09:A978: 20 38 A9  JSR sub_A938
 C - - - - - 0x02698B 09:A97B: BD 40 04  LDA ram_object_X_pos,X
 C - - - - - 0x02698E 09:A97E: 10 03     BPL bra_A983
-C - - - - - 0x026990 09:A980: 20 FC D1  JSR sub_0x03D20C
+C - - - - - 0x026990 09:A980: 20 FC D1  JSR sub_0x03D20C_reverse_byte
 bra_A983:
 C - - - - - 0x026993 09:A983: C9 16     CMP #$16
 C - - - - - 0x026995 09:A985: B0 08     BCS bra_A98F_RTS
@@ -7443,7 +7443,7 @@ C - - - - - 0x026A4C 09:AA3C: 38        SEC
 C - - - - - 0x026A4D 09:AA3D: A5 00     LDA ram_0000
 C - - - - - 0x026A4F 09:AA3F: E5 0D     SBC ram_000D
 C - - - - - 0x026A51 09:AA41: B0 03     BCS bra_AA46
-C - - - - - 0x026A53 09:AA43: 20 FC D1  JSR sub_0x03D20C
+C - - - - - 0x026A53 09:AA43: 20 FC D1  JSR sub_0x03D20C_reverse_byte
 bra_AA46:
 C - - - - - 0x026A56 09:AA46: C5 02     CMP ram_0002
 C - - - - - 0x026A58 09:AA48: B0 11     BCS bra_AA5B_next_object
@@ -7451,7 +7451,7 @@ C - - - - - 0x026A5A 09:AA4A: 38        SEC
 C - - - - - 0x026A5B 09:AA4B: A5 01     LDA ram_0001
 C - - - - - 0x026A5D 09:AA4D: E5 04     SBC ram_0004
 C - - - - - 0x026A5F 09:AA4F: B0 03     BCS bra_AA54
-C - - - - - 0x026A61 09:AA51: 20 FC D1  JSR sub_0x03D20C
+C - - - - - 0x026A61 09:AA51: 20 FC D1  JSR sub_0x03D20C_reverse_byte
 bra_AA54:
 C - - - - - 0x026A64 09:AA54: C5 03     CMP ram_0003
 C - - - - - 0x026A66 09:AA56: B0 03     BCS bra_AA5B_next_object
@@ -8014,7 +8014,7 @@ C - - - - - 0x026DE5 09:ADD5: A5 02     LDA ram_0002
 C - - - - - 0x026DE7 09:ADD7: 38        SEC
 C - - - - - 0x026DE8 09:ADD8: E5 03     SBC ram_0003
 C - - - - - 0x026DEA 09:ADDA: B0 03     BCS bra_ADDF
-C - - - - - 0x026DEC 09:ADDC: 20 FC D1  JSR sub_0x03D20C
+C - - - - - 0x026DEC 09:ADDC: 20 FC D1  JSR sub_0x03D20C_reverse_byte
 bra_ADDF:
 C - - - - - 0x026DEF 09:ADDF: C5 05     CMP ram_0005
 C - - - - - 0x026DF1 09:ADE1: B0 43     BCS bra_AE26_RTS
@@ -8644,7 +8644,7 @@ C - - - - - 0x027145 09:B135: 90 03     BCC bra_B13A
 C - - - - - 0x027147 09:B137: C9 08     CMP #$08
 C - - - - - 0x027149 09:B139: 60        RTS
 bra_B13A:
-C - - - - - 0x02714A 09:B13A: 20 FC D1  JSR sub_0x03D20C
+C - - - - - 0x02714A 09:B13A: 20 FC D1  JSR sub_0x03D20C_reverse_byte
 C - - - - - 0x02714D 09:B13D: C9 20     CMP #$20
 bra_B13F_RTS:
 C - - - - - 0x02714F 09:B13F: 60        RTS

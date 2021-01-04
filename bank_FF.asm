@@ -588,7 +588,7 @@ C - - - - - 0x03D19F 0F:D18F: A5 00     LDA ram_0000
 C - - - - - 0x03D1A1 0F:D191: 49 FF     EOR #$FF
 C - - - - - 0x03D1A3 0F:D193: 85 00     STA ram_0000
 C - - - - - 0x03D1A5 0F:D195: A5 01     LDA ram_0001
-C - - - - - 0x03D1A7 0F:D197: 20 FC D1  JSR sub_D1FC
+C - - - - - 0x03D1A7 0F:D197: 20 FC D1  JSR sub_D1FC_reverse_byte
 C - - - - - 0x03D1AA 0F:D19A: 85 01     STA ram_0001
 C - - - - - 0x03D1AC 0F:D19C: D0 02     BNE bra_D1A0
 C - - - - - 0x03D1AE 0F:D19E: E6 00     INC ram_0000
@@ -648,10 +648,10 @@ C - - - - - 0x03D209 0F:D1F9: 4C 8D D1  JMP loc_D18D
 
 
 
-sub_D1FC:
-loc_D1FC:
-.export sub_0x03D20C
-sub_0x03D20C:
+sub_D1FC_reverse_byte:
+loc_D1FC_reverse_byte:
+.export sub_0x03D20C_reverse_byte
+sub_0x03D20C_reverse_byte:
 C D 2 - - - 0x03D20C 0F:D1FC: 49 FF     EOR #$FF
 C - - - - - 0x03D20E 0F:D1FE: 18        CLC
 C - - - - - 0x03D20F 0F:D1FF: 69 01     ADC #$01
@@ -690,7 +690,7 @@ C - - - - - 0x03D21C 0F:D20C: BD 40 04  LDA ram_object_X_pos,X
 C - - - - - 0x03D21F 0F:D20F: 38        SEC
 C - - - - - 0x03D220 0F:D210: F9 40 04  SBC ram_object_X_pos,Y
 C - - - - - 0x03D223 0F:D213: B0 23     BCS bra_D238_RTS
-C - - - - - 0x03D225 0F:D215: 4C FC D1  JMP loc_D1FC
+C - - - - - 0x03D225 0F:D215: 4C FC D1  JMP loc_D1FC_reverse_byte
 
 
 
@@ -2551,7 +2551,7 @@ C - - - - - 0x03DF20 0F:DF10: 98        TYA
 C - - - - - 0x03DF21 0F:DF11: 90 03     BCC bra_DF16
 C - - - - - 0x03DF23 0F:DF13: 4C 58 DC  JMP loc_DC58
 bra_DF16:
-C - - - - - 0x03DF26 0F:DF16: 20 FC D1  JSR sub_D1FC
+C - - - - - 0x03DF26 0F:DF16: 20 FC D1  JSR sub_D1FC_reverse_byte
 C - - - - - 0x03DF29 0F:DF19: 4C 54 DC  JMP loc_DC54
 
 
@@ -3447,7 +3447,7 @@ C - - - - - 0x03E34E 0F:E33E: 4C 46 D3  JMP loc_D346
 
 ofs_E341_04:
 C - - J - - 0x03E351 0F:E341: A5 90     LDA ram_sum_btn_press
-C - - - - - 0x03E353 0F:E343: 29 10     AND #$10
+C - - - - - 0x03E353 0F:E343: 29 10     AND #con_btn_Start
 C - - - - - 0x03E355 0F:E345: D0 53     BNE bra_E39A
 C - - - - - 0x03E357 0F:E347: A5 57     LDA ram_0057
 C - - - - - 0x03E359 0F:E349: 29 F8     AND #$F8
@@ -3674,7 +3674,7 @@ C - - - - - 0x03E4C7 0F:E4B7: A5 2C     LDA ram_002C
 C - - - - - 0x03E4C9 0F:E4B9: C9 03     CMP #$03
 C - - - - - 0x03E4CB 0F:E4BB: 90 35     BCC bra_E4F2
 C - - - - - 0x03E4CD 0F:E4BD: A5 90     LDA ram_sum_btn_press
-C - - - - - 0x03E4CF 0F:E4BF: 29 20     AND #$20
+C - - - - - 0x03E4CF 0F:E4BF: 29 20     AND #con_btn_Select
 C - - - - - 0x03E4D1 0F:E4C1: F0 2F     BEQ bra_E4F2
 C - - - - - 0x03E4D3 0F:E4C3: AD 54 01  LDA ram_0154
 C - - - - - 0x03E4D6 0F:E4C6: 0A        ASL
@@ -4064,7 +4064,7 @@ C - - - - - 0x03E76A 0F:E75A: 8D 60 05  STA ram_0560
 ofs_E75D_10:
 C - - - - - 0x03E76D 0F:E75D: 20 E7 F7  JSR sub_F7E7
 C - - - - - 0x03E770 0F:E760: A5 90     LDA ram_sum_btn_press
-C - - - - - 0x03E772 0F:E762: 29 10     AND #$10
+C - - - - - 0x03E772 0F:E762: 29 10     AND #con_btn_Start
 C - - - - - 0x03E774 0F:E764: F0 09     BEQ bra_E76F_RTS
 C - - - - - 0x03E776 0F:E766: 20 C2 F6  JSR sub_F6C2
 C - - - - - 0x03E779 0F:E769: 20 3C F0  JSR sub_F03C
@@ -6293,16 +6293,16 @@ C - - - - - 0x03F402 0F:F3F2: 20 B3 F5  JSR sub_F5B3
 C - - - - - 0x03F405 0F:F3F5: F0 E2     BEQ bra_F3D9
 C - - - - - 0x03F407 0F:F3F7: 20 45 F4  JSR sub_F445
 C - - - - - 0x03F40A 0F:F3FA: A5 90     LDA ram_sum_btn_press
-C - - - - - 0x03F40C 0F:F3FC: 29 0C     AND #$0C
+C - - - - - 0x03F40C 0F:F3FC: 29 0C     AND #con_btns_UD
 C - - - - - 0x03F40E 0F:F3FE: F0 0A     BEQ bra_F40A
 C - - - - - 0x03F410 0F:F400: A0 FF     LDY #$FF
-C - - - - - 0x03F412 0F:F402: 29 08     AND #$08
+C - - - - - 0x03F412 0F:F402: 29 08     AND #con_btn_Up
 C - - - - - 0x03F414 0F:F404: D0 0C     BNE bra_F412
 C - - - - - 0x03F416 0F:F406: A0 01     LDY #$01
 C - - - - - 0x03F418 0F:F408: D0 08     BNE bra_F412
 bra_F40A:
 C - - - - - 0x03F41A 0F:F40A: A5 90     LDA ram_sum_btn_press
-C - - - - - 0x03F41C 0F:F40C: 29 20     AND #$20
+C - - - - - 0x03F41C 0F:F40C: 29 20     AND #con_btn_Select
 C - - - - - 0x03F41E 0F:F40E: F0 1B     BEQ bra_F42B
 - - - - - - 0x03F420 0F:F410: A0 01     LDY #$01
 bra_F412:
@@ -6322,7 +6322,7 @@ C - - - - - 0x03F435 0F:F425: 20 90 F6  JSR sub_F690
 C - - - - - 0x03F438 0F:F428: 20 C4 F5  JSR sub_F5C4
 bra_F42B:
 C - - - - - 0x03F43B 0F:F42B: A5 90     LDA ram_sum_btn_press
-C - - - - - 0x03F43D 0F:F42D: 29 10     AND #$10
+C - - - - - 0x03F43D 0F:F42D: 29 10     AND #con_btn_Start
 C - - - - - 0x03F43F 0F:F42F: F0 2C     BEQ bra_F45D_RTS
 C - - - - - 0x03F441 0F:F431: A9 29     LDA #$29
 C - - - - - 0x03F443 0F:F433: 85 98     STA ram_0098
@@ -6411,7 +6411,7 @@ C - - - - - 0x03F4C4 0F:F4B4: 84 26     STY ram_0026
 C - - - - - 0x03F4C6 0F:F4B6: 4C C6 F5  JMP loc_F5C6
 bra_F4B9:
 C - - - - - 0x03F4C9 0F:F4B9: A5 90     LDA ram_sum_btn_press
-C - - - - - 0x03F4CB 0F:F4BB: 29 30     AND #$30
+C - - - - - 0x03F4CB 0F:F4BB: 29 30     AND #con_btns_SS
 C - - - - - 0x03F4CD 0F:F4BD: D0 10     BNE bra_F4CF
 C - - - - - 0x03F4CF 0F:F4BF: 20 79 D2  JSR sub_D279
 C - - - - - 0x03F4D2 0F:F4C2: 20 B3 F5  JSR sub_F5B3
@@ -6464,7 +6464,7 @@ C - - - - - 0x03F517 0F:F507: F0 EE     JMP loc_F5A7
 
 ofs_F509_05:
 C - - J - - 0x03F519 0F:F509: A5 90     LDA ram_sum_btn_press
-C - - - - - 0x03F51B 0F:F50B: 29 30     AND #$30
+C - - - - - 0x03F51B 0F:F50B: 29 30     AND #con_btns_SS
 C - - - - - 0x03F51D 0F:F50D: D0 55     BNE bra_F564
 C - - - - - 0x03F51F 0F:F50F: A6 21     LDX ram_0021
 C - - - - - 0x03F521 0F:F511: D0 2B     BNE bra_F53E
@@ -7794,7 +7794,7 @@ C - - - - - 0x03FCDE 0F:FCCE: A5 A6     LDA ram_00A6
 C - - - - - 0x03FCE0 0F:FCD0: E9 60     SBC #$60
 C - - - - - 0x03FCE2 0F:FCD2: B0 05     BCS bra_FCD9
 C - - - - - 0x03FCE4 0F:FCD4: E6 B7     INC ram_00B7
-C - - - - - 0x03FCE6 0F:FCD6: 20 FC D1  JSR sub_D1FC
+C - - - - - 0x03FCE6 0F:FCD6: 20 FC D1  JSR sub_D1FC_reverse_byte
 bra_FCD9:
 C - - - - - 0x03FCE9 0F:FCD9: 85 B8     STA ram_00B8
 C - - - - - 0x03FCEB 0F:FCDB: A9 00     LDA #$00
@@ -7828,7 +7828,7 @@ C - - - - - 0x03FD19 0F:FD09: 65 B9     ADC ram_00B9
 C - - - - - 0x03FD1B 0F:FD0B: 85 BB     STA ram_00BB
 C - - - - - 0x03FD1D 0F:FD0D: A4 B7     LDY ram_00B7
 C - - - - - 0x03FD1F 0F:FD0F: F0 03     BEQ bra_FD14
-C - - - - - 0x03FD21 0F:FD11: 20 FC D1  JSR sub_D1FC
+C - - - - - 0x03FD21 0F:FD11: 20 FC D1  JSR sub_D1FC_reverse_byte
 bra_FD14:
 C - - - - - 0x03FD24 0F:FD14: 18        CLC
 C - - - - - 0x03FD25 0F:FD15: 69 60     ADC #$60
