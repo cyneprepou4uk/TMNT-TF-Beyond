@@ -6632,9 +6632,6 @@ C - - - - - 0x03F601 0F:F5F1: D0 06     BNE bra_F5F9_swap_prg_bank
 
 sub_F5F3_prg_bank_0E:
 C - - - - - 0x03F603 0F:F5F3: A9 3C     LDA #$3C
-C - - - - - 0x03F605 0F:F5F5: D0 02     BNE bra_F5F9_swap_prg_bank
-
-bra_F5F9_swap_prg_bank:
 sub_F5F9_swap_prg_bank:
 C - - - - - 0x03F609 0F:F5F9: E6 3D     INC ram_003D
 C - - - - - 0x03F60B 0F:F5FB: A4 3D     LDY ram_003D
