@@ -1,5 +1,6 @@
 .segment "BANK_0B"
 .include "copy_bank_ram.inc"
+.include "copy_bank_val.inc"
 ; 0x02C010-0x03000F
 
 - D 0 - - - 0x02C010 0B:8000: 06        .byte $06   ; 

@@ -1,5 +1,6 @@
 .segment "BANK_0E"
 .include "copy_bank_ram.inc"
+.include "copy_bank_val.inc"
 ; 0x038010-0x03C00F
 
 - D 0 - - - 0x038010 0E:8000: 0C        .byte $0C   ; 

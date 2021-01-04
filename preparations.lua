@@ -21,6 +21,7 @@ files_list = {
     "bank_0E.asm",
     "bank_FF.asm",
     "bank_ram.inc",
+    "bank_val.inc",
 }
 
 --конвертация испанских символов в английские
