@@ -2,6 +2,8 @@
 
 Teenage Mutant Ninja Turtles: Tournament Fighters [NES] disassembly.
 
+Original hacking by [Shredder](https://vk.com/id48899185).
+
 Use **syntax_6502.xml** to highlight code in [Notepad++](https://notepad-plus-plus.org/).
 
 
