@@ -9,7 +9,6 @@
 .export sub_0x024014
 sub_0x024014:
 C - - - - - 0x024014 09:8004: 20 3B FF  JSR sub_0x03FF4B
-C - - - - - 0x024017 09:8007: EA        NOP
 .export loc_0x024018
 loc_0x024018:
 C D 0 - - - 0x024018 09:8008: A6 AD     LDX ram_00AD
@@ -2199,11 +2198,6 @@ C - - - - - 0x024F60 09:8F50: 20 18 D2  JSR sub_0x03D228
 C - - - - - 0x024F63 09:8F53: A9 80     LDA #$80
 C - - - - - 0x024F65 09:8F55: 1D 80 05  ORA ram_0580,X
 C - - - - - 0x024F68 09:8F58: 9D 80 05  STA ram_0580,X
-C - - - - - 0x024F6B 09:8F5B: EA        NOP
-C - - - - - 0x024F6C 09:8F5C: EA        NOP
-C - - - - - 0x024F6D 09:8F5D: EA        NOP
-C - - - - - 0x024F6E 09:8F5E: EA        NOP
-C - - - - - 0x024F6F 09:8F5F: EA        NOP
 C - - - - - 0x024F70 09:8F60: 4C 73 D0  JMP loc_0x03D083
 
 
@@ -7768,7 +7762,6 @@ C - - - - - 0x026C98 09:AC88: D9 45 AD  CMP tbl_AD45,Y
 C - - - - - 0x026C9B 09:AC8B: 90 06     BCC bra_AC93
 C - - - - - 0x026C9D 09:AC8D: 0E 04 01  ASL ram_0104
 C - - - - - 0x026CA0 09:AC90: 90 18     BCC bra_ACAA
-C - - - - - 0x026CA2 09:AC92: EA        NOP
 bra_AC93:
 C - - - - - 0x026CA3 09:AC93: 9D 2C 06  STA ram_062C,X
 bra_AC96_RTS:
@@ -8689,8 +8682,6 @@ C - - - - - 0x027178 09:B168: A6 01     LDX ram_0001
 C - - - - - 0x02717A 09:B16A: AD 2B 01  LDA ram_option_skin
 C - - - - - 0x02717D 09:B16D: 29 02     AND #$02
 C - - - - - 0x02717F 09:B16F: 20 EA D5  JSR sub_0x03D5FA
-C - - - - - 0x027182 09:B172: EA        NOP
-C - - - - - 0x027183 09:B173: EA        NOP
 bra_B174:
 C - - - - - 0x027184 09:B174: C6 01     DEC ram_0001
 C - - - - - 0x027186 09:B176: C6 01     DEC ram_0001

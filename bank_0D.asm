@@ -326,7 +326,6 @@ ofs_8243_00:
 C - - J - - 0x034253 0D:8243: 20 B8 A3  JSR sub_A3B8
 C - - - - - 0x034256 0D:8246: F0 26     BEQ bra_826E
 sub_8248:
-C - - - - - 0x034258 0D:8248: EA        NOP
 C - - - - - 0x034259 0D:8249: 0A        ASL
 C - - - - - 0x03425A 0D:824A: A8        TAY
 C - - - - - 0x03425B 0D:824B: B9 0B 8B  LDA tbl_8B0B,Y
@@ -3510,7 +3509,6 @@ C - - - - - 0x0353AA 0D:939A: B0 EB     BCS bra_9387
 C - - - - - 0x0353AC 0D:939C: 20 A9 EE  JSR sub_0x03EEB9
 C - - - - - 0x0353AF 0D:939F: A9 20     LDA #$20
 C - - - - - 0x0353B1 0D:93A1: 20 3E EE  JSR sub_0x03EE4E
-C - - - - - 0x0353B4 0D:93A4: EA        NOP
 C - - - - - 0x0353B5 0D:93A5: B0 E0     BCS bra_9387
 C - - - - - 0x0353B7 0D:93A7: 20 96 ED  JSR sub_0x03EDA6
 C - - - - - 0x0353BA 0D:93AA: A9 16     LDA #$16
@@ -4087,7 +4085,6 @@ C - - - - - 0x035760 0D:9750: A9 16     LDA #$16
 C - - - - - 0x035762 0D:9752: 60        RTS
 bra_9753:
 loc_9753:
-C D 0 - - - 0x035763 0D:9753: EA        NOP
 C - - - - - 0x035764 0D:9754: 20 96 ED  JSR sub_0x03EDA6
 C - - - - - 0x035767 0D:9757: A9 08     LDA #$08
 C - - - - - 0x035769 0D:9759: 60        RTS
@@ -4918,7 +4915,6 @@ ofs_9C32_00:
 C D 0 J - - 0x035C42 0D:9C32: A5 11     LDA ram_0011
 C - - - - - 0x035C44 0D:9C34: C9 08     CMP #$08
 C - - - - - 0x035C46 0D:9C36: D0 37     BNE bra_9C6F_RTS
-C - - - - - 0x035C48 0D:9C38: EA        NOP
 C - - - - - 0x035C49 0D:9C39: A5 13     LDA ram_0013
 C - - - - - 0x035C4B 0D:9C3B: C9 03     CMP #$03
 C - - - - - 0x035C4D 0D:9C3D: F0 21     BEQ bra_9C60
@@ -5677,7 +5673,6 @@ bra_A148:
 - - - - - - 0x036161 0D:A151: C9 03     CMP #$03
 - - - - - - 0x036163 0D:A153: F0 0C     BEQ bra_A161_RTS
 - - - - - - 0x036165 0D:A155: 20 D8 ED  JSR sub_0x03EDE8
-- - - - - - 0x036168 0D:A158: EA        NOP
 - - - - - - 0x036169 0D:A159: C9 50     CMP #$50
 - - - - - - 0x03616B 0D:A15B: B0 05     BCS bra_A162
 - - - - - - 0x03616D 0D:A15D: A9 25     LDA #$25
@@ -5937,13 +5932,6 @@ bra_A30F:
 C - - - - - 0x03631F 0D:A30F: BD 50 05  LDA ram_0550,X
 C - - - - - 0x036322 0D:A312: 49 06     EOR #$06
 C - - - - - 0x036324 0D:A314: F0 10     BEQ bra_A326
-C - - - - - 0x036326 0D:A316: EA        NOP
-C - - - - - 0x036327 0D:A317: EA        NOP
-C - - - - - 0x036328 0D:A318: EA        NOP
-C - - - - - 0x036329 0D:A319: EA        NOP
-C - - - - - 0x03632A 0D:A31A: EA        NOP
-C - - - - - 0x03632B 0D:A31B: EA        NOP
-C - - - - - 0x03632C 0D:A31C: EA        NOP
 C - - - - - 0x03632D 0D:A31D: A5 8C     LDA ram_random_2
 C - - - - - 0x03632F 0D:A31F: 1D 10 06  ORA ram_0610,X
 C - - - - - 0x036332 0D:A322: 29 80     AND #$80

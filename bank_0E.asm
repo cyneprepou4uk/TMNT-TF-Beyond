@@ -2111,8 +2111,6 @@ C - - - - - 0x038B5F 0E:8B4F: 4C CB 8A  JMP loc_8ACB
 
 
 ofs_8B52_02:
-C - - J - - 0x038B62 0E:8B52: EA        NOP
-C - - - - - 0x038B63 0E:8B53: EA        NOP
 C - - - - - 0x038B64 0E:8B54: 20 40 A7  JSR sub_A740
 C - - - - - 0x038B67 0E:8B57: D0 F3     BNE bra_8B4C
 C - - - - - 0x038B69 0E:8B59: 20 55 8C  JSR sub_8C55

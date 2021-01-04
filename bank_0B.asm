@@ -30,7 +30,6 @@ C - - - - - 0x02C0F7 0B:80E7: EE 3E 06  INC ram_063E
 C - - - - - 0x02C0FA 0B:80EA: A9 74     LDA #$74
 C - - - - - 0x02C0FC 0B:80EC: 85 32     STA ram_0032
 C - - - - - 0x02C0FE 0B:80EE: 20 00 AC  JSR sub_AC00
-C - - - - - 0x02C101 0B:80F1: EA        NOP
 C - - - - - 0x02C102 0B:80F2: A0 02     LDY #$02
 C - - - - - 0x02C104 0B:80F4: 20 04 DC  JSR sub_0x03DC14
 C - - - - - 0x02C107 0B:80F7: A5 2C     LDA ram_002C
@@ -48,7 +47,6 @@ C - - J - - 0x02C116 0B:8106: EE 3E 06  INC ram_063E
 C - - - - - 0x02C119 0B:8109: A4 2C     LDY ram_002C
 C - - - - - 0x02C11B 0B:810B: BE FA BF  LDX tbl_BFFA,Y
 C - - - - - 0x02C11E 0B:810E: 20 44 F0  JSR sub_0x03F054
-C - - - - - 0x02C121 0B:8111: EA        NOP
 C - - - - - 0x02C122 0B:8112: A5 2C     LDA ram_002C
 C - - - - - 0x02C124 0B:8114: D0 05     BNE bra_811B
 C - - - - - 0x02C126 0B:8116: A2 1A     LDX #$1A
