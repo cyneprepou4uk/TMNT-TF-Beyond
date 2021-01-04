@@ -6651,7 +6651,7 @@ sub_F5F9:
 C - - - - - 0x03F609 0F:F5F9: E6 3D     INC ram_003D
 C - - - - - 0x03F60B 0F:F5FB: A4 3D     LDY ram_003D
 C - - - - - 0x03F60D 0F:F5FD: 99 3E 00  STA ram_003E,Y
-bra_F600:
+loc_F600_restore_prg_bank:
 sub_F600_prg_bank_0B:
 C - - - - - 0x03F610 0F:F600: A0 06     LDY #$06
 C - - - - - 0x03F612 0F:F602: 84 42     STY ram_for_8000_1
@@ -6674,7 +6674,7 @@ loc_0x03F627_restore_prg_bank:
 C D 3 - - - 0x03F627 0F:F617: C6 3D     DEC ram_003D
 C - - - - - 0x03F629 0F:F619: A4 3D     LDY ram_003D
 C - - - - - 0x03F62B 0F:F61B: B9 3E 00  LDA ram_003E,Y
-C - - - - - 0x03F62E 0F:F61E: 10 E0     BPL bra_F600
+C - - - - - 0x03F62E 0F:F61E: 10 E0     JMP loc_F600_restore_prg_bank
 
 sub_F620_chr_bankswitch:
 C - - - - - 0x03F630 0F:F620: A5 23     LDA ram_0023
