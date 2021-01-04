@@ -1442,10 +1442,10 @@ C - - - - - 0x03D611 0F:D601: 60        RTS
 sub_D602:
 C - - - - - 0x03D612 0F:D602: AD 2B 01  LDA ram_option_skin
 C - - - - - 0x03D615 0F:D605: 29 02     AND #$02
-C - - - - - 0x03D617 0F:D607: D0 03     BNE bra_D60C
+C - - - - - 0x03D617 0F:D607: D0 03     BNE bra_D60C_night
 C - - - - - 0x03D619 0F:D609: A2 21     LDX #$21
 C - - - - - 0x03D61B 0F:D60B: 60        RTS
-bra_D60C:
+bra_D60C_night:
 C - - - - - 0x03D61C 0F:D60C: A2 8F     LDX #$8F
 C - - - - - 0x03D61E 0F:D60E: 60        RTS
 
@@ -3652,9 +3652,9 @@ bra_E495:
 C - - - - - 0x03E4A5 0F:E495: 0A        ASL
 C - - - - - 0x03E4A6 0F:E496: A8        TAY
 C - - - - - 0x03E4A7 0F:E497: B9 79 E9  LDA tbl_E979,Y
-C - - - - - 0x03E4AA 0F:E49A: 8D 72 06  STA ram_0672
+C - - - - - 0x03E4AA 0F:E49A: 8D 72 06  STA ram_game_time_tens
 C - - - - - 0x03E4AD 0F:E49D: B9 7A E9  LDA tbl_E97A,Y
-C - - - - - 0x03E4B0 0F:E4A0: 8D 73 06  STA ram_0673
+C - - - - - 0x03E4B0 0F:E4A0: 8D 73 06  STA ram_game_time_ones
 C - - - - - 0x03E4B3 0F:E4A3: 60        RTS
 
 
@@ -3666,8 +3666,8 @@ C - - - - - 0x03E4B8 0F:E4A8: AD 27 01  LDA ram_option_timer
 C - - - - - 0x03E4BB 0F:E4AB: C9 03     CMP #$03
 C - - - - - 0x03E4BD 0F:E4AD: B0 08     BCS bra_E4B7
 bra_E4AF:
-C - - - - - 0x03E4BF 0F:E4AF: AD 72 06  LDA ram_0672
-C - - - - - 0x03E4C2 0F:E4B2: 0D 73 06  ORA ram_0673
+C - - - - - 0x03E4BF 0F:E4AF: AD 72 06  LDA ram_game_time_tens
+C - - - - - 0x03E4C2 0F:E4B2: 0D 73 06  ORA ram_game_time_ones
 C - - - - - 0x03E4C5 0F:E4B5: F0 4F     BEQ bra_E506
 bra_E4B7:
 C - - - - - 0x03E4C7 0F:E4B7: A5 2C     LDA ram_002C
@@ -4133,10 +4133,10 @@ C - - - - - 0x03E7DC 0F:E7CC: E6 95     INC ram_0095
 C - - - - - 0x03E7DE 0F:E7CE: A9 08     LDA #$08
 C - - - - - 0x03E7E0 0F:E7D0: 85 A6     STA ram_00A6
 C - - - - - 0x03E7E2 0F:E7D2: A9 03     LDA #$03
-C - - - - - 0x03E7E4 0F:E7D4: 8D 72 06  STA ram_0672
+C - - - - - 0x03E7E4 0F:E7D4: 8D 72 06  STA ram_game_time_tens
 C - - - - - 0x03E7E7 0F:E7D7: 8D 30 05  STA ram_0530
 C - - - - - 0x03E7EA 0F:E7DA: A9 00     LDA #$00
-C - - - - - 0x03E7EC 0F:E7DC: 8D 73 06  STA ram_0673
+C - - - - - 0x03E7EC 0F:E7DC: 8D 73 06  STA ram_game_time_ones
 C - - - - - 0x03E7EF 0F:E7DF: 85 AA     STA ram_00AA
 C - - - - - 0x03E7F1 0F:E7E1: 8D 1A 06  STA ram_061A
 C - - - - - 0x03E7F4 0F:E7E4: 8D 18 06  STA ram_0618
@@ -4180,8 +4180,8 @@ C - - - - - 0x03E844 0F:E834: D0 03     BNE bra_E839
 C - - - - - 0x03E846 0F:E836: 4C 22 E5  JMP loc_E522
 bra_E839:
 C - - - - - 0x03E849 0F:E839: 20 9D F7  JSR sub_F79D
-C - - - - - 0x03E84C 0F:E83C: AD 72 06  LDA ram_0672
-C - - - - - 0x03E84F 0F:E83F: 0D 73 06  ORA ram_0673
+C - - - - - 0x03E84C 0F:E83C: AD 72 06  LDA ram_game_time_tens
+C - - - - - 0x03E84F 0F:E83F: 0D 73 06  ORA ram_game_time_ones
 C - - - - - 0x03E852 0F:E842: D0 3C     BNE bra_E880_RTS
 C - - - - - 0x03E854 0F:E844: AD 10 04  LDA ram_Y_pos_hi_object
 C - - - - - 0x03E857 0F:E847: C9 AF     CMP #$AF
@@ -4644,19 +4644,19 @@ C - - - - - 0x03EABA 0F:EAAA: CD 30 05  CMP ram_0530
 C - - - - - 0x03EABD 0F:EAAD: F0 C5     BEQ bra_EA74_RTS
 C - - - - - 0x03EABF 0F:EAAF: CD 31 05  CMP ram_0531
 C - - - - - 0x03EAC2 0F:EAB2: F0 7E     BEQ bra_EB32_RTS
-C - - - - - 0x03EAC4 0F:EAB4: AD 74 06  LDA ram_0674
-C - - - - - 0x03EAC7 0F:EAB7: 0D 73 06  ORA ram_0673
-C - - - - - 0x03EACA 0F:EABA: 0D 72 06  ORA ram_0672
+C - - - - - 0x03EAC4 0F:EAB4: AD 74 06  LDA ram_game_time_ms
+C - - - - - 0x03EAC7 0F:EAB7: 0D 73 06  ORA ram_game_time_ones
+C - - - - - 0x03EACA 0F:EABA: 0D 72 06  ORA ram_game_time_tens
 C - - - - - 0x03EACD 0F:EABD: F0 73     BEQ bra_EB32_RTS
-C - - - - - 0x03EACF 0F:EABF: CE 74 06  DEC ram_0674
+C - - - - - 0x03EACF 0F:EABF: CE 74 06  DEC ram_game_time_ms
 C - - - - - 0x03EAD2 0F:EAC2: 10 6E     BPL bra_EB32_RTS
 C - - - - - 0x03EAD4 0F:EAC4: A9 4E     LDA #$4E
 C - - - - - 0x03EAD6 0F:EAC6: 20 0E E1  JSR sub_E10E
-C - - - - - 0x03EAD9 0F:EAC9: 8D 74 06  STA ram_0674
-C - - - - - 0x03EADC 0F:EACC: CE 73 06  DEC ram_0673
+C - - - - - 0x03EAD9 0F:EAC9: 8D 74 06  STA ram_game_time_ms
+C - - - - - 0x03EADC 0F:EACC: CE 73 06  DEC ram_game_time_ones
 C - - - - - 0x03EADF 0F:EACF: 30 1A     BMI bra_EAEB
 C - - - - - 0x03EAE1 0F:EAD1: D0 34     BNE bra_EB07
-C - - - - - 0x03EAE3 0F:EAD3: AD 72 06  LDA ram_0672
+C - - - - - 0x03EAE3 0F:EAD3: AD 72 06  LDA ram_game_time_tens
 C - - - - - 0x03EAE6 0F:EAD6: C9 02     CMP #$02
 C - - - - - 0x03EAE8 0F:EAD8: D0 2D     BNE bra_EB07
 C - - - - - 0x03EAEA 0F:EADA: A5 95     LDA ram_0095
@@ -4668,9 +4668,9 @@ C - - - - - 0x03EAF5 0F:EAE5: 20 90 F6  JSR sub_F690
 C - - - - - 0x03EAF8 0F:EAE8: 4C 07 EB  JMP loc_EB07
 bra_EAEB:
 C - - - - - 0x03EAFB 0F:EAEB: A9 09     LDA #$09
-C - - - - - 0x03EAFD 0F:EAED: 8D 73 06  STA ram_0673
-C - - - - - 0x03EB00 0F:EAF0: CE 72 06  DEC ram_0672
-C - - - - - 0x03EB03 0F:EAF3: AC 72 06  LDY ram_0672
+C - - - - - 0x03EAFD 0F:EAED: 8D 73 06  STA ram_game_time_ones
+C - - - - - 0x03EB00 0F:EAF0: CE 72 06  DEC ram_game_time_tens
+C - - - - - 0x03EB03 0F:EAF3: AC 72 06  LDY ram_game_time_tens
 C - - - - - 0x03EB06 0F:EAF6: 88        DEY
 C - - - - - 0x03EB07 0F:EAF7: D0 0E     BNE bra_EB07
 C - - - - - 0x03EB09 0F:EAF9: A5 95     LDA ram_0095
@@ -4693,7 +4693,7 @@ C - - - - - 0x03EB20 0F:EB10: 69 6F     ADC #$6F
 C - - - - - 0x03EB22 0F:EB12: 20 66 D2  JSR sub_D266
 C - - - - - 0x03EB25 0F:EB15: A9 20     LDA #$20
 C - - - - - 0x03EB27 0F:EB17: 20 66 D2  JSR sub_D266
-C - - - - - 0x03EB2A 0F:EB1A: B9 72 06  LDA ram_0672,Y
+C - - - - - 0x03EB2A 0F:EB1A: B9 72 06  LDA ram_game_time_tens,Y
 C - - - - - 0x03EB2D 0F:EB1D: C9 0A     CMP #$0A
 C - - - - - 0x03EB2F 0F:EB1F: F0 12     BEQ bra_EB33
 C - - - - - 0x03EB31 0F:EB21: 09 10     ORA #$10
@@ -7125,6 +7125,7 @@ ofs_F87D_00:
 
 
 sub_F881_garbage_loop:
+; в X подается величина цикла
 bra_F881_loop:
 C - - - - - 0x03F891 0F:F881: CA        DEX
 C - - - - - 0x03F892 0F:F882: 10 FD     BPL bra_F881_loop

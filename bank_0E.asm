@@ -2003,8 +2003,8 @@ C - - - - - 0x038AC0 0E:8AB0: 20 E5 F6  JSR sub_0x03F6F5
 C - - - - - 0x038AC3 0E:8AB3: 20 9C A5  JSR sub_A59C
 C - - - - - 0x038AC6 0E:8AB6: C9 03     CMP #$03
 C - - - - - 0x038AC8 0E:8AB8: B0 08     BCS bra_8AC2
-C - - - - - 0x038ACA 0E:8ABA: AD 72 06  LDA ram_0672
-C - - - - - 0x038ACD 0E:8ABD: 0D 73 06  ORA ram_0673
+C - - - - - 0x038ACA 0E:8ABA: AD 72 06  LDA ram_game_time_tens
+C - - - - - 0x038ACD 0E:8ABD: 0D 73 06  ORA ram_game_time_ones
 C - - - - - 0x038AD0 0E:8AC0: D0 13     BNE bra_8AD5_RTS
 bra_8AC2:
 C - - - - - 0x038AD2 0E:8AC2: A9 00     LDA #$00
@@ -2036,11 +2036,11 @@ C - - - - - 0x038AF0 0E:8AE0: 29 10     AND #$10
 C - - - - - 0x038AF2 0E:8AE2: 0A        ASL
 C - - - - - 0x038AF3 0E:8AE3: 0A        ASL
 C - - - - - 0x038AF4 0E:8AE4: 0A        ASL
-C - - - - - 0x038AF5 0E:8AE5: CE 73 06  DEC ram_0673
+C - - - - - 0x038AF5 0E:8AE5: CE 73 06  DEC ram_game_time_ones
 C - - - - - 0x038AF8 0E:8AE8: 10 0A     BPL bra_8AF4
 C - - - - - 0x038AFA 0E:8AEA: A9 09     LDA #$09
-C - - - - - 0x038AFC 0E:8AEC: 8D 73 06  STA ram_0673
-C - - - - - 0x038AFF 0E:8AEF: CE 72 06  DEC ram_0672
+C - - - - - 0x038AFC 0E:8AEC: 8D 73 06  STA ram_game_time_ones
+C - - - - - 0x038AFF 0E:8AEF: CE 72 06  DEC ram_game_time_tens
 C - - - - - 0x038B02 0E:8AF2: 30 3B     BMI bra_8B2F
 bra_8AF4:
 C - - - - - 0x038B04 0E:8AF4: 20 07 EB  JSR sub_0x03EB17

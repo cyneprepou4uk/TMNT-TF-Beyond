@@ -1354,8 +1354,8 @@ sub_896F:
 C - - - - - 0x02497F 09:896F: AD 27 01  LDA ram_option_timer
 C - - - - - 0x024982 09:8972: C9 03     CMP #$03
 C - - - - - 0x024984 09:8974: B0 F8     BCS bra_896E_RTS
-C - - - - - 0x024986 09:8976: AD 72 06  LDA ram_0672
-C - - - - - 0x024989 09:8979: 0D 73 06  ORA ram_0673
+C - - - - - 0x024986 09:8976: AD 72 06  LDA ram_game_time_tens
+C - - - - - 0x024989 09:8979: 0D 73 06  ORA ram_game_time_ones
 C - - - - - 0x02498C 09:897C: D0 F0     BNE bra_896E_RTS
 C - - - - - 0x02498E 09:897E: 68        PLA
 C - - - - - 0x02498F 09:897F: 68        PLA
@@ -7238,10 +7238,10 @@ C - - - - - 0x0268DE 09:A8CE: CD 90 05  CMP ram_0590
 C - - - - - 0x0268E1 09:A8D1: B0 11     BCS bra_A8E4
 C - - - - - 0x0268E3 09:A8D3: CD 91 05  CMP ram_0591
 C - - - - - 0x0268E6 09:A8D6: B0 0C     BCS bra_A8E4
-C - - - - - 0x0268E8 09:A8D8: AD 72 06  LDA ram_0672
+C - - - - - 0x0268E8 09:A8D8: AD 72 06  LDA ram_game_time_tens
 C - - - - - 0x0268EB 09:A8DB: C9 03     CMP #$03
 C - - - - - 0x0268ED 09:A8DD: D0 0F     BNE bra_A8EE_RTS
-C - - - - - 0x0268EF 09:A8DF: AD 73 06  LDA ram_0673
+C - - - - - 0x0268EF 09:A8DF: AD 73 06  LDA ram_game_time_ones
 C - - - - - 0x0268F2 09:A8E2: D0 0A     BNE bra_A8EE_RTS
 bra_A8E4:
 C - - - - - 0x0268F4 09:A8E4: AD 36 05  LDA ram_0536

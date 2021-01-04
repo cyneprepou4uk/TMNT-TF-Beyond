@@ -1,6 +1,8 @@
 ; $8000
 con_bank_id                     = $00
 
+
+
 ; ram_btn_press                 = $8E
 ; ram_btn_hold                  = $91
 con_btn_Right                   = $01 ; 
@@ -79,8 +81,6 @@ con_fighter_Shred               = $06 ;
     ; нога сидя                     = $2D
     ; нога антиэйр                  = $2E
 
-
-
 ; ram_id_special                = $0554 спешалы
     ; Hot бабочка                   = $21
     ; Hot огонь                     = $2F
@@ -91,6 +91,6 @@ con_fighter_Shred               = $06 ;
     ; Mike ракеты поверху           = $34
     ; Don пила вращение             = $35
     ; Shred мясо                    = $36
-    ; Casey клющка                  = $37
+    ; Casey клюшка                  = $37
     ; Don пила подкат               = $38
     ; Casey вихрь                   = $39
