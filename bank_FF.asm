@@ -898,7 +898,7 @@ C - - - - - 0x03D316 0F:D306: 05 98     ORA ram_0098
 C - - - - - 0x03D318 0F:D308: 05 24     ORA ram_0024
 C - - - - - 0x03D31A 0F:D30A: D0 F7     BNE bra_D303_RTS
 C - - - - - 0x03D31C 0F:D30C: A4 8E     LDY ram_btn_press
-C - - - - - 0x03D31E 0F:D30E: 20 24 EA  JSR sub_EA24    ; bzk опт
+C - - - - - 0x03D31E 0F:D30E: 20 24 EA  JSR sub_EA24
 C - - - - - 0x03D321 0F:D311: F0 02     BEQ bra_D315
 C - - - - - 0x03D323 0F:D313: A4 90     LDY ram_sum_btn_press
 bra_D315:
@@ -4186,7 +4186,7 @@ C - - - - - 0x03E83D 0F:E82D: 4C 41 E1  JMP loc_E141
 
 ofs_E830_19:
 C - - J - - 0x03E840 0F:E830: A5 92     LDA ram_btn_hold + 1
-C - - - - - 0x03E842 0F:E832: C9 C8     CMP #$C8
+C - - - - - 0x03E842 0F:E832: C9 C8     CMP #con_btns_AB + con_btn_Up
 C - - - - - 0x03E844 0F:E834: D0 03     BNE bra_E839
 C - - - - - 0x03E846 0F:E836: 4C 22 E5  JMP loc_E522
 bra_E839:
@@ -5236,10 +5236,10 @@ C - - - - - 0x03ED98 0F:ED88: 60        RTS
 
 
 
-.export sub_0x03ED9F
-sub_0x03ED9F:
-.export loc_0x03ED9F
-loc_0x03ED9F:
+.export sub_0x03ED9F_write_buttons
+sub_0x03ED9F_write_buttons:
+.export loc_0x03ED9F_write_buttons
+loc_0x03ED9F_write_buttons:
 C D 3 - - - 0x03ED9F 0F:ED8F: 95 91     STA ram_btn_hold,X
 C - - - - - 0x03EDA1 0F:ED91: 95 8E     STA ram_btn_press,X
 C - - - - - 0x03EDA3 0F:ED93: A9 00     LDA #$00
@@ -5592,7 +5592,7 @@ C D 3 - - - 0x03EF88 0F:EF78: 10 14     BPL bra_EF8E
 C - - - - - 0x03EF8A 0F:EF7A: BD 40 04  LDA ram_0440,X
 C - - - - - 0x03EF8D 0F:EF7D: D9 40 04  CMP ram_0440,Y
 C - - - - - 0x03EF90 0F:EF80: B5 91     LDA ram_btn_hold,X
-C - - - - - 0x03EF92 0F:EF82: 29 01     AND #$01
+C - - - - - 0x03EF92 0F:EF82: 29 01     AND #con_btn_Right
 C - - - - - 0x03EF94 0F:EF84: F0 06     BEQ bra_EF8C
 C - - - - - 0x03EF96 0F:EF86: B0 06     BCS bra_EF8E
 bra_EF88:

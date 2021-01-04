@@ -9589,7 +9589,7 @@ ofs_A85E:
 .export ofs_0x02E86E
 ofs_0x02E86E = ofs_A85E - 1
 C - - - - - 0x02E86E 0B:A85E: B5 91     LDA ram_btn_hold,X
-C - - - - - 0x02E870 0B:A860: 29 08     AND #$08
+C - - - - - 0x02E870 0B:A860: 29 08     AND #con_btn_Up
 C - - - - - 0x02E872 0B:A862: F0 1C     BEQ bra_A880
 C - - - - - 0x02E874 0B:A864: A4 A9     LDY ram_00A9
 C - - - - - 0x02E876 0B:A866: B9 20 05  LDA ram_0520,Y

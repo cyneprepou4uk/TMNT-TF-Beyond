@@ -1716,7 +1716,7 @@ C - - - - - 0x038936 0E:8926: B0 24     BCS bra_894C
 C - - - - - 0x038938 0E:8928: A2 01     LDX #$01
 bra_892A:
 C - - - - - 0x03893A 0E:892A: B5 8E     LDA ram_btn_press,X
-C - - - - - 0x03893C 0E:892C: 29 03     AND #con_btn_Right + con_btn_Left
+C - - - - - 0x03893C 0E:892C: 29 03     AND #con_btns_LR
 C - - - - - 0x03893E 0E:892E: F0 16     BEQ bra_8946
 C - - - - - 0x038940 0E:8930: 29 01     AND #con_btn_Right
 C - - - - - 0x038942 0E:8932: D0 02     BNE bra_8936
@@ -3255,7 +3255,7 @@ C - - - - - 0x0392A6 0E:9296: 60        RTS
 
 sub_9297:
 C - - - - - 0x0392A7 0E:9297: A5 91     LDA ram_btn_hold
-C - - - - - 0x0392A9 0E:9299: 29 80     AND #$80
+C - - - - - 0x0392A9 0E:9299: 29 80     AND #con_btn_A
 C - - - - - 0x0392AB 0E:929B: D0 F9     BNE bra_9296_RTS
 C - - - - - 0x0392AD 0E:929D: A5 21     LDA ram_0021
 C - - - - - 0x0392AF 0E:929F: 38        SEC
