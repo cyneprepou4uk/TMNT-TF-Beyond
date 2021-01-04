@@ -6651,7 +6651,7 @@ C - - - - - 0x03F679 0F:F669: A0 01     LDY #$01
 C - - - - - 0x03F67B 0F:F66B: 84 2E     STY ram_002E
 C - - - - - 0x03F67D 0F:F66D: AD 00 80  LDA ram_8000_bank_id
 C - - - - - 0x03F682 0F:F672: 85 46     STA ram_0046
-C - - - - - 0x03F684 0F:F674: A2 30     LDX #con_bank_id + $30
+C - - - - - 0x03F684 0F:F674: A2 30     LDX #con_bank_id + $10
 sub_F676:
 C - - - - - 0x03F686 0F:F676: A0 06     LDY #$06
 C - - - - - 0x03F688 0F:F678: 84 43     STY ram_for_8000_2
