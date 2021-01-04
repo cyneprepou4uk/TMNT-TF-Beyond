@@ -92,13 +92,13 @@ C - - - - - 0x0340CD 0D:80BD: 8A        TXA
 C - - - - - 0x0340CE 0D:80BE: 0A        ASL
 C - - - - - 0x0340CF 0D:80BF: 0A        ASL
 C - - - - - 0x0340D0 0D:80C0: 85 10     STA ram_0010
-C - - - - - 0x0340D2 0D:80C2: BC 50 05  LDY ram_id_object,X
+C - - - - - 0x0340D2 0D:80C2: BC 50 05  LDY ram_id_fighter,X
 C - - - - - 0x0340D5 0D:80C5: B9 1C DF  LDA tbl_0x03DF2C,Y
 C - - - - - 0x0340D8 0D:80C8: 38        SEC
 C - - - - - 0x0340D9 0D:80C9: E9 01     SBC #$01
 C - - - - - 0x0340DB 0D:80CB: A4 10     LDY ram_0010
 C - - - - - 0x0340DD 0D:80CD: 99 E8 06  STA ram_06E8,Y
-C - - - - - 0x0340E0 0D:80D0: BD 50 05  LDA ram_id_object,X
+C - - - - - 0x0340E0 0D:80D0: BD 50 05  LDA ram_id_fighter,X
 C - - - - - 0x0340E3 0D:80D3: 0A        ASL
 C - - - - - 0x0340E4 0D:80D4: 0A        ASL
 C - - - - - 0x0340E5 0D:80D5: 85 11     STA ram_0011
@@ -221,7 +221,7 @@ C - - - - - 0x0341A1 0D:8191: D0 E7     BNE bra_817A
 
 
 sub_8193:
-C - - - - - 0x0341A3 0D:8193: BD 50 05  LDA ram_id_object,X
+C - - - - - 0x0341A3 0D:8193: BD 50 05  LDA ram_id_fighter,X
 C - - - - - 0x0341A6 0D:8196: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x0341A9 0D:8199: 11 9C     .word ofs_9C11_00_Leo
 - D 0 - I - 0x0341AB 0D:819B: F6 9C     .word ofs_9CF6_01_Raph
@@ -234,7 +234,7 @@ C - - - - - 0x0341A6 0D:8196: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 
 
 sub_81A7:
-C - - - - - 0x0341B7 0D:81A7: BD 50 05  LDA ram_id_object,X
+C - - - - - 0x0341B7 0D:81A7: BD 50 05  LDA ram_id_fighter,X
 C - - - - - 0x0341BA 0D:81AA: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x0341BD 0D:81AD: EB 8D     .word ofs_8DEB_00_Leo
 - D 0 - I - 0x0341BF 0D:81AF: BC 90     .word ofs_90BC_01_Raph
@@ -1318,10 +1318,10 @@ C D 0 - - - 0x034914 0D:8904: 4C 0E 8A  JMP loc_8A0E
 
 
 ofs_8907_07:
-C - - J - - 0x034917 0D:8907: BD 10 04  LDA ram_Y_pos_hi_object,X
+C - - J - - 0x034917 0D:8907: BD 10 04  LDA ram_Y_pos_hi_fighter,X
 C - - - - - 0x03491A 0D:890A: C9 A0     CMP #$A0
 C - - - - - 0x03491C 0D:890C: B0 08     BCS bra_8916
-C - - - - - 0x03491E 0D:890E: BD 60 04  LDA ram_Y_spd_hi_object,X
+C - - - - - 0x03491E 0D:890E: BD 60 04  LDA ram_Y_spd_hi_fighter,X
 C - - - - - 0x034921 0D:8911: 30 03     BMI bra_8916
 C - - - - - 0x034923 0D:8913: 4C 96 ED  JMP loc_0x03EDA6
 bra_8916:
@@ -4899,7 +4899,7 @@ C - - - - - 0x035C28 0D:9C18: F0 01     BEQ bra_9C1B
 C - - - - - 0x035C2A 0D:9C1A: 60        RTS
 bra_9C1B:
 C - - - - - 0x035C2B 0D:9C1B: BC DE 06  LDY ram_06DE,X
-C - - - - - 0x035C2E 0D:9C1E: B9 50 05  LDA ram_id_object,Y
+C - - - - - 0x035C2E 0D:9C1E: B9 50 05  LDA ram_id_fighter,Y
 C - - - - - 0x035C31 0D:9C21: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x035C34 0D:9C24: 32 9C     .word ofs_9C32_00_Leo
 - D 0 - I - 0x035C36 0D:9C26: 75 9C     .word ofs_9C75_01_Raph
@@ -4959,7 +4959,7 @@ C - - - - - 0x035C8E 0D:9C7E: C9 10     CMP #$10
 C - - - - - 0x035C90 0D:9C80: 90 28     BCC bra_9CAA_RTS
 C - - - - - 0x035C92 0D:9C82: 20 FE ED  JSR sub_0x03EE0E
 C - - - - - 0x035C95 0D:9C85: B0 11     BCS bra_9C98
-- - - - - - 0x035C97 0D:9C87: BD 50 05  LDA ram_id_object,X
+- - - - - - 0x035C97 0D:9C87: BD 50 05  LDA ram_id_fighter,X
 - - - - - - 0x035C9A 0D:9C8A: A8        TAY
 - - - - - - 0x035C9B 0D:9C8B: B9 AB 9C  LDA tbl_9CAB,Y
 - - - - - - 0x035C9E 0D:9C8E: CD 38 06  CMP ram_dist_X_btw_plrs
@@ -5061,7 +5061,7 @@ C - - - - - 0x035D0D 0D:9CFD: F0 01     BEQ bra_9D00
 C - - - - - 0x035D0F 0D:9CFF: 60        RTS
 bra_9D00:
 C - - - - - 0x035D10 0D:9D00: BC DE 06  LDY ram_06DE,X
-C - - - - - 0x035D13 0D:9D03: B9 50 05  LDA ram_id_object,Y
+C - - - - - 0x035D13 0D:9D03: B9 50 05  LDA ram_id_fighter,Y
 C - - - - - 0x035D16 0D:9D06: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x035D19 0D:9D09: 32 9C     .word ofs_9C32_00_Leo
 - D 0 - I - 0x035D1B 0D:9D0B: 75 9C     .word ofs_9C75_01_Raph
@@ -5081,7 +5081,7 @@ C - - - - - 0x035D33 0D:9D23: F0 01     BEQ bra_9D26
 C - - - - - 0x035D35 0D:9D25: 60        RTS
 bra_9D26:
 C - - - - - 0x035D36 0D:9D26: BC DE 06  LDY ram_06DE,X
-C - - - - - 0x035D39 0D:9D29: B9 50 05  LDA ram_id_object,Y
+C - - - - - 0x035D39 0D:9D29: B9 50 05  LDA ram_id_fighter,Y
 C - - - - - 0x035D3C 0D:9D2C: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x035D3F 0D:9D2F: 3D 9D     .word ofs_9D3D_00_Leo
 - D 0 - I - 0x035D41 0D:9D31: 75 9C     .word ofs_9C75_01_Raph
@@ -5139,7 +5139,7 @@ C - - - - - 0x035DA0 0D:9D90: 85 17     STA ram_0017
 C - - - - - 0x035DA2 0D:9D92: 60        RTS
 bra_9D93:
 C - - - - - 0x035DA3 0D:9D93: BC DE 06  LDY ram_06DE,X
-C - - - - - 0x035DA6 0D:9D96: B9 50 05  LDA ram_id_object,Y
+C - - - - - 0x035DA6 0D:9D96: B9 50 05  LDA ram_id_fighter,Y
 C - - - - - 0x035DA9 0D:9D99: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x035DAC 0D:9D9C: 32 9C     .word ofs_9C32_00_Leo
 - D 0 - I - 0x035DAE 0D:9D9E: 75 9C     .word ofs_9C75_01_Raph
@@ -5173,7 +5173,7 @@ C - - - - - 0x035DE3 0D:9DD3: D0 03     BNE bra_9DD8
 C - - - - - 0x035DE5 0D:9DD5: 4C 31 9E  JMP loc_9E31
 bra_9DD8:
 C - - - - - 0x035DE8 0D:9DD8: BC DE 06  LDY ram_06DE,X
-C - - - - - 0x035DEB 0D:9DDB: B9 50 05  LDA ram_id_object,Y
+C - - - - - 0x035DEB 0D:9DDB: B9 50 05  LDA ram_id_fighter,Y
 C - - - - - 0x035DEE 0D:9DDE: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x035DF1 0D:9DE1: EF 9D     .word ofs_9DEF_00_Leo
 - D 0 - I - 0x035DF3 0D:9DE3: 36 9E     .word ofs_9E36_01_Raph
@@ -5351,7 +5351,7 @@ C - - - - - 0x035F12 0D:9F02: F0 01     BEQ bra_9F05
 C - - - - - 0x035F14 0D:9F04: 60        RTS
 bra_9F05:
 C - - - - - 0x035F15 0D:9F05: BC DE 06  LDY ram_06DE,X
-C - - - - - 0x035F18 0D:9F08: B9 50 05  LDA ram_id_object,Y
+C - - - - - 0x035F18 0D:9F08: B9 50 05  LDA ram_id_fighter,Y
 C - - - - - 0x035F1B 0D:9F0B: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 0 - I - 0x035F1E 0D:9F0E: 1C 9F     .word ofs_9F1C_00_Leo
 - D 0 - I - 0x035F20 0D:9F10: 68 9F     .word ofs_9F68_01_Raph
@@ -5506,7 +5506,7 @@ tbl_9FF5:
 
 bra_9FF9:
 C - - - - - 0x036009 0D:9FF9: BC DE 06  LDY ram_06DE,X
-C - - - - - 0x03600C 0D:9FFC: B9 50 05  LDA ram_id_object,Y
+C - - - - - 0x03600C 0D:9FFC: B9 50 05  LDA ram_id_fighter,Y
 C - - - - - 0x03600F 0D:9FFF: 20 32 D0  JSR sub_0x03D042_read_pointers_after_jsr
 - D 1 - I - 0x036012 0D:A002: 10 A0     .word ofs_A010_00_Leo
 - D 1 - I - 0x036014 0D:A004: 46 A0     .word ofs_A046_01_Raph

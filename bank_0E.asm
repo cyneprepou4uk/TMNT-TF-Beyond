@@ -2781,9 +2781,9 @@ sub_8FCB:
 C - - - - - 0x038FDB 0E:8FCB: BC 4C 01  LDY ram_014C,X
 C - - - - - 0x038FDE 0E:8FCE: 8C 50 05  STY ram_id_object
 C - - - - - 0x038FE1 0E:8FD1: B9 7A 90  LDA tbl_907A,Y
-C - - - - - 0x038FE4 0E:8FD4: 8D 10 04  STA ram_Y_pos_hi_object
+C - - - - - 0x038FE4 0E:8FD4: 8D 10 04  STA ram_Y_pos_hi_fighter
 C - - - - - 0x038FE7 0E:8FD7: A9 C0     LDA #$C0
-C - - - - - 0x038FE9 0E:8FD9: 8D 40 04  STA ram_X_pos_hi_object
+C - - - - - 0x038FE9 0E:8FD9: 8D 40 04  STA ram_X_pos_hi_fighter
 C - - - - - 0x038FEC 0E:8FDC: B9 73 90  LDA tbl_9073,Y
 C - - - - - 0x038FEF 0E:8FDF: A8        TAY
 C - - - - - 0x038FF0 0E:8FE0: A2 00     LDX #$00
@@ -6560,11 +6560,11 @@ C - - - - - 0x03A3A6 0E:A396: 4A        LSR
 C - - - - - 0x03A3A7 0E:A397: BC 4C 01  LDY ram_014C,X
 C - - - - - 0x03A3AA 0E:A39A: A9 00     LDA #$00
 C - - - - - 0x03A3AC 0E:A39C: 79 12 A4  ADC tbl_A412,Y
-C - - - - - 0x03A3AF 0E:A39F: 9D 00 04  STA ram_anim_object,X
+C - - - - - 0x03A3AF 0E:A39F: 9D 00 04  STA ram_anim_fighter,X
 C - - - - - 0x03A3B2 0E:A3A2: BD 20 A4  LDA tbl_A420,X
-C - - - - - 0x03A3B5 0E:A3A5: 9D 10 04  STA ram_Y_pos_hi_object,X
+C - - - - - 0x03A3B5 0E:A3A5: 9D 10 04  STA ram_Y_pos_hi_fighter,X
 C - - - - - 0x03A3B8 0E:A3A8: BD 19 A4  LDA tbl_A419,X
-C - - - - - 0x03A3BB 0E:A3AB: 9D 40 04  STA ram_X_pos_hi_object,X
+C - - - - - 0x03A3BB 0E:A3AB: 9D 40 04  STA ram_X_pos_hi_fighter,X
 C - - - - - 0x03A3BE 0E:A3AE: BD 55 01  LDA ram_0155,X
 C - - - - - 0x03A3C1 0E:A3B1: 29 03     AND #$03
 C - - - - - 0x03A3C3 0E:A3B3: 09 80     ORA #$80

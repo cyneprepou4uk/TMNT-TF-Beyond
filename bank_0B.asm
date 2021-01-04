@@ -227,9 +227,9 @@ sub_822F:
 loc_822F:
 C D 0 - - - 0x02C23F 0B:822F: B4 A2     LDY ram_option_fighter,X
 C - - - - - 0x02C241 0B:8231: B9 50 83  LDA tbl_8350,Y
-C - - - - - 0x02C244 0B:8234: 9D 40 04  STA ram_X_pos_hi_object,X
+C - - - - - 0x02C244 0B:8234: 9D 40 04  STA ram_X_pos_hi_fighter,X
 C - - - - - 0x02C247 0B:8237: B9 57 83  LDA tbl_8357,Y
-C - - - - - 0x02C24A 0B:823A: 9D 10 04  STA ram_Y_pos_hi_object,X
+C - - - - - 0x02C24A 0B:823A: 9D 10 04  STA ram_Y_pos_hi_fighter,X
 C - - - - - 0x02C24D 0B:823D: 20 AB 82  JSR sub_82AB
 C - - - - - 0x02C250 0B:8240: B4 A2     LDY ram_option_fighter,X
 C - - - - - 0x02C252 0B:8242: B9 49 83  LDA tbl_8349,Y
