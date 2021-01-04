@@ -229,34 +229,31 @@ _off002_0x03CFF5_29:
 
 
 
-sub_D009:
+sub_D009_clear_ram_:
 C - - - - - 0x03D019 0F:D009: A2 8E     LDX #$8E
 C - - - - - 0x03D01B 0F:D00B: D0 02     BNE bra_D00F
-
-
-
-sub_D00D:
+sub_D00D_clear_ram_:
 C - - - - - 0x03D01D 0F:D00D: A2 A4     LDX #$A4
 bra_D00F:
 C - - - - - 0x03D01F 0F:D00F: A9 00     LDA #$00
-bra_D011:
+bra_D011_loop:
 C - - - - - 0x03D021 0F:D011: 95 00     STA ram_0000,X
 C - - - - - 0x03D023 0F:D013: E8        INX
 C - - - - - 0x03D024 0F:D014: E0 E0     CPX #$E0
-C - - - - - 0x03D026 0F:D016: D0 F9     BNE bra_D011
+C - - - - - 0x03D026 0F:D016: D0 F9     BNE bra_D011_loop
 C - - - - - 0x03D028 0F:D018: A2 00     LDX #$00
-bra_D01A:
+bra_D01A_loop:
 C - - - - - 0x03D02A 0F:D01A: 9D 00 04  STA ram_0400,X
 C - - - - - 0x03D02D 0F:D01D: 9D 00 05  STA ram_0500,X
 C - - - - - 0x03D030 0F:D020: 9D 00 06  STA ram_0600,X
 C - - - - - 0x03D033 0F:D023: 9D 00 07  STA ram_0700,X
 C - - - - - 0x03D036 0F:D026: E8        INX
-C - - - - - 0x03D037 0F:D027: D0 F1     BNE bra_D01A
+C - - - - - 0x03D037 0F:D027: D0 F1     BNE bra_D01A_loop
 C - - - - - 0x03D039 0F:D029: A2 C0     LDX #$C0
-bra_D02B:
+bra_D02B_loop:
 C - - - - - 0x03D03B 0F:D02B: 9D 00 03  STA ram_0300,X
 C - - - - - 0x03D03E 0F:D02E: E8        INX
-C - - - - - 0x03D03F 0F:D02F: D0 FA     BNE bra_D02B
+C - - - - - 0x03D03F 0F:D02F: D0 FA     BNE bra_D02B_loop
 C - - - - - 0x03D041 0F:D031: 60        RTS
 
 
@@ -1307,12 +1304,12 @@ C - - - - - 0x03D571 0F:D561: 20 66 D2  JSR sub_D266
 C - - - - - 0x03D574 0F:D564: A9 3F     LDA #$3F
 C - - - - - 0x03D576 0F:D566: 20 66 D2  JSR sub_D266
 C - - - - - 0x03D579 0F:D569: A4 A9     LDY ram_object_index
-bra_D56B:
+bra_D56B_loop:
 C - - - - - 0x03D57B 0F:D56B: B9 4D 06  LDA ram_064D,Y
 C - - - - - 0x03D57E 0F:D56E: 20 66 D2  JSR sub_D266
 C - - - - - 0x03D581 0F:D571: C8        INY
 C - - - - - 0x03D582 0F:D572: CE 6D 06  DEC ram_066D
-C - - - - - 0x03D585 0F:D575: D0 F4     BNE bra_D56B
+C - - - - - 0x03D585 0F:D575: D0 F4     BNE bra_D56B_loop
 C - - - - - 0x03D587 0F:D577: 4C 59 D2  JMP loc_D259
 
 
@@ -3240,7 +3237,7 @@ C - - - - - 0x03E1ED 0F:E1DD: A5 A2     LDA ram_option_fighter
 C - - - - - 0x03E1EF 0F:E1DF: 48        PHA
 C - - - - - 0x03E1F0 0F:E1E0: A5 A3     LDA ram_option_fighter + 1
 C - - - - - 0x03E1F2 0F:E1E2: 48        PHA
-C - - - - - 0x03E1F3 0F:E1E3: 20 0D D0  JSR sub_D00D
+C - - - - - 0x03E1F3 0F:E1E3: 20 0D D0  JSR sub_D00D_clear_ram_
 C - - - - - 0x03E1F6 0F:E1E6: 68        PLA
 C - - - - - 0x03E1F7 0F:E1E7: 85 A3     STA ram_option_fighter + 1
 C - - - - - 0x03E1F9 0F:E1E9: 68        PLA
@@ -6281,7 +6278,7 @@ C - - - - - 0x03F3D3 0F:F3C3: 86 26     STX ram_0026
 C - - - - - 0x03F3D5 0F:F3C5: 86 27     STX ram_cursor_main_menu_index
 C - - - - - 0x03F3D7 0F:F3C7: 8E 11 01  STX ram_0111
 C - - - - - 0x03F3DA 0F:F3CA: 8E 12 01  STX ram_0112
-C - - - - - 0x03F3DD 0F:F3CD: 20 09 D0  JSR sub_D009
+C - - - - - 0x03F3DD 0F:F3CD: 20 09 D0  JSR sub_D009_clear_ram_
 C - - - - - 0x03F3E0 0F:F3D0: 20 00 F0  JSR sub_F000
 C - - - - - 0x03F3E3 0F:F3D3: 20 48 E1  JSR sub_E148
 C - - - - - 0x03F3E6 0F:F3D6: 4C 38 F5  JMP loc_F538
@@ -6454,7 +6451,7 @@ C - - - - - 0x03F4EE 0F:F4DE: 4C C2 F6  JMP loc_F6C2
 ofs_F4E5_02:
 C - - J - - 0x03F4F5 0F:F4E5: 20 42 F0  JSR sub_F042
 C - - - - - 0x03F4F8 0F:F4E8: 20 88 FB  JSR sub_FB88
-C - - - - - 0x03F4FB 0F:F4EB: 20 09 D0  JSR sub_D009
+C - - - - - 0x03F4FB 0F:F4EB: 20 09 D0  JSR sub_D009_clear_ram_
 C - - - - - 0x03F4FE 0F:F4EE: E6 98     INC ram_0098
 C - - - - - 0x03F500 0F:F4F0: A9 00     LDA #$00
 C - - - - - 0x03F502 0F:F4F2: 85 26     STA ram_0026
@@ -6465,7 +6462,7 @@ C - - - - - 0x03F507 0F:F4F7: 4C A7 F5  JMP loc_F5A7
 ofs_F4FA_03:
 C - - J - - 0x03F50A 0F:F4FA: A9 00     LDA #$00
 C - - - - - 0x03F50C 0F:F4FC: 85 94     STA ram_0094
-C - - - - - 0x03F50E 0F:F4FE: 20 0D D0  JSR sub_D00D
+C - - - - - 0x03F50E 0F:F4FE: 20 0D D0  JSR sub_D00D_clear_ram_
 C - - - - - 0x03F511 0F:F501: A9 00     LDA #$00
 C - - - - - 0x03F513 0F:F503: 85 A0     STA ram_option_strength
 C - - - - - 0x03F515 0F:F505: 85 A1     STA ram_option_strength + 1
@@ -6480,7 +6477,7 @@ C - - - - - 0x03F51D 0F:F50D: D0 55     BNE bra_F564
 C - - - - - 0x03F51F 0F:F50F: A6 21     LDX ram_0021
 C - - - - - 0x03F521 0F:F511: D0 2B     BNE bra_F53E
 C - - - - - 0x03F523 0F:F513: 20 88 FB  JSR sub_FB88
-C - - - - - 0x03F526 0F:F516: 20 09 D0  JSR sub_D009
+C - - - - - 0x03F526 0F:F516: 20 09 D0  JSR sub_D009_clear_ram_
 C - - - - - 0x03F529 0F:F519: 20 42 F0  JSR sub_F042
 C - - - - - 0x03F52C 0F:F51C: A2 04     LDX #$04
 C - - - - - 0x03F52E 0F:F51E: 20 44 F0  JSR sub_F044
@@ -6532,7 +6529,7 @@ C - - - - - 0x03F57C 0F:F56C: 4C 3E E1  JMP loc_E13E
 ofs_F56F_06:
 C - - J - - 0x03F57F 0F:F56F: A6 21     LDX ram_0021
 C - - - - - 0x03F581 0F:F571: D0 1D     BNE bra_F590
-C - - - - - 0x03F583 0F:F573: 20 09 D0  JSR sub_D009
+C - - - - - 0x03F583 0F:F573: 20 09 D0  JSR sub_D009_clear_ram_
 C - - - - - 0x03F586 0F:F576: A2 06     LDX #$06
 C - - - - - 0x03F588 0F:F578: 20 44 F0  JSR sub_F044
 C - - - - - 0x03F58B 0F:F57B: A9 00     LDA #$00
