@@ -18,7 +18,7 @@ con_btns_LR                     = con_btn_Left + con_btn_Right                  
 
 
 
-; ram_fighter_id                = $0550
+; ram_object_id                 = $0550
 con_fighter_Leo                 = $00 ; 
 con_fighter_Raph                = $01 ; 
 con_fighter_Mike                = $02 ; 

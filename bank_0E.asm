@@ -2708,7 +2708,7 @@ C D 0 - - - 0x038F54 0E:8F44: EE 75 06  INC ram_0675
 C - - - - - 0x038F57 0E:8F47: A2 00     LDX #$00
 C - - - - - 0x038F59 0E:8F49: 8E 01 04  STX ram_0401
 C - - - - - 0x038F5C 0E:8F4C: 8E 03 04  STX ram_0403
-C - - - - - 0x038F5F 0E:8F4F: 8E 50 05  STX ram_fighter_id
+C - - - - - 0x038F5F 0E:8F4F: 8E 50 05  STX ram_object_id
 C - - - - - 0x038F62 0E:8F52: AE 76 06  LDX ram_0676
 C - - - - - 0x038F65 0E:8F55: 20 CB 8F  JSR sub_8FCB
 C - - - - - 0x038F68 0E:8F58: A9 28     LDA #$28
@@ -2768,7 +2768,7 @@ bra_8FA0:
 bra_8FB1:
 C - - - - - 0x038FC1 0E:8FB1: A6 A8     LDX ram_00A8
 C - - - - - 0x038FC3 0E:8FB3: 9D 4C 01  STA ram_014C,X
-C - - - - - 0x038FC6 0E:8FB6: 8D 50 05  STA ram_fighter_id
+C - - - - - 0x038FC6 0E:8FB6: 8D 50 05  STA ram_object_id
 C - - - - - 0x038FC9 0E:8FB9: A9 27     LDA #$27
 C - - - - - 0x038FCB 0E:8FBB: 20 90 F6  JSR sub_0x03F6A0
 C - - - - - 0x038FCE 0E:8FBE: 20 58 90  JSR sub_9058
@@ -2779,7 +2779,7 @@ C - - - - - 0x038FD9 0E:8FC9: A6 A8     LDX ram_00A8
 bra_8FCB:
 sub_8FCB:
 C - - - - - 0x038FDB 0E:8FCB: BC 4C 01  LDY ram_014C,X
-C - - - - - 0x038FDE 0E:8FCE: 8C 50 05  STY ram_fighter_id
+C - - - - - 0x038FDE 0E:8FCE: 8C 50 05  STY ram_object_id
 C - - - - - 0x038FE1 0E:8FD1: B9 7A 90  LDA tbl_907A,Y
 C - - - - - 0x038FE4 0E:8FD4: 8D 10 04  STA ram_0410
 C - - - - - 0x038FE7 0E:8FD7: A9 C0     LDA #$C0
@@ -3848,13 +3848,13 @@ C - - - - - 0x039640 0E:9630: 20 90 F6  JSR sub_0x03F6A0
 C - - - - - 0x039643 0E:9633: A9 0B     LDA #$0B
 C - - - - - 0x039645 0E:9635: 20 14 F8  JSR sub_0x03F824
 C - - - - - 0x039648 0E:9638: A5 A2     LDA ram_option_fighter
-C - - - - - 0x03964A 0E:963A: 8D 50 05  STA ram_fighter_id
+C - - - - - 0x03964A 0E:963A: 8D 50 05  STA ram_object_id
 C - - - - - 0x03964D 0E:963D: A9 06     LDA #con_fighter_Shred
-C - - - - - 0x03964F 0E:963F: 8D 51 05  STA ram_fighter_id + 1
+C - - - - - 0x03964F 0E:963F: 8D 51 05  STA ram_object_id + 1
 C - - - - - 0x039652 0E:9642: 85 A3     STA ram_option_fighter + 1
 C - - - - - 0x039654 0E:9644: A0 00     LDY #$00
 C - - - - - 0x039656 0E:9646: 20 5C 96  JSR sub_965C
-C - - - - - 0x039659 0E:9649: AC 50 05  LDY ram_fighter_id
+C - - - - - 0x039659 0E:9649: AC 50 05  LDY ram_object_id
 C - - - - - 0x03965C 0E:964C: B9 57 99  LDA tbl_9957,Y
 C - - - - - 0x03965F 0E:964F: 8D 54 06  STA ram_0654
 C - - - - - 0x039662 0E:9652: 8D 60 06  STA ram_0660
@@ -3930,7 +3930,7 @@ C - - - - - 0x0396DB 0E:96CB: A0 01     LDY #$01
 C - - - - - 0x0396DD 0E:96CD: A9 02     LDA #$02
 C - - - - - 0x0396DF 0E:96CF: 20 94 D3  JSR sub_0x03D3A4
 C - - - - - 0x0396E2 0E:96D2: A2 04     LDX #$04
-C - - - - - 0x0396E4 0E:96D4: AD 50 05  LDA ram_fighter_id
+C - - - - - 0x0396E4 0E:96D4: AD 50 05  LDA ram_object_id
 C - - - - - 0x0396E7 0E:96D7: 20 2A E3  JSR sub_0x03E33A
 C - - - - - 0x0396EA 0E:96DA: A2 01     LDX #$01
 bra_96DC:
