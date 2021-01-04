@@ -2,6 +2,7 @@
 .include "copy_bank_ram.inc"
 .include "copy_bank_val.inc"
 ; 0x028010-0x02C00F
+; анимации персов
 
     .byte con_bank_id + $14   ; (!) байт должен находиться по адресу 8000, чтение из 0x03F67D
 

@@ -186,7 +186,7 @@ bra_81E2:
 C - - - - - 0x02C1F2 0B:81E2: A5 00     LDA ram_0000
 C - - - - - 0x02C1F4 0B:81E4: 18        CLC
 C - - - - - 0x02C1F5 0B:81E5: 75 A2     ADC ram_option_fighter,X
-C - - - - - 0x02C1F7 0B:81E7: 20 50 AA  JSR sub_AA50
+C - - - - - 0x02C1F7 0B:81E7: 20 50 AA  JSR sub_AA50_preset_strength
 C - - - - - 0x02C1FA 0B:81EA: D9 62 83  CMP tbl_8362,Y
 C - - - - - 0x02C1FD 0B:81ED: 90 08     BCC bra_81F7
 C - - - - - 0x02C1FF 0B:81EF: 10 04     BPL bra_81F5
@@ -9804,7 +9804,7 @@ C - - - - - 0x02EA32 0B:AA22: 0A        ASL
 C - - - - - 0x02EA33 0B:AA23: 0A        ASL
 C - - - - - 0x02EA34 0B:AA24: 75 A2     ADC ram_option_fighter,X
 C - - - - - 0x02EA36 0B:AA26: A8        TAY
-C - - - - - 0x02EA37 0B:AA27: B9 90 AA  LDA tbl_AA90,Y
+C - - - - - 0x02EA37 0B:AA27: B9 90 AA  LDA tbl_AA90_vs_strength,Y
 C - - - - - 0x02EA3A 0B:AA2A: 95 A0     STA ram_option_strength,X
 bra_AA2C:
 C - - - - - 0x02EA3C 0B:AA2C: A0 01     LDY #$01
@@ -9816,7 +9816,10 @@ tbl_E46B:
 
 
 
-sub_AA50:
+sub_AA50_preset_strength:
+; bzk лучше чтобы код выполнялся разово при загрузке экрана с выбором арены
+; нежели обновлять силу каждый раз при смене перса
+; дублирование кода в 0x02EA10, оптимизировать
 C - - - - - 0x02EA60 0B:AA50: 48        PHA
 C - - - - - 0x02EA61 0B:AA51: AD 2B 01  LDA ram_option_skin
 C - - - - - 0x02EA64 0B:AA54: 29 08     AND #$08
@@ -9834,7 +9837,7 @@ C - - - - - 0x02EA79 0B:AA69: D0 02     BNE bra_AA6D
 C - - - - - 0x02EA7B 0B:AA6B: A9 06     LDA #$06
 bra_AA6D:
 C - - - - - 0x02EA7D 0B:AA6D: 95 A2     STA ram_option_fighter,X
-bra_AA6F:
+bra_AA6F_loop:
 C - - - - - 0x02EA7F 0B:AA6F: 8D 50 05  STA ram_id_object
 C - - - - - 0x02EA82 0B:AA72: 8A        TXA
 C - - - - - 0x02EA83 0B:AA73: 49 01     EOR #$01
@@ -9845,11 +9848,11 @@ C - - - - - 0x02EA8A 0B:AA7A: 0A        ASL
 C - - - - - 0x02EA8B 0B:AA7B: 0A        ASL
 C - - - - - 0x02EA8C 0B:AA7C: 75 A2     ADC ram_option_fighter,X
 C - - - - - 0x02EA8E 0B:AA7E: A8        TAY
-C - - - - - 0x02EA8F 0B:AA7F: B9 90 AA  LDA tbl_AA90,Y
+C - - - - - 0x02EA8F 0B:AA7F: B9 90 AA  LDA tbl_AA90_vs_strength,Y
 C - - - - - 0x02EA92 0B:AA82: 95 A0     STA ram_option_strength,X
 C - - - - - 0x02EA94 0B:AA84: B5 A2     LDA ram_option_fighter,X
 C - - - - - 0x02EA96 0B:AA86: C6 9D     DEC ram_009D
-C - - - - - 0x02EA98 0B:AA88: 10 E5     BPL bra_AA6F
+C - - - - - 0x02EA98 0B:AA88: 10 E5     BPL bra_AA6F_loop
 C - - - - - 0x02EA9A 0B:AA8A: A6 9C     LDX ram_009C
 bra_AA8C:
 C - - - - - 0x02EA9C 0B:AA8C: AC E0 04  LDY ram_04E0
@@ -9857,71 +9860,19 @@ C - - - - - 0x02EA9F 0B:AA8F: 60        RTS
 
 
 
-tbl_AA90:
-- D 1 - - - 0x02EAA0 0B:AA90: 00        .byte $00   ; 
-- D 1 - - - 0x02EAA1 0B:AA91: 00        .byte $00   ; 
-- D 1 - - - 0x02EAA2 0B:AA92: 01        .byte $01   ; 
-- D 1 - - - 0x02EAA3 0B:AA93: 00        .byte $00   ; 
-- D 1 - - - 0x02EAA4 0B:AA94: 01        .byte $01   ; 
-- D 1 - - - 0x02EAA5 0B:AA95: FE        .byte $FE   ; 
-- D 1 - - - 0x02EAA6 0B:AA96: FD        .byte $FD   ; 
-- - - - - - 0x02EAA7 0B:AA97: 00        .byte $00   ; 
-- D 1 - - - 0x02EAA8 0B:AA98: 00        .byte $00   ; 
-- D 1 - - - 0x02EAA9 0B:AA99: 00        .byte $00   ; 
-- D 1 - - - 0x02EAAA 0B:AA9A: 01        .byte $01   ; 
-- D 1 - - - 0x02EAAB 0B:AA9B: 00        .byte $00   ; 
-- D 1 - - - 0x02EAAC 0B:AA9C: 01        .byte $01   ; 
-- D 1 - - - 0x02EAAD 0B:AA9D: FE        .byte $FE   ; 
-- D 1 - - - 0x02EAAE 0B:AA9E: FD        .byte $FD   ; 
-- - - - - - 0x02EAAF 0B:AA9F: 00        .byte $00   ; 
-- D 1 - - - 0x02EAB0 0B:AAA0: 00        .byte $00   ; 
-- D 1 - - - 0x02EAB1 0B:AAA1: 00        .byte $00   ; 
-- D 1 - - - 0x02EAB2 0B:AAA2: 00        .byte $00   ; 
-- D 1 - - - 0x02EAB3 0B:AAA3: 00        .byte $00   ; 
-- D 1 - - - 0x02EAB4 0B:AAA4: 00        .byte $00   ; 
-- D 1 - - - 0x02EAB5 0B:AAA5: FD        .byte $FD   ; 
-- D 1 - - - 0x02EAB6 0B:AAA6: FD        .byte $FD   ; 
-- - - - - - 0x02EAB7 0B:AAA7: 00        .byte $00   ; 
-- D 1 - - - 0x02EAB8 0B:AAA8: 00        .byte $00   ; 
-- D 1 - - - 0x02EAB9 0B:AAA9: 00        .byte $00   ; 
-- D 1 - - - 0x02EABA 0B:AAAA: 01        .byte $01   ; 
-- D 1 - - - 0x02EABB 0B:AAAB: 00        .byte $00   ; 
-- D 1 - - - 0x02EABC 0B:AAAC: 01        .byte $01   ; 
-- D 1 - - - 0x02EABD 0B:AAAD: FE        .byte $FE   ; 
-- D 1 - - - 0x02EABE 0B:AAAE: FD        .byte $FD   ; 
-- - - - - - 0x02EABF 0B:AAAF: 00        .byte $00   ; 
-- D 1 - - - 0x02EAC0 0B:AAB0: 00        .byte $00   ; 
-- D 1 - - - 0x02EAC1 0B:AAB1: 00        .byte $00   ; 
-- D 1 - - - 0x02EAC2 0B:AAB2: 01        .byte $01   ; 
-- D 1 - - - 0x02EAC3 0B:AAB3: 00        .byte $00   ; 
-- D 1 - - - 0x02EAC4 0B:AAB4: 01        .byte $01   ; 
-- D 1 - - - 0x02EAC5 0B:AAB5: FE        .byte $FE   ; 
-- D 1 - - - 0x02EAC6 0B:AAB6: FE        .byte $FE   ; 
-- - - - - - 0x02EAC7 0B:AAB7: 00        .byte $00   ; 
-- D 1 - - - 0x02EAC8 0B:AAB8: 01        .byte $01   ; 
-- D 1 - - - 0x02EAC9 0B:AAB9: 01        .byte $01   ; 
-- D 1 - - - 0x02EACA 0B:AABA: 02        .byte $02   ; 
-- D 1 - - - 0x02EACB 0B:AABB: 02        .byte $02   ; 
-- D 1 - - - 0x02EACC 0B:AABC: 01        .byte $01   ; 
-- D 1 - - - 0x02EACD 0B:AABD: FE        .byte $FE   ; 
-- D 1 - - - 0x02EACE 0B:AABE: FE        .byte $FE   ; 
-- - - - - - 0x02EACF 0B:AABF: 01        .byte $01   ; 
-- D 1 - - - 0x02EAD0 0B:AAC0: 02        .byte $02   ; 
-- D 1 - - - 0x02EAD1 0B:AAC1: 02        .byte $02   ; 
-- D 1 - - - 0x02EAD2 0B:AAC2: 03        .byte $03   ; 
-- D 1 - - - 0x02EAD3 0B:AAC3: 03        .byte $03   ; 
-- D 1 - - - 0x02EAD4 0B:AAC4: 03        .byte $03   ; 
-- D 1 - - - 0x02EAD5 0B:AAC5: 00        .byte $00   ; 
-- D 1 - - - 0x02EAD6 0B:AAC6: FE        .byte $FE   ; 
-- - - - - - 0x02EAD7 0B:AAC7: 02        .byte $02   ; 
-- - - - - - 0x02EAD8 0B:AAC8: 00        .byte $00   ; 
-- - - - - - 0x02EAD9 0B:AAC9: 00        .byte $00   ; 
-- - - - - - 0x02EADA 0B:AACA: 01        .byte $01   ; 
-- - - - - - 0x02EADB 0B:AACB: 00        .byte $00   ; 
-- - - - - - 0x02EADC 0B:AACC: 01        .byte $01   ; 
-- - - - - - 0x02EADD 0B:AACD: FE        .byte $FE   ; 
-- - - - - - 0x02EADE 0B:AACE: FD        .byte $FD   ; 
-- - - - - - 0x02EADF 0B:AACF: 00        .byte $00   ; 
+tbl_AA90_vs_strength:
+;                                             Leo  Rap  Mik  Don  Cas  Hot  Shr  unused
+- D 1 - - - 0x02EAA0 0B:AA90: 00        .byte $00, $00, $01, $00, $01, $FE, $FD, $00   ; 00 Leo
+- D 1 - - - 0x02EAA8 0B:AA98: 00        .byte $00, $00, $01, $00, $01, $FE, $FD, $00   ; 01 Raph
+- D 1 - - - 0x02EAB0 0B:AAA0: 00        .byte $00, $00, $00, $00, $00, $FD, $FD, $00   ; 02 Mike
+- D 1 - - - 0x02EAB8 0B:AAA8: 00        .byte $00, $00, $01, $00, $01, $FE, $FD, $00   ; 03 Don
+- D 1 - - - 0x02EAC0 0B:AAB0: 00        .byte $00, $00, $01, $00, $01, $FE, $FE, $00   ; 04 Casey
+- D 1 - - - 0x02EAC8 0B:AAB8: 01        .byte $01, $01, $02, $02, $01, $FE, $FE, $01   ; 05 Hot
+- D 1 - - - 0x02EAD0 0B:AAC0: 02        .byte $02, $02, $03, $03, $03, $00, $FE, $02   ; 06 Shred
+
+
+; bzk мусор
+- - - - - - 0x02EAD8 0B:AAC8: 00        .byte $00, $00, $01, $00, $01, $FE, $FD, $00   ; 07 
 
 
 
