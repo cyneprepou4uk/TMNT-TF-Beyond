@@ -1198,6 +1198,69 @@ _off003_0x000210_1F:
 
 
 
+.export _off003_0x03F15A_00
+_off003_0x03F15A_00:
+- D 3 - I - 0x03F15A 0F:F14A: 00        .byte $00   ; 
+- D 3 - I - 0x03F15B 0F:F14B: 20        .byte $20   ; 
+- D 3 - I - 0x03F15C 0F:F14C: 78        .byte $78   ; 
+- D 3 - I - 0x03F15D 0F:F14D: 00        .byte $00   ; 
+- D 3 - I - 0x03F15E 0F:F14E: 78        .byte $78   ; 
+- D 3 - I - 0x03F15F 0F:F14F: 00        .byte $00   ; 
+- D 3 - I - 0x03F160 0F:F150: 78        .byte $78   ; 
+- D 3 - I - 0x03F161 0F:F151: 00        .byte $00   ; 
+- D 3 - I - 0x03F162 0F:F152: 78        .byte $78   ; 
+- D 3 - I - 0x03F163 0F:F153: 00        .byte $00   ; 
+- D 3 - I - 0x03F164 0F:F154: 78        .byte $78   ; 
+- D 3 - I - 0x03F165 0F:F155: 00        .byte $00   ; 
+- D 3 - I - 0x03F166 0F:F156: 78        .byte $78   ; 
+- D 3 - I - 0x03F167 0F:F157: 00        .byte $00   ; 
+- D 3 - I - 0x03F168 0F:F158: 78        .byte $78   ; 
+- D 3 - I - 0x03F169 0F:F159: 00        .byte $00   ; 
+- D 3 - I - 0x03F16A 0F:F15A: 78        .byte $78   ; 
+- D 3 - I - 0x03F16B 0F:F15B: 00        .byte $00   ; 
+- D 3 - I - 0x03F16C 0F:F15C: 40        .byte $40   ; 
+- D 3 - I - 0x03F16D 0F:F15D: 00        .byte $00   ; 
+- D 3 - I - 0x03F16E 0F:F15E: 7F        .byte $7F   ; 
+- D 3 - I - 0x03F16F 0F:F15F: 00        .byte $00   ; 
+- D 3 - I - 0x03F170 0F:F160: 2C        .byte $2C   ; 
+- D 3 - I - 0x03F171 0F:F161: 78        .byte $78   ; 
+- D 3 - I - 0x03F172 0F:F162: 00        .byte $00   ; 
+- D 3 - I - 0x03F173 0F:F163: 78        .byte $78   ; 
+- D 3 - I - 0x03F174 0F:F164: 00        .byte $00   ; 
+- D 3 - I - 0x03F175 0F:F165: 78        .byte $78   ; 
+- D 3 - I - 0x03F176 0F:F166: 00        .byte $00   ; 
+- D 3 - I - 0x03F177 0F:F167: 78        .byte $78   ; 
+- D 3 - I - 0x03F178 0F:F168: 00        .byte $00   ; 
+- D 3 - I - 0x03F179 0F:F169: 78        .byte $78   ; 
+- D 3 - I - 0x03F17A 0F:F16A: 00        .byte $00   ; 
+- D 3 - I - 0x03F17B 0F:F16B: 78        .byte $78   ; 
+- D 3 - I - 0x03F17C 0F:F16C: 00        .byte $00   ; 
+- D 3 - I - 0x03F17D 0F:F16D: 78        .byte $78   ; 
+- D 3 - I - 0x03F17E 0F:F16E: 00        .byte $00   ; 
+- D 3 - I - 0x03F17F 0F:F16F: 78        .byte $78   ; 
+- D 3 - I - 0x03F180 0F:F170: 00        .byte $00   ; 
+- D 3 - I - 0x03F181 0F:F171: 40        .byte $40   ; 
+- D 3 - I - 0x03F182 0F:F172: 00        .byte $00   ; 
+- D 3 - I - 0x03F183 0F:F173: FF        .byte $FF   ; 
+
+
+
+.export _off003_0x03EF71_0D
+_off003_0x03EF71_0D:
+- D 3 - I - 0x03EF71 0F:EF61: 00        .byte $00   ; 
+- D 3 - I - 0x03EF72 0F:EF62: 22        .byte $22   ; 
+- D 3 - I - 0x03EF73 0F:EF63: 78        .byte $78   ; 
+- D 3 - I - 0x03EF74 0F:EF64: 00        .byte $00   ; 
+- D 3 - I - 0x03EF75 0F:EF65: 78        .byte $78   ; 
+- D 3 - I - 0x03EF76 0F:EF66: 00        .byte $00   ; 
+- D 3 - I - 0x03EF77 0F:EF67: 78        .byte $78   ; 
+- D 3 - I - 0x03EF78 0F:EF68: 00        .byte $00   ; 
+- D 3 - I - 0x03EF79 0F:EF69: 58        .byte $58   ; 
+- D 3 - I - 0x03EF7A 0F:EF6A: 00        .byte $00   ; 
+- D 3 - I - 0x03EF7B 0F:EF6B: FF        .byte $FF   ; 
+
+
+
 .export sub_0x003F10
 sub_0x003F10:
 C - - - - - 0x003F10 00:BF00: A5 2C     LDA ram_002C

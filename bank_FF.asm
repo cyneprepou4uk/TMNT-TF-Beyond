@@ -3511,7 +3511,7 @@ C - - - - - 0x03E3C5 0F:E3B5: 4C 6D D4  JMP loc_D46D
 
 
 tbl_E3B8_prg_bank:
-- D 3 - - - 0x03E3C8 0F:E3B8: 30        .byte con_bank_id + $10   ; 00
+- D 3 - - - 0x03E3C8 0F:E3B8: 30        .byte con_bank_id + $00   ; 00
 - D 3 - - - 0x03E3C9 0F:E3B9: 36        .byte con_bank_id + $16   ; 01
 - D 3 - - - 0x03E3CA 0F:E3BA: 36        .byte con_bank_id + $16   ; 02
 - D 3 - - - 0x03E3CB 0F:E3BB: 36        .byte con_bank_id + $16   ; 03
@@ -3524,7 +3524,7 @@ tbl_E3B8_prg_bank:
 - D 3 - - - 0x03E3D2 0F:E3C2: 36        .byte con_bank_id + $16   ; 0A
 - D 3 - - - 0x03E3D3 0F:E3C3: 36        .byte con_bank_id + $16   ; 0B
 - D 3 - - - 0x03E3D4 0F:E3C4: 36        .byte con_bank_id + $16   ; 0C
-- D 3 - - - 0x03E3D5 0F:E3C5: 30        .byte con_bank_id + $10   ; 0D
+- D 3 - - - 0x03E3D5 0F:E3C5: 30        .byte con_bank_id + $00   ; 0D
 - D 3 - - - 0x03E3D6 0F:E3C6: 36        .byte con_bank_id + $16   ; 0E
 - D 3 - - - 0x03E3D7 0F:E3C7: 36        .byte con_bank_id + $16   ; 0F
 - D 3 - - - 0x03E3D8 0F:E3C8: 36        .byte con_bank_id + $16   ; 10
@@ -5549,21 +5549,6 @@ C - - - - - 0x03EF70 0F:EF60: 60        RTS
 
 
 
-_off003_EF61_0D:
-- D 3 - I - 0x03EF71 0F:EF61: 00        .byte $00   ; 
-- D 3 - I - 0x03EF72 0F:EF62: 22        .byte $22   ; 
-- D 3 - I - 0x03EF73 0F:EF63: 78        .byte $78   ; 
-- D 3 - I - 0x03EF74 0F:EF64: 00        .byte $00   ; 
-- D 3 - I - 0x03EF75 0F:EF65: 78        .byte $78   ; 
-- D 3 - I - 0x03EF76 0F:EF66: 00        .byte $00   ; 
-- D 3 - I - 0x03EF77 0F:EF67: 78        .byte $78   ; 
-- D 3 - I - 0x03EF78 0F:EF68: 00        .byte $00   ; 
-- D 3 - I - 0x03EF79 0F:EF69: 58        .byte $58   ; 
-- D 3 - I - 0x03EF7A 0F:EF6A: 00        .byte $00   ; 
-- D 3 - I - 0x03EF7B 0F:EF6B: FF        .byte $FF   ; 
-
-
-
 .export sub_0x03EF7C
 sub_0x03EF7C:
 C - - - - - 0x03EF7C 0F:EF6C: A2 01     LDX #$01
@@ -5809,7 +5794,7 @@ C - - - - - 0x03F0EB 0F:F0DB: 4C B5 F2  JMP loc_F2B5
 
 
 tbl_F0DE:
-- D 3 - - - 0x03F0EE 0F:F0DE: 4A F1     .word _off003_F14A_00
+- D 3 - - - 0x03F0EE 0F:F0DE: 4A F1     .word _off003_0x03F15A_00
 - D 3 - - - 0x03F0F0 0F:F0E0: A5 83     .word _off003_0x02C3B5_01
 - D 3 - - - 0x03F0F2 0F:F0E2: 6A 83     .word _off003_0x02C37A_02
 - D 3 - - - 0x03F0F4 0F:F0E4: DE 8A     .word _off003_0x02CAEE_03
@@ -5822,7 +5807,7 @@ tbl_F0DE:
 - D 3 - - - 0x03F102 0F:F0F2: 3F 91     .word _off003_0x02D14F_0A
 - D 3 - - - 0x03F104 0F:F0F4: 9C 94     .word _off003_0x02D4AC_0B
 - D 3 - - - 0x03F106 0F:F0F6: 8E 9F     .word _off003_0x02DF9E_0C
-- D 3 - - - 0x03F108 0F:F0F8: 61 EF     .word _off003_EF61_0D
+- D 3 - - - 0x03F108 0F:F0F8: 61 EF     .word _off003_0x03EF71_0D
 - D 3 - - - 0x03F10A 0F:F0FA: 39 96     .word _off003_0x02D649_0E
 - D 3 - - - 0x03F10C 0F:F0FC: 47 84     .word _off003_0x02C457_0F
 - D 3 - - - 0x03F10E 0F:F0FE: B2 99     .word _off003_0x02D9C2_10
@@ -5859,52 +5844,6 @@ loc_F142:
 C D 3 - - - 0x03F152 0F:F142: A9 36     LDA #$36
 C - - - - - 0x03F154 0F:F144: 20 00 F6  JSR sub_F600_prg_bank_0B
 C - - - - - 0x03F157 0F:F147: 4C 70 BF  JMP loc_0x02FF80
-
-
-
-_off003_F14A_00:
-- D 3 - I - 0x03F15A 0F:F14A: 00        .byte $00   ; 
-- D 3 - I - 0x03F15B 0F:F14B: 20        .byte $20   ; 
-- D 3 - I - 0x03F15C 0F:F14C: 78        .byte $78   ; 
-- D 3 - I - 0x03F15D 0F:F14D: 00        .byte $00   ; 
-- D 3 - I - 0x03F15E 0F:F14E: 78        .byte $78   ; 
-- D 3 - I - 0x03F15F 0F:F14F: 00        .byte $00   ; 
-- D 3 - I - 0x03F160 0F:F150: 78        .byte $78   ; 
-- D 3 - I - 0x03F161 0F:F151: 00        .byte $00   ; 
-- D 3 - I - 0x03F162 0F:F152: 78        .byte $78   ; 
-- D 3 - I - 0x03F163 0F:F153: 00        .byte $00   ; 
-- D 3 - I - 0x03F164 0F:F154: 78        .byte $78   ; 
-- D 3 - I - 0x03F165 0F:F155: 00        .byte $00   ; 
-- D 3 - I - 0x03F166 0F:F156: 78        .byte $78   ; 
-- D 3 - I - 0x03F167 0F:F157: 00        .byte $00   ; 
-- D 3 - I - 0x03F168 0F:F158: 78        .byte $78   ; 
-- D 3 - I - 0x03F169 0F:F159: 00        .byte $00   ; 
-- D 3 - I - 0x03F16A 0F:F15A: 78        .byte $78   ; 
-- D 3 - I - 0x03F16B 0F:F15B: 00        .byte $00   ; 
-- D 3 - I - 0x03F16C 0F:F15C: 40        .byte $40   ; 
-- D 3 - I - 0x03F16D 0F:F15D: 00        .byte $00   ; 
-- D 3 - I - 0x03F16E 0F:F15E: 7F        .byte $7F   ; 
-- D 3 - I - 0x03F16F 0F:F15F: 00        .byte $00   ; 
-- D 3 - I - 0x03F170 0F:F160: 2C        .byte $2C   ; 
-- D 3 - I - 0x03F171 0F:F161: 78        .byte $78   ; 
-- D 3 - I - 0x03F172 0F:F162: 00        .byte $00   ; 
-- D 3 - I - 0x03F173 0F:F163: 78        .byte $78   ; 
-- D 3 - I - 0x03F174 0F:F164: 00        .byte $00   ; 
-- D 3 - I - 0x03F175 0F:F165: 78        .byte $78   ; 
-- D 3 - I - 0x03F176 0F:F166: 00        .byte $00   ; 
-- D 3 - I - 0x03F177 0F:F167: 78        .byte $78   ; 
-- D 3 - I - 0x03F178 0F:F168: 00        .byte $00   ; 
-- D 3 - I - 0x03F179 0F:F169: 78        .byte $78   ; 
-- D 3 - I - 0x03F17A 0F:F16A: 00        .byte $00   ; 
-- D 3 - I - 0x03F17B 0F:F16B: 78        .byte $78   ; 
-- D 3 - I - 0x03F17C 0F:F16C: 00        .byte $00   ; 
-- D 3 - I - 0x03F17D 0F:F16D: 78        .byte $78   ; 
-- D 3 - I - 0x03F17E 0F:F16E: 00        .byte $00   ; 
-- D 3 - I - 0x03F17F 0F:F16F: 78        .byte $78   ; 
-- D 3 - I - 0x03F180 0F:F170: 00        .byte $00   ; 
-- D 3 - I - 0x03F181 0F:F171: 40        .byte $40   ; 
-- D 3 - I - 0x03F182 0F:F172: 00        .byte $00   ; 
-- D 3 - I - 0x03F183 0F:F173: FF        .byte $FF   ; 
 
 
 
