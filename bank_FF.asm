@@ -4400,11 +4400,6 @@ tbl_E979_ones:
 
 - D 3 - - - 0x03E98F 0F:E97F: 0A        .byte $0A   ; 
 - D 3 - - - 0x03E990 0F:E980: 0A        .byte $0A   ; 
-; bzk мусор возможно
-- - - - - - 0x03E991 0F:E981: C9        .byte $C9   ; 
-- - - - - - 0x03E992 0F:E982: C8        .byte $C8   ; 
-- - - - - - 0x03E993 0F:E983: AA        .byte $AA   ; 
-- - - - - - 0x03E994 0F:E984: CA        .byte $CA   ; 
 
 
 
