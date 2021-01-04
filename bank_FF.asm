@@ -946,11 +946,6 @@ C - - - - - 0x03D37D 0F:D36D: 0D 6D 06  ORA ram_066D
 C - - - - - 0x03D380 0F:D370: 8D 6D 06  STA ram_066D
 C - - - - - 0x03D383 0F:D373: 60        RTS
 
-tbl_D35C_palette:
-    .word tbl_0x02F3FA_green
-    .word tbl_0x02F1FA_original
-    .word tbl_0x02EFFA_night
-
 
 
 tbl_D374:
@@ -972,18 +967,23 @@ C D 2 - - - 0x03D38C 0F:D37C: 85 05     STA ram_0005
                                         ASL
                                         TAX
                                         LDA ram_0005
-C - - - - - 0x03D38E 0F:D37E: AC 93 D3  LDY tbl_D35C_palette + 1,X
+C - - - - - 0x03D38E 0F:D37E: AC 93 D3  LDY tbl_D392_palette + 1,X
 C - - - - - 0x03D391 0F:D381: 0A        ASL
 C - - - - - 0x03D392 0F:D382: 20 8D D3  JSR sub_D38D
 C - - - - - 0x03D395 0F:D385: 65 05     ADC ram_0005
 C - - - - - 0x03D397 0F:D387: 20 8D D3  JSR sub_D38D
-C - - - - - 0x03D39A 0F:D38A: 6D 92 D3  ADC tbl_D35C_palette,X
+C - - - - - 0x03D39A 0F:D38A: 6D 92 D3  ADC tbl_D392_palette,X
 sub_D38D:
 C - - - - - 0x03D39D 0F:D38D: 90 02     BCC bra_D391_RTS
 C - - - - - 0x03D39F 0F:D38F: 18        CLC
 C - - - - - 0x03D3A0 0F:D390: C8        INY
 bra_D391_RTS:
 C - - - - - 0x03D3A1 0F:D391: 60        RTS
+
+tbl_D392_palette:
+    .word tbl_0x02F3FA_green
+    .word tbl_0x02F1FA_original
+    .word tbl_0x02EFFA_night
 
 
 
