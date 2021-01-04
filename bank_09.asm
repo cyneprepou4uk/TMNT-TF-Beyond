@@ -218,7 +218,7 @@ C - - - - - 0x024184 09:8174: FE 30 05  INC ram_0530,X
 C - - - - - 0x024187 09:8177: A9 00     LDA #$00
 C - - - - - 0x024189 09:8179: 9D 60 05  STA ram_0560,X
 C - - - - - 0x02418C 09:817C: 85 98     STA ram_0098
-C - - - - - 0x02418E 09:817E: 8D 0C 04  STA ram_040C
+C - - - - - 0x02418E 09:817E: 8D 0C 04  STA ram_animation_special
 C - - - - - 0x024191 09:8181: 60        RTS
 
 
@@ -924,7 +924,7 @@ C - - - - - 0x024678 09:8668: BC 50 05  LDY ram_object_id,X
 C - - - - - 0x02467B 09:866B: 79 D8 96  ADC tbl_96D8,Y
 C - - - - - 0x02467E 09:866E: A8        TAY
 C - - - - - 0x02467F 09:866F: B9 DF 96  LDA tbl_96DF,Y
-C - - - - - 0x024682 09:8672: 9D 0C 04  STA ram_040C,X
+C - - - - - 0x024682 09:8672: 9D 0C 04  STA ram_animation_special,X
 C - - - - - 0x024685 09:8675: 18        CLC
 C - - - - - 0x024686 09:8676: A9 0C     LDA #$0C
 C - - - - - 0x024688 09:8678: 65 A8     ADC ram_00A8
@@ -6408,7 +6408,7 @@ ofs_A4B5_01:
 C - - J - - 0x0264C5 09:A4B5: BD 08 04  LDA ram_0408,X
 C - - - - - 0x0264C8 09:A4B8: D0 05     BNE bra_A4BF
 C - - - - - 0x0264CA 09:A4BA: A9 A7     LDA #$A7
-C - - - - - 0x0264CC 09:A4BC: 9D 0C 04  STA ram_040C,X
+C - - - - - 0x0264CC 09:A4BC: 9D 0C 04  STA ram_animation_special,X
 bra_A4BF:
 C - - - - - 0x0264CF 09:A4BF: A9 E5     LDA #$E5
 C - - - - - 0x0264D1 09:A4C1: D0 EC     BNE bra_A4AF
@@ -7620,7 +7620,7 @@ C D 1 - - - 0x026B94 09:AB84: A6 AC     LDX ram_00AC
 C - - - - - 0x026B96 09:AB86: B9 B0 05  LDA ram_05B0,Y
 C - - - - - 0x026B99 09:AB89: 9D E0 04  STA ram_04E0,X
 C - - - - - 0x026B9C 09:AB8C: A9 00     LDA #$00
-C - - - - - 0x026B9E 09:AB8E: 9D 0C 04  STA ram_040C,X
+C - - - - - 0x026B9E 09:AB8E: 9D 0C 04  STA ram_animation_special,X
 C - - - - - 0x026BA1 09:AB91: 20 88 B0  JSR sub_B088
 C - - - - - 0x026BA4 09:AB94: A6 AC     LDX ram_00AC
 C - - - - - 0x026BA6 09:AB96: A0 12     LDY #$12
@@ -7683,7 +7683,7 @@ loc_ABFF:
 C D 1 - - - 0x026C0F 09:ABFF: 9D 20 05  STA ram_0520,X
 C - - - - - 0x026C12 09:AC02: A9 00     LDA #$00
 C - - - - - 0x026C14 09:AC04: 9D 40 05  STA ram_0540,X
-C - - - - - 0x026C17 09:AC07: 9D 0C 04  STA ram_040C,X
+C - - - - - 0x026C17 09:AC07: 9D 0C 04  STA ram_animation_special,X
 C - - - - - 0x026C1A 09:AC0A: 9D 04 04  STA ram_0404,X
 C - - - - - 0x026C1D 09:AC0D: 60        RTS
 
@@ -9858,7 +9858,7 @@ C - - - - - 0x0277C9 09:B7B9: BC D0 05  LDY ram_05D0,X
 C - - - - - 0x0277CC 09:B7BC: B9 72 BA  LDA tbl_BA72,Y
 C - - - - - 0x0277CF 09:B7BF: 9D 00 04  STA ram_animation_id,X
 C - - - - - 0x0277D2 09:B7C2: B9 7D BA  LDA tbl_BA7D,Y
-C - - - - - 0x0277D5 09:B7C5: 9D 0C 04  STA ram_040C,X
+C - - - - - 0x0277D5 09:B7C5: 9D 0C 04  STA ram_animation_special,X
 C - - - - - 0x0277D8 09:B7C8: BD 40 04  LDA ram_object_X_pos_hi,X
 C - - - - - 0x0277DB 09:B7CB: 9D 4C 04  STA ram_044C,X
 C - - - - - 0x0277DE 09:B7CE: A9 A5     LDA #> ofs_0x02E5B1
@@ -10176,7 +10176,7 @@ C - - - - - 0x027A00 09:B9F0: 20 CC B3  JSR sub_B3CC
 bra_B9F3:
 C - - - - - 0x027A03 09:B9F3: BC D0 05  LDY ram_05D0,X
 C - - - - - 0x027A06 09:B9F6: B9 90 BA  LDA tbl_BA90,Y
-C - - - - - 0x027A09 09:B9F9: 9D 0C 04  STA ram_040C,X
+C - - - - - 0x027A09 09:B9F9: 9D 0C 04  STA ram_animation_special,X
 C - - - - - 0x027A0C 09:B9FC: BD 40 04  LDA ram_object_X_pos_hi,X
 C - - - - - 0x027A0F 09:B9FF: 9D 4C 04  STA ram_044C,X
 C - - - - - 0x027A12 09:BA02: BD 10 04  LDA ram_object_Y_pos_hi,X
@@ -10188,7 +10188,7 @@ C - - - - - 0x027A1E 09:BA0E: 60        RTS
 bra_BA0F:
 C - - - - - 0x027A1F 09:BA0F: FE 40 05  INC ram_0540,X
 C - - - - - 0x027A22 09:BA12: A9 00     LDA #$00
-C - - - - - 0x027A24 09:BA14: 9D 0C 04  STA ram_040C,X
+C - - - - - 0x027A24 09:BA14: 9D 0C 04  STA ram_animation_special,X
 C - - - - - 0x027A27 09:BA17: A9 03     LDA #$03
 C - - - - - 0x027A29 09:BA19: 4C 38 DF  JMP loc_0x03DF48
 
@@ -10515,7 +10515,7 @@ C - - - - - 0x027B98 09:BB88: A9 00     LDA #$00
 C - - - - - 0x027B9A 09:BB8A: B0 03     BCS bra_BB8F
 C - - - - - 0x027B9C 09:BB8C: B9 A8 BB  LDA tbl_BBA8,Y
 bra_BB8F:
-C - - - - - 0x027B9F 09:BB8F: 8D 0C 04  STA ram_040C
+C - - - - - 0x027B9F 09:BB8F: 8D 0C 04  STA ram_animation_special
 C - - - - - 0x027BA2 09:BB92: A9 40     LDA #$40
 C - - - - - 0x027BA4 09:BB94: 8D 1C 04  STA ram_041C
 C - - - - - 0x027BA7 09:BB97: A9 68     LDA #$68

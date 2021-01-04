@@ -9418,7 +9418,7 @@ C - - - - - 0x02E73B 0B:A72B: 90 03     BCC bra_A730
 C - - - - - 0x02E73D 0B:A72D: FE 20 05  INC ram_0520,X
 bra_A730:
 C - - - - - 0x02E740 0B:A730: A9 00     LDA #$00
-C - - - - - 0x02E742 0B:A732: 9D 0C 04  STA ram_040C,X
+C - - - - - 0x02E742 0B:A732: 9D 0C 04  STA ram_animation_special,X
 C - - - - - 0x02E745 0B:A735: 9D 10 06  STA ram_0610,X
 C - - - - - 0x02E748 0B:A738: 4C 17 F6  JMP loc_0x03F627
 
