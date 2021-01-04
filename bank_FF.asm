@@ -2341,31 +2341,23 @@ C - - - - - 0x03DE18 0F:DE08: 60        RTS
 
 
 
+loc_DE08_clear_points_2p_only:
+                                        LDX #$04
+                                        BNE bra_DE0E_clear_points_2p
 sub_DE09_clear_points:
 .export sub_0x03DE19_clear_points
 sub_0x03DE19_clear_points:
 .export loc_0x03DE19_clear_points
 loc_0x03DE19_clear_points:
-C D 2 - - - 0x03DE19 0F:DE09: 20 16 DE  JSR sub_DE16_clear_points_2p
-C - - - - - 0x03DE1C 0F:DE0C: A2 03     LDX #$03
+C - - - - - 0x03DE1C 0F:DE0C: A2 03     LDX #$00
+bra_DE0E_clear_points_2p:
 C - - - - - 0x03DE1E 0F:DE0E: A9 00     LDA #$00
 bra_DE10_loop:
 C - - - - - 0x03DE20 0F:DE10: 95 AE     STA ram_points_6,X
-C - - - - - 0x03DE22 0F:DE12: CA        DEX
-C - - - - - 0x03DE23 0F:DE13: 10 FB     BPL bra_DE10_loop
+C - - - - - 0x03DE22 0F:DE12: CA        INX
+                                        CPX #$08
+C - - - - - 0x03DE23 0F:DE13: 10 FB     BNE bra_DE10_loop
 C - - - - - 0x03DE25 0F:DE15: 60        RTS
-
-
-
-sub_DE16_clear_points_2p:
-loc_DE16_clear_points_2p:
-C D 2 - - - 0x03DE26 0F:DE16: A2 03     LDX #$03
-C - - - - - 0x03DE28 0F:DE18: A9 00     LDA #$00
-bra_DE1A_loop:
-C - - - - - 0x03DE2A 0F:DE1A: 95 B2     STA ram_points_6 + 4,X
-C - - - - - 0x03DE2C 0F:DE1C: CA        DEX
-C - - - - - 0x03DE2D 0F:DE1D: 10 FB     BPL bra_DE1A_loop
-C - - - - - 0x03DE2F 0F:DE1F: 60        RTS
 
 
 
@@ -4092,7 +4084,7 @@ C - - - - - 0x03E79E 0F:E78E: D0 DF     BNE bra_E76F_RTS
 C - - - - - 0x03E7A0 0F:E790: A9 01     LDA #$01
 C - - - - - 0x03E7A2 0F:E792: 85 2C     STA ram_002C
 C - - - - - 0x03E7A4 0F:E794: 85 94     STA ram_0094
-C - - - - - 0x03E7A6 0F:E796: 4C 16 DE  JMP loc_DE16_clear_points_2p
+C - - - - - 0x03E7A6 0F:E796: 4C 16 DE  JMP loc_DE08_clear_points_2p_only
 
 
 
