@@ -290,14 +290,6 @@ C - - - - - 0x03D066 0F:D056: 90 02     BCC bra_D05A_RTS
 C - - - - - 0x03D068 0F:D058: F6 01     INC ram_0001,X
 bra_D05A_RTS:
 C - - - - - 0x03D06A 0F:D05A: 60        RTS
-- - - - - - 0x03D06B 0F:D05B: 38        SEC
-- - - - - - 0x03D06C 0F:D05C: 49 FF     EOR #$FF
-- - - - - - 0x03D06E 0F:D05E: 75 00     ADC ram_0000,X
-- - - - - - 0x03D070 0F:D060: 95 00     STA ram_0000,X
-- - - - - - 0x03D072 0F:D062: B0 02     BCS bra_D066_RTS
-- - - - - - 0x03D074 0F:D064: D6 01     DEC ram_0001,X
-bra_D066_RTS:
-- - - - - - 0x03D076 0F:D066: 60        RTS
 
 
 
