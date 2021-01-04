@@ -2371,7 +2371,7 @@ C - - - - - 0x03DE31 0F:DE21: 29 01     AND #$01
 C - - - - - 0x03DE33 0F:DE23: 18        CLC
 C - - - - - 0x03DE34 0F:DE24: 69 02     ADC #$02
 C - - - - - 0x03DE36 0F:DE26: A8        TAY
-bra_DE27:
+bra_DE27_loop:
 C - - - - - 0x03DE37 0F:DE27: 20 C7 DA  JSR sub_DAC7
 C - - - - - 0x03DE3A 0F:DE2A: C8        INY
 C - - - - - 0x03DE3B 0F:DE2B: C8        INY
@@ -2380,10 +2380,10 @@ C - - - - - 0x03DE3E 0F:DE2E: B0 0B     BCS bra_DE3B_RTS
 C - - - - - 0x03DE40 0F:DE30: 98        TYA
 C - - - - - 0x03DE41 0F:DE31: 29 FE     AND #$FE
 C - - - - - 0x03DE43 0F:DE33: C9 06     CMP #$06
-C - - - - - 0x03DE45 0F:DE35: D0 F0     BNE bra_DE27
+C - - - - - 0x03DE45 0F:DE35: D0 F0     BNE bra_DE27_loop
 C - - - - - 0x03DE47 0F:DE37: C8        INY
 C - - - - - 0x03DE48 0F:DE38: C8        INY
-C - - - - - 0x03DE49 0F:DE39: D0 EC     BNE bra_DE27
+C - - - - - 0x03DE49 0F:DE39: D0 EC     BNE bra_DE27_loop
 bra_DE3B_RTS:
 C - - - - - 0x03DE4B 0F:DE3B: 60        RTS
 

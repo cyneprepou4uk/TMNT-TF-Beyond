@@ -11005,7 +11005,7 @@ C - - - - - 0x02FFD8 0B:BFC8: AC 43 01  LDY ram_0143
 C - - - - - 0x02FFDB 0B:BFCB: B9 30 01  LDA ram_name_letter_1,Y
 C - - - - - 0x02FFDE 0B:BFCE: 85 A2     STA ram_option_fighter
 C - - - - - 0x02FFE0 0B:BFD0: AC 42 01  LDY ram_0142
-C - - - - - 0x02FFE3 0B:BFD3: B9 38 01  LDA ram_0138,Y
+C - - - - - 0x02FFE3 0B:BFD3: B9 38 01  LDA ram_name_letter_1 + 8,Y
 C - - - - - 0x02FFE6 0B:BFD6: 85 A3     STA ram_option_fighter + 1
 C - - - - - 0x02FFE8 0B:BFD8: 4C 46 E2  JMP loc_0x03E256
 
