@@ -2063,3 +2063,8 @@ ram_07FC                        = $07FC ; N/A
 ram_07FD                        = $07FD ; N/A
 ram_07FE                        = $07FE ; N/A
 ram_07FF                        = $07FF ; N/A
+
+
+ram_8000_bank_id                = $8000
+
+

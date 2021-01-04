@@ -3511,38 +3511,38 @@ C - - - - - 0x03E3C5 0F:E3B5: 4C 6D D4  JMP loc_D46D
 
 
 tbl_E3B8_prg_bank:
-- D 3 - - - 0x03E3C8 0F:E3B8: 30        .byte $30   ; 00
-- D 3 - - - 0x03E3C9 0F:E3B9: 36        .byte $36   ; 01
-- D 3 - - - 0x03E3CA 0F:E3BA: 36        .byte $36   ; 02
-- D 3 - - - 0x03E3CB 0F:E3BB: 36        .byte $36   ; 03
-- D 3 - - - 0x03E3CC 0F:E3BC: 36        .byte $36   ; 04
-- D 3 - - - 0x03E3CD 0F:E3BD: 36        .byte $36   ; 05
-- D 3 - - - 0x03E3CE 0F:E3BE: 36        .byte $36   ; 06
-- D 3 - - - 0x03E3CF 0F:E3BF: 36        .byte $36   ; 07
-- D 3 - - - 0x03E3D0 0F:E3C0: 36        .byte $36   ; 08
-- D 3 - - - 0x03E3D1 0F:E3C1: 36        .byte $36   ; 09
-- D 3 - - - 0x03E3D2 0F:E3C2: 36        .byte $36   ; 0A
-- D 3 - - - 0x03E3D3 0F:E3C3: 36        .byte $36   ; 0B
-- D 3 - - - 0x03E3D4 0F:E3C4: 36        .byte $36   ; 0C
-- D 3 - - - 0x03E3D5 0F:E3C5: 30        .byte $30   ; 0D
-- D 3 - - - 0x03E3D6 0F:E3C6: 36        .byte $36   ; 0E
-- D 3 - - - 0x03E3D7 0F:E3C7: 36        .byte $36   ; 0F
-- D 3 - - - 0x03E3D8 0F:E3C8: 36        .byte $36   ; 10
-- D 3 - - - 0x03E3D9 0F:E3C9: 36        .byte $36   ; 11
-- D 3 - - - 0x03E3DA 0F:E3CA: 36        .byte $36   ; 12
-- D 3 - - - 0x03E3DB 0F:E3CB: 36        .byte $36   ; 13
-- D 3 - - - 0x03E3DC 0F:E3CC: 36        .byte $36   ; 14
-- D 3 - - - 0x03E3DD 0F:E3CD: 36        .byte $36   ; 15
-- D 3 - - - 0x03E3DE 0F:E3CE: 36        .byte $36   ; 16
-- D 3 - - - 0x03E3DF 0F:E3CF: 36        .byte $36   ; 17
-- D 3 - - - 0x03E3E0 0F:E3D0: 36        .byte $36   ; 18
-- D 3 - - - 0x03E3E1 0F:E3D1: 36        .byte $36   ; 19
-- D 3 - - - 0x03E3E2 0F:E3D2: 36        .byte $36   ; 1A
-- D 3 - - - 0x03E3E3 0F:E3D3: 36        .byte $36   ; 1B
-- D 3 - - - 0x03E3E4 0F:E3D4: 36        .byte $36   ; 1C
-- D 3 - - - 0x03E3E5 0F:E3D5: 36        .byte $36   ; 1D
-- D 3 - - - 0x03E3E6 0F:E3D6: 00        .byte $00   ; 1E
-- D 3 - - - 0x03E3E7 0F:E3D7: 00        .byte $00   ; 1F
+- D 3 - - - 0x03E3C8 0F:E3B8: 30        .byte con_bank_id + $10   ; 00
+- D 3 - - - 0x03E3C9 0F:E3B9: 36        .byte con_bank_id + $16   ; 01
+- D 3 - - - 0x03E3CA 0F:E3BA: 36        .byte con_bank_id + $16   ; 02
+- D 3 - - - 0x03E3CB 0F:E3BB: 36        .byte con_bank_id + $16   ; 03
+- D 3 - - - 0x03E3CC 0F:E3BC: 36        .byte con_bank_id + $16   ; 04
+- D 3 - - - 0x03E3CD 0F:E3BD: 36        .byte con_bank_id + $16   ; 05
+- D 3 - - - 0x03E3CE 0F:E3BE: 36        .byte con_bank_id + $16   ; 06
+- D 3 - - - 0x03E3CF 0F:E3BF: 36        .byte con_bank_id + $16   ; 07
+- D 3 - - - 0x03E3D0 0F:E3C0: 36        .byte con_bank_id + $16   ; 08
+- D 3 - - - 0x03E3D1 0F:E3C1: 36        .byte con_bank_id + $16   ; 09
+- D 3 - - - 0x03E3D2 0F:E3C2: 36        .byte con_bank_id + $16   ; 0A
+- D 3 - - - 0x03E3D3 0F:E3C3: 36        .byte con_bank_id + $16   ; 0B
+- D 3 - - - 0x03E3D4 0F:E3C4: 36        .byte con_bank_id + $16   ; 0C
+- D 3 - - - 0x03E3D5 0F:E3C5: 30        .byte con_bank_id + $10   ; 0D
+- D 3 - - - 0x03E3D6 0F:E3C6: 36        .byte con_bank_id + $16   ; 0E
+- D 3 - - - 0x03E3D7 0F:E3C7: 36        .byte con_bank_id + $16   ; 0F
+- D 3 - - - 0x03E3D8 0F:E3C8: 36        .byte con_bank_id + $16   ; 10
+- D 3 - - - 0x03E3D9 0F:E3C9: 36        .byte con_bank_id + $16   ; 11
+- D 3 - - - 0x03E3DA 0F:E3CA: 36        .byte con_bank_id + $16   ; 12
+- D 3 - - - 0x03E3DB 0F:E3CB: 36        .byte con_bank_id + $16   ; 13
+- D 3 - - - 0x03E3DC 0F:E3CC: 36        .byte con_bank_id + $16   ; 14
+- D 3 - - - 0x03E3DD 0F:E3CD: 36        .byte con_bank_id + $16   ; 15
+- D 3 - - - 0x03E3DE 0F:E3CE: 36        .byte con_bank_id + $16   ; 16
+- D 3 - - - 0x03E3DF 0F:E3CF: 36        .byte con_bank_id + $16   ; 17
+- D 3 - - - 0x03E3E0 0F:E3D0: 36        .byte con_bank_id + $16   ; 18
+- D 3 - - - 0x03E3E1 0F:E3D1: 36        .byte con_bank_id + $16   ; 19
+- D 3 - - - 0x03E3E2 0F:E3D2: 36        .byte con_bank_id + $16   ; 1A
+- D 3 - - - 0x03E3E3 0F:E3D3: 36        .byte con_bank_id + $16   ; 1B
+- D 3 - - - 0x03E3E4 0F:E3D4: 36        .byte con_bank_id + $16   ; 1C
+- D 3 - - - 0x03E3E5 0F:E3D5: 36        .byte con_bank_id + $16   ; 1D
+- D 3 - - - 0x03E3E6 0F:E3D6: 00        .byte con_bank_id + $00   ; 1E
+- D 3 - - - 0x03E3E7 0F:E3D7: 00        .byte con_bank_id + $00   ; 1F
 
 
 
@@ -6710,7 +6710,7 @@ C - - - - - 0x03F678 0F:F668: 60        RTS
 sub_F669:
 C - - - - - 0x03F679 0F:F669: A0 01     LDY #$01
 C - - - - - 0x03F67B 0F:F66B: 84 2E     STY ram_002E
-C - - - - - 0x03F67D 0F:F66D: AD 00 80  LDA $8000
+C - - - - - 0x03F67D 0F:F66D: AD 00 80  LDA ram_8000_bank_id
 C - - - - - 0x03F682 0F:F672: 85 46     STA ram_0046
 C - - - - - 0x03F684 0F:F674: A2 30     LDX #$30
 sub_F676:
