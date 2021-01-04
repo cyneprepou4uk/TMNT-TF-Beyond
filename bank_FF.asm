@@ -5725,7 +5725,7 @@ C - - - - - 0x03F054 0F:F044: 8A        TXA
 C - - - - - 0x03F055 0F:F045: 4A        LSR
 C - - - - - 0x03F056 0F:F046: A8        TAY
 C - - - - - 0x03F057 0F:F047: B9 B8 E3  LDA tbl_E3B8_prg_bank,Y
-C - - - - - 0x03F05A 0F:F04A: 20 F9 F5  JSR sub_F5F9
+C - - - - - 0x03F05A 0F:F04A: 20 F9 F5  JSR sub_F5F9_swap_prg_bank
 C - - - - - 0x03F05D 0F:F04D: 20 53 F0  JSR sub_F053
 C - - - - - 0x03F060 0F:F050: 4C 17 F6  JMP loc_F617_restore_prg_bank
 sub_F053:
@@ -6610,44 +6610,32 @@ C - - - - - 0x03F5E8 0F:F5D8: 4C 3E E1  JMP loc_E13E
 
 sub_F5DF_prg_bank_09:
 C - - - - - 0x03F5EF 0F:F5DF: A9 32     LDA #$32
-C - - - - - 0x03F5F1 0F:F5E1: D0 16     BNE bra_F5F9
-
-
+C - - - - - 0x03F5F1 0F:F5E1: D0 16     BNE bra_F5F9_swap_prg_bank
 
 sub_F5E3_prg_bank_0A:
 C - - - - - 0x03F5F3 0F:F5E3: A9 34     LDA #$34
-C - - - - - 0x03F5F5 0F:F5E5: D0 12     BNE bra_F5F9
-
-
+C - - - - - 0x03F5F5 0F:F5E5: D0 12     BNE bra_F5F9_swap_prg_bank
 
 sub_F5E7_prg_bank_0B:
 .export loc_0x03F5F7_prg_bank_0B
 loc_0x03F5F7_prg_bank_0B:
 C D 3 - - - 0x03F5F7 0F:F5E7: A9 36     LDA #$36
-C - - - - - 0x03F5F9 0F:F5E9: D0 0E     BNE bra_F5F9
-
-
+C - - - - - 0x03F5F9 0F:F5E9: D0 0E     BNE bra_F5F9_swap_prg_bank
 
 sub_F5EB_prg_bank_0C:
 C - - - - - 0x03F5FB 0F:F5EB: A9 38     LDA #$38
-C - - - - - 0x03F5FD 0F:F5ED: D0 0A     BNE bra_F5F9
-
-
+C - - - - - 0x03F5FD 0F:F5ED: D0 0A     BNE bra_F5F9_swap_prg_bank
 
 sub_F5EF_prg_bank_0D:
 C - - - - - 0x03F5FF 0F:F5EF: A9 3A     LDA #$3A
-C - - - - - 0x03F601 0F:F5F1: D0 06     BNE bra_F5F9
-
-
+C - - - - - 0x03F601 0F:F5F1: D0 06     BNE bra_F5F9_swap_prg_bank
 
 sub_F5F3_prg_bank_0E:
 C - - - - - 0x03F603 0F:F5F3: A9 3C     LDA #$3C
-C - - - - - 0x03F605 0F:F5F5: D0 02     BNE bra_F5F9
+C - - - - - 0x03F605 0F:F5F5: D0 02     BNE bra_F5F9_swap_prg_bank
 
-
-
-bra_F5F9:
-sub_F5F9:
+bra_F5F9_swap_prg_bank:
+sub_F5F9_swap_prg_bank:
 C - - - - - 0x03F609 0F:F5F9: E6 3D     INC ram_003D
 C - - - - - 0x03F60B 0F:F5FB: A4 3D     LDY ram_003D
 C - - - - - 0x03F60D 0F:F5FD: 99 3E 00  STA ram_003E,Y
