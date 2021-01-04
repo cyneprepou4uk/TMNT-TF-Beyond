@@ -9871,10 +9871,6 @@ tbl_AA90_vs_strength:
 - D 1 - - - 0x02EAD0 0B:AAC0: 02        .byte $02, $02, $03, $03, $03, $00, $FE, $02   ; 06 Shred
 
 
-; bzk мусор
-- - - - - - 0x02EAD8 0B:AAC8: 00        .byte $00, $00, $01, $00, $01, $FE, $FD, $00   ; 07 
-
-
 
 .export loc_0x02EB10
 loc_0x02EB10:
