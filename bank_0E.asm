@@ -2137,14 +2137,14 @@ C - - - - - 0x038B8D 0E:8B7D: 20 21 8B  JSR sub_8B21
 C - - - - - 0x038B90 0E:8B80: AE 71 06  LDX ram_0671
 C - - - - - 0x038B93 0E:8B83: 20 32 EA  JSR sub_0x03EA42
 C - - - - - 0x038B96 0E:8B86: AC 28 01  LDY ram_option_health
-C - - - - - 0x038B99 0E:8B89: BD 0D 01  LDA ram_010D,X
+C - - - - - 0x038B99 0E:8B89: BD 0D 01  LDA ram_hp_hi,X
 C - - - - - 0x038B9C 0E:8B8C: 20 52 A7  JSR sub_A752
 C - - - - - 0x038B9F 0E:8B8F: 90 03     BCC bra_8B94
 C - - - - - 0x038BA1 0E:8B91: 4C 06 8B  JMP loc_8B06
 bra_8B94:
 C - - - - - 0x038BA4 0E:8B94: 20 3E 8B  JSR sub_8B3E
 C - - - - - 0x038BA7 0E:8B97: 0A        ASL
-C - - - - - 0x038BA8 0E:8B98: 9D 90 05  STA ram_0590,X
+C - - - - - 0x038BA8 0E:8B98: 9D 90 05  STA ram_hp_lo,X
 ofs_8B9B_04:
 C - - - - - 0x038BAB 0E:8B9B: 20 55 8C  JSR sub_8C55
 C - - - - - 0x038BAE 0E:8B9E: A9 00     LDA #$00
@@ -7185,11 +7185,11 @@ C - - - - - 0x03A72C 0E:A71C: 4C 59 D2  JMP loc_0x03D269
 sub_A740:
 C - - - - - 0x03A750 0E:A740: AC 28 01  LDY ram_option_health
 C - - - - - 0x03A753 0E:A743: F0 07     BEQ bra_A74C
-C - - - - - 0x03A755 0E:A745: BD 0D 01  LDA ram_010D,X
+C - - - - - 0x03A755 0E:A745: BD 0D 01  LDA ram_hp_hi,X
 C - - - - - 0x03A758 0E:A748: D9 A6 EF  CMP tbl_0x03EFB6,Y
 C - - - - - 0x03A75B 0E:A74B: 60        RTS
 bra_A74C:
-C - - - - - 0x03A75C 0E:A74C: BD 90 05  LDA ram_0590,X
+C - - - - - 0x03A75C 0E:A74C: BD 90 05  LDA ram_hp_lo,X
 C - - - - - 0x03A75F 0E:A74F: C9 B0     CMP #$B0
 C - - - - - 0x03A761 0E:A751: 60        RTS
 
@@ -7199,13 +7199,13 @@ sub_A752:
 C - - - - - 0x03A762 0E:A752: 38        SEC
 C - - - - - 0x03A763 0E:A753: F9 FD BF  SBC tbl_BFFD,Y
 C - - - - - 0x03A766 0E:A756: 90 04     BCC bra_A75C
-C - - - - - 0x03A768 0E:A758: 9D 0D 01  STA ram_010D,X
+C - - - - - 0x03A768 0E:A758: 9D 0D 01  STA ram_hp_hi,X
 C - - - - - 0x03A76B 0E:A75B: 60        RTS
 bra_A75C:
-C - - - - - 0x03A76C 0E:A75C: BD 90 05  LDA ram_0590,X
+C - - - - - 0x03A76C 0E:A75C: BD 90 05  LDA ram_hp_lo,X
 C - - - - - 0x03A76F 0E:A75F: 38        SEC
 C - - - - - 0x03A770 0E:A760: F9 FD BF  SBC tbl_BFFD,Y
-C - - - - - 0x03A773 0E:A763: 9D 90 05  STA ram_0590,X
+C - - - - - 0x03A773 0E:A763: 9D 90 05  STA ram_hp_lo,X
 C - - - - - 0x03A776 0E:A766: 60        RTS
 
 
@@ -7213,15 +7213,15 @@ C - - - - - 0x03A776 0E:A766: 60        RTS
 .export loc_0x03A777
 loc_0x03A777:
 C D 1 - - - 0x03A777 0E:A767: A2 01     LDX #$01
-C - - - - - 0x03A779 0E:A769: AD 0D 01  LDA ram_010D
-C - - - - - 0x03A77C 0E:A76C: 0D 0E 01  ORA ram_010E
+C - - - - - 0x03A779 0E:A769: AD 0D 01  LDA ram_hp_hi
+C - - - - - 0x03A77C 0E:A76C: 0D 0E 01  ORA ram_hp_hi + 1
 C - - - - - 0x03A77F 0E:A76F: F0 09     BEQ bra_A77A
-C - - - - - 0x03A781 0E:A771: AD 0D 01  LDA ram_010D
-C - - - - - 0x03A784 0E:A774: CD 0E 01  CMP ram_010E
+C - - - - - 0x03A781 0E:A771: AD 0D 01  LDA ram_hp_hi
+C - - - - - 0x03A784 0E:A774: CD 0E 01  CMP ram_hp_hi + 1
 C - - - - - 0x03A787 0E:A777: 4C 80 A7  JMP loc_A780
 bra_A77A:
-C - - - - - 0x03A78A 0E:A77A: AD 90 05  LDA ram_0590
-C - - - - - 0x03A78D 0E:A77D: CD 91 05  CMP ram_0591
+C - - - - - 0x03A78A 0E:A77A: AD 90 05  LDA ram_hp_lo
+C - - - - - 0x03A78D 0E:A77D: CD 91 05  CMP ram_hp_lo + 1
 loc_A780:
 C D 1 - - - 0x03A790 0E:A780: 08        PHP
 C - - - - - 0x03A791 0E:A781: A9 E6     LDA #> ofs_0x03E6C5

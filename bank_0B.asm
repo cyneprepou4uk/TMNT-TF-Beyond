@@ -9439,20 +9439,20 @@ C - - - - - 0x02E75D 0B:A74D: 4C 17 F6  JMP loc_0x03F627_restore_prg_bank
 
 .export sub_0x02E760
 sub_0x02E760:
-C - - - - - 0x02E760 0B:A750: BD 90 05  LDA ram_0590,X
+C - - - - - 0x02E760 0B:A750: BD 90 05  LDA ram_hp_lo,X
 C - - - - - 0x02E763 0B:A753: 20 81 A7  JSR sub_A781
 C - - - - - 0x02E766 0B:A756: 85 02     STA ram_0002
-C - - - - - 0x02E768 0B:A758: BD 90 05  LDA ram_0590,X
+C - - - - - 0x02E768 0B:A758: BD 90 05  LDA ram_hp_lo,X
 C - - - - - 0x02E76B 0B:A75B: 20 9C A7  JSR sub_A79C
 C - - - - - 0x02E76E 0B:A75E: 85 05     STA ram_0005
-C - - - - - 0x02E770 0B:A760: BC 0D 01  LDY ram_010D,X
+C - - - - - 0x02E770 0B:A760: BC 0D 01  LDY ram_hp_hi,X
 C - - - - - 0x02E773 0B:A763: F0 14     BEQ bra_A779
 C - - - - - 0x02E775 0B:A765: 98        TYA
 C - - - - - 0x02E776 0B:A766: 20 81 A7  JSR sub_A781
 C - - - - - 0x02E779 0B:A769: 18        CLC
 C - - - - - 0x02E77A 0B:A76A: 65 02     ADC ram_0002
 C - - - - - 0x02E77C 0B:A76C: 85 02     STA ram_0002
-C - - - - - 0x02E77E 0B:A76E: BD 0D 01  LDA ram_010D,X
+C - - - - - 0x02E77E 0B:A76E: BD 0D 01  LDA ram_hp_hi,X
 C - - - - - 0x02E781 0B:A771: 20 9C A7  JSR sub_A79C
 C - - - - - 0x02E784 0B:A774: 18        CLC
 C - - - - - 0x02E785 0B:A775: 65 05     ADC ram_0005
@@ -9944,13 +9944,13 @@ C - - - - - 0x02EB25 0B:AB15: 7D 50 05  ADC ram_id_object,X
 C - - - - - 0x02EB28 0B:AB18: C9 21     CMP #$21
 C - - - - - 0x02EB2A 0B:AB1A: D0 29     BNE bra_AB45
 C - - - - - 0x02EB2C 0B:AB1C: 48        PHA
-C - - - - - 0x02EB2D 0B:AB1D: B9 0D 01  LDA ram_010D,Y
+C - - - - - 0x02EB2D 0B:AB1D: B9 0D 01  LDA ram_hp_hi,Y
 C - - - - - 0x02EB30 0B:AB20: F0 03     BEQ bra_AB25
 C - - - - - 0x02EB32 0B:AB22: 20 9C A7  JSR sub_A79C
 bra_AB25:
 C - - - - - 0x02EB35 0B:AB25: 85 1B     STA ram_001B
 C - - - - - 0x02EB37 0B:AB27: A4 1A     LDY ram_001A
-C - - - - - 0x02EB39 0B:AB29: B9 90 05  LDA ram_0590,Y
+C - - - - - 0x02EB39 0B:AB29: B9 90 05  LDA ram_hp_lo,Y
 C - - - - - 0x02EB3C 0B:AB2C: 20 9C A7  JSR sub_A79C
 C - - - - - 0x02EB3F 0B:AB2F: 18        CLC
 C - - - - - 0x02EB40 0B:AB30: 65 1B     ADC ram_001B
