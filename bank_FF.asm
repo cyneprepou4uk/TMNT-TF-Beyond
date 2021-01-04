@@ -821,7 +821,7 @@ tbl_BFFC_credits:
 
 
 ofs_D2AD_01:
-C - - J - - 0x03D2BD 0F:D2AD: A9 36     LDA #$36
+C - - J - - 0x03D2BD 0F:D2AD: A9 36     LDA #con_bank_id + $16
 C - - - - - 0x03D2BF 0F:D2AF: 20 00 F6  JSR sub_F600_prg_bank_0B
 C - - - - - 0x03D2C2 0F:D2B2: 20 E0 BE  JSR sub_0x02FEF0
 C - - - - - 0x03D2C6 0F:D2B6: E6 94     INC ram_0094
@@ -3247,7 +3247,7 @@ C - - - - - 0x03E215 0F:E205: A6 2C     LDX ram_002C
 C - - - - - 0x03E217 0F:E207: F0 28     BEQ bra_E231
 C - - - - - 0x03E219 0F:E209: E0 03     CPX #$03
 C - - - - - 0x03E21B 0F:E20B: 90 39     BCC bra_E246
-C - - - - - 0x03E21D 0F:E20D: A9 36     LDA #$36
+C - - - - - 0x03E21D 0F:E20D: A9 36     LDA #con_bank_id + $16
 C - - - - - 0x03E21F 0F:E20F: 20 00 F6  JSR sub_F600_prg_bank_0B
 C - - - - - 0x03E222 0F:E212: A5 28     LDA ram_random_1
 C - - - - - 0x03E224 0F:E214: 29 0F     AND #$0F
@@ -3556,7 +3556,7 @@ tbl_E3EF:
 
 ofs_E3F3_05:
 C - - J - - 0x03E403 0F:E3F3: 20 C2 F6  JSR sub_F6C2
-C - - - - - 0x03E406 0F:E3F6: A9 36     LDA #$36
+C - - - - - 0x03E406 0F:E3F6: A9 36     LDA #con_bank_id + $16
 C - - - - - 0x03E408 0F:E3F8: 20 00 F6  JSR sub_F600_prg_bank_0B
 C - - - - - 0x03E40B 0F:E3FB: 20 50 AE  JSR sub_0x02EE60
 C - - - - - 0x03E40E 0F:E3FE: 20 44 F0  JSR sub_F044
@@ -3584,7 +3584,7 @@ C - - - - - 0x03E439 0F:E429: 9D 40 04  STA ram_X_pos_hi_object,X
 C - - - - - 0x03E43C 0F:E42C: A9 B0     LDA #$B0
 C - - - - - 0x03E43E 0F:E42E: 9D 10 04  STA ram_Y_pos_hi_object,X
 C - - - - - 0x03E441 0F:E431: A0 01     LDY #$01
-C - - - - - 0x03E443 0F:E433: A9 36     LDA #$36
+C - - - - - 0x03E443 0F:E433: A9 36     LDA #con_bank_id + $16
 C - - - - - 0x03E445 0F:E435: 20 00 F6  JSR sub_F600_prg_bank_0B
 C - - - - - 0x03E448 0F:E438: 20 00 AA  JSR sub_0x02EA10
 C - - - - - 0x03E44C 0F:E43C: 8A        TXA
@@ -5833,7 +5833,7 @@ tbl_F13B:
 
 
 loc_F142:
-C D 3 - - - 0x03F152 0F:F142: A9 36     LDA #$36
+C D 3 - - - 0x03F152 0F:F142: A9 36     LDA #con_bank_id + $16
 C - - - - - 0x03F154 0F:F144: 20 00 F6  JSR sub_F600_prg_bank_0B
 C - - - - - 0x03F157 0F:F147: 4C 70 BF  JMP loc_0x02FF80
 
@@ -7139,7 +7139,7 @@ off_F8AE:
 
 sub_F8B8:
 C - - - - - 0x03F8C8 0F:F8B8: 48        PHA
-C - - - - - 0x03F8C9 0F:F8B9: A9 36     LDA #$36
+C - - - - - 0x03F8C9 0F:F8B9: A9 36     LDA #con_bank_id + $16
 C - - - - - 0x03F8CB 0F:F8BB: 20 00 F6  JSR sub_F600_prg_bank_0B
 C - - - - - 0x03F8CE 0F:F8BE: 4C 90 AF  JMP loc_0x02EFA0
 
