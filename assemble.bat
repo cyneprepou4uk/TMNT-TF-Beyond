@@ -52,14 +52,11 @@ ld65 -C ld65.cfg -o PRG_ROM.bin --dbgfile _debug.txt ^
 :: join header, prg and chr into a single ROM file
 copy /B header.bin + PRG_ROM.bin + CHR_ROM.chr !tmnt.nes
 
-:: delete leftover garbage and copies
-del *.o + PRG_ROM.bin + copy_*.asm + copy_*.inc
-
 :: join listing files into a single file
 copy /A copy_*.lst _listing.txt
 
-:: delete listing copies
-del copy_*.lst
+:: delete leftover garbage and copies
+del *.o + PRG_ROM.bin + copy_*
 
 :: create a copy of .nl file for original ROM
 if exist TMNT_original.nes (copy !tmnt.nes.ram.nl TMNT_original.nes.ram.nl)
