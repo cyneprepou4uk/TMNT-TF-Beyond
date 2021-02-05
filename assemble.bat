@@ -70,13 +70,13 @@ if %size% EQU 524304 (
     echo Done! Look for !tmnt.nes file in your folder.
     if exist !tmnt.bak (
         echo.
-        C:\windows\system32\fc /A /B /T !tmnt.nes !tmnt.bak > nul && echo Perfect match || echo Differences found 
+        fc /A /B /T !tmnt.nes !tmnt.bak > nul && echo Perfect match || echo Differences found 
         echo.
         copy !tmnt.nes !tmnt.bak
         echo Backup created
     )
     echo --------------------------------------------
-    C:\windows\system32\timeout /T 10
+    timeout /T 10
 ) else (
     echo.
     echo --------------------------------------------------
