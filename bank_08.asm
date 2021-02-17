@@ -46,7 +46,7 @@ bra_8043:
 C - - - - - 0x020053 08:8043: A2 00     LDX #$00
 bra_8045_loop:
 C - - - - - 0x020055 08:8045: BD 5C 80  LDA tbl_805C,X
-C - - - - - 0x020058 08:8048: 8E 61 07  STX ram_0761
+C - - - - - 0x020058 08:8048: 8E 61 07  STX ram_sound_channel_index
 C - - - - - 0x02005B 08:804B: 8D B2 07  STA ram_07B2
 C - - - - - 0x02005E 08:804E: BD 0C 07  LDA ram_070C,X
 C - - - - - 0x020061 08:8051: F0 03     BEQ bra_8056
@@ -173,7 +173,7 @@ C - - - - - 0x02013A 08:812A: DE 4E 07  DEC ram_074E,X
 C - - - - - 0x02013D 08:812D: D6 F0     DEC ram_00F0,X
 bra_812F:
 C - - - - - 0x02013F 08:812F: 20 90 83  JSR sub_8390
-C - - - - - 0x020142 08:8132: 4C BB 81  JMP loc_81BB
+C - - - - - 0x020142 08:8132: 4C BB 81  JMP loc_81BB_4000x_ORA
 bra_8135:
 - - - - - - 0x020145 08:8135: DE B0 07  DEC ram_07B0,X
 - - - - - - 0x020148 08:8138: D0 0A     BNE bra_8144_RTS
@@ -233,30 +233,33 @@ C - - - - - 0x0201B7 08:81A7: 29 02     AND #$02
 C - - - - - 0x0201B9 08:81A9: F0 02     BEQ bra_81AD
 C - - - - - 0x0201BB 08:81AB: D0 05     BNE bra_81B2
 bra_81AD:
-C - - - - - 0x0201BD 08:81AD: A5 E2     LDA ram_00E2
-C - - - - - 0x0201BF 08:81AF: 4C BB 81  JMP loc_81BB
+C - - - - - 0x0201BD 08:81AD: A5 E2     LDA ram_sound_stack
+C - - - - - 0x0201BF 08:81AF: 4C BB 81  JMP loc_81BB_4000x_ORA
 bra_81B2:
 sub_81B2:
 C - - - - - 0x0201C2 08:81B2: BD 50 07  LDA ram_0750,X
 C - - - - - 0x0201C5 08:81B5: 29 F0     AND #$F0
-C - - - - - 0x0201C7 08:81B7: 05 E2     ORA ram_00E2
-C - - - - - 0x0201C9 08:81B9: D0 03     BNE bra_81BE
-loc_81BB:
-sub_81BB:
+C - - - - - 0x0201C7 08:81B7: 05 E2     ORA ram_sound_stack
+C - - - - - 0x0201C9 08:81B9: D0 03     BNE bra_81BE_4000x
+
+
+
+loc_81BB_4000x_ORA:
+sub_81BB_4000x_ORA:
 C D 0 - - - 0x0201CB 08:81BB: 1D 54 07  ORA ram_0754,X
-bra_81BE:
-sub_81BE:
-loc_81BE:
+bra_81BE_4000x:
+sub_81BE_4000x:
+loc_81BE_4000x:
 C D 0 - - - 0x0201CE 08:81BE: 20 07 8A  JSR sub_8A07
 C - - - - - 0x0201D1 08:81C1: B0 03     BCS bra_81C6
 C - - - - - 0x0201D3 08:81C3: 9D 00 40  STA $4000,X
 bra_81C6:
-C - - - - - 0x0201D6 08:81C6: AE 61 07  LDX ram_0761
+C - - - - - 0x0201D6 08:81C6: AE 61 07  LDX ram_sound_channel_index
 C - - - - - 0x0201D9 08:81C9: 60        RTS
 
 
 
-sub_81CA:
+sub_81CA_4001x:
 C - - - - - 0x0201DA 08:81CA: 20 07 8A  JSR sub_8A07
 C - - - - - 0x0201DD 08:81CD: B0 F7     BCS bra_81C6
 C - - - - - 0x0201DF 08:81CF: 9D 01 40  STA $4001,X
@@ -264,7 +267,7 @@ C - - - - - 0x0201E2 08:81D2: 90 F2     BCC bra_81C6
 
 
 
-loc_81D4:
+loc_81D4_4002x:
 C D 0 - - - 0x0201E4 08:81D4: 20 07 8A  JSR sub_8A07
 C - - - - - 0x0201E7 08:81D7: B0 ED     BCS bra_81C6
 C - - - - - 0x0201E9 08:81D9: 9D 02 40  STA $4002,X
@@ -272,7 +275,7 @@ C - - - - - 0x0201EC 08:81DC: 90 E8     BCC bra_81C6
 
 
 
-sub_81DE:
+sub_81DE_4003x:
 C - - - - - 0x0201EE 08:81DE: 09 08     ORA #$08
 C - - - - - 0x0201F0 08:81E0: 20 07 8A  JSR sub_8A07
 C - - - - - 0x0201F3 08:81E3: B0 E1     BCS bra_81C6
@@ -290,13 +293,13 @@ sub_81EF:
 - - - - - - 0x020201 08:81F1: BD D4 07  LDA ram_07D4,X
 - - - - - - 0x020204 08:81F4: A8        TAY
 - - - - - - 0x020205 08:81F5: B9 41 95  LDA tbl_9541,Y
-- - - - - - 0x020208 08:81F8: 85 E2     STA ram_00E2
+- - - - - - 0x020208 08:81F8: 85 E2     STA ram_sound_stack
 - - - - - - 0x02020A 08:81FA: B9 42 95  LDA tbl_9541 + 1,Y
-- - - - - - 0x02020D 08:81FD: 85 E3     STA ram_00E3
+- - - - - - 0x02020D 08:81FD: 85 E3     STA ram_sound_stack + 1
 bra_81FF:
 - - - - - - 0x02020F 08:81FF: BD B6 07  LDA ram_07B6,X
 - - - - - - 0x020212 08:8202: A8        TAY
-- - - - - - 0x020213 08:8203: B1 E2     LDA (ram_00E2),Y
+- - - - - - 0x020213 08:8203: B1 E2     LDA (ram_sound_stack),Y
 - - - - - - 0x020215 08:8205: C9 FB     CMP #$FB
 - - - - - - 0x020217 08:8207: 90 07     BCC bra_8210
 - - - - - - 0x020219 08:8209: 20 24 82  JSR sub_8224
@@ -341,7 +344,7 @@ C - - - - - 0x020251 08:8241: FE C2 07  INC ram_07C2,X
 C - - - - - 0x020254 08:8244: FE B6 07  INC ram_07B6,X
 C - - - - - 0x020257 08:8247: BD B6 07  LDA ram_07B6,X
 C - - - - - 0x02025A 08:824A: A8        TAY
-C - - - - - 0x02025B 08:824B: B1 E2     LDA (ram_00E2),Y
+C - - - - - 0x02025B 08:824B: B1 E2     LDA (ram_sound_stack),Y
 C - - - - - 0x02025D 08:824D: DD C2 07  CMP ram_07C2,X
 C - - - - - 0x020260 08:8250: D0 05     BNE bra_8257
 - - - - - - 0x020262 08:8252: FE B6 07  INC ram_07B6,X
@@ -361,34 +364,34 @@ C - - - - - 0x020270 08:8260: 48        PHA
 C - - - - - 0x020271 08:8261: BD C8 07  LDA ram_07C8,X
 C - - - - - 0x020274 08:8264: A8        TAY
 C - - - - - 0x020275 08:8265: B9 41 95  LDA tbl_9541,Y
-C - - - - - 0x020278 08:8268: 85 E2     STA ram_00E2
+C - - - - - 0x020278 08:8268: 85 E2     STA ram_sound_stack
 C - - - - - 0x02027A 08:826A: B9 42 95  LDA tbl_9541 + 1,Y
-C - - - - - 0x02027D 08:826D: 85 E3     STA ram_00E3
+C - - - - - 0x02027D 08:826D: 85 E3     STA ram_sound_stack + 1
 bra_826F:
 C - - - - - 0x02027F 08:826F: BD B9 07  LDA ram_07B9,X
 C - - - - - 0x020282 08:8272: A8        TAY
-C - - - - - 0x020283 08:8273: B1 E2     LDA (ram_00E2),Y
+C - - - - - 0x020283 08:8273: B1 E2     LDA (ram_sound_stack),Y
 C - - - - - 0x020285 08:8275: C9 FB     CMP #$FB
 C - - - - - 0x020287 08:8277: 90 0D     BCC bra_8286
 C - - - - - 0x020289 08:8279: E8        INX
 C - - - - - 0x02028A 08:827A: E8        INX
 C - - - - - 0x02028B 08:827B: E8        INX
 C - - - - - 0x02028C 08:827C: 20 24 82  JSR sub_8224
-C - - - - - 0x02028F 08:827F: AE 61 07  LDX ram_0761
+C - - - - - 0x02028F 08:827F: AE 61 07  LDX ram_sound_channel_index
 C - - - - - 0x020292 08:8282: 90 36     BCC bra_82BA
 C - - - - - 0x020294 08:8284: B0 E9     BCS bra_826F
 bra_8286:
 C - - - - - 0x020296 08:8286: FE B9 07  INC ram_07B9,X
 C - - - - - 0x020299 08:8289: BD B3 07  LDA ram_07B3,X
 C - - - - - 0x02029C 08:828C: D0 08     BNE bra_8296
-C - - - - - 0x02029E 08:828E: B1 E2     LDA (ram_00E2),Y
+C - - - - - 0x02029E 08:828E: B1 E2     LDA (ram_sound_stack),Y
 C - - - - - 0x0202A0 08:8290: 20 37 8D  JSR sub_0x03D217_divide_by_10h
 C - - - - - 0x0202A3 08:8293: 9D B3 07  STA ram_07B3,X
 bra_8296:
 C - - - - - 0x0202A6 08:8296: BD CB 07  LDA ram_07CB,X
 C - - - - - 0x0202A9 08:8299: 29 0F     AND #$0F
 C - - - - - 0x0202AB 08:829B: F0 1D     BEQ bra_82BA
-C - - - - - 0x0202AD 08:829D: B1 E2     LDA (ram_00E2),Y
+C - - - - - 0x0202AD 08:829D: B1 E2     LDA (ram_sound_stack),Y
 C - - - - - 0x0202AF 08:829F: 29 0F     AND #$0F
 C - - - - - 0x0202B1 08:82A1: 85 E4     STA ram_00E4
 C - - - - - 0x0202B3 08:82A3: F0 1F     BEQ bra_82C4
@@ -422,12 +425,12 @@ sub_82CB:
 C - - - - - 0x0202DB 08:82CB: BD CB 07  LDA ram_07CB,X
 C - - - - - 0x0202DE 08:82CE: 29 0F     AND #$0F
 C - - - - - 0x0202E0 08:82D0: F0 0B     BEQ bra_82DD
-C - - - - - 0x0202E2 08:82D2: 85 E2     STA ram_00E2
+C - - - - - 0x0202E2 08:82D2: 85 E2     STA ram_sound_stack
 C - - - - - 0x0202E4 08:82D4: A9 00     LDA #$00
 bra_82D6:
 C - - - - - 0x0202E6 08:82D6: 18        CLC
 C - - - - - 0x0202E7 08:82D7: 65 E4     ADC ram_00E4
-C - - - - - 0x0202E9 08:82D9: C6 E2     DEC ram_00E2
+C - - - - - 0x0202E9 08:82D9: C6 E2     DEC ram_sound_stack
 C - - - - - 0x0202EB 08:82DB: D0 F9     BNE bra_82D6
 bra_82DD:
 C - - - - - 0x0202ED 08:82DD: 9D CE 07  STA ram_07CE,X
@@ -452,18 +455,18 @@ C - - - - - 0x020307 08:82F7: 4C B0 89  JMP loc_89B0
 bra_82FA:
 sub_82FA:
 C - - - - - 0x02030A 08:82FA: BD 00 07  LDA ram_0700,X
-C - - - - - 0x02030D 08:82FD: 85 E2     STA ram_00E2
+C - - - - - 0x02030D 08:82FD: 85 E2     STA ram_sound_stack
 C - - - - - 0x02030F 08:82FF: BD 74 07  LDA ram_0774,X
 C - - - - - 0x020312 08:8302: 29 10     AND #$10
 C - - - - - 0x020314 08:8304: F0 05     BEQ bra_830B
-C - - - - - 0x020316 08:8306: A5 E2     LDA ram_00E2
+C - - - - - 0x020316 08:8306: A5 E2     LDA ram_sound_stack
 C - - - - - 0x020318 08:8308: 0A        ASL
-C - - - - - 0x020319 08:8309: 85 E2     STA ram_00E2
+C - - - - - 0x020319 08:8309: 85 E2     STA ram_sound_stack
 bra_830B:
 C - - - - - 0x02031B 08:830B: BD 06 07  LDA ram_0706,X
 bra_830E:
 C - - - - - 0x02031E 08:830E: 38        SEC
-C - - - - - 0x02031F 08:830F: E5 E2     SBC ram_00E2
+C - - - - - 0x02031F 08:830F: E5 E2     SBC ram_sound_stack
 C - - - - - 0x020321 08:8311: 90 DD     BCC bra_82F0_RTS
 C - - - - - 0x020323 08:8313: D0 F9     BNE bra_830E
 C - - - - - 0x020325 08:8315: 20 3F 83  JSR sub_833F
@@ -504,7 +507,7 @@ C - - - - - 0x020351 08:8341: BD 74 07  LDA ram_0774,X
 C - - - - - 0x020354 08:8344: 29 20     AND #$20
 C - - - - - 0x020356 08:8346: F0 27     BEQ bra_836F
 C - - - - - 0x020358 08:8348: A9 04     LDA #$04
-C - - - - - 0x02035A 08:834A: 85 E2     STA ram_00E2
+C - - - - - 0x02035A 08:834A: 85 E2     STA ram_sound_stack
 C - - - - - 0x02035C 08:834C: A0 00     LDY #$00
 C - - - - - 0x02035E 08:834E: E0 01     CPX #$01
 C - - - - - 0x020360 08:8350: D0 02     BNE bra_8354
@@ -515,7 +518,7 @@ C - - - - - 0x020367 08:8357: 99 DD 07  STA ram_07DD,Y
 C - - - - - 0x02036A 08:835A: BD AD 07  LDA ram_07AD,X
 C - - - - - 0x02036D 08:835D: 99 E5 07  STA ram_07E5,Y
 C - - - - - 0x020370 08:8360: C8        INY
-C - - - - - 0x020371 08:8361: C6 E2     DEC ram_00E2
+C - - - - - 0x020371 08:8361: C6 E2     DEC ram_sound_stack
 C - - - - - 0x020373 08:8363: D0 EF     BNE bra_8354
 C - - - - - 0x020375 08:8365: BD 74 07  LDA ram_0774,X
 C - - - - - 0x020378 08:8368: 29 DF     AND #$DF
@@ -570,10 +573,10 @@ C - - - - - 0x0203CE 08:83BE: 85 E4     STA ram_00E4
 bra_83C0:
 C - - - - - 0x0203D0 08:83C0: BD 4E 07  LDA ram_074E,X
 bra_83C3:
-C - - - - - 0x0203D3 08:83C3: 85 E2     STA ram_00E2
+C - - - - - 0x0203D3 08:83C3: 85 E2     STA ram_sound_stack
 C - - - - - 0x0203D5 08:83C5: 38        SEC
 C - - - - - 0x0203D6 08:83C6: E5 E4     SBC ram_00E4
-C - - - - - 0x0203D8 08:83C8: 85 E2     STA ram_00E2
+C - - - - - 0x0203D8 08:83C8: 85 E2     STA ram_sound_stack
 C - - - - - 0x0203DA 08:83CA: D0 06     BNE bra_83D2
 C - - - - - 0x0203DC 08:83CC: A5 E4     LDA ram_00E4
 C - - - - - 0x0203DE 08:83CE: D0 09     BNE bra_83D9
@@ -585,18 +588,18 @@ C - - - - - 0x0203E7 08:83D7: F0 02     BEQ bra_83DB
 bra_83D9:
 C - - - - - 0x0203E9 08:83D9: A9 01     LDA #$01
 bra_83DB:
-C - - - - - 0x0203EB 08:83DB: 85 E2     STA ram_00E2
+C - - - - - 0x0203EB 08:83DB: 85 E2     STA ram_sound_stack
 C - - - - - 0x0203ED 08:83DD: B5 EA     LDA ram_00EA,X
 C - - - - - 0x0203EF 08:83DF: 4A        LSR
 C - - - - - 0x0203F0 08:83E0: B0 1F     BCS bra_8401
 bra_83E2:
-C - - - - - 0x0203F2 08:83E2: A5 E2     LDA ram_00E2
+C - - - - - 0x0203F2 08:83E2: A5 E2     LDA ram_sound_stack
 C - - - - - 0x0203F4 08:83E4: DD 6F 07  CMP ram_076F,X
 C - - - - - 0x0203F7 08:83E7: B0 05     BCS bra_83EE
 - - - - - - 0x0203F9 08:83E9: BD 6F 07  LDA ram_076F,X
-- - - - - - 0x0203FC 08:83EC: 85 E2     STA ram_00E2
+- - - - - - 0x0203FC 08:83EC: 85 E2     STA ram_sound_stack
 bra_83EE:
-C - - - - - 0x0203FE 08:83EE: A5 E2     LDA ram_00E2
+C - - - - - 0x0203FE 08:83EE: A5 E2     LDA ram_sound_stack
 C - - - - - 0x020400 08:83F0: 38        SEC
 C - - - - - 0x020401 08:83F1: ED 6B 07  SBC ram_076B
 C - - - - - 0x020404 08:83F4: F0 02     BEQ bra_83F8
@@ -606,9 +609,9 @@ C - - - - - 0x020408 08:83F8: BD 4E 07  LDA ram_074E,X
 C - - - - - 0x02040B 08:83FB: F0 02     BEQ bra_83FF
 C - - - - - 0x02040D 08:83FD: A9 01     LDA #$01
 bra_83FF:
-C - - - - - 0x02040F 08:83FF: 85 E2     STA ram_00E2
+C - - - - - 0x02040F 08:83FF: 85 E2     STA ram_sound_stack
 bra_8401:
-C - - - - - 0x020411 08:8401: A5 E2     LDA ram_00E2
+C - - - - - 0x020411 08:8401: A5 E2     LDA ram_sound_stack
 C - - - - - 0x020413 08:8403: 60        RTS
 
 
@@ -624,17 +627,17 @@ loc_840E_read_next_byte:
 C D 0 - - - 0x02041E 08:840E: C8        INY
 bra_840F_even:
 loc_840F:
-C D 0 - - - 0x02041F 08:840F: B1 E0     LDA (ram_00E0),Y
+C D 0 - - - 0x02041F 08:840F: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x020421 08:8411: 29 F0     AND #$F0
 C - - - - - 0x020423 08:8413: 38        SEC
 C - - - - - 0x020424 08:8414: E9 C0     SBC #$C0
 C - - - - - 0x020426 08:8416: 90 11     BCC bra_8429_BF_or_less
 C - - - - - 0x020428 08:8418: 20 37 8D  JSR sub_0x03D217_divide_by_10h
 C - - - - - 0x02042B 08:841B: 20 59 8C  JSR sub_8C59_jump_to_pointers_after_RTS
-- D 0 - I - 0x02042E 08:841E: D6 86     .word ofs_86D6_00
-- D 0 - I - 0x020430 08:8420: 0B 87     .word ofs_870B_01
-- D 0 - I - 0x020432 08:8422: 7C 87     .word ofs_877C_02
-- D 0 - I - 0x020434 08:8424: 1A 8A     .word ofs_8A1A_03
+- D 0 - I - 0x02042E 08:841E: D6 86     .word ofs_86D6_00___C0_CF
+- D 0 - I - 0x020430 08:8420: 0B 87     .word ofs_870B_01___D0_DF
+- D 0 - I - 0x020432 08:8422: 7C 87     .word ofs_877C_02___E0_EF
+- D 0 - I - 0x020434 08:8424: 1A 8A     .word ofs_8A1A_03___F0_FF
 
 
 
@@ -687,8 +690,8 @@ C - - - - - 0x02048C 08:847C: 90 06     BCC bra_8484
 C - - - - - 0x02048E 08:847E: 20 B2 81  JSR sub_81B2
 C - - - - - 0x020491 08:8481: 4C 89 84  JMP loc_8489
 bra_8484:
-C - - - - - 0x020494 08:8484: A5 E2     LDA ram_00E2
-C - - - - - 0x020496 08:8486: 20 BB 81  JSR sub_81BB
+C - - - - - 0x020494 08:8484: A5 E2     LDA ram_sound_stack
+C - - - - - 0x020496 08:8486: 20 BB 81  JSR sub_81BB_4000x_ORA
 loc_8489:
 C D 0 - - - 0x020499 08:8489: 20 D9 85  JSR sub_85D9
 C - - - - - 0x02049C 08:848C: 4C 8C 89  JMP loc_898C
@@ -699,7 +702,7 @@ sub_848F:
 C - - - - - 0x02049F 08:848F: BD ED 07  LDA ram_07ED,X
 C - - - - - 0x0204A2 08:8492: F0 41     BEQ bra_84D5
 C - - - - - 0x0204A4 08:8494: 48        PHA
-C - - - - - 0x0204A5 08:8495: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x0204A5 08:8495: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x0204A7 08:8497: 8D 86 07  STA ram_0786
 C - - - - - 0x0204AA 08:849A: 68        PLA
 C - - - - - 0x0204AB 08:849B: 48        PHA
@@ -735,18 +738,18 @@ C - - - - - 0x0204E2 08:84D2: 0D 7C 07  ORA ram_077C
 bra_84D5:
 C - - - - - 0x0204E5 08:84D5: 8D 86 07  STA ram_0786
 C - - - - - 0x0204E8 08:84D8: D0 02     BNE bra_84DC
-C - - - - - 0x0204EA 08:84DA: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x0204EA 08:84DA: B1 E0     LDA (ram_sound_data),Y
 bra_84DC:
 C - - - - - 0x0204EC 08:84DC: 29 0F     AND #$0F
 C - - - - - 0x0204EE 08:84DE: D0 02     BNE bra_84E2
 C - - - - - 0x0204F0 08:84E0: 09 10     ORA #$10
 bra_84E2:
-C - - - - - 0x0204F2 08:84E2: 85 E2     STA ram_00E2
+C - - - - - 0x0204F2 08:84E2: 85 E2     STA ram_sound_stack
 C - - - - - 0x0204F4 08:84E4: A9 00     LDA #$00
 bra_84E6:
 C - - - - - 0x0204F6 08:84E6: 18        CLC
 C - - - - - 0x0204F7 08:84E7: 7D 00 07  ADC ram_0700,X
-C - - - - - 0x0204FA 08:84EA: C6 E2     DEC ram_00E2
+C - - - - - 0x0204FA 08:84EA: C6 E2     DEC ram_sound_stack
 C - - - - - 0x0204FC 08:84EC: D0 F8     BNE bra_84E6
 C - - - - - 0x0204FE 08:84EE: 9D 06 07  STA ram_0706,X
 C - - - - - 0x020501 08:84F1: 60        RTS
@@ -765,7 +768,7 @@ C - - - - - 0x02050F 08:84FF: 4C 0F 84  JMP loc_840F
 sub_8502:
 C - - - - - 0x020512 08:8502: 29 0F     AND #$0F
 C - - - - - 0x020514 08:8504: F0 1E     BEQ bra_8524_RTS
-C - - - - - 0x020516 08:8506: 85 E2     STA ram_00E2
+C - - - - - 0x020516 08:8506: 85 E2     STA ram_sound_stack
 C - - - - - 0x020518 08:8508: A9 00     LDA #$00
 C - - - - - 0x02051A 08:850A: 85 E4     STA ram_00E4
 bra_850C:
@@ -774,7 +777,7 @@ C - - - - - 0x02051D 08:850D: 7D 06 07  ADC ram_0706,X
 C - - - - - 0x020520 08:8510: 90 02     BCC bra_8514
 C - - - - - 0x020522 08:8512: E6 E4     INC ram_00E4
 bra_8514:
-C - - - - - 0x020524 08:8514: C6 E2     DEC ram_00E2
+C - - - - - 0x020524 08:8514: C6 E2     DEC ram_sound_stack
 C - - - - - 0x020526 08:8516: D0 F4     BNE bra_850C
 C - - - - - 0x020528 08:8518: 46 E4     LSR ram_00E4
 C - - - - - 0x02052A 08:851A: 6A        ROR
@@ -834,26 +837,26 @@ C - - - - - 0x02057C 08:856C: 60        RTS
 sub_856D:
 C - - - - - 0x02057D 08:856D: AD 86 07  LDA ram_0786
 C - - - - - 0x020580 08:8570: D0 02     BNE bra_8574
-C - - - - - 0x020582 08:8572: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x020582 08:8572: B1 E0     LDA (ram_sound_data),Y
 bra_8574:
 C - - - - - 0x020584 08:8574: 29 F0     AND #$F0
 C - - - - - 0x020586 08:8576: 4A        LSR
 C - - - - - 0x020587 08:8577: 4A        LSR
 C - - - - - 0x020588 08:8578: 4A        LSR
-C - - - - - 0x020589 08:8579: 85 E2     STA ram_00E2
+C - - - - - 0x020589 08:8579: 85 E2     STA ram_sound_stack
 C - - - - - 0x02058B 08:857B: BD A7 07  LDA ram_07A7,X
 C - - - - - 0x02058E 08:857E: 10 16     BPL bra_8596
 C - - - - - 0x020590 08:8580: 20 C7 85  JSR sub_85C7
 loc_8583:
 C D 0 - - - 0x020593 08:8583: BD A4 07  LDA ram_07A4,X
-C - - - - - 0x020596 08:8586: 85 E3     STA ram_00E3
-C - - - - - 0x020598 08:8588: A5 E2     LDA ram_00E2
+C - - - - - 0x020596 08:8586: 85 E3     STA ram_sound_stack + 1
+C - - - - - 0x020598 08:8588: A5 E2     LDA ram_sound_stack
 loc_858A_loop:
-C D 0 - - - 0x02059A 08:858A: C6 E3     DEC ram_00E3
+C D 0 - - - 0x02059A 08:858A: C6 E3     DEC ram_sound_stack + 1
 C - - - - - 0x02059C 08:858C: 30 0E     BMI bra_859C
 C - - - - - 0x02059E 08:858E: 18        CLC
 C - - - - - 0x02059F 08:858F: 69 18     ADC #$18
-C - - - - - 0x0205A1 08:8591: 85 E2     STA ram_00E2
+C - - - - - 0x0205A1 08:8591: 85 E2     STA ram_sound_stack
 C - - - - - 0x0205A3 08:8593: 4C 8A 85  JMP loc_858A_loop
 bra_8596:
 C - - - - - 0x0205A6 08:8596: 20 D3 85  JSR sub_85D3
@@ -867,7 +870,7 @@ C - - - - - 0x0205B4 08:85A4: 85 E8     STA ram_00E8
 C - - - - - 0x0205B6 08:85A6: 48        PHA
 C - - - - - 0x0205B7 08:85A7: BD 90 8C  LDA tbl_8C8F + 1,X
 C - - - - - 0x0205BA 08:85AA: 85 E9     STA ram_00E9
-C - - - - - 0x0205BC 08:85AC: AE 61 07  LDX ram_0761
+C - - - - - 0x0205BC 08:85AC: AE 61 07  LDX ram_sound_channel_index
 C - - - - - 0x0205BF 08:85AF: 9D AD 07  STA ram_07AD,X
 C - - - - - 0x0205C2 08:85B2: 68        PLA
 C - - - - - 0x0205C3 08:85B3: 9D AA 07  STA ram_07AA,X
@@ -877,19 +880,19 @@ C - - - - - 0x0205C6 08:85B6: 60        RTS
 
 sub_85C7:
 C - - - - - 0x0205D7 08:85C7: 29 7F     AND #$7F
-C - - - - - 0x0205D9 08:85C9: 85 E3     STA ram_00E3
-C - - - - - 0x0205DB 08:85CB: A5 E2     LDA ram_00E2
+C - - - - - 0x0205D9 08:85C9: 85 E3     STA ram_sound_stack + 1
+C - - - - - 0x0205DB 08:85CB: A5 E2     LDA ram_sound_stack
 C - - - - - 0x0205DD 08:85CD: 38        SEC
-C - - - - - 0x0205DE 08:85CE: E5 E3     SBC ram_00E3
-C - - - - - 0x0205E0 08:85D0: 85 E2     STA ram_00E2
+C - - - - - 0x0205DE 08:85CE: E5 E3     SBC ram_sound_stack + 1
+C - - - - - 0x0205E0 08:85D0: 85 E2     STA ram_sound_stack
 C - - - - - 0x0205E2 08:85D2: 60        RTS
 
 
 
 sub_85D3:
 C - - - - - 0x0205E3 08:85D3: 18        CLC
-C - - - - - 0x0205E4 08:85D4: 65 E2     ADC ram_00E2
-C - - - - - 0x0205E6 08:85D6: 85 E2     STA ram_00E2
+C - - - - - 0x0205E4 08:85D4: 65 E2     ADC ram_sound_stack
+C - - - - - 0x0205E6 08:85D6: 85 E2     STA ram_sound_stack
 C - - - - - 0x0205E8 08:85D8: 60        RTS
 
 
@@ -918,14 +921,14 @@ sub_85F9:
 C - - - - - 0x020609 08:85F9: BD CB 07  LDA ram_07CB,X
 C - - - - - 0x02060C 08:85FC: 20 37 8D  JSR sub_0x03D217_divide_by_10h
 C - - - - - 0x02060F 08:85FF: F0 16     BEQ bra_8617
-C - - - - - 0x020611 08:8601: 85 E2     STA ram_00E2
-C - - - - - 0x020613 08:8603: C6 E2     DEC ram_00E2
+C - - - - - 0x020611 08:8601: 85 E2     STA ram_sound_stack
+C - - - - - 0x020613 08:8603: C6 E2     DEC ram_sound_stack
 C - - - - - 0x020615 08:8605: F0 0D     BEQ bra_8614
 C - - - - - 0x020617 08:8607: BD 00 07  LDA ram_0700,X
 bra_860A:
 C - - - - - 0x02061A 08:860A: 18        CLC
 C - - - - - 0x02061B 08:860B: 7D 00 07  ADC ram_0700,X
-C - - - - - 0x02061E 08:860E: C6 E2     DEC ram_00E2
+C - - - - - 0x02061E 08:860E: C6 E2     DEC ram_sound_stack
 C - - - - - 0x020620 08:8610: D0 F8     BNE bra_860A
 C - - - - - 0x020622 08:8612: F0 03     BEQ bra_8617
 bra_8614:
@@ -982,7 +985,7 @@ C - - - - - 0x02066A 08:865A: 60        RTS
 loc_865B:
 C D 0 - - - 0x02066B 08:865B: AD 86 07  LDA ram_0786
 C - - - - - 0x02066E 08:865E: D0 02     BNE bra_8662
-C - - - - - 0x020670 08:8660: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x020670 08:8660: B1 E0     LDA (ram_sound_data),Y
 bra_8662:
 C - - - - - 0x020672 08:8662: 20 37 8D  JSR sub_0x03D217_divide_by_10h
 C - - - - - 0x020675 08:8665: AA        TAX
@@ -994,7 +997,7 @@ C - - - - - 0x020680 08:8670: 4C 76 86  JMP loc_8676
 bra_8673_47_or_higher:
 C - - - - - 0x020683 08:8673: 20 88 86  JSR sub_8688_47_5A
 loc_8676:
-C D 0 - - - 0x020686 08:8676: AE 61 07  LDX ram_0761
+C D 0 - - - 0x020686 08:8676: AE 61 07  LDX ram_sound_channel_index
 C - - - - - 0x020689 08:8679: 4C A4 8B  JMP loc_8BA4
 
 
@@ -1052,9 +1055,12 @@ C - - - - - 0x0206E2 08:86D2: 60        RTS
 
 
 
-bra_86D3:
+bra_86D3:   ; bzk опт
 C - - - - - 0x0206E3 08:86D3: 4C 29 84  JMP loc_8429
-ofs_86D6_00:
+
+
+
+ofs_86D6_00___C0_CF:
 C - - J - - 0x0206E6 08:86D6: BD ED 07  LDA ram_07ED,X
 C - - - - - 0x0206E9 08:86D9: 29 10     AND #$10
 C - - - - - 0x0206EB 08:86DB: D0 F6     BNE bra_86D3
@@ -1069,11 +1075,11 @@ C - - - - - 0x0206FA 08:86EA: F0 0B     BEQ bra_86F7
 C - - - - - 0x0206FC 08:86EC: E0 03     CPX #$03
 C - - - - - 0x0206FE 08:86EE: F0 0D     BEQ bra_86FD
 C - - - - - 0x020700 08:86F0: A9 7F     LDA #$7F
-C - - - - - 0x020702 08:86F2: 20 CA 81  JSR sub_81CA
+C - - - - - 0x020702 08:86F2: 20 CA 81  JSR sub_81CA_4001x
 bra_86F5:
 C - - - - - 0x020705 08:86F5: A9 30     LDA #$30
 bra_86F7:
-C - - - - - 0x020707 08:86F7: 20 BE 81  JSR sub_81BE
+C - - - - - 0x020707 08:86F7: 20 BE 81  JSR sub_81BE_4000x
 bra_86FA:
 C - - - - - 0x02070A 08:86FA: 4C A4 8B  JMP loc_8BA4
 bra_86FD:
@@ -1086,8 +1092,8 @@ C - - - - - 0x020719 08:8709: F0 EA     BEQ bra_86F5
 
 
 
-ofs_870B_01:
-C - - J - - 0x02071B 08:870B: B1 E0     LDA (ram_00E0),Y
+ofs_870B_01___D0_DF:
+C - - J - - 0x02071B 08:870B: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x02071D 08:870D: C9 DE     CMP #$DE
 C - - - - - 0x02071F 08:870F: B0 3F     BCS bra_8750_DE_FF
 C - - - - - 0x020721 08:8711: 29 0F     AND #$0F
@@ -1097,7 +1103,7 @@ C - - - - - 0x020728 08:8718: F0 30     BEQ bra_874A
 C - - - - - 0x02072A 08:871A: E0 02     CPX #$02
 C - - - - - 0x02072C 08:871C: F0 26     BEQ bra_8744
 C - - - - - 0x02072E 08:871E: C8        INY
-C - - - - - 0x02072F 08:871F: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x02072F 08:871F: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x020731 08:8721: 48        PHA
 C - - - - - 0x020732 08:8722: 29 0F     AND #$0F
 C - - - - - 0x020734 08:8724: 9D 56 07  STA ram_0756,X
@@ -1107,7 +1113,7 @@ C - - - - - 0x02073A 08:872A: 9D 54 07  STA ram_0754,X
 C - - - - - 0x02073D 08:872D: A9 00     LDA #$00
 C - - - - - 0x02073F 08:872F: 9D 6D 07  STA ram_076D,X
 C - - - - - 0x020742 08:8732: C8        INY
-C - - - - - 0x020743 08:8733: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x020743 08:8733: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x020745 08:8735: 9D D4 07  STA ram_07D4,X
 C - - - - - 0x020748 08:8738: 30 13     BMI bra_874D
 - - - - - - 0x02074A 08:873A: 0A        ASL
@@ -1117,7 +1123,7 @@ C - - - - - 0x020748 08:8738: 30 13     BMI bra_874D
 bra_8744:
 loc_8744:
 C D 0 - - - 0x020754 08:8744: C8        INY
-C - - - - - 0x020755 08:8745: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x020755 08:8745: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x020757 08:8747: 9D D7 07  STA ram_07D7,X
 bra_874A:
 C - - - - - 0x02075A 08:874A: 4C 0E 84  JMP loc_840E_read_next_byte
@@ -1147,8 +1153,8 @@ C - - - - - 0x02078A 08:877A: D0 CE     BNE bra_874A
 
 
 
-ofs_877C_02:
-C - - J - - 0x02078C 08:877C: B1 E0     LDA (ram_00E0),Y
+ofs_877C_02___E0_EF:
+C - - J - - 0x02078C 08:877C: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x02078E 08:877E: C9 E6     CMP #$E6
 C - - - - - 0x020790 08:8780: B0 07     BCS bra_8789_E6_and_higher
 C - - - - - 0x020792 08:8782: 29 0F     AND #$0F
@@ -1173,7 +1179,7 @@ C - - - - - 0x02079C 08:878C: 20 59 8C  JSR sub_8C59_jump_to_pointers_after_RTS
 
 ofs_87A3_E6:
 C - - J - - 0x0207B3 08:87A3: C8        INY
-C - - - - - 0x0207B4 08:87A4: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x0207B4 08:87A4: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x0207B6 08:87A6: 9D D4 07  STA ram_07D4,X
 C - - - - - 0x0207B9 08:87A9: 30 07     BMI bra_87B2
 - - - - - - 0x0207BB 08:87AB: 0A        ASL
@@ -1186,7 +1192,7 @@ C - - - - - 0x0207C2 08:87B2: 4C 0E 84  JMP loc_840E_read_next_byte
 
 ofs_87B5_E7:
 C - - J - - 0x0207C5 08:87B5: C8        INY
-C - - - - - 0x0207C6 08:87B6: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x0207C6 08:87B6: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x0207C8 08:87B8: 9D D7 07  STA ram_07D7,X
 C - - - - - 0x0207CB 08:87BB: 4C 0E 84  JMP loc_840E_read_next_byte
 
@@ -1194,7 +1200,7 @@ C - - - - - 0x0207CB 08:87BB: 4C 0E 84  JMP loc_840E_read_next_byte
 
 ofs_87BE_E8:
 C - - J - - 0x0207CE 08:87BE: C8        INY
-C - - - - - 0x0207CF 08:87BF: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x0207CF 08:87BF: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x0207D1 08:87C1: 9D 00 07  STA ram_0700,X
 loc_87C4:   ; bzk опт, ради экономии 1 байта затрачено 3 такта
 C D 0 - - - 0x0207D4 08:87C4: C8        INY
@@ -1204,11 +1210,11 @@ C - - - - - 0x0207D5 08:87C5: 4C 06 84  JMP loc_8406
 
 ofs_87C8_E9:
 C - - J - - 0x0207D8 08:87C8: C8        INY
-C - - - - - 0x0207D9 08:87C9: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x0207D9 08:87C9: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x0207DB 08:87CB: F0 06     BEQ bra_87D3_00
 C - - - - - 0x0207DD 08:87CD: 29 0F     AND #$0F
 C - - - - - 0x0207DF 08:87CF: F0 09     BEQ bra_87DA_00
-C - - - - - 0x0207E1 08:87D1: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x0207E1 08:87D1: B1 E0     LDA (ram_sound_data),Y
 bra_87D3_00:
 C - - - - - 0x0207E3 08:87D3: 9D 50 07  STA ram_0750,X
 C - - - - - 0x0207E6 08:87D6: 4C 0E 84  JMP loc_840E_read_next_byte
@@ -1218,7 +1224,7 @@ C - - - - - 0x0207E6 08:87D6: 4C 0E 84  JMP loc_840E_read_next_byte
 ofs_87D9_E9:
 - - - - - - 0x0207E9 08:87D9: C8        INY
 bra_87DA_00:
-- - - - - - 0x0207EA 08:87DA: B1 E0     LDA (ram_00E0),Y
+- - - - - - 0x0207EA 08:87DA: B1 E0     LDA (ram_sound_data),Y
 - - - - - - 0x0207EC 08:87DC: 9D 54 07  STA ram_0754,X
 - - - - - - 0x0207EF 08:87DF: 4C C4 87  JMP loc_87C4
 
@@ -1226,7 +1232,7 @@ bra_87DA_00:
 
 ofs_87E2_EA:
 C - - J - - 0x0207F2 08:87E2: C8        INY
-C - - - - - 0x0207F3 08:87E3: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x0207F3 08:87E3: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x0207F5 08:87E5: 9D 97 07  STA ram_0797,X
 C - - - - - 0x0207F8 08:87E8: 4C 0E 84  JMP loc_840E_read_next_byte
 
@@ -1234,14 +1240,14 @@ C - - - - - 0x0207F8 08:87E8: 4C 0E 84  JMP loc_840E_read_next_byte
 
 ofs_87EB_EB:
 C - - J - - 0x0207FB 08:87EB: C8        INY
-C - - - - - 0x0207FC 08:87EC: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x0207FC 08:87EC: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x0207FE 08:87EE: F0 18     BEQ bra_8808
 C - - - - - 0x020800 08:87F0: 38        SEC
 C - - - - - 0x020801 08:87F1: E9 50     SBC #$50
 C - - - - - 0x020803 08:87F3: 0A        ASL
 C - - - - - 0x020804 08:87F4: 9D C8 07  STA ram_07C8,X
 C - - - - - 0x020807 08:87F7: C8        INY
-C - - - - - 0x020808 08:87F8: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x020808 08:87F8: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x02080A 08:87FA: 9D CB 07  STA ram_07CB,X
 C - - - - - 0x02080D 08:87FD: BD 68 07  LDA ram_0768,X
 C - - - - - 0x020810 08:8800: 09 80     ORA #$80
@@ -1257,7 +1263,7 @@ C - - - - - 0x02081D 08:880D: 10 F3     BPL bra_8802
 
 ofs_880F_EC:
 C - - J - - 0x02081F 08:880F: C8        INY
-C - - - - - 0x020820 08:8810: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x020820 08:8810: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x020822 08:8812: 48        PHA
 C - - - - - 0x020823 08:8813: 48        PHA
 C - - - - - 0x020824 08:8814: 29 0F     AND #$0F
@@ -1292,7 +1298,7 @@ C - - - - - 0x020854 08:8844: 4C 0E 84  JMP loc_840E_read_next_byte
 
 ofs_8847_ED:
 C - - J - - 0x020857 08:8847: C8        INY
-C - - - - - 0x020858 08:8848: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x020858 08:8848: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x02085A 08:884A: 9D 63 07  STA ram_0763,X
 C - - - - - 0x02085D 08:884D: 4C C4 87  JMP loc_87C4
 
@@ -1300,7 +1306,7 @@ C - - - - - 0x02085D 08:884D: 4C C4 87  JMP loc_87C4
 
 ofs_8850_EE:
 C - - J - - 0x020860 08:8850: C8        INY
-C - - - - - 0x020861 08:8851: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x020861 08:8851: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x020863 08:8853: 30 07     BMI bra_885C
 C - - - - - 0x020865 08:8855: 0A        ASL
 bra_8856:
@@ -1315,7 +1321,7 @@ C - - - - - 0x02086F 08:885F: D0 F5     BNE bra_8856
 
 ofs_8861_EF:
 C - - J - - 0x020871 08:8861: C8        INY
-C - - - - - 0x020872 08:8862: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x020872 08:8862: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x020874 08:8864: 8D F1 07  STA ram_07F1
 C - - - - - 0x020877 08:8867: A9 00     LDA #$00
 C - - - - - 0x020879 08:8869: 8D F2 07  STA ram_07F2
@@ -1332,13 +1338,13 @@ C D 0 - - - 0x020883 08:8873: 20 36 8F  JSR sub_8F36
 C - - - - - 0x020886 08:8876: AD 90 07  LDA ram_0790
 C - - - - - 0x020889 08:8879: 2D 95 07  AND ram_0795
 C - - - - - 0x02088C 08:887C: D0 40     BNE bra_88BE
-C - - - - - 0x02088E 08:887E: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x02088E 08:887E: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x020890 08:8880: C9 F9     CMP #$F9
-C - - - - - 0x020892 08:8882: 90 03     BCC bra_8887
+C - - - - - 0x020892 08:8882: 90 03     BCC bra_8887_F8_or_less
 C - - - - - 0x020894 08:8884: 4C 1A 8A  JMP loc_8A1A
-bra_8887:
+bra_8887_F8_or_less:
 C - - - - - 0x020897 08:8887: C9 E8     CMP #$E8
-C - - - - - 0x020899 08:8889: 90 23     BCC bra_88AE_E7_and_less
+C - - - - - 0x020899 08:8889: 90 23     BCC bra_88AE_E7_or_less
 C - - - - - 0x02089B 08:888B: C9 F0     CMP #$F0
 C - - - - - 0x02089D 08:888D: B0 07     BCS bra_8896
 C - - - - - 0x02089F 08:888F: E0 05     CPX #$05
@@ -1357,10 +1363,10 @@ bra_88A6:
 - - - - - - 0x0208B6 08:88A6: A9 00     LDA #$00
 - - - - - - 0x0208B8 08:88A8: 8D 90 07  STA ram_0790
 - - - - - - 0x0208BB 08:88AB: 4C 6F 8B  JMP loc_8B6F
-bra_88AE_E7_and_less:
+bra_88AE_E7_or_less:
 C - - - - - 0x0208BE 08:88AE: 29 F0     AND #$F0
 C - - - - - 0x0208C0 08:88B0: D0 5B     BNE bra_890D
-C - - - - - 0x0208C2 08:88B2: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x0208C2 08:88B2: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x0208C4 08:88B4: 29 0F     AND #$0F
 C - - - - - 0x0208C6 08:88B6: F0 55     BEQ bra_890D
 C - - - - - 0x0208C8 08:88B8: 9D 00 07  STA ram_0700,X
@@ -1378,7 +1384,7 @@ C - - - - - 0x0208DF 08:88CF: F0 C8     BEQ bra_8899
 bra_88D1:
 C - - - - - 0x0208E1 08:88D1: E0 05     CPX #$05
 C - - - - - 0x0208E3 08:88D3: F0 9E     BEQ bra_8873
-C - - - - - 0x0208E5 08:88D5: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x0208E5 08:88D5: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x0208E7 08:88D7: E0 02     CPX #$02
 C - - - - - 0x0208E9 08:88D9: D0 06     BNE bra_88E1
 - - - - - - 0x0208EB 08:88DB: 9D D7 07  STA ram_07D7,X
@@ -1387,7 +1393,7 @@ C - - - - - 0x0208EE 08:88DE: 4C 72 88  JMP loc_8872
 bra_88E1:
 C - - - - - 0x0208F1 08:88E1: 29 F0     AND #$F0
 C - - - - - 0x0208F3 08:88E3: 9D 54 07  STA ram_0754,X
-C - - - - - 0x0208F6 08:88E6: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x0208F6 08:88E6: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x0208F8 08:88E8: 29 0F     AND #$0F
 C - - - - - 0x0208FA 08:88EA: F0 08     BEQ bra_88F4
 C - - - - - 0x0208FC 08:88EC: 09 80     ORA #$80
@@ -1400,7 +1406,7 @@ C - - - - - 0x020902 08:88F2: D0 03     BNE bra_88F7
 bra_88F4:
 ofs_88F4_EA:
 C - - - - - 0x020904 08:88F4: C8        INY
-C - - - - - 0x020905 08:88F5: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x020905 08:88F5: B1 E0     LDA (ram_sound_data),Y
 bra_88F7:
 C - - - - - 0x020907 08:88F7: 9D 72 07  STA ram_0772,X
 C - - - - - 0x02090A 08:88FA: BD 68 07  LDA ram_0768,X
@@ -1420,7 +1426,7 @@ loc_890D:
 C D 0 - - - 0x02091D 08:890D: B5 EA     LDA ram_00EA,X
 C - - - - - 0x02091F 08:890F: 29 FD     AND #$FD
 C - - - - - 0x020921 08:8911: 95 EA     STA ram_00EA,X
-C - - - - - 0x020923 08:8913: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x020923 08:8913: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x020925 08:8915: E0 05     CPX #$05
 C - - - - - 0x020927 08:8917: D0 05     BNE bra_891E
 C - - - - - 0x020929 08:8919: C9 10     CMP #$10
@@ -1437,7 +1443,7 @@ bra_892E:
 C - - - - - 0x02093E 08:892E: 09 30     ORA #$30
 C - - - - - 0x020940 08:8930: D0 21     BNE bra_8953
 bra_8932:
-C - - - - - 0x020942 08:8932: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x020942 08:8932: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x020944 08:8934: 20 37 8D  JSR sub_0x03D217_divide_by_10h
 C - - - - - 0x020947 08:8937: D0 03     BNE bra_893C
 C - - - - - 0x020949 08:8939: 4C E0 86  JMP loc_86E0
@@ -1446,20 +1452,20 @@ C - - - - - 0x02094C 08:893C: E0 05     CPX #$05
 C - - - - - 0x02094E 08:893E: F0 EE     BEQ bra_892E
 C - - - - - 0x020950 08:8940: 9D 4E 07  STA ram_074E,X
 C - - - - - 0x020953 08:8943: BD 72 07  LDA ram_0772,X
-C - - - - - 0x020956 08:8946: 20 CA 81  JSR sub_81CA
+C - - - - - 0x020956 08:8946: 20 CA 81  JSR sub_81CA_4001x
 C - - - - - 0x020959 08:8949: BD 54 07  LDA ram_0754,X
 C - - - - - 0x02095C 08:894C: 29 10     AND #$10
 C - - - - - 0x02095E 08:894E: D0 09     BNE bra_8959
 - - - - - - 0x020960 08:8950: BD 54 07  LDA ram_0754,X
 bra_8953:
 loc_8953:
-C - - - - - 0x020963 08:8953: 20 BE 81  JSR sub_81BE
+C - - - - - 0x020963 08:8953: 20 BE 81  JSR sub_81BE_4000x
 C - - - - - 0x020966 08:8956: 4C 5F 89  JMP loc_895F
 bra_8959:
 C - - - - - 0x020969 08:8959: 20 90 83  JSR sub_8390
-C - - - - - 0x02096C 08:895C: 20 BB 81  JSR sub_81BB
+C - - - - - 0x02096C 08:895C: 20 BB 81  JSR sub_81BB_4000x_ORA
 loc_895F:
-C D 0 - - - 0x02096F 08:895F: B1 E0     LDA (ram_00E0),Y
+C D 0 - - - 0x02096F 08:895F: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x020971 08:8961: 29 0F     AND #$0F
 C - - - - - 0x020973 08:8963: E0 05     CPX #$05
 C - - - - - 0x020975 08:8965: D0 04     BNE bra_896B
@@ -1468,7 +1474,7 @@ C - - - - - 0x020979 08:8969: F0 21     BEQ bra_898C
 bra_896B:
 C - - - - - 0x02097B 08:896B: 85 E9     STA ram_00E9
 C - - - - - 0x02097D 08:896D: C8        INY
-C - - - - - 0x02097E 08:896E: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x02097E 08:896E: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x020980 08:8970: 85 E8     STA ram_00E8
 C - - - - - 0x020982 08:8972: B5 EA     LDA ram_00EA,X
 C - - - - - 0x020984 08:8974: 29 40     AND #$40
@@ -1534,14 +1540,14 @@ bra_89D9:
 C - - - - - 0x0209E9 08:89D9: A5 E9     LDA ram_00E9
 bra_89DB:
 C - - - - - 0x0209EB 08:89DB: 9D 59 07  STA ram_0759,X
-C - - - - - 0x0209EE 08:89DE: 20 DE 81  JSR sub_81DE
+C - - - - - 0x0209EE 08:89DE: 20 DE 81  JSR sub_81DE_4003x
 C - - - - - 0x0209F1 08:89E1: BD 68 07  LDA ram_0768,X
 C - - - - - 0x0209F4 08:89E4: 29 DF     AND #$DF
 C - - - - - 0x0209F6 08:89E6: 9D 68 07  STA ram_0768,X
 bra_89E9:
 C - - - - - 0x0209F9 08:89E9: A5 E8     LDA ram_00E8
 C - - - - - 0x0209FB 08:89EB: 9D 5E 07  STA ram_075E,X
-C - - - - - 0x0209FE 08:89EE: 4C D4 81  JMP loc_81D4
+C - - - - - 0x0209FE 08:89EE: 4C D4 81  JMP loc_81D4_4002x
 bra_89F1:
 C - - - - - 0x020A01 08:89F1: A9 08     LDA #$08
 C - - - - - 0x020A03 08:89F3: 8D 0F 40  STA $400F
@@ -1572,14 +1578,14 @@ bra_8A14:
 C - - - - - 0x020A24 08:8A14: 18        CLC
 bra_8A15:
 C - - - - - 0x020A25 08:8A15: 68        PLA
-C - - - - - 0x020A26 08:8A16: AE B2 07  LDX ram_07B2
+C - - - - - 0x020A26 08:8A16: AE B2 07  LDX ram_07B2    ; bzk опт, бесполезная загрузка
 C - - - - - 0x020A29 08:8A19: 60        RTS
 
 
 
 loc_8A1A:
-ofs_8A1A_03:
-C D 0 J - - 0x020A2A 08:8A1A: B1 E0     LDA (ram_00E0),Y
+ofs_8A1A_03___F0_FF:
+C D 0 J - - 0x020A2A 08:8A1A: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x020A2C 08:8A1C: C9 F9     CMP #$F9
 C - - - - - 0x020A2E 08:8A1E: B0 08     BCS bra_8A28_FA_FF
 C - - - - - 0x020A30 08:8A20: 29 0F     AND #$0F
@@ -1589,7 +1595,7 @@ bra_8A28_FA_FF:     ; F9 видимо не бывает
 C - - - - - 0x020A38 08:8A28: 38        SEC
 C - - - - - 0x020A39 08:8A29: E9 FA     SBC #$FA
 C - - - - - 0x020A3B 08:8A2B: 20 59 8C  JSR sub_8C59_jump_to_pointers_after_RTS
-- D 0 - I - 0x020A3E 08:8A2E: 3A 8A     .word ofs_8A3A_FA
+- D 0 - I - 0x020A3E 08:8A2E: 3A 8A     .word ofs_8A3A_FA   ; хз где был использован, такого байта не нашел
 - D 0 - I - 0x020A40 08:8A30: D4 8A     .word ofs_8AD4_FB
 - D 0 - I - 0x020A42 08:8A32: F0 8A     .word ofs_8AF0_FC
 - D 0 - I - 0x020A44 08:8A34: 04 8B     .word ofs_8B04_FD_jsr
@@ -1603,15 +1609,15 @@ C - - J - - 0x020A4A 08:8A3A: B5 EA     LDA ram_00EA,X
 C - - - - - 0x020A4C 08:8A3C: 29 40     AND #$40
 C - - - - - 0x020A4E 08:8A3E: D0 3F     BNE bra_8A7F
 C - - - - - 0x020A50 08:8A40: C8        INY
-C - - - - - 0x020A51 08:8A41: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x020A51 08:8A41: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x020A53 08:8A43: 9D 86 07  STA ram_0786,X
 C - - - - - 0x020A56 08:8A46: C8        INY
-C - - - - - 0x020A57 08:8A47: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x020A57 08:8A47: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x020A59 08:8A49: 9D 77 07  STA ram_0777,X
 C - - - - - 0x020A5C 08:8A4C: E0 02     CPX #$02
 C - - - - - 0x020A5E 08:8A4E: F0 11     BEQ bra_8A61
 C - - - - - 0x020A60 08:8A50: C8        INY
-C - - - - - 0x020A61 08:8A51: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x020A61 08:8A51: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x020A63 08:8A53: 9D 8B 07  STA ram_078B,X
 C - - - - - 0x020A66 08:8A56: 20 37 8D  JSR sub_0x03D217_divide_by_10h
 C - - - - - 0x020A69 08:8A59: 9D 90 07  STA ram_0790,X
@@ -1624,12 +1630,12 @@ C - - - - - 0x020A75 08:8A65: 95 EA     STA ram_00EA,X
 C - - - - - 0x020A77 08:8A67: C8        INY
 C - - - - - 0x020A78 08:8A68: 98        TYA
 C - - - - - 0x020A79 08:8A69: 18        CLC
-C - - - - - 0x020A7A 08:8A6A: 65 E0     ADC ram_00E0
+C - - - - - 0x020A7A 08:8A6A: 65 E0     ADC ram_sound_data
 C - - - - - 0x020A7C 08:8A6C: 9D 9A 07  STA ram_079A,X
 C - - - - - 0x020A7F 08:8A6F: A9 00     LDA #$00
 C - - - - - 0x020A81 08:8A71: 9D 7C 07  STA ram_077C,X
 C - - - - - 0x020A84 08:8A74: 9D 81 07  STA ram_0781,X
-C - - - - - 0x020A87 08:8A77: 65 E1     ADC ram_00E1
+C - - - - - 0x020A87 08:8A77: 65 E1     ADC ram_sound_data + 1
 C - - - - - 0x020A89 08:8A79: 9D 9F 07  STA ram_079F,X
 C - - - - - 0x020A8C 08:8A7C: 4C 06 84  JMP loc_8406
 bra_8A7F:
@@ -1662,9 +1668,9 @@ C - - - - - 0x020AC3 08:8AB3: 90 03     BCC bra_8AB8
 - - - - - - 0x020AC5 08:8AB5: FE 81 07  INC ram_0781,X
 bra_8AB8:
 C - - - - - 0x020AC8 08:8AB8: BD 9A 07  LDA ram_079A,X
-C - - - - - 0x020ACB 08:8ABB: 85 E0     STA ram_00E0
+C - - - - - 0x020ACB 08:8ABB: 85 E0     STA ram_sound_data
 C - - - - - 0x020ACD 08:8ABD: BD 9F 07  LDA ram_079F,X
-C - - - - - 0x020AD0 08:8AC0: 85 E1     STA ram_00E1
+C - - - - - 0x020AD0 08:8AC0: 85 E1     STA ram_sound_data + 1
 C - - - - - 0x020AD2 08:8AC2: 4C 04 84  JMP loc_8404
 bra_8AC5:
 C - - - - - 0x020AD5 08:8AC5: B5 EA     LDA ram_00EA,X
@@ -1689,11 +1695,11 @@ sub_8ADD:
 C - - - - - 0x020AED 08:8ADD: C8        INY
 C - - - - - 0x020AEE 08:8ADE: 98        TYA
 C - - - - - 0x020AEF 08:8ADF: 18        CLC
-C - - - - - 0x020AF0 08:8AE0: 65 E0     ADC ram_00E0
+C - - - - - 0x020AF0 08:8AE0: 65 E0     ADC ram_sound_data
 C - - - - - 0x020AF2 08:8AE2: 9D 1E 07  STA ram_071E,X
 C - - - - - 0x020AF5 08:8AE5: A9 00     LDA #$00
 C - - - - - 0x020AF7 08:8AE7: 9D 36 07  STA ram_0736,X
-C - - - - - 0x020AFA 08:8AEA: 65 E1     ADC ram_00E1
+C - - - - - 0x020AFA 08:8AEA: 65 E1     ADC ram_sound_data + 1
 C - - - - - 0x020AFC 08:8AEC: 9D 2A 07  STA ram_072A,X
 C - - - - - 0x020AFF 08:8AEF: 60        RTS
 
@@ -1705,7 +1711,7 @@ C - - - - - 0x020B01 08:8AF1: 18        CLC
 C - - - - - 0x020B02 08:8AF2: 69 06     ADC #$06
 C - - - - - 0x020B04 08:8AF4: AA        TAX
 C - - - - - 0x020B05 08:8AF5: 20 DD 8A  JSR sub_8ADD
-C - - - - - 0x020B08 08:8AF8: AE 61 07  LDX ram_0761
+C - - - - - 0x020B08 08:8AF8: AE 61 07  LDX ram_sound_channel_index
 C - - - - - 0x020B0B 08:8AFB: B5 EA     LDA ram_00EA,X
 C - - - - - 0x020B0D 08:8AFD: 09 08     ORA #$08
 bra_8AFF:
@@ -1719,10 +1725,10 @@ C - - J - - 0x020B14 08:8B04: 20 88 8B  JSR sub_8B88
 C - - - - - 0x020B17 08:8B07: C8        INY
 C - - - - - 0x020B18 08:8B08: 98        TYA
 C - - - - - 0x020B19 08:8B09: 18        CLC
-C - - - - - 0x020B1A 08:8B0A: 65 E0     ADC ram_00E0
+C - - - - - 0x020B1A 08:8B0A: 65 E0     ADC ram_sound_data
 C - - - - - 0x020B1C 08:8B0C: 9D 42 07  STA ram_0742,X
 C - - - - - 0x020B1F 08:8B0F: A9 00     LDA #$00
-C - - - - - 0x020B21 08:8B11: 65 E1     ADC ram_00E1
+C - - - - - 0x020B21 08:8B11: 65 E1     ADC ram_sound_data + 1
 C - - - - - 0x020B23 08:8B13: 9D 48 07  STA ram_0748,X
 C - - - - - 0x020B26 08:8B16: B5 EA     LDA ram_00EA,X
 C - - - - - 0x020B28 08:8B18: 09 10     ORA #$10
@@ -1733,7 +1739,7 @@ C - - - - - 0x020B2C 08:8B1C: D0 77     JMP loc_8B95
 
 ofs_8B1E_FE_jmp_or_loop:
 C - - J - - 0x020B2E 08:8B1E: C8        INY
-C - - - - - 0x020B2F 08:8B1F: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x020B2F 08:8B1F: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x020B31 08:8B21: C9 FF     CMP #$FF
 C - - - - - 0x020B33 08:8B23: D0 06     BNE bra_8B2B    ; FF
 C - - - - - 0x020B35 08:8B25: 20 88 8B  JSR sub_8B88
@@ -1743,7 +1749,7 @@ C - - - - - 0x020B3B 08:8B2B: B5 EA     LDA ram_00EA,X
 C - - - - - 0x020B3D 08:8B2D: 29 04     AND #$04
 C - - - - - 0x020B3F 08:8B2F: F0 20     BEQ bra_8B51
 C - - - - - 0x020B41 08:8B31: FE 36 07  INC ram_0736,X
-C - - - - - 0x020B44 08:8B34: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x020B44 08:8B34: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x020B46 08:8B36: DD 36 07  CMP ram_0736,X
 C - - - - - 0x020B49 08:8B39: D0 09     BNE bra_8B44
 C - - - - - 0x020B4B 08:8B3B: B5 EA     LDA ram_00EA,X
@@ -1752,14 +1758,14 @@ C - - - - - 0x020B4F 08:8B3F: 95 EA     STA ram_00EA,X
 C - - - - - 0x020B51 08:8B41: 4C C4 87  JMP loc_87C4
 bra_8B44:
 C - - - - - 0x020B54 08:8B44: BD 1E 07  LDA ram_071E,X
-C - - - - - 0x020B57 08:8B47: 85 E0     STA ram_00E0
+C - - - - - 0x020B57 08:8B47: 85 E0     STA ram_sound_data
 C - - - - - 0x020B59 08:8B49: BD 2A 07  LDA ram_072A,X
 loc_8B4C:
-C D 0 - - - 0x020B5C 08:8B4C: 85 E1     STA ram_00E1
+C D 0 - - - 0x020B5C 08:8B4C: 85 E1     STA ram_sound_data + 1
 C - - - - - 0x020B5E 08:8B4E: 4C 04 84  JMP loc_8404
 bra_8B51:
 C - - - - - 0x020B61 08:8B51: FE 3C 07  INC ram_073C,X
-C - - - - - 0x020B64 08:8B54: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x020B64 08:8B54: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x020B66 08:8B56: DD 3C 07  CMP ram_073C,X
 C - - - - - 0x020B69 08:8B59: D0 09     BNE bra_8B64
 C - - - - - 0x020B6B 08:8B5B: B5 EA     LDA ram_00EA,X
@@ -1768,7 +1774,7 @@ C - - - - - 0x020B6F 08:8B5F: 95 EA     STA ram_00EA,X
 C - - - - - 0x020B71 08:8B61: 4C C4 87  JMP loc_87C4
 bra_8B64:
 C - - - - - 0x020B74 08:8B64: BD 24 07  LDA ram_0724,X
-C - - - - - 0x020B77 08:8B67: 85 E0     STA ram_00E0
+C - - - - - 0x020B77 08:8B67: 85 E0     STA ram_sound_data
 C - - - - - 0x020B79 08:8B69: BD 30 07  LDA ram_0730,X
 C - - - - - 0x020B7C 08:8B6C: 4C 4C 8B  JMP loc_8B4C
 
@@ -1780,9 +1786,9 @@ C - - J - - 0x020B7F 08:8B6F: B5 EA     LDA ram_00EA,X
 C - - - - - 0x020B81 08:8B71: 29 10     AND #$10
 C - - - - - 0x020B83 08:8B73: F0 4F     BEQ bra_8BC4
 C - - - - - 0x020B85 08:8B75: BD 42 07  LDA ram_0742,X
-C - - - - - 0x020B88 08:8B78: 85 E0     STA ram_00E0
+C - - - - - 0x020B88 08:8B78: 85 E0     STA ram_sound_data
 C - - - - - 0x020B8A 08:8B7A: BD 48 07  LDA ram_0748,X
-C - - - - - 0x020B8D 08:8B7D: 85 E1     STA ram_00E1
+C - - - - - 0x020B8D 08:8B7D: 85 E1     STA ram_sound_data + 1
 C - - - - - 0x020B8F 08:8B7F: B5 EA     LDA ram_00EA,X
 C - - - - - 0x020B91 08:8B81: 29 EF     AND #$EF
 C - - - - - 0x020B93 08:8B83: 95 EA     STA ram_00EA,X
@@ -1792,10 +1798,10 @@ C - - - - - 0x020B95 08:8B85: 4C 04 84  JMP loc_8404
 
 sub_8B88:
 C - - - - - 0x020B98 08:8B88: C8        INY
-C - - - - - 0x020B99 08:8B89: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x020B99 08:8B89: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x020B9B 08:8B8B: 9D 12 07  STA ram_0712,X
 C - - - - - 0x020B9E 08:8B8E: C8        INY
-C - - - - - 0x020B9F 08:8B8F: B1 E0     LDA (ram_00E0),Y
+C - - - - - 0x020B9F 08:8B8F: B1 E0     LDA (ram_sound_data),Y
 C - - - - - 0x020BA1 08:8B91: 9D 18 07  STA ram_0718,X
 C - - - - - 0x020BA4 08:8B94: 60        RTS
 
@@ -1804,9 +1810,9 @@ C - - - - - 0x020BA4 08:8B94: 60        RTS
 loc_8B95:
 C D 0 - - - 0x020BA5 08:8B95: A0 00     LDY #$00
 C - - - - - 0x020BA7 08:8B97: BD 12 07  LDA ram_0712,X
-C - - - - - 0x020BAA 08:8B9A: 85 E0     STA ram_00E0
+C - - - - - 0x020BAA 08:8B9A: 85 E0     STA ram_sound_data
 C - - - - - 0x020BAC 08:8B9C: BD 18 07  LDA ram_0718,X
-C - - - - - 0x020BAF 08:8B9F: 85 E1     STA ram_00E1
+C - - - - - 0x020BAF 08:8B9F: 85 E1     STA ram_sound_data + 1
 C - - - - - 0x020BB1 08:8BA1: 4C 06 84  JMP loc_8406
 
 
@@ -1823,13 +1829,13 @@ sub_8BB0:
 C - - - - - 0x020BC0 08:8BB0: C8        INY
 C - - - - - 0x020BC1 08:8BB1: 98        TYA
 C - - - - - 0x020BC2 08:8BB2: 18        CLC
-C - - - - - 0x020BC3 08:8BB3: 65 E0     ADC ram_00E0
+C - - - - - 0x020BC3 08:8BB3: 65 E0     ADC ram_sound_data
 C - - - - - 0x020BC5 08:8BB5: 9D 12 07  STA ram_0712,X
-C - - - - - 0x020BC8 08:8BB8: 85 E0     STA ram_00E0
+C - - - - - 0x020BC8 08:8BB8: 85 E0     STA ram_sound_data
 C - - - - - 0x020BCA 08:8BBA: A9 00     LDA #$00
-C - - - - - 0x020BCC 08:8BBC: 65 E1     ADC ram_00E1
+C - - - - - 0x020BCC 08:8BBC: 65 E1     ADC ram_sound_data + 1
 C - - - - - 0x020BCE 08:8BBE: 9D 18 07  STA ram_0718,X
-C - - - - - 0x020BD1 08:8BC1: 85 E1     STA ram_00E1
+C - - - - - 0x020BD1 08:8BC1: 85 E1     STA ram_sound_data + 1
 bra_8BC3_RTS:
 C - - - - - 0x020BD3 08:8BC3: 60        RTS
 bra_8BC4:
@@ -1850,7 +1856,7 @@ ofs_8BD9_00:
 ofs_8BD9_01:
 ofs_8BD9_05:
 C - - J - - 0x020BE9 08:8BD9: A9 30     LDA #$30
-C - - - - - 0x020BEB 08:8BDB: 4C BE 81  JMP loc_81BE
+C - - - - - 0x020BEB 08:8BDB: 4C BE 81  JMP loc_81BE_4000x
 
 
 
@@ -1867,7 +1873,7 @@ C - - - - - 0x020BF8 08:8BE8: 60        RTS
 ofs_8BE9_04:
 C - - J - - 0x020BF9 08:8BE9: 86 E4     STX ram_00E4
 C - - - - - 0x020BFB 08:8BEB: A2 00     LDX #$00
-C - - - - - 0x020BFD 08:8BED: 8E 61 07  STX ram_0761
+C - - - - - 0x020BFD 08:8BED: 8E 61 07  STX ram_sound_channel_index
 C - - - - - 0x020C00 08:8BF0: A9 30     LDA #$30
 C - - - - - 0x020C02 08:8BF2: 8D 00 40  STA $4000
 C - - - - - 0x020C05 08:8BF5: A9 7F     LDA #$7F
@@ -1878,7 +1884,7 @@ C - - - - - 0x020C0E 08:8BFE: AD 0C 07  LDA ram_070C
 C - - - - - 0x020C11 08:8C01: F0 08     BEQ bra_8C0B_RTS
 C - - - - - 0x020C13 08:8C03: 20 25 8C  JSR sub_8C25
 C - - - - - 0x020C16 08:8C06: A6 E4     LDX ram_00E4
-C - - - - - 0x020C18 08:8C08: 8E 61 07  STX ram_0761
+C - - - - - 0x020C18 08:8C08: 8E 61 07  STX ram_sound_channel_index
 bra_8C0B_RTS:
 C - - - - - 0x020C1B 08:8C0B: 60        RTS
 
@@ -1888,7 +1894,7 @@ sub_8C0C:
 C - - - - - 0x020C1C 08:8C0C: A2 00     LDX #$00
 bra_8C0E_loop:
 C - - - - - 0x020C1E 08:8C0E: BD 5C 80  LDA tbl_805C,X
-C - - - - - 0x020C21 08:8C11: 8E 61 07  STX ram_0761
+C - - - - - 0x020C21 08:8C11: 8E 61 07  STX ram_sound_channel_index
 C - - - - - 0x020C24 08:8C14: 8D B2 07  STA ram_07B2
 C - - - - - 0x020C27 08:8C17: BD 0C 07  LDA ram_070C,X
 C - - - - - 0x020C2A 08:8C1A: F0 03     BEQ bra_8C1F
@@ -1907,22 +1913,22 @@ C - - - - - 0x020C37 08:8C27: 29 02     AND #$02
 C - - - - - 0x020C39 08:8C29: D0 19     BNE bra_8C44
 C - - - - - 0x020C3B 08:8C2B: E0 02     CPX #$02
 C - - - - - 0x020C3D 08:8C2D: F0 23     BEQ bra_8C52
-C - - - - - 0x020C3F 08:8C2F: 20 BB 81  JSR sub_81BB
+C - - - - - 0x020C3F 08:8C2F: 20 BB 81  JSR sub_81BB_4000x_ORA
 C - - - - - 0x020C42 08:8C32: BD 72 07  LDA ram_0772,X
-C - - - - - 0x020C45 08:8C35: 20 CA 81  JSR sub_81CA
+C - - - - - 0x020C45 08:8C35: 20 CA 81  JSR sub_81CA_4001x
 bra_8C38:
 loc_8C38:
 C D 0 - - - 0x020C48 08:8C38: BD 59 07  LDA ram_0759,X
-C - - - - - 0x020C4B 08:8C3B: 20 DE 81  JSR sub_81DE
+C - - - - - 0x020C4B 08:8C3B: 20 DE 81  JSR sub_81DE_4003x
 C - - - - - 0x020C4E 08:8C3E: BD 5E 07  LDA ram_075E,X
-C - - - - - 0x020C51 08:8C41: 4C D4 81  JMP loc_81D4
+C - - - - - 0x020C51 08:8C41: 4C D4 81  JMP loc_81D4_4002x
 bra_8C44:
 C - - - - - 0x020C54 08:8C44: A9 00     LDA #$00
 C - - - - - 0x020C56 08:8C46: E0 02     CPX #$02
 C - - - - - 0x020C58 08:8C48: F0 02     BEQ bra_8C4C
 C - - - - - 0x020C5A 08:8C4A: A9 30     LDA #$30
 bra_8C4C:
-C - - - - - 0x020C5C 08:8C4C: 20 BE 81  JSR sub_81BE
+C - - - - - 0x020C5C 08:8C4C: 20 BE 81  JSR sub_81BE_4000x
 C - - - - - 0x020C5F 08:8C4F: 4C 38 8C  JMP loc_8C38
 bra_8C52:
 C - - - - - 0x020C62 08:8C52: A9 90     LDA #$90
@@ -1938,18 +1944,18 @@ C - - - - - 0x020C6D 08:8C5D: 0A        ASL
 C - - - - - 0x020C6E 08:8C5E: A8        TAY
 C - - - - - 0x020C6F 08:8C5F: C8        INY
 C - - - - - 0x020C70 08:8C60: 68        PLA
-C - - - - - 0x020C71 08:8C61: 85 E2     STA ram_00E2
+C - - - - - 0x020C71 08:8C61: 85 E2     STA ram_sound_stack
 C - - - - - 0x020C73 08:8C63: 68        PLA
-C - - - - - 0x020C74 08:8C64: 85 E3     STA ram_00E3
-C - - - - - 0x020C76 08:8C66: B1 E2     LDA (ram_00E2),Y
+C - - - - - 0x020C74 08:8C64: 85 E3     STA ram_sound_stack + 1
+C - - - - - 0x020C76 08:8C66: B1 E2     LDA (ram_sound_stack),Y
 C - - - - - 0x020C78 08:8C68: AA        TAX
 C - - - - - 0x020C79 08:8C69: C8        INY
-C - - - - - 0x020C7A 08:8C6A: B1 E2     LDA (ram_00E2),Y
-C - - - - - 0x020C7C 08:8C6C: 85 E3     STA ram_00E3
-C - - - - - 0x020C7E 08:8C6E: 86 E2     STX ram_00E2
+C - - - - - 0x020C7A 08:8C6A: B1 E2     LDA (ram_sound_stack),Y
+C - - - - - 0x020C7C 08:8C6C: 85 E3     STA ram_sound_stack + 1
+C - - - - - 0x020C7E 08:8C6E: 86 E2     STX ram_sound_stack
 C - - - - - 0x020C80 08:8C70: A6 E4     LDX ram_00E4
 C - - - - - 0x020C82 08:8C72: A4 E5     LDY ram_00E5
-C - - - - - 0x020C84 08:8C74: 6C E2 00  JMP (ram_00E2)
+C - - - - - 0x020C84 08:8C74: 6C E2 00  JMP (ram_sound_stack)
 
 
 
